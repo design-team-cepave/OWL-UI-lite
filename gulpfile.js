@@ -7,29 +7,30 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     cssnano     = require('gulp-cssnano'),
     imagemin    = require('gulp-imagemin'),
-    src         = './';
+    src         = './src';
+    dist        = './dist';
 
 gulp.task('styles', function(){
-  gulp.src('./app/sass/main.scss')
+  gulp.src('sass/main.scss', {cwd: src})
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest(src + 'app/dist/css'))
+    .pipe(gulp.dest('css', {cwd: dist}))
     .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('views', function buildHTML() {
-  return gulp.src(src + 'app/pug/index.pug')
+  return gulp.src('pug/index.pug', {cwd: src})
   .pipe(plumber())
   .pipe(pug({
     pretty: true
   }))
-  .pipe(gulp.dest(src + 'app/dist'))
+  .pipe(gulp.dest(dist))
   .pipe(browserSync.reload({stream: true}));
 });
 
 
 gulp.task('js-watch', function(){
-  gulp.src(src + 'app/dist/scripts/*.js')
+  gulp.src('scripts/*.js', {cwd: dist})
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -37,31 +38,31 @@ gulp.task('js-watch', function(){
 gulp.task('serve', function() {
   browserSync.init({
     server: {
-      baseDir: src + 'app/dist'
+      baseDir: dist
     }
   });
-  gulp.watch('app/sass/**/*.{sass, scss}', {cwd: src}, ['styles']);
-  gulp.watch('app/pug/**/*.pug', {cwd: src}, ['views']);
-  gulp.watch('app/dist/scripts/*.js', {cwd: src}, ['js-watch']);
-  gulp.watch('app/dist/*.html').on('change', browserSync.reload);
+  gulp.watch('sass/**/*.{sass, scss}', {cwd: src}, ['styles']);
+  gulp.watch('pug/**/*.pug', {cwd: src}, ['views']);
+  gulp.watch('scripts/*.js', {cwd: dist}, ['js-watch']);
+  gulp.watch('*.html', {cwd: dist}).on('change', browserSync.reload);
 });
 
 gulp.task('image-min', function(){
-  gulp.src(src + 'app/dist/img/*')
+  gulp.src('img/*', {cwd: dist})
     .pipe(imagemin())
-    .pipe(gulp.dest(src + 'app/dist/img'));
+    .pipe(gulp.dest('img', {cwd: dist}));
 });
 
 gulp.task('js-min', function(){
-  gulp.src(src + 'app/dist/scripts/*.js')
+  gulp.src('scripts/*.js', {cwd: dist})
     .pipe(uglify())
-    .pipe(gulp.dest(src + 'app/dist/scripts'));
+    .pipe(gulp.dest('scripts', {cwd: dist}));
 });
 
 gulp.task('css-min', function(){
-  gulp.src(src + 'app/dist/css/*.css')
+  gulp.src('css/*.css', {cwd: dist})
     .pipe(cssnano())
-    .pipe(gulp.dest(src + 'app/dist/css'));
+    .pipe(gulp.dest('css', {cwd: dist}));
 });
 
 gulp.task('default', ['styles', 'views', 'js-watch', 'serve']);
