@@ -1,0 +1,38 @@
+## OS
+.DS_Store
+.DS_Store?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+
+## Node
+node_modules
+npm-debug.log
+
+## Backup
+*~
+
+## Build
+app/dist/css
+app/dist/*.html
+
+
+## Sublime editor
+*.sublime-project
+*.sublime-workspace
+
+.eslintrc
+
+## Todo
+app/dist/humans.txt
+app/dist/robots.txt
