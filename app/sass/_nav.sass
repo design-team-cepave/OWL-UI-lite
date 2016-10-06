@@ -1,0 +1,42 @@
+.logo
+  display: inline-block
+  padding: 10px
+
+.menu
+  float: right
+  padding: 15px
+
+.lines
+  display: block
+  background-color: black
+  height: 4px
+  width: 28px
+  margin-top: 5px
+
+header
+  background: $main-color
+  // position: fixed
+  width: 100%
+  img
+    padding: 10px
+  nav
+    float: right
+    padding: 10px
+    display: none
+  ul
+    padding: 10px
+  li
+    display: inline-block
+    margin-right: 25px
+    cursor: pointer
+    font-size: .9em
+    padding: 2px
+    &:hover
+      color: lightcoral
+
+@media screen and (min-width: $medium-devices)
+  .menu
+    display: none
+  header
+    nav
+      display: block

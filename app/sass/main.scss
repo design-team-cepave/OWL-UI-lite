@@ -1,0 +1,17 @@
+@import "_reset";
+@import "_variables";
+@import "_helpers";
+
+@import "_nav";
+
+html {
+  font-family: $main-font;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+div {
+  padding-top: 10%;
+}
