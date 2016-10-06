@@ -9,7 +9,7 @@
     "static"
   ],
   "author": "JJ",
-  "license": "design.cepave.com",
+  "license": "MIT",
   "homepage": "design.cepave.com/owl-ui-lite",
   "devDependencies": {
     "gulp": "~3.9.0",
