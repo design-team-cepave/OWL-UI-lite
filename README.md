@@ -22,6 +22,7 @@ Installation
 
 **Step 3: Use**
 
+* 指令執行 ``npm install`` 安裝所需之 Node package.
 * 指令執行 ``gulp`` 編譯 pug 與 sass 檔案, 與開啟 local server.
 * 指令執行 ``gulp build`` minify 與 compress 全部 css, js 與 images.
 
