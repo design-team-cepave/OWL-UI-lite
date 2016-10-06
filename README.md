@@ -3,10 +3,17 @@
 
 professional design and developers CSS-framework
 
-版本要求
+Requirements
 -------------------------
-* Compass 0.13.alpha.4
-* SASS 3.2.1
+compass ruby gem
+
+``
+$ gem update --system
+$ gem install compass
+``
+
+請參照[用戶指南](http://compass-style.org/install/)
+
 
 Installation
 -------------------------

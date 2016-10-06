@@ -6,6 +6,7 @@ var gulp        = require('gulp'),
     watch       = require('gulp-watch'),
     uglify      = require('gulp-uglify'),
     cssnano     = require('gulp-cssnano'),
+    compass     = require('gulp-compass'),
     imagemin    = require('gulp-imagemin'),
     src         = './src';
     dist        = './dist';
@@ -13,7 +14,10 @@ var gulp        = require('gulp'),
 gulp.task('styles', function(){
   gulp.src('sass/main.scss', {cwd: src})
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(compass({
+      css: 'dist/css',
+      sass: 'src/sass'
+    }))
     .pipe(gulp.dest('css', {cwd: dist}))
     .pipe(browserSync.reload({stream: true}));
 });
@@ -28,12 +32,10 @@ gulp.task('views', function buildHTML() {
   .pipe(browserSync.reload({stream: true}));
 });
 
-
 gulp.task('js-watch', function(){
   gulp.src('scripts/*.js', {cwd: dist})
     .pipe(browserSync.reload({stream: true}));
 });
-
 
 gulp.task('serve', function() {
   browserSync.init({

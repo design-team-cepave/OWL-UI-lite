@@ -39,3 +39,4 @@ app/dist/*.html
 ## Todo
 app/dist/humans.txt
 app/dist/robots.txt
+/.sass-cache
