@@ -1,7 +1,7 @@
 [OWL-UI-lite](https://github.com/design-team-cepave/OWL-UI-lite)
 =========================
 
-professional design and developers CSS-framework
+professional designers and developers CSS framework
 
 Requirements
 -------------------------
