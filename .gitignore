@@ -25,6 +25,7 @@ npm-debug.log
 ## Build
 dist/css
 dist/*.html
+dist/assets/**/*
 
 ## Change path
 app/dist/css
@@ -40,3 +41,6 @@ app/dist/*.html
 app/dist/humans.txt
 app/dist/robots.txt
 /.sass-cache
+
+## Dev
+temp/
