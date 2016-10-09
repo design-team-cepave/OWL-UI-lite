@@ -25,7 +25,7 @@ npm-debug.log
 ## Build
 dist/css
 dist/*.html
-dist/assets/**/*
+dist/assets/css
 
 ## Change path
 app/dist/css
