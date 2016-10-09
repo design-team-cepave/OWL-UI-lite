@@ -1,2 +1,42 @@
-@import 'compass';
-@import 'owl-ui-lite';
+@import "compass";
+@import "_scss/variables";
+@import "_scss/theming";
+@import "_scss/mixins";
+@import "_scss/animation";
+
+// =============
+// Page download and index
+// =============
+#header {
+  @include display-flex;
+  @include align-items(center);
+  padding: 20px 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    @include background-image(linear-gradient(to right, #FFDA00, #FF4E39, #FF2E9C, #FF44FF, #00BFFF, #00EDFF, #FF74FF));
+  }
+  &-brand {
+    width: 25%;
+    a {
+      position: relative;
+      font-size: 0;
+      display: block;
+      width: 132px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-image: url("../img/logo.png");
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        background-image: url("../img/logo@2x.png");
+        background-size: 132px 30px;
+      }
+    }
+  }
+}
+
