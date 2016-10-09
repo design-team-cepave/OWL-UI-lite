@@ -1,0 +1,178 @@
+// =============
+// Colors
+// =============
+
+// Color Pattles
+$color-gray-lightest: #F2F6F7 // rgb(242, 246, 247)
+$color-gray-lighter : #DFE4E6 // rgb(223, 228, 230)
+$color-gray-light   : #B8BDBF // rgb(184, 189, 191)
+$color-gray         : #919799 // rgb(145, 151, 153)
+$color-gray-dark    : #6C7173 // rgb(108, 113, 115)
+$color-gray-darker  : #3B3F40 // rgb(59, 63, 64)
+
+// Primary Color
+$color-primary-Light      : #CAB6F2 //rgb(202, 182, 242)
+$color-primary            : #8962D9 //rgb(137, 98, 217)
+$color-primary-Dark       : #6B5499 //rgb(107, 84, 153)
+
+// Secondary Color
+$color-secondary-red       : #E6175C
+$color-secondary-orange    : #F27F0C
+$color-secondary-yellow    : #FFD919
+$color-secondary-blue      : hsl(210, 81.8, 46.8)
+$color-secondary-bue-light : hsl(210, 87.7, 59.4)
+$color-secondary-blue-dark : hsl(210, 90.5, 36.8)
+$color-secondary-green     : #B9E617
+
+// Color States
+$color-default : $color-gray-lighter
+$color-success : $color-secondary-green
+$color-error   : $color-secondary-red
+$color-warning : $color-secondary-yellow
+
+
+// =============
+// Font
+// =============
+$font-family           : 'Helvetica Neue', Helvetica, sans-serif
+$font-family-heading   : $font-family
+$font-family-monospace : Consolas, Monaco, 'Courier New', monospace
+
+// Breakpoints
+$breakpoint-small  : 768px
+$breakpoint-medium : 1024px
+$breakpoint-large  : 1200px
+
+// FontFamily
+$font-family           : 'Helvetica Neue', Helvetica, sans-serif
+$font-family-heading   : $font-family
+$font-family-monospace : Consolas, Monaco, "Courier New", monospace
+
+// Baseline
+$base-unit: 4px
+$base-line: 24px
+$base-line-small: 20px
+$base-line-smaller: 16px
+
+// Grid
+$grid-columns: 12
+$grid-width: 1128 // pixels
+$grid-gutter: $base-line
+$grid-gutter-integer: ($grid-gutter / ($grid-gutter * 0 + 1))
+$grid-gap: ($grid-gutter-integer / ($grid-width / 100)) * 1%
+
+// Z Indexes
+$z-over-content: 100
+$z-over-control: 200
+$z-over-page: 300
+$z-over-screen: 400
+$z-over-all: 500
+
+// Text font size
+$font-size-regular: 16px
+
+$font-size-big: $font-size-regular + 2px
+$font-size-small: $font-size-regular - 2px
+$font-size-smaller: $font-size-regular - 4px
+
+// UI font size
+$ui-font-size: $font-size-small
+$ui-font-size-small: $font-size-smaller
+$ui-font-size-big: $font-size-big
+
+// Headings
+$font-size-title: 60px
+$font-size-h1: 48px
+$font-size-h2: 36px
+$font-size-h3: 24px
+$font-size-h4: 18px
+$font-size-h5: 16px
+$font-size-h6: 12px
+
+$line-height-title: 64px
+$line-height-h1: 52px
+$line-height-h2: 40px
+$line-height-h3: 32px
+$line-height-h4: $base-line
+$line-height-h5: $base-line
+$line-height-h6: 20px
+
+// Spaces
+$margin-bottom-heading: 12px
+$margin-bottom-paragraph: 16px
+
+// Color
+$text-color-body: #333
+$text-color-heading: #000
+$text-color-samp: #fff
+$text-color-input: #333
+$text-color-input-append: #555
+
+// Color States
+$color-default: #f4f4f4
+$color-primary: #3c74d9
+$color-success: #60ae4d
+$color-error:   #f34248
+$color-warning: #fed443
+
+// Links
+$link-color: darken($color-primary, 10%)
+$link-hover-color: $color-error
+
+
+// Background
+$background-color-body: #fff
+$background-color-pre: #f8f8f8
+$background-color-mark: $color-warning
+$background-color-code: $color-default
+$background-color-samp: lighten($color-primary, 7%)
+$background-color-highlight: rgba($color-primary, .075)
+
+// Kbd
+$kbd-border: 1px solid rgba(0, 0, 0, .1)
+
+// Table
+$table-striped-background-color: #f4f4f4
+$table-border: 1px solid #eee
+
+// Label
+$label-font-size: $ui-font-size
+$label-color: #111
+$label-font-weight: normal
+
+// Input
+$input-disabled-opacity: 0.75
+$input-disabled-color: rgba(0, 0, 0, .5)
+$input-border-size: 1px
+$input-border-color: #dfdfdf
+$input-focus-border-color: #bbb
+$input-background-color: #fff
+$input-focus-background-color: #fff
+$input-append-background-color: #eee
+$input-padding: 8px 10px
+$input-padding-big: 16px 10px
+
+// Fieldset
+$fieldset-border-color: rgba(0, 0, 0, .1)
+$fieldset-border-size: 1px
+
+// Button
+$button-background-color: #eee
+$button-font-weight: normal
+$button-outline-font-weight: normal
+$button-outline-border-size: 1px
+$button-padding-small: 0 20px
+$button-padding: 0 28px
+$button-padding-big: 0 48px
+
+// Height
+$ui-height-small: 32px
+$ui-line-height-small: 32px
+$ui-height: 40px
+$ui-line-height: 38px
+$ui-height-big: 48px
+$ui-line-height-big: 46px
+
+// Overlay
+$overlay-background-color: rgba(255, 255, 255, .9)
+

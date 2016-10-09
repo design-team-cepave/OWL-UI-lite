@@ -17,7 +17,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('ui-styles', function(){
-  gulp.src('sass/main.scss', {cwd: src})
+  gulp.src('sass/owl-ui-lite.scss', {cwd: src})
     .pipe($.plumber())
     .pipe($.compass({
       sass: 'src/sass',

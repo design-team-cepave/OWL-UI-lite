@@ -1,0 +1,42 @@
+// row
+@mixin grid-row {
+
+  @include flex;
+  @include flex-wrap;
+
+  margin-left: -$grid-gap;
+}
+
+// column
+@mixin grid-column($num) {
+
+  $width: (100% / $grid-columns) * $num;
+
+  flex-basis: $width;
+  max-width: $width;
+  width: $width;
+}
+
+// column offset
+@mixin grid-column-offset($num) {
+
+  $width: (100% / $grid-columns) * $num;
+
+  margin-left: $width;
+}
+
+// grid media
+@mixin grid-media-columns($num) {
+
+  @include column-count($num);
+  @include column-gap($grid-gutter);
+
+  & > div {
+    display: inline-block;
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoint-small) {
+    @include column-count(1)
+  }
+}
