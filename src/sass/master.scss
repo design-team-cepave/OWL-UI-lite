@@ -40,3 +40,29 @@
   }
 }
 
+#main {
+  margin: auto;
+  max-width: 1128px;
+}
+#hero {
+  padding-top: 84px;
+  padding-bottom: 56px;
+  text-align: center;
+  h1 {
+    color: $color-gray;
+  }
+  #owl-ui-lite-brand {
+    font-size: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 322px;
+    height: 52px;
+    padding-right: 1em;
+    background-repeat: no-repeat;
+    background-image: url("../img/owl-ui-lite-logo.png");
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      background-image: url("../img/owl-ui-lite-logo@2x.png");
+      background-size: 322px 52px;
+    }
+  }
+}
