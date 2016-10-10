@@ -39,7 +39,7 @@ gulp.task('doc-styles', function(){
 gulp.task('styles', ['ui-styles', 'doc-styles']);
 
 gulp.task('views', function buildHTML() {
-  return gulp.src('pug/index.pug', {cwd: src})
+  return gulp.src('pug/**/!(_)*.pug', {cwd: src})
   .pipe($.plumber())
   .pipe($.pug({
     pretty: true
