@@ -9,11 +9,6 @@ body, h1, h2, h3, h4, h5, h6, .button {
   font-family: 'Lato', Arial, sans-serif;
 }
 
-
-// =============
-// Page download and index
-// =============
-
 .button.call-to-action {
   background: #8962D9;
   color: #fff;
@@ -154,6 +149,31 @@ body, h1, h2, h3, h4, h5, h6, .button {
       line-height: 40px;
       padding: 4px 40px;
       font-size: 16px;
+    }
+  }
+  &-components {
+    padding: 32px;
+    background: #f8f8f9;
+    .item {
+      padding: 16px;
+      margin-bottom: 40px;
+      background: #fff;
+      h4 {
+        margin-bottom: 8px;
+        a {
+          color: #000;
+          &:hover {
+            -moz-transition: all linear 0.2s;
+            transition: all linear 0.2s;
+            color: rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+      p {
+        font-size: 13px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.7);
+      }
     }
   }
 }
