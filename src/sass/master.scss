@@ -4,9 +4,55 @@
 @import "_scss/mixins";
 @import "_scss/animation";
 
+
+body, h1, h2, h3, h4, h5, h6, .button {
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+
 // =============
 // Page download and index
 // =============
+
+.button.call-to-action {
+  background: #8962D9;
+  color: #fff;
+  height: 48px;
+  line-height: 40px;
+  padding: 0 40px;
+  font-size: 16px;
+  &:focus, &:hover {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &:focus {
+    &:disabled, &.disabled {
+      color: #fff;
+      background: #1fce6d;
+    }
+  }
+  &:hover {
+    &:disabled, &.disabled {
+      color: #fff;
+      background: #1fce6d;
+    }
+  }
+  &.outline {
+    &:hover {
+      color: rgba(31, 206, 109, 0.6);
+      border-color: rgba(31, 206, 109, 0.4);
+    }
+    color: #1fce6d;
+    border-color: #1fce6d;
+    background: none;
+    &:disabled:hover,
+    &.disabled:hover {
+      color: #1fce6d;
+      border-color: #1fce6d;
+      background: none;
+    }
+  }
+}
+
 #header {
   @include display-flex;
   @include align-items(center);
@@ -45,24 +91,69 @@
   max-width: 1128px;
 }
 #hero {
-  padding-top: 84px;
-  padding-bottom: 56px;
+  padding-top: 64px;
+  padding-bottom: 64px;
   text-align: center;
-  h1 {
-    color: $color-gray;
+  p {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 720px;
+    margin: auto;
+    color: rgba(0, 0, 0, 0.5);
   }
-  #owl-ui-lite-brand {
+  &-subnav {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    li {
+      margin: 0 12px;
+      font-size: 20px;
+      display: inline-block;
+      a, span {
+        display: inline-block;
+        padding: 4px 12px;
+      }
+      a {
+        color: #3794de;
+        &:hover {
+          color: #000;
+          text-decoration: underline;
+        }
+      }
+      span {
+        color: rgba(0, 0, 0, 0.45);
+      }
+    }
+  }
+  figure {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+#owl-ui-lite {
+  &-brand {
     font-size: 0;
     display: inline-block;
     vertical-align: middle;
-    width: 322px;
-    height: 52px;
+    width: 422px;
+    height: 64px;
     padding-right: 1em;
     background-repeat: no-repeat;
     background-image: url("../img/owl-ui-lite-logo.png");
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       background-image: url("../img/owl-ui-lite-logo@2x.png");
-      background-size: 322px 52px;
+      background-size: 422px 64px;
+    }
+  }
+  &-download-box {
+    a {
+      margin: 0 8px;
+    }
+    .button {
+      height: 48px;
+      line-height: 40px;
+      padding: 4px 40px;
+      font-size: 16px;
     }
   }
 }

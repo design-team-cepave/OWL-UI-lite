@@ -3,11 +3,19 @@ extends base.pug
 block content
   #header
     #header-brand
-      a(href='../index.html') Cepave
+      a(href='http://cepave.com/') Cepave
   #main
     #hero
       h1
         span#owl-ui-lite-brand OWL UI lite
-        |  — CSS Framework
-      p professional designers and developers CSS framework
+      p professional designer and developer CSS framework
+      nav#hero-subnav
+        ul
+          li: span Download
+          li: a(href='#') Documentation
+      figure
+        img(src='../assets/img/intro.png', alt='OWL UI lite CSS Framework', width='798', height='280')
+      #owl-ui-lite-download-box
+        a.button.call-to-action(href='#') Download
+        a.button.outline(href='#') View on Github
   include footer.pug
