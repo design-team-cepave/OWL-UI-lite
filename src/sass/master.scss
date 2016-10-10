@@ -154,20 +154,23 @@ body, h1, h2, h3, h4, h5, h6, .button {
   &-components {
     padding: 32px;
     background: #f8f8f9;
+    a {
+      border: 1px solid rgba($color-primary,0);
+      text-decoration: blink;
+      &:hover {
+        @include transition(all linear .3s);
+        border-color: rgba($color-primary,1);
+      }
+    }
     .item {
       padding: 16px;
       margin-bottom: 40px;
       background: #fff;
+      color: #000;
+      display: block;
+      width: 100%;
       h4 {
         margin-bottom: 8px;
-        a {
-          color: #000;
-          &:hover {
-            -moz-transition: all linear 0.2s;
-            transition: all linear 0.2s;
-            color: rgba(0, 0, 0, 0.6);
-          }
-        }
       }
       p {
         font-size: 13px;

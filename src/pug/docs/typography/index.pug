@@ -1,0 +1,105 @@
+extends ../../_base
+
+block head
+  - var root_path = '../../'
+  include ../../_head
+
+block content
+  - var root_path = '../../'
+  #header
+    #header-brand
+      a(href='http://cepave.com/') Cepave
+  #main
+    #hero
+      //- h1
+      //-   span#owl-ui-lite-brand OWL UI lite
+      //- p professional designer and developer CSS framework
+      nav#hero-subnav
+        ul
+          li: a(href=root_path)  Download
+          li: span Documentation
+
+    #owl-ui-lite-components
+      .row.equal
+        .col.col-4
+          .item
+            h4
+              a(href='typography/index.html') Typography
+            p 遵循精確的間距與為完美的字體節奏尺寸
+        .col.col-4
+          .item
+            h4
+              a(href='typography/index.html') Color palettes
+            p 據情感的意涵的色彩表示
+        .col.col-4
+          .item
+            h4
+              a(href='grid/index.html') Grid
+            p 靈活，充分支援響應設計，並使用容易
+        .col.col-4
+          .item
+            h4
+              a(href='tables/index.html') Tables
+            p
+        .col.col-4
+          .item
+            h4
+              a(href='forms/index.html') Forms
+            p 完整的表單元件，包含：Forms, fields, inputs, checkboxes...等
+        .col.col-4
+          .item
+            h4
+              a(href='buttons/index.html') Buttons
+            p 各式齊全的風格按鈕
+        .col.col-4
+          .item
+            h4
+              a(href='alerts/index.html') Alerts
+            p 適合多數情境使用，為使用者提供即時訊息
+        .col.col-4
+          .item
+            h4
+              a(href='tabs/index.html') Tabs
+            p 為網站的複雜內容提供友善的導航介面
+        .col.col-4
+          .item
+            h4
+              a(href='breadcrumbs/index.html') Breadcrumbs
+            p 為使用者留下痕跡，因此他們不會迷路
+        .col.col-4
+          .item
+            h4
+              a(href='pagination/index.html') Pagination
+            p 為網站提供各種靈活的分頁選擇
+        .col.col-4
+          .item
+            h4
+              a(href='dropdowns/index.html') Dropdowns
+            p 為網站提供友善的操作與資訊收斂
+        .col.col-4
+          .item
+            h4
+              a(href='modals/index.html') Modals
+            p 簡潔，實用，可擴展的模態對話框視窗
+
+        .col.col-4
+          .item
+            h4
+              a(href='animation/index.html') Animation
+            p 添加常用基本動畫，如:shaking, pulsing, sliding...等
+        .col.col-4
+          .item
+            h4
+              a(href='utilities/index.html') Utilities
+            p 好用的附帶功能樣式工具
+        .col.col-4
+          .item
+            h4
+              a(href='mixins/index.html') Mixins
+            p 收錄 sass 強大與豐富的資源，有效節省開發時間
+
+  include ../../_footer
+
+block script
+  - var root_path = '../../'
+  include ../../_script
