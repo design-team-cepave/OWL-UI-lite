@@ -11,92 +11,238 @@ block content
       a(href='http://cepave.com/') Cepave
   #main
     #hero
-      //- h1
-      //-   span#owl-ui-lite-brand OWL UI lite
-      //- p professional designer and developer CSS framework
+      h1 Typography
+      p#hero-lead
+        |Typography 是網頁上的最重要和最基礎的事情之一。即使是輕微的缺陷，都可以摧毀美麗的頁面。OWL UI lite 提供完美的排版與理想的間距、字級大小和比例，無論確切的風格或選擇什麼字體都可以適配所需的頁面。
       nav#hero-subnav
         ul
-          li: a(href=root_path)  Download
-          li: span Documentation
+          li: a(href=root_path) Download
+          li: a(href=root_path+'/docs/') Documentation
 
-    #owl-ui-lite-components
-      .row.equal
-        .col.col-4
-          .item
-            h4
-              a(href='typography/index.html') Typography
-            p 遵循精確的間距與為完美的字體節奏尺寸
-        .col.col-4
-          .item
-            h4
-              a(href='typography/index.html') Color palettes
-            p 據情感的意涵的色彩表示
-        .col.col-4
-          .item
-            h4
-              a(href='grid/index.html') Grid
-            p 靈活，充分支援響應設計，並使用容易
-        .col.col-4
-          .item
-            h4
-              a(href='tables/index.html') Tables
+    .row
+      .col.col-3
+        nav.nav-contents
+          ul
+            li: a(href='index.html#h-headings') Headings
+            li: a(href='index.html#h-subheadings') Subheadings
+            li: a(href='index.html#h-paragraph') Paragraph
+            li: a(href='index.html#h-inline') Inline Elements
+            li: a(href='index.html#h-lists') Lists
+      .col.col-9
+        #owl-ui-lite-component
+
+          // Headings
+          h3#h-headings.demo-head Headings
+          .example
+            h1 Heading 1
+            h2 Heading 2
+            h3 Heading 3
+            h4 Heading 4
+            h5 Heading 5
+            h6 Heading 6
+          br
+          p
+            |標題（Heading）是通過&nbsp;
+            code &lt;h1&gt;
+            |&nbsp;-&nbsp;
+            code &lt;h6&gt;
+            |&nbsp;等標籤進行定義的。&nbsp;
+            code &lt;h1&gt;
+            |&nbsp;定義最大的標題。&lt;h6&gt; 定義最小的標題。
+          p
+            | OWL UI lite 使用&nbsp;
+            code &lt;h1&gt;
+            |&nbsp;-&nbsp;
+            code &lt;h6&gt;
+            |&nbsp;標籤(tag)或&nbsp;
+            code &lt;h1&gt;
+            |&nbsp;-&nbsp;
+            code &lt;h6&gt;
+            |&nbsp;樣式名(class name)來定義你的標題
+
+          // Subheadings
+          h3#h-subheadings.demo-head Subheadings
+          p
+            |副標題正是為了讓標題得到良好的呈現。
+          p
+            |要使用副標題，需添加&nbsp;
+            code .subheading
+            |&nbsp;樣式到一個 heading tag（h1-h6）. 下面的範例中, 這個&nbsp;
+            code &lt;h3&gt;
+            |&nbsp;最好搭配像&nbsp;
+            code .muted
+            |&nbsp;的樣式名，讓文字顏色跟字體更細或淡.
+          .example
+            h1 Lorem ipsum dolor sit amet, consectetur
+            h3.subheading.muted Lorem ipsum dolor sit amet, consectetur
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          pre.code
+            //- <h1>...</h1>
+            //- <h3 class="subheading muted">...</h3>
+            |&lt;h1&gt;...&lt;/h1&gt;
+            |&lt;h3 class=&quot;subheading muted&quot;&gt;...&lt;/h3&gt;
+
+          // Paragraph
+          h3#h-paragraph.demo-head Paragraph
+          p
+            |除了特殊規範外, 所有的段落文字取快使用&nbsp;
+            code 16px
+            |&nbsp;黑體（sans-serif） 字體級&nbsp;
+            code 24px
+            |&nbsp;行高.
+          .example
             p
-        .col.col-4
-          .item
-            h4
-              a(href='forms/index.html') Forms
-            p 完整的表單元件，包含：Forms, fields, inputs, checkboxes...等
-        .col.col-4
-          .item
-            h4
-              a(href='buttons/index.html') Buttons
-            p 各式齊全的風格按鈕
-        .col.col-4
-          .item
-            h4
-              a(href='alerts/index.html') Alerts
-            p 適合多數情境使用，為使用者提供即時訊息
-        .col.col-4
-          .item
-            h4
-              a(href='tabs/index.html') Tabs
-            p 為網站的複雜內容提供友善的導航介面
-        .col.col-4
-          .item
-            h4
-              a(href='breadcrumbs/index.html') Breadcrumbs
-            p 為使用者留下痕跡，因此他們不會迷路
-        .col.col-4
-          .item
-            h4
-              a(href='pagination/index.html') Pagination
-            p 為網站提供各種靈活的分頁選擇
-        .col.col-4
-          .item
-            h4
-              a(href='dropdowns/index.html') Dropdowns
-            p 為網站提供友善的操作與資訊收斂
-        .col.col-4
-          .item
-            h4
-              a(href='modals/index.html') Modals
-            p 簡潔，實用，可擴展的模態對話框視窗
+              |Lorem ipsum
+              code dolor
+              |sit amet,&nbsp;
+              a(href='') consectetur adipisicing
+              |&nbsp;elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            p
+              | Lorem ipsum dolor sit amet,&nbsp;
+              var consectetur
+              |&nbsp;adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          pre.code
+            //- <p>...</p>
+            | &lt;p&gt;...&lt;/p&gt;
 
-        .col.col-4
-          .item
-            h4
-              a(href='animation/index.html') Animation
-            p 添加常用基本動畫，如:shaking, pulsing, sliding...等
-        .col.col-4
-          .item
-            h4
-              a(href='utilities/index.html') Utilities
-            p 好用的附帶功能樣式工具
-        .col.col-4
-          .item
-            h4
-              a(href='mixins/index.html') Mixins
-            p 收錄 sass 強大與豐富的資源，有效節省開發時間
+          // Inline Elements
+          h3#h-inline.demo-head Inline Elements
+          p OWL UI lite 具有各種行內格式化元素。他們都有自己的語義，自己的風格。
+          table.table-bordered
+            tr
+              td.nowrap
+                abbr(title='Cascading Style Sheets') CSS
+              td.col-6
+                code &lt;attr&gt;
+              td.nowrap
+                cite Cite
+              td.col-6
+                code &lt;city&gt;
+            tr
+              td.nowrap
+                code &lt;Code&gt;
+              td
+                code &lt;code&gt;
+              td.nowrap
+                samp Sample
+              td
+                code &lt;samp&gt;
+            tr
+              td.nowrap
+                var Variable
+              td
+                code &lt;var&gt;
+              td.nowrap
+                mark Mark
+              td
+                code &lt;mark&gt;
+            tr
+              td.nowrap
+                kbd Shortcut
+              td
+                code &lt;kbd&gt;
+              td.nowrap
+                del Deleted
+              td
+                code &lt;del&gt;
+            tr
+              td.nowrap
+                i Italic
+              td
+                code &lt;i&gt;
+              td.nowrap
+                em Emphasis
+              td
+                code &lt;em&gt;
+            tr
+              td.nowrap
+                strong Highlighted
+              td
+                code &lt;strong&gt;
+              td.nowrap
+                b Bold
+              td
+                code &lt;b&gt;
+            tr
+              td.nowrap
+                | x
+                sup superscript
+              td
+                code &lt;sup&gt;
+              td.nowrap
+                | x
+                sub subscript
+              td
+                code &lt;sub&gt;
+            tr
+              td.nowrap
+                small Small
+              td
+                code &lt;small&gt;
+              td.nowrap
+                ins Inserted
+              td
+                code &lt;ins&gt;
+
+          // Lists
+          h3#h-lists.demo-head Lists
+          p 我們雖然很可能永遠不會需要，但仍然為列表提供許多的級別，只要你喜歡 :D。前三個級別表示與不同類型的項目(bullets)或不同風格的數字的。
+          .row
+            .col.col-6
+              ul
+                li list item 1
+                li
+                  | list item 2
+                  ul
+                    li list item 2.1
+                    li
+                      | list item 2.2
+                      ul
+                        li list item 2.2.1
+                        li list item 2.2.2
+                    li list item 2.3
+                    li list item 2.4
+                li list item 3
+                li list item 4
+              pre.code
+                |&lt;ul&gt;
+                |    &lt;li&gt;...&lt;/li&gt;
+                |&lt;/ul&gt;
+            .col.col-6
+              ol
+                li list item 1
+                li
+                  | list item 2
+                  ol
+                    li list item 2.1
+                    li
+                      | list item 2.2
+                      ol
+                        li list item 2.2.1
+                        li list item 2.2.2
+                    li list item 2.3
+                    li list item 2.4
+                li list item 3
+                li list item 4
+              pre.code
+                |&lt;ol&gt;
+                |    &lt;li&gt;...&lt;/li&gt;
+                |&lt;/ol&gt;
+
+          h3.demo-head Definition List
+          p 偶而，我們可能需要一個自定義列表。千忘不要忘記使用自定義列表，因為我們愛語義的東西。自定義列表不僅僅是一列項目，而是項目及其註釋的組合
+          dl
+            dt Term 1
+            dd Description 1
+            dt Term 2
+            dd Description 2
+            dt Term 3
+            dd Description 3
+          pre.code
+            |&lt;dl&gt;
+            |   &lt;dt&gt;Term&lt;/dt&gt;
+            |   &lt;dd&gt;Description&lt;/dd&gt;
+            |&lt;/dl&gt;
 
   include ../../_footer
 
