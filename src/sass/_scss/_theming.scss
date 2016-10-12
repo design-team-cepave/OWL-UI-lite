@@ -37,3 +37,12 @@ $color-warning : $color-secondary-yellow;
 $font-family           : 'Helvetica Neue', Helvetica, sans-serif !default;
 $font-family-heading   : $font-family;
 $font-family-monospace : Consolas, Monaco, 'Courier New', monospace !default;
+$font-size-regular     : 14px;
+$font-size-smaller     : $font-size-regular - 3px;
+
+
+
+// =============
+// Buttons
+// =============
+$button-border-radius: 0;
