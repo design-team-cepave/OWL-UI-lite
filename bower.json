@@ -1,0 +1,28 @@
+{
+  "name": "OWL-UI-lite",
+  "description": "professional design and developer CSS-framework",
+  "main": "",
+  "authors": [
+    "JJ"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "style-guide",
+    "ui-library",
+    "static",
+    "website",
+    "static"
+  ],
+  "homepage": "https://github.com/design-team-cepave/OWL-UI-lite",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "prism": "prismjs#^1.5.1"
+  }
+}
