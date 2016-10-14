@@ -47,6 +47,26 @@ gulp.task('views', function buildHTML() {
   .pipe(gulp.dest(dist))
 });
 
+var vendor = {
+  src: './bower_components',
+  prism: {
+    js  : '/prism/vendor/**/*',
+    style : '/prism/themes/**/*',
+  }
+};
+gulp.task('prism:script', function() {
+  return gulp.src(vendor.src + vendor.prism.js)
+  .pipe($.plumber())
+  .pipe(gulp.dest('dist/scripts/vendor/prism'));
+});
+gulp.task('prism:styles', function() {
+  return gulp.src(vendor.src + vendor.prism.style)
+  .pipe($.plumber())
+  .pipe(gulp.dest('dist/css/vendor/prism/themes'));
+});
+gulp.task('vendor', ['prism:script', 'prism:styles']);
+
+
 gulp.task('js-watch', function(){
   gulp.src('scripts/*.js', {cwd: dist})
     .pipe(browserSync.reload({stream: true}));
