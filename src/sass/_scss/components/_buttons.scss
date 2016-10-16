@@ -15,7 +15,7 @@ button,
   -webkit-appearance: none;
   color: #000;
   background-color: $button-background-color;
-  border-radius: 4px;
+  border-radius: $button-border-radius;
 }
 button:hover,
 .button:hover {
@@ -100,10 +100,10 @@ button:hover,
     border-radius: 0;
 
     &:first-child {
-      border-radius: 4px 0 0 4px;
+      border-radius: $button-border-radius 0 0 $button-border-radius;
     }
     &:last-child {
-      border-radius: 0 4px 4px 0;
+      border-radius: 0 $button-border-radius $button-border-radius 0;
     }
   }
 }

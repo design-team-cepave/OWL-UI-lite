@@ -1,0 +1,154 @@
+extends ../../_base
+
+block head
+  - var root_path = '../../'
+  include ../../_head
+
+block content
+  - var root_path = '../../'
+  #header
+    #header-brand
+      a(href='http://cepave.com/') Cepave
+  #main
+    #hero
+      h1 Buttons
+      p#hero-lead
+        |OWL UI lite 的按鈕元件組合是針對簡約、即時、便捷而定制，並支援 pushed, pressed, clicked 等操作
+      nav#hero-subnav
+        ul
+          li: a(href=root_path) Download
+          li: a(href=root_path+'/docs/') Documentation
+
+    .row
+      .col.col-3
+        nav.nav-contents
+          ul
+            li: a(href='index.html#h-base') Base
+            li: a(href='index.html#h-primary') Primary
+            li: a(href='index.html#h-outline') Outline
+            li: a(href='index.html#h-primary-outline') Primary Outline
+            li: a(href='index.html#h-disabled') Disabled
+            li: a(href='index.html#h-width') Width
+            li: a(href='index.html#h-grouped') Grouped
+      .col.col-9
+        #owl-ui-lite-component
+
+          // Base
+          h3#h-base.demo-head Base
+          p
+            |以下都是基本的常用按鈕。，無論是設置為&nbsp;
+            var .button
+            |&nbsp;樣式名(class)的超鏈接、
+            code &lt;button&gt;
+            |&nbsp;元素(tag)和表單送出按鈕
+            code &lt;type="submit"&gt;
+            |&nbsp;屬性，OWI UI lite 統一了他們的外觀，因此看起來都一樣，我們可以根據情況和需求，來使用這些按鈕元素
+          p
+            a.button(href='#', role='button') Link
+            button.button Button
+            input.button(type='submit', value='Submit')
+          pre.code
+            //- <a href="#" class="button" role="button">Link</a>
+            //- <button class="button">Button</button>
+            //- <input type="submit" class="button" value="Submit">
+            |&lt;a href="#" class="button" role="button"&gt;Link&lt;/a&gt;
+            |&lt;button class="button"&gt;Button&lt;/button&gt;
+            |&lt;input type="submit" class="button" value="Submit"&gt;
+
+          // Primary
+          h3#h-primary.demo-head Primary
+          p
+            var .primary
+            |&nbsp;的樣式，它是帶有與填色相同邊框色的按鈕
+          p
+            a.button.primary(href='#', role='button') Link
+            button.button.primary Button
+            input.button.primary(type='submit', value='Submit')
+          pre.code
+            //- <a href="#" class="button primary" role="button">Link</a>
+            //- <button class="button primary">Button</button>
+            //- <input type="submit" class="button primary" value="Submit">
+            |&lt;a href="#" class="button primary" role="button"&gt;Link&lt;/a&gt;
+            |&lt;button class="button primary"&gt;Button&lt;/button&gt;
+            |&lt;input type="submit" class="button primary" value="Submit"&gt;
+
+          // Outline
+          h3#h-outline.demo-head Outline
+          p
+            var .Outline
+            |&nbsp;樣式名(class)正如它應該做的事: 無填色帶淺灰色外框風格的按鈕
+          p
+            a.button.outline(href='#', role='button') Link
+            button.button.outline Button
+            input.button.outline(type='submit', value='Submit')
+          pre.code
+            |&lt;a href="#" class="button outline" role="button"&gt;Link&lt;/a&gt;
+            |&lt;button class="button outline"&gt;Button&lt;/button&gt;
+            |&lt;input type="submit" class="button outline" value="Submit"&gt;
+
+          // Primary Outline
+          h3#h-primary-outline.demo-head Primary Outline
+          p
+            |前兩個風格樣式&nbsp;
+            var .primary .outline
+            |&nbsp;的組合而成的主色的外框按鈕
+          p
+            a.button.primary.outline(href='index.html#', role='button') Link
+            button.button.primary.outline Button
+            input.button.primary.outline(type='submit', value='Submit')
+          pre.code
+            |&lt;a href="#" class="button primary outline" role="button"&gt;Link&lt;/a&gt;
+            |&lt;button class="button primary outline"&gt;Button&lt;/button&gt;
+            |&lt;input type="submit" class="button primary outline" value="Submit"&gt;
+
+          // Disabled
+          h3#h-disabled.demo-head Disabled
+          p 禁用(Disabled)的按鈕都自動套用柔和的色彩外觀，進而表示：無效、不可點擊。
+          p
+            a.button.disabled(href='index.html#', role='button') Link
+            button.button.primary(disabled='') Button
+            input.button.primary.outline.disabled(type='submit', value='Submit')
+          pre.code
+            |&lt;a href="#" class="button disabled" href="index.html#" role="button"&gt;Link&lt;/a&gt;
+            |&lt;button class="button primary" disabled=""&gt;Button&lt;/button&gt;
+            |&lt;input type="submit" class="button primary outline disabled" value="Submit"&gt;
+
+
+          // Width
+          h3#h-width.demo-head Width
+          p
+            |特殊情境、增強按鈕強度的作法，使用&nbsp;
+            var .width-
+            |&nbsp;將按鈕寬度相對於上層之數值
+          p
+            button.button.primary.width-100 Button 100%
+          p
+            button.button.primary.width-50 Button 50%
+          pre.code
+            |&lt;button class="button primary width-100"&gt;Button 100%&lt;/button&gt;
+            |&lt;button class="button primary width-50"&gt;Button 50%&lt;/button&gt;
+
+
+          // Grouped
+          h3#h-grouped.demo-head Grouped
+          p
+            |群組話按鈕&nbsp;
+            var .group
+            |利用結構設置於按鈕上一層級，將層級內的按鈕作群組話的外框風格。
+          p.buttons.group
+            button.button.outline Button
+            button.button.outline.disabled Button
+            button.button.outline Button
+          pre.code
+            |&lt;p class="buttons group"&gt;
+            |   &lt;button class="button outline"&gt;Button&lt;/button&gt;
+            |   &lt;button class="button outline disabled"&gt;Button&lt;/button&gt;
+            |   &lt;button class="button outline"&gt;Button&lt;/button&gt;
+            |&lt;/button&gt;
+
+
+  include ../../_footer
+
+block script
+  - var root_path = '../../'
+  include ../../_script
