@@ -213,5 +213,10 @@ body, h1, h2, h3, h4, h5, h6, .button {
   border: 1px solid rgba(0, 0, 0, 0.07);
 }
 
+.palettes-item {
+  width: 100%;
+  padding-bottom: 100%;
+}
+
 @import "_module/window";
 
