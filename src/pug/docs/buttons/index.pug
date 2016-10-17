@@ -62,9 +62,9 @@ block content
             var .primary
             |&nbsp;的樣式，它是帶有與填色相同邊框色的按鈕
           p
-            a.button.primary(href="#", role="button") Link
+            a.button.primary(href='#', role='button') Link
             button.button.primary button
-            input.button.primary(type="submit", value="Submit")
+            input.button.primary(type='submit', value='Submit')
           .window
             .icons: span
             .title button--primary.pug
@@ -81,15 +81,14 @@ block content
             var .Outline
             |&nbsp;樣式名(class)正如它應該做的事: 無填色帶淺灰色外框風格的按鈕
           p
-            a.button.outline(href="#", role="button") Link
+            a.button.outline(href='#', role='button') Link
             button.button.outline button
-            input.button.outline(type="submit", value="Submit")
+            input.button.outline(type='submit', value='Submit')
           .window
             .icons: span
             .title button--outline.pug
             pre.language-jade
               code.
-
                 a(class="button outline", href='#', role='button') Link
                 button(class="button outline") Button
                 input(class="button outline", type='submit', value='Submit')
@@ -164,7 +163,7 @@ block content
             .title button--grouped.pug
             pre.language-jade
               code.
-                p.buttons.group
+                p(class="buttons group")
                   button(class="button outline") Button
                   button(class="button outline disabled") Button
                   button(class="button outline") Button
