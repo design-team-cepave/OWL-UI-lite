@@ -29,6 +29,8 @@ bower_components
 dist/css
 dist/**/*.html
 dist/assets/css
+dist/scripts/vendor
+
 
 ## Change path
 app/dist/css

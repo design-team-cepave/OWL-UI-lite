@@ -2,16 +2,7 @@
 
 // $font-size: 16px;
 // $width: 800px;
-$border-radius: 10px;
 
-$black: #222;
-$grey-dark: #999;
-$grey-light: #ddd;
-$blue: #09a3d5;
-$purple: #8130c9;
-$red: #e4514f;
-$yellow: #f4c025;
-$green: #3ec930;
 
 // * {
 //   padding: 0;
@@ -29,6 +20,17 @@ $green: #3ec930;
 // }
 
 .window {
+  $border-radius: 10px;
+
+  $black: #222;
+  $grey-dark: #999;
+  $grey-light: #ddd;
+  $blue: #09a3d5;
+  $purple: #8130c9;
+  $red: #e4514f;
+  $yellow: #f4c025;
+  $green: #3ec930;
+
   background: $grey-light;
   border-radius: $border-radius;
   display: flex;
@@ -92,17 +94,35 @@ $green: #3ec930;
     }
   }
 
-  .token.punctuation {
-    color: $grey-dark;
-  }
-  .token.boolean, .token.number {
-    color: $purple;
-  }
-  .token.keyword {
-    color: $blue
-  }
-  .token.operator {
-    color: $red;
+  .token {
+    &.tag {
+      color: #A95861;
+    }
+    &.attr-name {
+      color: #D08770;
+    }
+    &.attr-value {
+      color: #A3BE8C;
+    }
+    &.plain-text {
+      color: #C0C5CE;
+    }
+    &.string {
+      color: #A3BE8C;
+    }
+    &.punctuation {
+      color: $grey-dark;
+    }
+    &.boolean,
+    &.number {
+      color: $purple;
+    }
+    &.keyword {
+      color: $blue
+    }
+    &.operator {
+      color: $red;
+    }
   }
   @keyframes blink {
     0%  {

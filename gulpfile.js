@@ -50,12 +50,13 @@ gulp.task('views', function buildHTML() {
 var vendor = {
   src: './bower_components',
   prism: {
-    js  : '/prism/vendor/**/*',
+    js    : '/prism/prism.js',
+    jade  : '/prism/components/prism-jade.js',
     style : '/prism/themes/**/*',
   }
 };
 gulp.task('prism:script', function() {
-  return gulp.src(vendor.src + vendor.prism.js)
+  return gulp.src([vendor.src + vendor.prism.js, vendor.src + vendor.prism.jade])
   .pipe($.plumber())
   .pipe(gulp.dest('dist/scripts/vendor/prism'));
 });
