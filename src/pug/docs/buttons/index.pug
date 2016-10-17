@@ -52,9 +52,9 @@ block content
             .title button--base.pug
             pre.language-jade
               code.
-                a.button(href="#", role="button") Link
-                button.button button
-                input.button(type="submit", value="Submit")
+                a(class="button", href="#", role="button") Link
+                button(class="button") button
+                input(class="button", type="submit", value="Submit")
 
           // Primary
           h3#h-primary.demo-head Primary
@@ -62,17 +62,18 @@ block content
             var .primary
             |&nbsp;的樣式，它是帶有與填色相同邊框色的按鈕
           p
-            a.button.primary(href='#', role='button') Link
-            button.button.primary Button
-            input.button.primary(type='submit', value='Submit')
+            a.button.primary(href="#", role="button") Link
+            button.button.primary button
+            input.button.primary(type="submit", value="Submit")
           .window
             .icons: span
             .title button--primary.pug
             pre.language-jade
               code.
-                a.button.primary(href="#", role="button") Link
-                button.button.primary button
-                input.button.primary(type="submit", value="Submit")
+                a(class="button primary", href='#', role='button') Link
+                button(class="button primary") Button
+                input(class="button primary", type='submit', value='Submit')
+
 
           // Outline
           h3#h-outline.demo-head Outline
@@ -80,17 +81,18 @@ block content
             var .Outline
             |&nbsp;樣式名(class)正如它應該做的事: 無填色帶淺灰色外框風格的按鈕
           p
-            a.button.outline(href='#', role='button') Link
-            button.button.outline Button
-            input.button.outline(type='submit', value='Submit')
+            a.button.outline(href="#", role="button") Link
+            button.button.outline button
+            input.button.outline(type="submit", value="Submit")
           .window
             .icons: span
             .title button--outline.pug
             pre.language-jade
               code.
-                a.button.outline(href="#", role="button") Link
-                button.button.outline button
-                input.button.outline(type="submit", value="Submit")
+
+                a(class="button outline", href='#', role='button') Link
+                button(class="button outline") Button
+                input(class="button outline", type='submit', value='Submit')
 
           // Primary Outline
           h3#h-primary-outline.demo-head Primary Outline
@@ -107,9 +109,9 @@ block content
             .title button--primary-outline.pug
             pre.language-jade
               code.
-                a.button.primary.outline(href='index.html#', role='button') Link
-                button.button.primary.outline Button
-                input.button.primary.outline(type='submit', value='Submit')
+                a(class="button primary outline", href='index.html#', role='button') Link
+                button(class="button primary outline") Button
+                input(class="button primary outline", type='submit', value='Submit')
 
           // Disabled
           h3#h-disabled.demo-head Disabled
@@ -123,9 +125,10 @@ block content
             .title button--disable.pug
             pre.language-jade
               code.
-                a.button.disabled(href='index.html#', role='button') Link
-                button.button.primary(disabled='') Button
-                input.button.primary.outline.disabled(type='submit', value='Submit')
+                a(class="button disabled",href='index.html#', role='button') Link
+                button(class="button primary", disabled='') Button
+                input(class="button primary outline disabled",type='submit', value='Submit')
+
 
           // Width
           h3#h-width.demo-head Width
@@ -142,8 +145,8 @@ block content
             .title button--width.pug
             pre.language-jade
               code.
-                button.button.primary.width-100 Button 100%
-                button.button.primary.width-50 Button 50%
+                button(class="button primary width-100") Button 100%
+                button(class="button primary width-50") Button 50%
 
 
           // Grouped
@@ -162,9 +165,9 @@ block content
             pre.language-jade
               code.
                 p.buttons.group
-                  button.button.outline Button
-                  button.button.outline.disabled Button
-                  button.button.outline Button
+                  button(class="button outline") Button
+                  button(class="button outline disabled") Button
+                  button(class="button outline") Button
 
   include ../../_footer
 
