@@ -23,9 +23,10 @@ doctype html
     meta(name="format-detection", content="telephone=no")
 
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato')
-    link(rel='stylesheet', href="css/vendor/prism/themes/prism.css")
-    link(rel="stylesheet", href="css/owl-ui-lite.css")
-    link(rel="stylesheet", href="assets/css/master.css")
+
+    link(rel='stylesheet', href=root_path+"assets/css/vendor/prism/themes/prism.css")
+    link(rel="stylesheet", href=root_path+"css/owl-ui-lite.css")
+    link(rel="stylesheet", href=root_path+"assets/css/master.css")
 
 body
   <!--[if lt IE 9]>
@@ -35,5 +36,5 @@ body
   block content
 
   script(src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
-  script(src="scripts/vendor/prism/promise.js")
-  script(src="scripts/main.js")
+  script(src=root_path+"scripts/vendor/prism/promise.js")
+  script(src=root_path+"scripts/main.js")

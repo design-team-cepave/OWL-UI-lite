@@ -62,7 +62,7 @@ gulp.task('prism:script', function() {
 gulp.task('prism:styles', function() {
   return gulp.src(vendor.src + vendor.prism.style)
   .pipe($.plumber())
-  .pipe(gulp.dest('dist/css/vendor/prism/themes'));
+  .pipe(gulp.dest('dist/assets/css/vendor/prism/themes'));
 });
 gulp.task('vendor', ['prism:script', 'prism:styles']);
 

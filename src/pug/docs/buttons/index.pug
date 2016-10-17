@@ -47,13 +47,14 @@ block content
             a.button(href='#', role='button') Link
             button.button Button
             input.button(type='submit', value='Submit')
-          pre.code
-            //- <a href="#" class="button" role="button">Link</a>
-            //- <button class="button">Button</button>
-            //- <input type="submit" class="button" value="Submit">
-            |&lt;a href="#" class="button" role="button"&gt;Link&lt;/a&gt;
-            |&lt;button class="button"&gt;Button&lt;/button&gt;
-            |&lt;input type="submit" class="button" value="Submit"&gt;
+          .window
+            .icons: span
+            .title button--base.pug
+            pre.language-jade
+              code.
+                a.button(href="#", role="button") Link
+                button.button button
+                input.button(type="submit", value="Submit")
 
           // Primary
           h3#h-primary.demo-head Primary
@@ -64,13 +65,14 @@ block content
             a.button.primary(href='#', role='button') Link
             button.button.primary Button
             input.button.primary(type='submit', value='Submit')
-          pre.code
-            //- <a href="#" class="button primary" role="button">Link</a>
-            //- <button class="button primary">Button</button>
-            //- <input type="submit" class="button primary" value="Submit">
-            |&lt;a href="#" class="button primary" role="button"&gt;Link&lt;/a&gt;
-            |&lt;button class="button primary"&gt;Button&lt;/button&gt;
-            |&lt;input type="submit" class="button primary" value="Submit"&gt;
+          .window
+            .icons: span
+            .title button--primary.pug
+            pre.language-jade
+              code.
+                a.button.primary(href="#", role="button") Link
+                button.button.primary button
+                input.button.primary(type="submit", value="Submit")
 
           // Outline
           h3#h-outline.demo-head Outline
@@ -81,10 +83,14 @@ block content
             a.button.outline(href='#', role='button') Link
             button.button.outline Button
             input.button.outline(type='submit', value='Submit')
-          pre.code
-            |&lt;a href="#" class="button outline" role="button"&gt;Link&lt;/a&gt;
-            |&lt;button class="button outline"&gt;Button&lt;/button&gt;
-            |&lt;input type="submit" class="button outline" value="Submit"&gt;
+          .window
+            .icons: span
+            .title button--outline.pug
+            pre.language-jade
+              code.
+                a.button.outline(href="#", role="button") Link
+                button.button.outline button
+                input.button.outline(type="submit", value="Submit")
 
           // Primary Outline
           h3#h-primary-outline.demo-head Primary Outline
@@ -96,10 +102,14 @@ block content
             a.button.primary.outline(href='index.html#', role='button') Link
             button.button.primary.outline Button
             input.button.primary.outline(type='submit', value='Submit')
-          pre.code
-            |&lt;a href="#" class="button primary outline" role="button"&gt;Link&lt;/a&gt;
-            |&lt;button class="button primary outline"&gt;Button&lt;/button&gt;
-            |&lt;input type="submit" class="button primary outline" value="Submit"&gt;
+          .window
+            .icons: span
+            .title button--primary-outline.pug
+            pre.language-jade
+              code.
+                a.button.primary.outline(href='index.html#', role='button') Link
+                button.button.primary.outline Button
+                input.button.primary.outline(type='submit', value='Submit')
 
           // Disabled
           h3#h-disabled.demo-head Disabled
@@ -108,11 +118,14 @@ block content
             a.button.disabled(href='index.html#', role='button') Link
             button.button.primary(disabled='') Button
             input.button.primary.outline.disabled(type='submit', value='Submit')
-          pre.code
-            |&lt;a href="#" class="button disabled" href="index.html#" role="button"&gt;Link&lt;/a&gt;
-            |&lt;button class="button primary" disabled=""&gt;Button&lt;/button&gt;
-            |&lt;input type="submit" class="button primary outline disabled" value="Submit"&gt;
-
+          .window
+            .icons: span
+            .title button--disable.pug
+            pre.language-jade
+              code.
+                a.button.disabled(href='index.html#', role='button') Link
+                button.button.primary(disabled='') Button
+                input.button.primary.outline.disabled(type='submit', value='Submit')
 
           // Width
           h3#h-width.demo-head Width
@@ -124,9 +137,13 @@ block content
             button.button.primary.width-100 Button 100%
           p
             button.button.primary.width-50 Button 50%
-          pre.code
-            |&lt;button class="button primary width-100"&gt;Button 100%&lt;/button&gt;
-            |&lt;button class="button primary width-50"&gt;Button 50%&lt;/button&gt;
+          .window
+            .icons: span
+            .title button--width.pug
+            pre.language-jade
+              code.
+                button.button.primary.width-100 Button 100%
+                button.button.primary.width-50 Button 50%
 
 
           // Grouped
@@ -139,13 +156,15 @@ block content
             button.button.outline Button
             button.button.outline.disabled Button
             button.button.outline Button
-          pre.code
-            |&lt;p class="buttons group"&gt;
-            |   &lt;button class="button outline"&gt;Button&lt;/button&gt;
-            |   &lt;button class="button outline disabled"&gt;Button&lt;/button&gt;
-            |   &lt;button class="button outline"&gt;Button&lt;/button&gt;
-            |&lt;/button&gt;
-
+          .window
+            .icons: span
+            .title button--grouped.pug
+            pre.language-jade
+              code.
+                p.buttons.group
+                  button.button.outline Button
+                  button.button.outline.disabled Button
+                  button.button.outline Button
 
   include ../../_footer
 
