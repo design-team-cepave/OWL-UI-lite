@@ -36,6 +36,7 @@
   display: flex;
   flex-flow: row wrap;
   position: relative;
+  margin-bottom: 40px;
   code, pre {
     color: $grey-light;
   }
@@ -77,7 +78,7 @@
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
     color: #fff;
-    overflow: scroll;
+    overflow: visible;
     padding: 2.5em;
     width: 100%;
     -webkit-font-smoothing: antialiased;
