@@ -20,8 +20,22 @@
   &.outline,
   &.outline:disabled:hover,
   &.outline.disabled:hover {
-    color: rgba($back-color,1);
-    border-color: rgba($back-color,1);
+    color: $text-color;
+    border-color: $text-color;
     background: none;
   }
+}
+
+
+@mixin button-fill($text-color, $back-color) {
+
+  color: $text-color;
+  background-color: $back-color;
+}
+
+@mixin button-outline($text-color, $back-color) {
+
+  color: $back-color;
+  border-color: $back-color;
+  background-color: transparent;
 }

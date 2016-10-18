@@ -1,4 +1,7 @@
 // Default
+$button-text-color-default: rgba(0, 0, 0, .6);
+$button-border-color-default: rgba(0,0,0,.2);
+
 button,
 .button {
   font-family: $font-family;
@@ -13,14 +16,13 @@ button,
   border: $button-outline-border-size solid transparent;
   vertical-align: middle;
   -webkit-appearance: none;
-  color: #000;
-  background-color: $button-background-color;
+  @include button-fill(#000, $button-background-color);
   border-radius: $button-border-radius;
 }
 button:hover,
 .button:hover {
+  @include button-fill($button-text-color-default, $button-background-color);
   outline: none;
-  color: rgba(0, 0, 0, .6);
   text-decoration: none;
   box-shadow: inset 0 0 0 30px rgba(0, 0, 0, .1);
 }
@@ -29,7 +31,7 @@ button:hover,
 .button.disabled {
   cursor: default;
   font-style: normal;
-  opacity: .5;
+  opacity: .4;
   &:hover {
     color: #000;
     box-shadow: none;
@@ -42,15 +44,13 @@ button:hover,
   font-weight: $button-outline-font-weight;
 }
 .button.outline:hover {
-  color: rgba(0,0,0,.6);
-  border-color: rgba(0,0,0,.2);
+  @include button-outline($button-text-color-default, $button-border-color-default);
   box-shadow: none;
 }
 .button.outline,
 .button.outline:disabled:hover,
 .button.outline.disabled:hover {
-  color: rgba(0,0,0,.8);
-  border-color: rgba(0,0,0,.4);
+  @include button-outline($button-text-color-default, $button-border-color-default);
 }
 
 // Sizes
@@ -80,12 +80,32 @@ button:hover,
 
 // Primary
 .button.primary {
-  @include button(#fff, $color-primary);
-}
 
+  @include button-fill(white, $color-primary);
+  &:focus,
+  &:hover {
+    @include button-fill(white, $color-primary-Dark);
+  }
+  &:disabled:hover,
+  &.disabled:hover {
+    @include button-fill(white, $color-primary);
+  }
+
+  &.outline {
+    @include button-outline($color-primary, $color-primary);
+    &:focus,
+    &:hover {
+      @include button-fill(white, $color-primary);
+    }
+    &:disabled:hover,
+    &.disabled:hover {
+      @include button-outline($color-primary, $color-primary);
+    }
+  }
+}
 // Inverted
 .button.inverted {
-  @include button(#000, #fff);
+  @include button(#000, white);
 }
 
 // Grouped
@@ -94,7 +114,7 @@ button:hover,
   display: inline-block;
   vertical-align: bottom;
 
-  & .button {
+  .button {
     float: left;
     margin-left: -1px;
     border-radius: 0;
