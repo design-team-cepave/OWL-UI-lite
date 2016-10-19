@@ -84,7 +84,7 @@ button:hover,
   @include button-fill(white, $color-primary);
   &:focus,
   &:hover {
-    @include button-fill(white, $color-primary-Dark);
+    @include button-fill(white, $color-primary-dark);
   }
   &:disabled:hover,
   &.disabled:hover {
