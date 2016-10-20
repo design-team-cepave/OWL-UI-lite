@@ -39,12 +39,24 @@ $font-family-heading   : $font-family;
 $font-family-monospace : Consolas, Monaco, 'Courier New', monospace !default;
 $font-size-regular     : 14px;
 $font-size-smaller     : $font-size-regular - 3px;
+$text-color-body       : $color-gray-dark;
 
 
 // =============
 // Buttons
 // =============
 $button-border-radius: 0;
+$button-padding: $beta $zeta;
+$ui-height            : 34px;
+$ui-line-height       : 18px;
+
+
+// =============
+// Tables
+// =============
+$table-border: 1px solid $color-gray-lighter;
+$table-striped-background-color: $color-gray-lightest;
+$table-hover-background-color: rgba($color-secondary-blue, .1);
 
 
 // =============

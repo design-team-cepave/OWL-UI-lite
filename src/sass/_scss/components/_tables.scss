@@ -17,8 +17,8 @@ td {
 }
 th,
 td {
-  padding: ($base-unit * 4);
-  padding-bottom: ($base-unit * 4) - 1px;
+  padding: ($base-unit * 3);
+  padding-bottom: ($base-unit * 3) - 1px;
   border-bottom: $table-border;
   &:first-child {
     padding-left: 0;
@@ -47,8 +47,18 @@ table.bordered {
 }
 
 // Striped
-table.striped tr:nth-child(odd) td {
-  background: $table-striped-background-color;
+table.striped {
+  tr {
+    &:nth-child(odd) td {
+      background: $table-striped-background-color;
+    }
+    &:hover {
+      td {
+        background: $table-hover-background-color;
+      }
+    }
+  }
+
 }
 
 table.bordered,
@@ -56,14 +66,22 @@ table.striped {
   td,
   th {
     &:first-child {
-      padding-left: ($base-unit * 4);
+      padding-left: ($base-unit * 3);
     }
     &:last-child {
-      padding-right: ($base-unit * 4);
+      padding-right: ($base-unit * 3);
     }
   }
 }
 
+// Hover
+table {
+  tr:hover {
+    td {
+      background: $table-hover-background-color;
+    }
+  }
+}
 // Flat
 table.flat {
   td,
