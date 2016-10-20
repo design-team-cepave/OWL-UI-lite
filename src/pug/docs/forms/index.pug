@@ -1,0 +1,734 @@
+extends ../../_base
+
+block head
+  - var root_path = '../../'
+  include ../../_head
+
+block content
+  - var root_path = '../../'
+  #header
+    #header-brand
+      a(href='http://cepave.com/') Cepave
+  #main
+    #hero
+      h1 Forms
+      p#hero-lead
+        |OWL UI lite 完整定義所有表單元件，統一了主流瀏覽器的預設差異，可以利用他們來在網頁上完成所有與使用者的互動行為！
+      nav#hero-subnav
+        ul
+          li: a(href=root_path) Download
+          li: a(href=root_path+'/docs/') Documentation
+
+    .row
+      .col.col-3
+        nav.nav-contents
+          ul
+            li: a(href='index.html#h-base') Base
+            li: a(href='index.html#h-input') Input
+            li: a(href='index.html#h-checkboxes') Checkboxes & Radio
+            li: a(href='index.html#h-fieldset') Fieldset
+            li: a(href='index.html#h-width') Width
+            li: a(href='index.html#h-states') States
+            li: a(href='index.html#h-required') Required
+            li: a(href='index.html#h-descriptions') Descriptions
+            li: a(href='index.html#h-disabled') Disabled
+            li: a(href='index.html#h-append-prepend') Append & Prepend
+            li: a(href='index.html#h-button-append') Button Append
+            li: a(href='index.html#h-examples') More Examples
+      .col.col-9
+        #owl-ui-lite-component
+
+          // Base
+          h3#h-base.demo-head Base
+          p 這是表單最基本的所有基本輸入元件
+          form.form(method='post', action='', autocomplete='off')
+            .form-item
+              label 帳號
+              input.width-50(type='email', name='email')
+            .form-item
+              label 密碼
+              input(type='password', name='password')
+            .form-item
+              select.select
+                option(value='') 選擇我
+            .form-item.checkboxes
+              label
+                input(type='checkbox')
+                | 勾選
+              label
+                input(type='radio')
+                | 選擇
+            .form-item
+              textarea(rows='6')
+            label.form-item.checkbox
+              input(type='checkbox')
+              | 選擇
+            .form-item
+              button.button 取消
+              button.button.primary 登入
+          .window
+            .icons: span
+            .title form--base.pug
+            pre.language-jade
+              code.
+                form.form(method="post", action=", autocomplete="off")
+                  .form-item
+                    label 帳號
+                    input.width-50(type="email", name="email")
+                  .form-item
+                    label 密碼
+                    input(type="password", name="password")
+                  .form-item
+                    select.select
+                      option(value=") 選擇我
+                  .form-item.checkboxes
+                    label
+                      input(type="checkbox")
+                      | 勾選
+                    label
+                      input(type="radio")
+                      | 選擇
+                  .form-item
+                    textarea(rows="6")
+                  label.form-item.checkbox
+                    input(type="checkbox")
+                    | 選擇
+                  .form-item
+                    button.button 取消
+                    button.button.primary 登入
+
+          // Input
+          h3#h-input.demo-head Inputs
+          p
+            |下面是一個標準的文字輸入框
+            code type
+            |設置為
+            var text
+            |。
+            |之前為標籤
+            code Label
+            |，而後為一帶
+            var desc
+            |樣式的
+            code div
+            |，可作為一個選用的描述。
+          form.form
+            .form-item
+              label 標籤
+              input(type='text')
+              .desc 這裡的資訊有助於我們填寫內容.
+          .window
+            .icons: span
+            .title form--input.pug
+            pre.language-jade
+              code.
+                form.form
+                  .form-item
+                    label 標籤
+                    input(type='text')
+                    .desc 這裡的資訊有助於我們填寫內容.
+          p
+            |這裡有兩個文字輸入框，其中一個使用佔位符
+            code placeholder
+            |，另一個
+            code disabled
+            |。並設置為網格列寬
+            var col-6
+            |。
+          form.form
+            .row
+              .col.col-6
+                .form-item
+                  input(type='text', placeholder='這裡的資訊有助於我們填寫內容')
+              .col.col-6
+                .form-item
+                  input(type='text', disabled='true', value='停止改變的東西!')
+          .window
+            .icons: span
+            .title form--input.pug
+            pre.language-jade
+              code.
+                form.form
+                  .row
+                    .col.col-6
+                      .form-item
+                        input(type='text', placeholder='這裡的資訊有助於我們填寫內容')
+                    .col.col-6
+                      .form-item
+                        input(type='text', disabled='true', value='停止改變的東西!')
+          p
+            |這裡是如何用
+            var req
+            |樣式表示必填字段，並使用標籤
+            code span
+            |。並添加
+            var desc
+            |樣式，作為輔助資訊用途。
+          form.form
+            .row
+              .col.col-6
+                .form-item
+                  label
+                    | 標籤
+                    span.req *
+                  input(type='text')
+              .col.col-6
+                .form-item
+                  label
+                    | 標籤
+                    span.desc 這裡的資訊有助於我們填寫內容
+                  input(type='text')
+                  .desc 這裡的資訊有助於我們填寫內容
+          .window
+            .icons: span
+            .title form--input.pug
+            pre.language-jade
+              code.
+                form.form
+                  .row
+                    .col.col-6
+                      .form-item
+                        label
+                          | 標籤
+                          span.req *
+                        input(type='text')
+                    .col.col-6
+                      .form-item
+                        label
+                          | 標籤
+                          span.desc 這裡的資訊有助於我們填寫內容
+                        input(type='text')
+                        .desc 這裡的資訊有助於我們填寫內容
+
+          // Checkboxes & Radio
+          h3#h-checkboxes.demo-head Checkboxes & Radio
+          p
+            |齊全的複選框和單選按鈕。您可以簡單透過定義輸入框類型
+            var checkbox
+            |與
+            var radio
+            |的功能來使用。
+            |還有一個改變排列的選項，
+            |透過添加樣式
+            var checkbox-inline
+            |於容器，（同時適用於複選框和單選按鈕）
+          form.form(method='post', action='')
+            .form-item.checkboxes
+              label
+                input(type='checkbox')
+                | 勾選
+              label
+                input(type='checkbox')
+                | 勾選
+              label
+                input(type='checkbox')
+                | 勾選
+              label
+                input(type='checkbox')
+                | 勾選
+          .window
+            .icons: span
+            .title form--input.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item.checkboxes
+                    label
+                      input(type='checkbox')
+                      | 勾選
+                    label
+                      input(type='checkbox')
+                      | 勾選
+                    label
+                      input(type='checkbox')
+                      | 勾選
+                    label
+                      input(type='checkbox')
+                      | 勾選
+          form.form(method='post', action='')
+            .form-item.checkboxes-inline
+              label
+                input(type='checkbox')
+                | 勾選
+              label
+                input(type='checkbox')
+                | 勾選
+              label
+                input(type='checkbox')
+                | 勾選
+              label
+                input(type='checkbox')
+                | 勾選
+          .window
+            .icons: span
+            .title form--input.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item.checkboxes-inline
+                    label
+                      input(type='checkbox')
+                      | 勾選
+                    label
+                      input(type='checkbox')
+                      | 勾選
+                    label
+                      input(type='checkbox')
+                      | 勾選
+                    label
+                      input(type='checkbox')
+                      | 勾選
+          form.form(method='post', action='')
+            .form-item.checkboxes
+              label
+                input(name='check', type='radio')
+                | 核選
+              label
+                input(name='check', type='radio')
+                | 核選
+              label
+                input(name='check', type='radio')
+                | 核選
+              label
+                input(name='check', type='radio')
+                | 核選
+          .window
+            .icons: span
+            .title form--input.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item.checkboxes
+                    label
+                      input(name='check', type='radio')
+                      | 核選
+                    label
+                      input(name='check', type='radio')
+                      | 核選
+                    label
+                      input(name='check', type='radio')
+                      | 核選
+                    label
+                      input(name='check', type='radio')
+                      | 核選
+          form.form(method='post', action='')
+            .form-item.checkboxes-inline
+              label
+                input(name='check-again', type='radio')
+                | 核選
+              label
+                input(name='check-again', type='radio')
+                | 核選
+              label
+                input(name='check-again', type='radio')
+                | 核選
+              label
+                input(name='check-again', type='radio')
+                | 核選
+          .window
+            .icons: span
+            .title form--input.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item.checkboxes-inline
+                    label
+                      input(name='check-again', type='radio')
+                      | 核選
+                    label
+                      input(name='check-again', type='radio')
+                      | 核選
+                    label
+                      input(name='check-again', type='radio')
+                      | 核選
+                    label
+                      input(name='check-again', type='radio')
+                      | 核選
+
+          // Fieldset
+          h4#h-fieldset.demo-head Fieldset
+          p
+            |OWL UI lite 為字段集 Fieldset 作好的預先格式化。用來包裝群組表單中的
+            code fieldset
+            |標籤。
+          form.form(method='post', action='')
+            fieldset
+              legend 登入資訊
+              .form-item
+                label Email
+                input.width-50(type='email', name='user-email')
+              .form-item.end
+                label Password
+                input.width-50(type='password', name='user-password')
+            fieldset
+              legend 關於
+              .form-item
+                textarea(name='user-about', rows='5')
+              .form-item.end
+                button 送出
+          .window
+            .icons: span
+            .title form--input.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  fieldset
+                    legend 登入資訊
+                    .form-item
+                      label Email
+                      input.width-50(type='email', name='user-email')
+                    .form-item.end
+                      label Password
+                      input.width-50(type='password', name='user-password')
+                  fieldset
+                    legend 關於
+                    .form-item
+                      textarea(name='user-about', rows='5')
+                    .form-item.end
+                      button 送出
+
+          // Width
+          h4#h-width.demo-head Width
+          p
+            |遵循 OWL UI lite 的寬度設定規則，即可很容易操縱表單字段長度。例如：只需使用
+            var width-50
+            |樣式，使輸入框寬度相對於容器的寬 50％。
+          form.form(method='post', action='')
+            .form-item
+              input.width-50(type='text')
+          .window
+            .icons: span
+            .title form--width.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item
+                    input.width-50(type='text')
+
+          // States
+          h4#h-states.demo-head States
+          p OWL UI lite 有兩個不同的狀態：分別是成功與失敗。
+          form.form(method='post', action='')
+            .form-item
+              label
+                |帳號
+                span.success 作為顯示成功時的提示
+              input.success(type='text')
+          .window
+            .icons: span
+            .title form--states.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item
+                    label
+                      |帳號
+                      span.success 作為顯示成功時的提示
+                    input.success(type='text')
+          form.form(method='post', action='')
+            .form-item
+              label
+                |帳號
+                span.error 作為顯示失敗時的提示
+              input.error(type='text')
+          .window
+            .icons: span
+            .title form--width.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item
+                    label
+                      |帳號
+                      span.error 作為顯示失敗時的提示
+                    input.error(type='text')
+
+          // Required
+          h4#h-required.demo-head Required
+          p
+            |必要欄位使用情境：需要添加使用者的視覺線索，可以透過設置屬性
+            var required
+            |，
+            |伴隨
+            code span
+            | 設置
+            var req
+            |樣式表現
+          form.form(method='post', action='')
+            .form-item
+              label
+                |帳號
+                span.req *
+              input.width-50(type='text', name='user-name')
+          .window
+            .icons: span
+            .title form--required.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item
+                    label
+                      |帳號
+                      span.req *
+                    input.width-50(type='text', name='user-name')
+
+          // Descriptions
+          h4#h-descriptions.demo-head Descriptions
+          p
+            | 使用描述很簡單，只需將表單的元素設置為
+            var desc
+            | 樣式
+          form.form(method='post', action='')
+            .form-item
+              label
+                |帳號
+                span.desc 一直都覺得這很重要
+              input.width-50(type='text', name='user-name')
+            .form-item
+              label 帳號
+              input.width-50(type='text', name='user-name')
+              .desc 請輸入您的帳號
+          .window
+            .icons: span
+            .title form--descriptions.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item
+                    label
+                      |帳號
+                      span.desc 一直都覺得這很重要
+                    input.width-50(type='text', name='user-name')
+                  .form-item
+                    label 帳號
+                    input.width-50(type='text', name='user-name')
+                    .desc 請輸入您的帳號
+
+          // Disabled
+          h4#h-disabled.demo-head Disabled
+          p
+            |禁用輸入框，不論文字、複選框或單選按鈕。只需添加
+            var disabled
+            |屬性即可
+          p
+            input.width-50(type='text', value='Text', disabled='')
+          p
+            input(type='checkbox', disabled='')
+            | 單選
+          p
+            input(type='radio', disabled='')
+            | 複選按鈕
+          textarea.width-50(disabled='') Text
+          br
+          p
+            select.width-50(disabled='')
+              option Item
+          .window
+            .icons: span
+            .title form--disabled.pug
+            pre.language-jade
+              code.
+                p
+                  input.width-50(type='text', value='Text', disabled='')
+                p
+                  input(type='checkbox', disabled='')
+                  | 單選
+                p
+                  input(type='radio', disabled='')
+                  | 複選按鈕
+                textarea.width-50(disabled='') Text
+                br
+                p
+                  select.width-50(disabled='')
+                    option Item
+
+          // Append & Prepend
+          h4#h-append-prepend.demo-head Append & Prepend
+          p 您可以在輸入框的前面或後面附加某些元素，如輸入框內容的單位。
+          form.form(method='post', action='')
+            .form-item
+              label 輸入檢索字串
+              .controls.width-50
+                span 不可輸入!@#$%^&*()
+                input(type='text')
+          .window
+            .icons: span
+            .title form--append_prepend.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item
+                    label 輸入檢索字串
+                    .controls.width-50
+                      span= '不可輸入!@#$%^&'
+
+          form.form(method='post', action='')
+            .form-item
+              label 流出安全上限
+              .controls.width-50
+                input(type='text')
+                span.append kb
+          .window
+            .icons: span
+            .title form--width.pug
+            pre.language-jade
+              code.
+                .form-item
+                  label 流出安全上限
+                  .controls.width-50
+                    input(type='text')
+                    span.append kb
+
+          // Button Append
+          h4#h-button-append.demo-head Button Append
+          p 您可以在輸入框的後面附加按鈕
+          form.form(method='post', action='')
+            .form-item
+              label 標籤
+              .controls.width-50
+                input(type='text', name='search', placeholder='搜尋...')
+                button.button.primary 搜尋
+          .window
+            .icons: span
+            .title form--button-append.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item
+                    label 標籤
+                    .controls.width-50
+                      input(type='text', name='search', placeholder='搜尋...')
+                      button.button.primary 搜尋
+
+          // More Examples
+          h4#h-examples.demo-head More Examples
+          p
+            |更多的使用範例，可以已任意使用
+
+          form.form.form-inline(method='post', action='')
+            .form-item
+              label 告警條件
+              |&nbsp;tags:&nbsp;
+              input.width-50(type='text', name='tags', size='20')
+              |&nbsp;max:&nbsp;
+              input(type='text', name='max', size='4')
+              |&nbsp;P:&nbsp;
+              input(type='text', name='P', size='3')
+              |&nbsp;note:&nbsp;
+              input(type='text', name='note', size='20')
+              .desc 這個很重要，必須伴隨告警發生的經驗來調整
+          .window
+            .icons: span
+            .title form--inline.pug
+            pre.language-jade
+              code.
+                form.form.form-inline(method='post', action='')
+                  .form-item
+                    label 告警條件
+                    |&nbsp;tags:&nbsp;
+                    input.width-50(type='text', name='tags', size='20')
+                    |&nbsp;max:&nbsp;
+                    input(type='text', name='max', size='4')
+                    |&nbsp;P:&nbsp;
+                    input(type='text', name='P', size='3')
+                    |&nbsp;note:&nbsp;
+                    input(type='text', name='note', size='20')
+                    .desc ...
+          form.form(method='post')
+            .row
+              .col.col-6
+                .form-item
+                  label 模版名稱
+                  input(type='text')
+              .col.col-6
+                .form-item
+                  label Metric
+                  select
+                    option(value='1') 選擇監控項
+                    option(value='2') cpu.busy
+                    option(value='3') http.response.time
+            .form-item
+              label 備註
+              textarea(rows='4')
+          .window
+            .icons: span
+            .title form--grid.pug
+            pre.language-jade
+              code.
+                form.form(method='post')
+                  .row
+                    .col.col-6
+                      .form-item
+                        label 模版名稱
+                        input(type='text')
+                    .col.col-6
+                      .form-item
+                        label Metric
+                        select
+                          option(value='1') 選擇監控項
+                          option(value='2') cpu.busy
+                          option(value='3') http.response.time
+                  .form-item
+                    label 備註
+                    textarea(rows='4')
+          form.form(method='post', action='')
+            .row
+              .col.col-6
+                .form-item
+                  label Metric
+                  select
+                    option ---
+                  .desc 選擇監控項
+              .col.col-6
+                .form-item
+                  br
+                  button.button.primary 送出
+          .window
+            .icons: span
+            .title form--grid.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .row
+                    .col.col-6
+                      .form-item
+                        label Metric
+                        select
+                          option ---
+                        .desc 選擇監控項
+                    .col.col-6
+                      .form-item
+                        br
+                        button.button.primary 送出
+          form.form(method='post', action='')
+            .form-item
+              label Text
+              textarea(rows='4')
+          .window
+            .icons: span
+            .title form--textarea-width-50.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item
+                    label Text
+                    textarea(rows='4')
+          form.form(method='post', action='')
+            .form-item
+              label Text
+              textarea.width-50(rows='4')
+          .window
+            .icons: span
+            .title form--textarea-width.pug
+            pre.language-jade
+              code.
+                form.form(method='post', action='')
+                  .form-item
+                    label Text
+                    textarea.width-50(rows='4')
+
+  include ../../_footer
+
+block script
+  - var root_path = '../../'
+  include ../../_script
