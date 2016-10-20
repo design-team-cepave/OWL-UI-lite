@@ -1,35 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Source+Code+Pro:700);
-
-// $font-size: 16px;
-// $width: 800px;
-
-
-// * {
-//   padding: 0;
-//   margin: 0;
-// }
-
-// body{
-//   align-items: center;
-//   background: $blue;
-//   display: flex;
-//   font: bold $font-size 'Lato', arial, sans-serif;
-//   height: 100vh;
-//   justify-content: center;
-//   width: 100vw;
-// }
-
 .window {
-  $border-radius: 10px;
-
-  $black: #222;
-  $grey-dark: #999;
-  $grey-light: #ddd;
-  $blue: #09a3d5;
-  $purple: #8130c9;
-  $red: #e4514f;
-  $yellow: #f4c025;
-  $green: #3ec930;
+  $border-radius : $beta;
+  $black         : #222;
+  $grey-dark     : $color-gray-dark;
+  $grey-light    : $color-gray-lighter;
+  $blue          : #09a3d5;
+  $purple        : #8130c9;
+  $red           : #e4514f;
+  $yellow        : #f4c025;
+  $green         : #3ec930;
 
   background: $grey-light;
   border-radius: $border-radius;
@@ -40,7 +18,6 @@
   code, pre {
     color: $grey-light;
   }
-  // width: $width;
   .bar {
     align-items: center;
     justify-content: center;
@@ -76,16 +53,17 @@
     }
   }
   pre {
-    background: #222;
+    background: $color-gray-lightest;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
     color: #fff;
     overflow: visible;
-    padding: 2.5em;
+    padding: $delta $epsilon;
     width: 100%;
+    margin-bottom: $beta;
     -webkit-font-smoothing: antialiased;
     code {
-      font: bold #{1em}/#{1.75} 'Source Code Pro', monospace;
+      font: bold #{1em}/#{1.5} 'Source Code Pro', monospace;
 
       &:after {
         animation: blink 0.9s infinite;
@@ -108,7 +86,7 @@
       color: #A3BE8C;
     }
     &.plain-text {
-      color: #C0C5CE;
+      color: $color-gray;
     }
     &.string {
       color: #A3BE8C;
