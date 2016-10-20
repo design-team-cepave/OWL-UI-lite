@@ -1,0 +1,424 @@
+extends ../../_base
+
+block head
+  - var root_path = '../../'
+  include ../../_head
+
+block content
+  - var root_path = '../../'
+  #header
+    #header-brand
+      a(href='http://cepave.com/') Cepave
+  #main
+    #hero
+      h1 Grid
+      p#hero-lead
+        |OWL UI lite 使用響應設計理念，運用 Flexbox 的 12列網格基礎。可以靈活合併或分割水平列，在巢狀結構中完成水平或垂直居中，與各種各樣的畫面排版。下面是一些 OWL UI lite 的網格可以做什麼的例子
+      nav#hero-subnav
+        ul
+          li: a(href=root_path) Download
+          li: a(href=root_path+'/docs/') Documentation
+
+    .row
+      .col.col-3
+        nav.nav-contents
+          ul
+            li: a(href='index.html#h-columns') Columns
+            li: a(href='index.html#h-auto-width') Auto Width
+            li: a(href='index.html#h-centered') Centered
+            li: a(href='index.html#h-right') Right
+            li: a(href='index.html#h-pull-right') Pull Right
+            li: a(href='index.html#h-reordering') Reordering
+            li: a(href='index.html#h-splice') Splice
+            li: a(href='index.html#h-offset') Offset
+            li: a(href='index.html#h-blocks') Blocks
+            li: a(href='index.html#h-fixed-width') Fixed Width Column
+            li: a(href='index.html#h-nested') Nested
+            li: a(href='index.html#h-equal') Equal Height
+            li: a(href='index.html#h-vertical-align') Vertical Align
+      .col.col-9
+        #owl-ui-lite-component
+
+          .grid-demo
+            // Columns
+            h3#h-columns.demo-head Columns
+            p
+              |水平欄是構建網站區塊的基礎元素。下面是演示如何形成的
+            .row
+              .col.col-4
+                .item 4
+              .col.col-8
+                .item 8
+            .window
+              .icons: span
+              .title columns.pug
+              pre.language-jade
+                code.
+                  .row
+                    .col.col-4
+                      .item ...
+                    .col.col-8
+                      .item ...
+            .row
+              .col.col-12
+                .item 12
+            .row
+              .col.col-1
+                .item 1
+              .col.col-11
+                .item 11
+            .row
+              .col.col-2
+                .item 2
+              .col.col-10
+                .item 10
+            .row
+              .col.col-3
+                .item 3
+              .col.col-9
+                .item 9
+            .row
+              .col.col-4
+                .item 4
+              .col.col-8
+                .item 8
+            .row
+              .col.col-5
+                .item 5
+              .col.col-7
+                .item 7
+            .row
+              .col.col-6
+                .item 6
+              .col.col-6
+                .item 6
+
+            // Auto Width
+            h3#h-auto-width.demo-head Auto Width
+            .row
+              .col
+                .item auto
+              .col
+                .item auto
+              .col
+                .item auto
+            .window
+              .icons: span
+              .title columns-auto-width.pug
+              pre.language-jade
+                code.
+                  .row
+                    .col
+                      .item ...
+                    .col
+                      .item ...
+                    .col
+                      .item ...
+
+            // Centered
+            h3#h-centered.demo-head Centered
+            p
+              |水平居中水平列，只需添加
+              var .centered
+              |樣式
+            .row.row-back.centered
+              .col.col-6
+                .item 6
+            .window
+              .icons: span
+              .title columns-centered.pug
+              pre.language-jade
+                code.
+                  .row.row-back.centered
+                    .col.col-6
+                      .item ...
+            // Right
+            h3#h-right.demo-head Right
+            .row.right
+              .col.col-6
+                .item 6
+            .window
+              .icons: span
+              .title columns-right.pug
+              pre.language-jade
+                code.
+                  .row.right
+                    .col.col-6
+                      .item ...
+
+            // Pull Right
+            h3#h-pull-right.demo-head Pull Right
+            .row
+              .col.col-2
+                .item 2
+              .col.col-6.pull-right
+                .item 6
+            .window
+              .icons: span
+              .title columns-pull-right.pug
+              pre.language-jade
+                code.
+                  .row
+                    .col.col-2
+                      .item ...
+                    .col.col-6.pull-right
+                      .item ...
+
+            // Reordering
+            h3#h-reordering.demo-head Reordering
+            p Last
+            .row
+              .col.col-6.last
+                .item 6
+              .col.col-6
+                .item 6
+            .window
+              .icons: span
+              .title columns-last.pug
+              pre.language-jade
+                code.
+                  .row
+                    .col.col-6.last
+                      .item ...
+                    .col.col-6
+                      .item ...
+            p First
+            .row
+              .col.col-6
+                .item 6
+              .col.col-6.first
+                .item 6
+            .window
+              .icons: span
+              .title columns-first.pug
+              pre.language-jade
+                code.
+                  .row
+                    .col.col-6
+                      .item ...
+                    .col.col-6.first
+                      .item ...
+
+            // Splice
+            h3#h-splice.demo-head Splice
+            p
+              |為了使兩水平列之間有沒有間隙或外距，希望讓他們看起來“黏在一起”，只要在父層
+              code row
+              |加入
+              var .splice
+              |樣式
+            .row.splice
+              .col.col-5
+                .item 5
+              .col.col-7
+                .item 7
+            .window
+              .icons: span
+              .title columns-splice.pug
+              pre.language-jade
+                code.
+                  .row.splice
+                    .col.col-5
+                      .item ...
+                    .col.col-7
+                      .item ...
+
+            // Offset
+            h3#h-offset.demo-head Offset
+            p
+              |將水平列偏移的例子，使用
+              var offset-6
+              |樣式，將
+              var col col-3
+              |作空間推移。(被設定之元素之後的元素也會一併被推擠)
+            .row
+              .col.col-3.offset-6
+                .item 3
+              .col.col-3
+                .item 3
+            .window
+              .icons: span
+              .title columns-offset.pug
+              pre.language-jade
+                code.
+                  .row
+                    .col.col-3.offset-6
+                      .item ...
+                    .col.col-3
+                      .item ...
+
+            // Blocks
+            h3#h-blocks.demo-head Blocks
+            p
+              |這有一點點小魔術。我們只需要設置區塊的尺寸，其餘的 OWL UI lite 會搞定
+            .row
+              .col.col-6
+                .item 50%
+              .col.col-6
+                .item 50%
+              .col.col-6
+                .item 50%
+              .col.col-6
+                .item 50%
+            .window
+              .icons: span
+              .title columns-block.pug
+              pre.language-jade
+                code.
+                  .row
+                    .col.col-6
+                      .item ...
+                    .col.col-6
+                      .item ...
+                    .col.col-6
+                      .item ...
+                    .col.col-6
+                      .item ...
+
+            // Column Fixed Width
+            h3#h-fixed-width.demo-head Fixed Width Column
+            p
+              |這也是 OWL UI lite 的法寶之一。您可以設置一個固定寬度的水平列，不受縮放的影響。
+            .row-layout
+              #fixed-sidebar.col-fixed
+                .item.item-dark 側邊欄
+              .col-fluid
+                .item 內容區塊
+            .row-layout
+              #fixed-sidebar.col-fixed
+                .item.item-dark 側邊欄
+              .col-fluid
+                .item 內容區塊
+              #fixed-sidebar-right.col-fixed
+                .item.item-dark 側邊欄2
+            .window
+              .icons: span
+              .title columns-block.scss
+              pre.language-jade
+                code.
+                  <!-- scss -->
+                  #fixed-sidebar {
+                    @include flex-fixed-width(200px);
+                  }
+                  #fixed-sidebar-right {
+                    @include flex-fixed-width(300px);
+                  }
+            .window
+              .icons: span
+              .title columns-block.jade
+              pre.language-jade
+                code.
+                  .row-layout
+                    #fixed-sidebar.col-fixed 側邊欄
+                    .col-fluid 內容區塊
+
+                  .row-layout
+                    #fixed-sidebar.col-fixed Sidebar
+                    .col-fluid Content
+                    #fixed-sidebar-right.col-fixed 側邊欄2
+
+            // Nested
+            h3#h-nested.demo-head Nested
+            p
+              |這個是水平列巢狀結構的例子。在這個例子，最外層有一個
+              var .row
+              |欄，其中使用
+              var .col col-6
+              |分隔為兩列，並設定其中一個
+              code div
+              |元素為
+              var .row end
+              |的樣式來表示，再其中對插入三個水平列。
+            .row
+              .col.col-6
+                .item 6
+              .col.col-6
+                .row.end.demo-nested
+                  .col.col-4
+                    .item 4
+                  .col.col-4
+                    .item 4
+                  .col.col-4
+                    .item 4
+            .window
+              .icons: span
+              .title columns-nested.jade
+              pre.language-jade
+                code.
+                  .row
+                    .col.col-6
+                      |...
+                    .col.col-6
+                      .row
+                        .col.col-4 ...
+                        .col.col-4 ...
+                        .col.col-4 ...
+
+            // Equal
+            h3#h-equal.demo-head Equal Height
+            p
+              |這個是垂直等高的例子。在這個例子，設置方式非常的簡單，之需最外層的
+              var .row
+              |附加樣式
+              var .equal
+              |即可
+            .row.equal
+              .col.col-4
+                .item 1
+              .col.col-4
+                .item
+                  | 1
+                  br
+                  | 2
+                  br
+                  | 3
+                  br
+                  | 4
+              .col.col-4
+                .item 2
+            .window
+              .icons: span
+              .title columns-equal-height.jade
+              pre.language-jade
+                code.
+                  .row.equal
+                    .col.col-4 ...
+                    .col.col-4
+                      .item ...
+                    .col.col-4
+                      .item ...
+
+            // Vertical Align
+            h3#h-vertical-align.demo-head Vertical Align
+            p
+              |不久前，想要使用 CSS 垂直水平對齊區塊元素幾乎是不可能的事。多虧了 Flexbox 的屬性，因此再也不需要什麼奇奇怪怪的方式了。
+            #aligner
+              div
+                | Lorem Ipsum，也称乱数假文或者哑元文本， 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
+            .window
+              .icons: span
+              .title columns-vertical_align.scss
+              pre.language-jade
+                code.
+                  #aligner {
+
+                    @include flex;
+                    @include flex-middle;
+                    @include flex-center;
+
+                    min-height: 500px;
+                    margin: 24px 0;
+                    border: 1px solid #eee;
+
+                    div {
+                      max-width: 50%;
+                      background: #eee;
+                      padding: 24px;
+                    }
+                  }
+
+  include ../../_footer
+
+block script
+  - var root_path = '../../'
+  include ../../_script

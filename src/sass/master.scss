@@ -218,5 +218,55 @@ body, h1, h2, h3, h4, h5, h6, .button {
   padding-bottom: 100%;
 }
 
+.grid-demo {
+  .row-back {
+    background: #ecf6f8;
+  }
+  .row {
+    margin-bottom: 24px;
+  }
+  .item {
+    background: #e1eef0;
+    font-size: 11px;
+    padding: 8px 10px;
+    text-align: center;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .item-dark {
+    background: #cee0e2;
+  }
+  .demo-nested .col {
+    background: #fff;
+  }
+  .row-layout {
+    margin-bottom: 24px;
+  }
+}
+
+#fixed-sidebar {
+  @include flex-fixed-width(200px);
+}
+
+#fixed-sidebar-right {
+  @include flex-fixed-width(300px);
+}
+
+#aligner {
+  @include flex;
+  @include flex-middle;
+  @include flex-center;
+
+  min-height: 500px;
+  margin: 24px 0;
+  border: 1px solid #eee;
+  div {
+    max-width: 50%;
+    background: #eee;
+    padding: 24px;
+  }
+}
+
+
 @import "_module/window";
 
