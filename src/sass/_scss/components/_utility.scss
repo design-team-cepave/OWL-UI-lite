@@ -139,10 +139,15 @@ input.round {
 
 // Forms
 .req {
-  font-weight: bold;
-  color: $color-error;
-  font-size: 1.1em;
-  text-transform: none;
+  display: inline;
+  color: transparent;
+  &:after {
+    content: '*';
+    font-size: 1.1em;
+    font-weight: bold;
+    color: $color-error;
+    text-transform: none;
+  }
 }
 
 // Close

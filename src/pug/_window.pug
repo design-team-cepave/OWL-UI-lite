@@ -1,0 +1,8 @@
+mixin window(title)
+  .window
+    .icons: span
+    .title= title
+    pre.language-jade
+      != '<code>'
+      block
+      != '</code>'

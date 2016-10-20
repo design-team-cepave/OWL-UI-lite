@@ -20,7 +20,7 @@ input[type="password"] {
   -webkit-appearance: none;
   background: $input-background-color;
   border: $input-border-size solid $input-border-color;
-  border-radius: 2px;
+  border-radius: $form-border-radius;
 }
 
 select,
@@ -29,7 +29,7 @@ textarea {
   width: 100%;
   line-height: 1.75;
   padding: $input-padding;
-  border-radius: 2px;
+  border-radius: $form-border-radius;
   background: $input-background-color;
   border: $input-border-size solid $input-border-color;
 }
@@ -50,6 +50,7 @@ input:focus {
   outline: none;
   background: $input-focus-background-color;
   border-color: $input-focus-border-color;
+  box-shadow: $input-focus-box-shadow;
 }
 
 textarea:disabled,
@@ -70,7 +71,7 @@ fieldset {
   padding: 39px 32px;
   margin-bottom: $base-line;
   border: $fieldset-border-size solid $fieldset-border-color;
-  border-radius: 4px;
+  border-radius: $form-border-radius;
 }
 legend {
   font-weight: bold;
@@ -220,6 +221,9 @@ select {
     background: none;
     background-color: rgba($color-error, .1);
     border: $input-border-size solid $color-error;
+    &:focus {
+      box-shadow: $input-error-box-shadow;
+    }
   }
 }
 input,
@@ -231,6 +235,9 @@ select {
     background: none;
     background-color: rgba($color-success, .1);
     border: $input-border-size solid $color-success;
+    &:focus {
+      box-shadow: $input-sucess-box-shadow;
+    }
   }
 }
 
@@ -259,7 +266,7 @@ select {
   }
 
   .button {
-    border-radius: 0 4px 4px 0;
+    border-radius: $form-border-radius;
   }
 }
 
