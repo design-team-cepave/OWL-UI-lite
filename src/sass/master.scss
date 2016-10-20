@@ -2,7 +2,7 @@
 @import "_scss/variables";
 @import "_scss/theming";
 @import "_scss/mixins";
-@import "_scss/animation";
+// @import "_scss/animation";
 
 
 body, h1, h2, h3, h4, h5, h6, .button {
@@ -265,6 +265,44 @@ body, h1, h2, h3, h4, h5, h6, .button {
     background: #eee;
     padding: 24px;
   }
+}
+
+// Label
+.demo-label .label {
+  margin-right: 8px;
+}
+.demo-label-inverted {
+  background: #222;
+  padding: 4px 8px;
+  padding-left: 16px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.label.custom {
+  background: $color-primary;
+  color: #fff;
+  a {
+    color: #fff;
+  }
+  &.outline {
+    border-color: $color-primary;
+    color: $color-primary;
+    a {
+      color: $color-primary;
+    }
+  }
+  &.tag {
+    background: none;
+    color: $color-primary;
+    a {
+      color: $color-primary;
+    }
+  }
+}
+
+// Breadcrumb
+#breadcrumb-custom-separator li:after {
+  content: '>';
 }
 
 
