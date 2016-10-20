@@ -52,7 +52,14 @@ input:focus {
   border-color: $input-focus-border-color;
   box-shadow: $input-focus-box-shadow;
 }
-
+input{
+  &[type="radio"],
+  &[type="checkbox"] {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
 textarea:disabled,
 select:disabled,
 input:disabled,
