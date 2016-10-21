@@ -3,7 +3,11 @@ select,
 textarea,
 fieldset {
   font-family: $font-family;
-  font-size: $ui-font-size;
+  font-size: $ui-font-size-small;
+  color: inherit;
+  @include input-placeholder {
+    color: $input-place-hold-color;
+  }
 }
 
 input[type="email"],
@@ -27,7 +31,6 @@ select,
 textarea {
   display: block;
   width: 100%;
-  line-height: 1.75;
   padding: $input-padding;
   border-radius: $form-border-radius;
   background: $input-background-color;
@@ -52,9 +55,11 @@ input:focus {
   border-color: $input-focus-border-color;
   box-shadow: $input-focus-box-shadow;
 }
-input{
+input {
   &[type="radio"],
   &[type="checkbox"] {
+    margin-right: $beta;
+    top: -1px;
     &:focus {
       box-shadow: none;
     }
@@ -70,12 +75,12 @@ input.disabled {
   opacity: $input-disabled-opacity;
   cursor: default;
   font-style: italic;
-  color: $input-disabled-color;
+  // color: $input-disabled-color;
 }
 
 // Fieldset
 fieldset {
-  padding: 39px 32px;
+  padding: $iota $zeta $zeta;
   margin-bottom: $base-line;
   border: $fieldset-border-size solid $fieldset-border-color;
   border-radius: $form-border-radius;
@@ -121,10 +126,11 @@ legend {
   }
 
   label {
-    font-size: $label-font-size;
+    font-size: $form-label-font-size;
     color: $label-color;
     font-weight: $label-font-weight;
     display: block;
+    margin-bottom: $alpha;
   }
 
   .checkboxes label,
@@ -133,11 +139,11 @@ legend {
     font-weight: normal;
     cursor: pointer;
     color: inherit;
-    font-size: $ui-font-size + 1px;
+    font-size: $ui-font-size-small;
   }
 
   .checkboxes label {
-    margin-bottom: 8px;
+    margin-bottom: $alpha;
     &:last-child {
       margin-bottom: 0;
     }
@@ -149,7 +155,7 @@ legend {
       font-size: inherit;
       color: inherit;
       display: inline-block;
-      margin-right: 16px;
+      margin-right: $delta;
       text-transform: none;
       font-weight: normal;
     }
@@ -161,7 +167,7 @@ legend {
   div.success {
     text-transform: none;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   span.error,
@@ -205,7 +211,7 @@ select.big {
 .desc {
   text-transform: none;
   margin-top: 4px;
-  color: rgba(0, 0, 0, .5);
+  color: rgba($color-gray-darker, .5);
   font-size: 12px;
   line-height: $base-line-small;
   font-weight: normal;

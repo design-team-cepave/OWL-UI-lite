@@ -1,48 +1,54 @@
-.breadcrumb {
-  font-size: $ui-font-size-small;
-  margin-bottom: $base-line;
-}
-.breadcrumb ul {
-  @include flex;
-  @include flex-middle;
-}
-.breadcrumb.centered ul {
-  @include flex-center;
-}
-.breadcrumb em,
-.breadcrumb a {
+%breadcrumb-item {
   font-style: normal;
-  padding: 0 10px;
+  padding: $breadcrumb-item-padding;
   display: inline-block;
   white-space: nowrap;
 }
-.breadcrumb em {
-  color: rgba(0, 0, 0, .5);
-}
-.breadcrumb a {
-  color: #000;
-  text-decoration: none;
-  &:hover {
-    @include transition;
-    color: rgba(0, 0, 0, .6);
-    text-decoration: underline;
+.breadcrumb {
+  font-size: $ui-font-size;
+  margin-bottom: $base-line;
+  ul {
+    @include flex;
+    @include flex-middle;
   }
-}
-.breadcrumb li:after {
-  display: inline-block;
-  content: '/';
-  color: rgba(0, 0, 0, .4);
-}
-.breadcrumb li:last-child:after {
-  display: none;
-}
-.breadcrumb li:first-child em,
-.breadcrumb li:first-child a {
-  padding-left: 0;
-}
-.breadcrumb li.active em,
-.breadcrumb li.active a {
-  text-decoration: none;
-  cursor: text;
-  color: rgba(0, 0, 0, .4);
+  &.centered ul {
+    @include flex-center;
+  }
+  &.right ul {
+    @include flex-right;
+  }
+  em {
+    @extend %breadcrumb-item;
+    color: $breadcrumb-item-text-hover-color;
+  }
+  a {
+    @extend %breadcrumb-item;
+    color: $breadcrumb-item-text-link-color;
+    text-decoration: none;
+    &:hover {
+      @include transition;
+      color: $breadcrumb-item-text-color;
+      text-decoration: underline;
+    }
+  }
+  li {
+    &:after {
+      display: inline-block;
+      content: '/';
+      color: $breadcrumb-separator-color;
+    }
+    &:last-child:after {
+      display: none;
+    }
+    &:first-child em,
+    &:first-child a {
+      padding-left: 0;
+    }
+    &.active em,
+    &.active a {
+      text-decoration: none;
+      cursor: text;
+      color: $breadcrumb-separator-color;
+    }
+  }
 }

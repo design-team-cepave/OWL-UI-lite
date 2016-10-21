@@ -1,62 +1,61 @@
+// label base
 .label {
-  font-size: 10px;
+  font-size: $label-font-size;
   font-weight: normal;
   display: inline;
-  line-height: 1;
-  top: -1px;
+  line-height: $label-line-height;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: $label-border-radius;
+  border: $label-border-border;
   position: relative;
   vertical-align: middle;
-  color: #000;
+  color: $label-text-color;
   background: $color-default;
-  padding: 2px 8px;
+  padding: $label-padding;
   letter-spacing: .01em;
   a, a:hover {
-    color: #000;
+    color: $label-text-color;
     text-decoration: none;
+    display: inline-block;
   }
 }
-.label {
 
+// label states
+.label {
   &.primary {
-    @include label(#fff, $color-primary);
+    @include label($color-gray-lightest, $color-primary);
   }
   &.error {
-    @include label(#fff, $color-error);
+    @include label($color-gray-lightest, $color-error);
   }
   &.success {
-    @include label(#fff, $color-success);
+    @include label($color-gray-lightest, $color-success);
   }
   &.warning {
-    @include label(#000, $color-warning);
+    @include label($color-gray-darker, $color-warning);
   }
   &.inverted {
-    @include label(#000, #fff);
+    @include label($color-gray-darker, $color-gray-lightest);
   }
   &.outline {
     background: none;
-    padding: 1px 7px;
-    border: 1px solid rgba(0, 0, 0, .2);
+    border: 1px solid rgba($color-primary-dark, .2);
     &, a {
-      color: rgba(0, 0, 0, .65);
+      color: rgba($color-gray-darker, .65);
     }
   }
 }
 
 // Badge
 .badge {
-  padding: 2px 6px;
+  padding: $badge-padding;
   border-radius: $base-line;
-}
-.badge.outline {
-  padding: 1px 5px;
 }
 
 // Tags
-.label{
+.label {
   .tag {
     padding: 0;
     background: none;
@@ -85,7 +84,7 @@
     }
     .inverted {
       &, a {
-        color: #fff;
+        color: $color-gray-lightest;
       }
     }
   }
@@ -98,8 +97,18 @@
     opacity: .6;
   }
 }
-h6 {
-  .label {
+
+.label {
+  h1 & {
+    top: -4px;
+  }
+  h2 & {
+    top: -2px;
+  }
+  h5 & {
+    top: -2px;
+  }
+  h6 & {
     top: -3px;
   }
 }
