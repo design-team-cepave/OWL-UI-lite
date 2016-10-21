@@ -11,21 +11,17 @@
 
   background: $grey-light;
   border-radius: $border-radius;
-  display: flex;
-  flex-flow: row wrap;
+  @include flex;
+  @include flex-flow(row wrap);
   position: relative;
   margin-bottom: 40px;
   code, pre {
     color: $color-gray;
   }
-  .bar {
-    align-items: center;
-    justify-content: center;
-  }
   .title {
     flex: 1;
     text-align: center;
-    padding: 0 0.75em;
+    padding: 0.35em 0.75em;
   }
   %icon {
     display: inline-block;
@@ -66,11 +62,11 @@
       font: bold #{1em}/#{1.5} 'Source Code Pro', monospace;
 
       &:after {
-        animation: blink 0.9s infinite;
+        animation: blink 0.75s infinite;
         font: initial;
         display: block;
         opacity: 1;
-        content: '\258b';
+        content: '|';
       }
     }
   }
@@ -106,7 +102,7 @@
     }
   }
   @keyframes blink {
-    0%  {
+    0% {
       opacity: 1;
     }
     50% {

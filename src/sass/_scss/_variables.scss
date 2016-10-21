@@ -43,14 +43,14 @@ $z-over-all     : 500;
 // Text font size
 $font-size-regular : 16px;
 
-$font-size-big     : $font-size-regular + 2px;
-$font-size-small   : $font-size-regular - 2px;
-$font-size-smaller : $font-size-regular - 3px;
+$font-size-big     : $font-size-regular + 2px; //18
+$font-size-small   : $font-size-regular - 2px; //14
+$font-size-smaller : $font-size-regular - 3px; //13
 
 // UI font size
-$ui-font-size       : $font-size-small;
-$ui-font-size-small : $font-size-smaller;
-$ui-font-size-big   : $font-size-big;
+$ui-font-size-big   : $font-size-big;     //18
+$ui-font-size       : $font-size-small;   //14
+$ui-font-size-small : $font-size-smaller; //13
 
 // Headings
 $font-size-title : 60px;
@@ -145,4 +145,5 @@ $ui-height-big        : 48px;
 $ui-line-height-big   : 46px;
 
 // Overlay
-$overlay-background-color: rgba(255, 255, 255, .9);
+$overlay-background-opacity : 0.9;
+$overlay-background-color   : linear-gradient(-1deg, rgba(7,9,56,0.90) 15%, rgba(69,40,130,0.90) 100%);;

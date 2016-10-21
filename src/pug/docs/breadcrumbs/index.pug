@@ -25,6 +25,7 @@ block content
           ul
             li: a(href='index.html#h-base') Base
             li: a(href='index.html#h-centered') Centered
+            li: a(href='index.html#h-right') Right
             li: a(href='index.html#h-separator') Custom Separator
       .col.col-9
         #owl-ui-lite-component
@@ -43,17 +44,17 @@ block content
                 a(href='index.html#') 頁面 3
               li.active
                 em 當前頁面
-            .window
-              .icons: span
-              .title button--primary.pug
-              pre.language-jade
-                code.
-                  nav.breadcrumb
-                    ul
-                      li
-                        a(href='#') ...
-                      li.active
-                        em ...
+          .window
+            .icons: span
+            .title breadcrumb--base.pug
+            pre.language-jade
+              code.
+                nav.breadcrumb
+                  ul
+                    li
+                      a(href='#') ...
+                    li.active
+                      em ...
 
           // Centered
           h3#h-centered.demo-head Centered
@@ -69,17 +70,43 @@ block content
                 a(href='index.html#') 頁面 3
               li.active
                 em 當前頁面
-            .window
-              .icons: span
-              .title button--primary.pug
-              pre.language-jade
-                code.
-                  nav.breadcrumb
-                    ul
-                      li
-                        a(href='#') ...
-                      li.active
-                        em ...
+          .window
+            .icons: span
+            .title breadcrumb--centered.pug
+            pre.language-jade
+              code.
+                nav.breadcrumb.centered
+                  ul
+                    li
+                      a(href='#') ...
+                    li.active
+                      em ...
+
+          // Right
+          h3#h-right.demo-head Right
+          nav.breadcrumb.right
+            ul
+              li
+                a(href='index.html#') 首頁
+              li
+                a(href='index.html#') 頁面 1
+              li
+                a(href='index.html#') 頁面 2
+              li
+                a(href='index.html#') 頁面 3
+              li.active
+                em 當前頁面
+          .window
+            .icons: span
+            .title breadcrumb--right.pug
+            pre.language-jade
+              code.
+                nav.breadcrumb.right
+                  ul
+                    li
+                      a(href='#') ...
+                    li.active
+                      em ...
 
           // Custom Separator
           h3#h-separator.demo-head Custom Separator
@@ -95,21 +122,21 @@ block content
                 a(href='index.html#') 頁面 3
               li.active
                 em 當前頁面
-            .window
-              .icons: span
-              .title button--primary.pug
-              pre.language-jade
-                code.
-                  // css
-                  #breadcrumb-custom-separator li:after {
-                    content: '>';
-                  }
+          .window
+            .icons: span
+            .title breadcrumb--custom-separator.pug
+            pre.language-jade
+              code.
+                // css
+                #breadcrumb-custom-separator li:after {
+                  content: '>';
+                }
 
-                  // jade
-                  nav#breadcrumb-custom-separator.breadcrumb
-                    ul
-                      li: a href="#" ...
-                      li.active: a href="#" ...
+                // jade
+                nav#breadcrumb-custom-separator.breadcrumb
+                  ul
+                    li: a href="#" ...
+                    li.active: a href="#" ...
 
 
   include ../../_footer

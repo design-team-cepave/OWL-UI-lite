@@ -45,25 +45,61 @@ $text-color-body       : $color-gray-dark;
 // =============
 // Buttons
 // =============
-$button-border-radius: 0;
-$button-padding: $beta $zeta;
+$button-border-radius : 0;
+$button-padding       : $beta $zeta;
 $ui-height            : 34px;
 $ui-line-height       : 18px;
 
 
 // =============
+// Labels & Badge
+// =============
+$label-font-size     : 12px;
+$label-line-height   : 18px;
+$label-text-color    : $color-gray-darker;
+$label-border-border : 1px solid transparent;
+$label-border-radius : 2px;
+$label-padding       : $alpha $beta;
+$badge-padding       : $alpha $beta;
+
+
+// =============
 // Tables
 // =============
-$table-border: 1px solid $color-gray-lighter;
-$table-striped-background-color: $color-gray-lightest;
-$table-hover-background-color: rgba($color-secondary-blue, .1);
+$table-border                   : 1px solid $color-gray-lighter;
+$table-striped-background-color : $color-gray-lightest;
+$table-hover-background-color   : rgba($color-secondary-blue, .1);
 
 
 // =============
 // Forms
 // =============
-$form-border-radius: 0;
-$input-focus-border-color: $color-primary;
-$input-focus-box-shadow: 0 0 0 2px rgba($color-primary, .3), 0 1px 2px rgba(0, 0, 0, .2) inset;
-$input-sucess-box-shadow: 0 0 0 2px rgba($color-success, .3), 0 1px 2px rgba(0, 0, 0, .2) inset;
-$input-error-box-shadow: 0 0 0 2px rgba($color-error, .3), 0 1px 2px rgba(0, 0, 0, .2) inset;
+$form-element-text-color       : $color-gray-dark;
+$label-color                   : $form-element-text-color;
+$form-label-font-size          : $ui-font-size-small;
+$input-place-hold-color        : $color-gray-light;
+$form-border-radius            : 0;
+$input-focus-border-color      : $color-primary;
+$input-focus-box-shadow        : 0 0 0 2px rgba($color-primary, .3), 0 1px 2px rgba($color-gray-darker, .1) inset;
+$input-sucess-box-shadow       : 0 0 0 2px rgba($color-success, .3), 0 1px 2px rgba($color-gray-darker, .1) inset;
+$input-error-box-shadow        : 0 0 0 2px rgba($color-error, .3), 0 1px 2px rgba($color-gray-darker, .1) inset;
+$input-disabled-opacity        : 0.4;
+$input-border-size             : 1px;
+$input-border-color            : $color-gray-light;
+$input-background-color        : white;
+$input-focus-background-color  : white;
+$input-append-background-color : $color-gray-lighter ;
+$input-padding                 : 8px 10px;
+$input-padding-big             : 16px 10px;
+
+// =============
+// Breadcrumb
+// =============
+$breadcrumb-font-size             : 14px;
+$breadcrumb-font-line-height      : 18px;
+$breadcrumb-item-text-link-color  : $color-primary;
+$breadcrumb-item-text-hover-color : $color-primary-dark;
+$breadcrumb-item-padding          : 0 $gamma;
+$breadcrumb-separator-color       : $color-gray-light;
+$breadcrumb-item-text-color       : $color-gray-dark;
+$breadcrumb-separator             : '/';
