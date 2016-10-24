@@ -20,16 +20,10 @@ $font-family           : 'Helvetica Neue', Helvetica, sans-serif;
 $font-family-heading   : $font-family;
 $font-family-monospace : Consolas, Monaco, "Courier New", monospace;
 
-// Baseline
-$base-unit         : 4px;
-$base-line         : 24px;
-$base-line-small   : 20px;
-$base-line-smaller : 16px;
-
 // Grid
 $grid-columns        : 12;
 $grid-width          : 1128; // pixels
-$grid-gutter         : $base-line;
+$grid-gutter         : 15px;
 $grid-gutter-integer : ($grid-gutter / ($grid-gutter * 0 + 1));
 $grid-gap            : ($grid-gutter-integer / ($grid-width / 100)) * 1%;
 
@@ -43,31 +37,43 @@ $z-over-all     : 500;
 // Text font size
 $font-size-regular : 16px;
 
+$font-size-bigger  : $font-size-regular + 4px; //20
 $font-size-big     : $font-size-regular + 2px; //18
 $font-size-small   : $font-size-regular - 2px; //14
 $font-size-smaller : $font-size-regular - 3px; //13
 
 // UI font size
-$ui-font-size-big   : $font-size-big;     //18
-$ui-font-size       : $font-size-small;   //14
-$ui-font-size-small : $font-size-smaller; //13
+$ui-font-size-bigger  : $font-size-bigger;  //20
+$ui-font-size-big     : $font-size-big;     //18
+$ui-font-size         : $font-size-small;   //14
+$ui-font-size-small   : $font-size-smaller; //13
+$ui-font-size-smaller : 12px;
 
 // Headings
-$font-size-title : 60px;
-$font-size-h1    : 48px;
-$font-size-h2    : 36px;
-$font-size-h3    : 24px;
-$font-size-h4    : 18px;
-$font-size-h5    : 16px;
+$font-size-title : $kappa;
+$font-size-h1    : $font-size-regular * 2;
+$font-size-h2    : $font-size-regular * 1.5;
+$font-size-h3    : $font-size-regular + 2px;
+$font-size-h4    : $font-size-small;
+$font-size-h5    : 13px;
 $font-size-h6    : 12px;
 
+// Baseline
+$base-unit         : 4px;
+$base-line-bigger  : 32px;
+$base-line-big     : 24px;
+$base-line         : 18px;
+$base-line-small   : 16px;
+$base-line-smaller : 16px;
+
+// Lineheight
 $line-height-title : 64px;
 $line-height-h1    : 52px;
-$line-height-h2    : 40px;
-$line-height-h3    : 32px;
+$line-height-h2    : $base-line-bigger;
+$line-height-h3    : $base-line-big;
 $line-height-h4    : $base-line;
 $line-height-h5    : $base-line;
-$line-height-h6    : 20px;
+$line-height-h6    : $base-line;
 
 // Spaces
 $margin-bottom-heading   : 12px;
