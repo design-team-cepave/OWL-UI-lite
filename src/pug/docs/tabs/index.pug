@@ -1,0 +1,85 @@
+extends ../../_base
+
+block head
+  - var root_path = '../../'
+  include ../../_head
+
+block content
+  - var root_path = '../../'
+  #header
+    #header-brand
+      a(href='http://cepave.com/') Cepave
+  #main
+    #hero
+      h1 Buttons
+      p#hero-lead
+        |OWL UI lite 的頁籤的目的在轉換頁面或切換內容。
+      nav#hero-subnav
+        ul
+          li: a(href=root_path) Download
+          li: a(href=root_path+'/docs/') Documentation
+
+    .row
+      .col.col-3
+        nav.nav-contents
+          ul
+            li: a(href='index.html#h-base') Base
+            li: a(href='index.html#h-header') Header
+
+      .col.col-9
+        #owl-ui-lite-component
+
+          // Tab base
+          h3#h-base.demo-head base
+          p 這裡的範例，僅只於樣式的呈現，並不包含頁籤主體以及對應的分區
+          nav#tab-base.tabs
+            ul
+              li.active
+                a(href='index.html#tab1') HostGroup
+              li
+                a(href='index.html#tab2') Endpoint
+              li
+                a(href='index.html#tab3') Counter
+          .window
+            .icons: span
+            .title tab--header.pug
+            pre.language-jade
+              code.
+                nav#tab-base.tabs
+                  ul
+                    li.active
+                      a(href='#') ...
+                    li
+                      a(href='#') ...
+                    li
+                      a(href='#') ...
+
+          // Tab header
+          h3#h-header.demo-head Tab header
+          nav#tab-header.tabs.header
+            ul
+              li.active
+                a(href='index.html#tab1') HostGroup
+              li
+                a(href='index.html#tab2') Endpoint
+              li
+                a(href='index.html#tab3') Counter
+          .window
+            .icons: span
+            .title tab--header.pug
+            pre.language-jade
+              code.
+                nav#tab-base.tabs.header
+                  ul
+                    li.active
+                      a(href='#') ...
+                    li
+                      a(href='#') ...
+                    li
+                      a(href='#') ...
+
+  include ../../_footer
+
+block script
+  - var root_path = '../../'
+  include ../../_script
