@@ -1,52 +1,54 @@
 .dropdown {
-  display: none;
-  position: absolute;
-  z-index: $z-over-content;
-  top: 0;
-  right: 0;
-  width: 280px;
-  color: #000;
-  font-size: $ui-font-size;
-  background: #fff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
-  border-radius: 8px;
-  overflow: auto;
-  max-height: 300px;
-  margin: 0;
-  padding: 0;
-}
-.dropdown.dropdown-mobile {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  max-height: none;
-  border: none;
-}
-.dropdown .close {
-  margin: 20px auto;
-}
-.dropdown ul {
-
-  list-style: none;
-  margin: 0;
-
-  & li {
-    border-bottom: 1px solid rgba(0, 0, 0, .07);
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-  & a {
-    display: block;
-    padding: 8px 8px 7px 8px;
-    text-decoration: none;
-    color: #000;
-    &:hover {
-      background: rgba(0, 0, 0, .05);
+  position: relative;
+  cursor: pointer;
+  .dropdown {
+    position: absolute;
+    display: none;
+    z-index: $dropdown-z-index;
+    top: 100%;
+    left: 0;
+    width: 180px;
+    color: $dropdown-color;
+    background: $dropdowm-list-item-background;
+    border-radius: 0;
+    overflow: auto;
+    // max-height: 300px;
+    margin: 0;
+    padding: 0;
+    font-size: $dropdown-font-size;
+    border: $dropdowm-border;
+    .close {
+      margin: 20px auto;
     }
 
+    &.open {
+      display: block;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+    li {
+      & + li {
+        border-top: $dropdowm-list-item-separator;
+      }
+      a {
+        display: block;
+        padding: $dropdowm-list-item-padding;
+        text-decoration: none;
+        background-color: $dropdowm-list-item-background;
+        color: $dropdown-color;
+        &:hover {
+          @include left-line(4px, $color-primary-light);
+        }
+      }
+      &:active,
+      &.active {
+        a {
+          background-color: $dropdowm-list-item-background-active;
+          color: white;
+        }
+      }
+    }
   }
 }
