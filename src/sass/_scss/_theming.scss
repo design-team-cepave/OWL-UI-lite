@@ -155,3 +155,16 @@ $breadcrumb-item-padding          : 0 $gamma;
 $breadcrumb-separator-color       : $color-gray-light;
 $breadcrumb-item-text-color       : $color-gray-dark;
 $breadcrumb-separator             : '/';
+
+
+// =============
+// Dropdowns
+// =============
+$dropdown-color: $color-gray-dark;
+$dropdown-font-size: $ui-font-size-small;
+$dropdown-z-index: $z-over-content;
+$dropdowm-border: 1px solid $color-gray-light;
+$dropdowm-list-item-separator: none;
+$dropdowm-list-item-padding: $beta $gamma;
+$dropdowm-list-item-background: white;
+$dropdowm-list-item-background-active: $color-primary-light;
