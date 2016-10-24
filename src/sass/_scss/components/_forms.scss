@@ -133,6 +133,10 @@ legend {
     margin-bottom: $alpha;
   }
 
+  br + .button {
+    margin-top: $alpha;
+  }
+
   .checkboxes label,
   label.checkbox {
     text-transform: none;
