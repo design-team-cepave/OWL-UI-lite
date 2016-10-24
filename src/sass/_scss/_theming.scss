@@ -41,6 +41,47 @@ $font-size-regular     : 14px;
 $font-size-smaller     : $font-size-regular - 3px;
 $text-color-body       : $color-gray-dark;
 
+// Text font size
+$font-size-regular    : 14px;
+
+$font-size-bigger     : $font-size-regular + 10px; //24
+$font-size-big        : $font-size-regular + 4px;  //18
+$font-size-small      : $font-size-regular - 1px;  //13
+$font-size-smaller    : $font-size-regular - 2px;  //12
+
+// UI font size
+$ui-font-size-bigger  : $font-size-bigger;  //24
+$ui-font-size-big     : $font-size-big;     //18
+$ui-font-size         : $font-size-regular; //14
+$ui-font-size-small   : $font-size-small;   //13
+$ui-font-size-smaller : $font-size-smaller; //12
+
+// Baseline
+$base-unit         : 4px;
+$base-line-bigger  : 32px;
+$base-line-big     : 24px;
+$base-line         : 18px;
+$base-line-small   : 16px;
+$base-line-smaller : 16px;
+
+// Headings
+$font-size-title : $kappa;
+$font-size-h1    : $font-size-regular * 2;
+$font-size-h2    : $font-size-regular * 1.5;
+$font-size-h3    : $font-size-regular + 2px;
+$font-size-h4    : $font-size-small;
+$font-size-h5    : 13px;
+$font-size-h6    : 12px;
+
+// Lineheight
+$line-height-title : 64px;
+$line-height-h1    : 52px;
+$line-height-h2    : $base-line-bigger;
+$line-height-h3    : $base-line-big;
+$line-height-h4    : $base-line;
+$line-height-h5    : $base-line;
+$line-height-h6    : $base-line;
+
 
 // =============
 // Buttons
@@ -91,6 +132,17 @@ $input-focus-background-color  : white;
 $input-append-background-color : $color-gray-lighter ;
 $input-padding                 : 8px 10px;
 $input-padding-big             : 16px 10px;
+
+
+// =============
+// Tabs
+// =============
+$tab-text-color              : $color-gray;
+$tab-text-color-active       : $color-gray-darker;
+$tab-header-font-size        : 20px;
+$tab-header-text-line-height : 26px;
+$tab-header-padding          : $gamma $iota $delta;
+
 
 // =============
 // Breadcrumb

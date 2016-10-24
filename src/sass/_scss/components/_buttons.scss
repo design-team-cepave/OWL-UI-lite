@@ -44,7 +44,7 @@ button:hover,
   font-weight: $button-outline-font-weight;
 }
 .button.outline:hover {
-  @include button-outline($button-text-color-default, $button-border-color-default);
+  @include button-fill($button-text-color-default, $button-background-color);
   box-shadow: none;
 }
 .button.outline,
