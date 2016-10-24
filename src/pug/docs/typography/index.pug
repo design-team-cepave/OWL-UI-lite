@@ -13,7 +13,7 @@ block content
     #hero
       h1 Typography
       p#hero-lead
-        |Typography 是網頁上的最重要和最基礎的事情之一。即使是輕微的缺陷，都可以摧毀美麗的頁面。OWL UI lite 提供完美的排版與理想的間距、字級大小和比例，無論確切的風格或選擇什麼字體都可以適配所需的頁面。
+        |Typography 是網頁上的最重要的基礎之一。即使是輕微的缺陷，也足以摧毀美麗的頁面。OWL UI lite 提供完美的排版與理想的間距、字級大小和比例關係，無論搭配什麼風格、選擇任何字體都可以適配頁面。
       nav#hero-subnav
         ul
           li: a(href=root_path) Download
@@ -91,11 +91,11 @@ block content
           // Paragraph
           h3#h-paragraph.demo-head Paragraph
           p
-            |除了特殊規範外, 所有的段落文字取快使用&nbsp;
-            code 16px
-            |&nbsp;黑體（sans-serif） 字體級&nbsp;
-            code 24px
-            |&nbsp;行高.
+            |除了特殊規範外, 所有的段落文字使用&nbsp;
+            code 13px
+            |&nbsp;字體級&nbsp;與
+            code 18px
+            |&nbsp;行高
           .example
             p
               |Lorem ipsum
@@ -116,7 +116,7 @@ block content
 
           // Inline Elements
           h3#h-inline.demo-head Inline Elements
-          p OWL UI lite 具有各種行內格式化元素。他們都有自己的語義，自己的風格。
+          p OWL UI lite 具有各種'行內'格式化元素。他們都有自己的語義，自己的風格。
           table.table-bordered
             tr
               td.nowrap
@@ -195,7 +195,9 @@ block content
 
           // Lists
           h3#h-lists.demo-head Lists
-          p 我們雖然很可能永遠不會需要，但仍然為列表提供許多的級別，只要你喜歡 :D。前三個級別表示與不同類型的項目(bullets)或不同風格的數字的。
+          p
+            |我們為列表提供許多的層級，雖然很可能永遠都用不到，但 OWL UI lite 仍然保留了這個彈性。
+            |無論項目或計數清單至少可支援至三個級別。
           .row
             .col.col-6
               ul
@@ -247,7 +249,7 @@ block content
                       li ...
 
           h3.demo-head Definition List
-          p 偶而，我們可能需要一個自定義列表。千忘不要忘記使用自定義列表，因為我們愛語義的東西。自定義列表不僅僅是一列項目，而是項目及其註釋的組合
+          p 有時候，我們可能需要一個自定義列表。千萬千萬不要忘記使用自定義列表，因為我們愛語義的東西，也務必遵守。自定義列表不僅僅是一列項目，而是項目及其註釋的組合
           dl
             dt Term 1
             dd Description 1
