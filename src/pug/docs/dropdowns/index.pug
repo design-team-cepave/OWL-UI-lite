@@ -1,0 +1,114 @@
+extends ../../_base
+
+block head
+  - var root_path = '../../'
+  include ../../_head
+
+block content
+  - var root_path = '../../'
+  #header
+    #header-brand
+      a(href='http://cepave.com/') Cepave
+  #main
+    #hero
+      h1 Dropdowns
+      p#hero-lead
+        |OWL UI lite 的下拉選單是直覺的內容收納。
+      nav#hero-subnav
+        ul
+          li: a(href=root_path) Download
+          li: a(href=root_path+'/docs/') Documentation
+
+    .row
+      .col.col-3
+        nav.nav-contents
+          ul
+            li: a(href='index.html#h-base') Base
+            li: a(href='index.html#h-button') Button dropdown
+            li: a(href='index.html#h-navigation') Navigation
+
+      .col.col-9
+        #owl-ui-lite-component
+
+          // base
+          h3#h-base.demo-head base
+          .row
+            .col-6
+              p
+                .dropdown
+                  | 下拉選單
+                  span.caret.down
+            .col-6
+              p
+                .dropdown
+                  span 下拉選單
+                  span.caret.up
+                  #dropdown1.dropdown.open
+                    ul
+                      li
+                        a(href='#') Item 1
+                      li
+                        a(href='#') Item 2
+                      li.active
+                        a(href='#') Item 3
+                      li
+                        a(href='#')
+                          span.label.primary Item 4
+                      li
+                        a(href='#')
+                          span.label.error Item 5
+          .window
+            .icons: span
+            .title dropdown.pug
+            pre.language-jade
+              code.
+                .dropdown
+                  span 下拉選單
+                  span.caret.down
+                  .dropdown.open
+                    ul
+                      li ...
+          // Button dropdown
+          h3#h-botton.demo-head Button Dropdown
+          .row
+            .col-6
+              p
+                button.button.outline.primary.dropdown
+                  | 下拉選單
+                  span.caret.down
+            .col-6
+              p
+                button.button.outline.primary.dropdown(data-target='#dropdown2')
+                  | 下拉選單
+                  span.caret.up
+                  #dropdown2.dropdown.open
+                    div(style='padding: 24px;')
+                      p Lorem Ipsum，也称乱数假文或者哑元文本， 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
+                      a(href='index.html#', data-action='dropdown-close') 關閉
+          // Navigation
+          h3.demo-head#h-navigation Navigation Fixed
+          #navbar-demo.sticky
+            nav#navbar-main
+              ul
+                li
+                  a(href='index.html#') Item 1
+                li
+                  a(href='index.html#') Item 2
+                li
+                  a(href='index.html#') Item 3
+                li
+                  .dropdown(data-target='#dropdown-fixed')
+                    | 下拉選單
+                    span.caret.up
+                    #dropdown-fixed.dropdown.open
+                      ul
+                        li
+                          a(href='') Menu 1
+                        li
+                          a(href='') Menu 2
+
+  include ../../_footer
+
+block script
+  - var root_path = '../../'
+  include ../../_script
