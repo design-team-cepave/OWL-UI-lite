@@ -152,4 +152,15 @@ $ui-line-height-big   : 46px;
 
 // Overlay
 $overlay-background-opacity : 0.9;
-$overlay-background-color   : linear-gradient(-1deg, rgba(7,9,56,0.90) 15%, rgba(69,40,130,0.90) 100%);;
+$overlay-background-color   : linear-gradient(-1deg, rgba(7,9,56,0.90) 15%, rgba(69,40,130,0.90) 100%);
+
+// Modals
+$modal-border            : none;
+$modal-header-font-size  : $ui-font-size-big;
+$modal-header-padding    : 24px 32px;
+$modal-body-padding      : 36px 56px;
+$modal-footer-padding    : 0;
+$modal-footer-background : #fff;
+$modal-border-radius     : 8px;
+$modal-border-radius-top : 4px;
+$modal-close : 36px;

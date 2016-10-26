@@ -160,11 +160,30 @@ $breadcrumb-separator             : '/';
 // =============
 // Dropdowns
 // =============
-$dropdown-color: $color-gray-dark;
-$dropdown-font-size: $ui-font-size-small;
-$dropdown-z-index: $z-over-content;
-$dropdowm-border: 1px solid $color-gray-light;
-$dropdowm-list-item-separator: none;
-$dropdowm-list-item-padding: $beta $gamma;
-$dropdowm-list-item-background: white;
-$dropdowm-list-item-background-active: $color-primary-light;
+$dropdown-color                       : $color-gray-dark;
+$dropdown-font-size                   : $ui-font-size-small;
+$dropdown-z-index                     : $z-over-content;
+$dropdowm-border                      : 1px solid $color-gray-light;
+$dropdowm-list-item-separator         : none;
+$dropdowm-list-item-padding           : $beta $gamma;
+$dropdowm-list-item-background        : white;
+$dropdowm-list-item-background-active : $color-primary-light;
+
+
+// =============
+// Modals
+// =============
+$modal-border               : 1px solid $color-gray-lighter;
+$modal-header-font-size     : $ui-font-size-big;
+$modal-header-padding       : $theta;
+$modal-body-padding         : $theta;
+$modal-border-radius        : 0;
+$modal-border-radius-top    : 0;
+$modal-footer-background    : $color-gray-lightest;
+$modal-footer-padding       : $gamma $theta;
+$modal-close                : 20px;
+$overlay-background-opacity : 0.9;
+$overlay-color              : (top                                                                                   : #462882, bottom : #080938);
+$overlay-background-color   : rgba(map-get($overlay-color, top),1) 30%, rgba(map-get($overlay-color, bottom),1) 70%;
+
+
