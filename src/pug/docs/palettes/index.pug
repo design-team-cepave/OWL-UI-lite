@@ -38,10 +38,20 @@ block content
             mixin palettes-list(color, value)
               tr
                 td.col-1: div(class='palettes-item color-background--' + color)
-                td.col-1
-                td.col-10
+                td.col-5
                   code.
-                    #{value}
+                    background-color: #{value}
+                  br
+                  code.
+                    class='color-background--#{color}'
+                td.col-1
+                  div(class='color-text--' + color) #{value}
+                td.col-5
+                  code.
+                    color: #{value}
+                  br
+                  code.
+                    class='color-text--#{color}'
 
             +palettes-list('primary-light', '$color-primary-Light')
             +palettes-list('primary', '$color-primary')
