@@ -109,9 +109,9 @@ body, h1, h2, h3, h4, h5, h6, .button {
         padding: 4px 12px;
       }
       a {
-        color: #3794de;
+        color: $color-primary;
         &:hover {
-          color: #000;
+          color: $color-primary-dark;
           text-decoration: underline;
         }
       }
@@ -190,13 +190,28 @@ body, h1, h2, h3, h4, h5, h6, .button {
   color: rgba(0, 0, 0, 0.5);
 }
 
+.nav-contents {
+  margin-top: 40px;
+  font-size: 16px;
+  li {
+    a {
+      color: $color-primary;
+      display: block;
+      padding: 12px 24px;
+      text-decoration: none;
+      &:hover {
+        @include left-line(4px, $color-primary)
+      }
+    }
+  }
+}
 //-
 // page/docs
 .demo-head {
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 20px;
   color: $color-gray-darker;
   text-align: center;
