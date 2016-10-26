@@ -1,144 +1,255 @@
 // Layout
-.group {
+@mixin group {
   @include clearfix;
 }
-.end {
+.group,
+%group {
+  @include group;
+}
+
+@mixin end {
   margin-bottom: 0 !important;
 }
-.centered {
+.end,
+%end {
+  @include end;
+}
+
+@mixin centered {
   margin-left: auto;
   margin-right: auto;
 }
+.centered,
+%centered {
+  @include centered;
+}
 
 // Float
-.float-right {
-
+@mixin float-right {
   float: right;
-
   @media (max-width: $breakpoint-small) {
     float: none;
   }
 }
-.float-left {
+.float-right,
+%float-right {
+  @include float-right;
+}
 
+@mixin float-left {
   float: left;
-
   @media (max-width: $breakpoint-small) {
     float: none;
   }
+}
+.float-left,
+%float-left {
+  @include float-left;
 }
 
 
 // Alignment
-.text-right {
+@mixin text-right {
   text-align: right;
 }
-.text-center,
-.text-centered {
+.text-right,
+%text-right {
+  @include text-right;
+}
+
+@mixin text-center {
   text-align: center;
 }
+.text-center,
+%text-center,
+.text-centered,
+%text-centered {
+  @include text-center;
+}
+
 
 
 // Display
-.hide {
+@mixin hide {
   display: none;
 }
+.hide,
+%hide {
+  @include hide;
+}
 
-@media (max-width: $breakpoint-small) {
-  .hide-on-small {
+@mixin hide-on-small {
+  @media (max-width: $breakpoint-small) {
     display: none !important;
   }
 }
-.show-on-small {
+.hide-on-small,
+%hide-on-small {
+  @include hide-on-small;
+}
 
+@mixin show-on-small {
   display: none !important;
-
   @media (max-width: $breakpoint-small) {
     display: block !important;
   }
 }
-
-
+.show-on-small,
+%show-on-small {
+  @include show-on-small;
+}
 
 // Print
-@media print {
-
-  .hide-on-print {
+@mixin hide-on-print {
+  @media print {
     display: none !important;
   }
-
-  .show-on-print {
+}
+@mixin show-on-print {
+  @media print {
     display: block !important;
   }
-
 }
+.hide-on-print,
+%hide-on-print {
+  @include hide-on-print;
+}
+.show-on-print,
+%show-on-print {
+  @include show-on-print;
+}
+
 
 // Visibility
-.invisible {
+@mixin invisible {
   visibility: hidden;
 }
-
-.visible {
-  visibility: visible;
+.invisible,
+%invisible {
+  @include invisible;
 }
+
+@mixin visible {
+  visibility: visible
+}
+.visible,
+%visible {
+  @include visible;
+}
+
 
 // TextColor
-.muted {
+@mixin muted {
   color: rgba(0, 0, 0, .5) !important;
+  &:hover {
+    color: #000 !important;
+  }
 }
-.soft-muted {
+.muted,
+%muted {
+  @include muted;
+}
+
+@mixin soft-muted {
   color: rgba(0, 0, 0, .7) !important;
+  &:hover {
+    color: #000 !important;
+  }
 }
-a.muted:hover,
-a.soft-muted:hover {
-  color: #000 !important;
+.soft-muted,
+%soft-muted {
+  @include soft-muted;
 }
-.error {
+
+@mixin error {
   color: $color-error;
 }
-.success {
+.error,
+%error {
+  @include error;
+}
+
+@mixin success {
   color: $color-success;
+}
+.success,
+%success {
+  @include success;
 }
 
 // TextStyle
-.upper {
+@mixin upper {
   text-transform: uppercase;
   letter-spacing: .08em;
 }
-.normal {
+.upper,
+%upper {
+  @include upper;
+}
+
+@mixin normal {
   font-weight: normal !important;
 }
-.light {
+.normal,
+%normal {
+  @include normal;
+}
+
+@mixin light {
   font-weight: 300 !important;
 }
-.italic {
+.light,
+%light {
+  @include light;
+}
+
+@mixin italic {
   font-style: italic !important;
 }
-.bold {
+.italic,
+%italic {
+  @include italic;
+}
+
+@mixin bold {
   font-weight: bold !important;
+}
+.bold,
+%bold {
+  @include bold;
 }
 
 // Highlight
-.highlight {
+.highlight,
+%highlight {
   background-color: $background-color-highlight;
+}
+@mixin highlight {
+  @extend %highlight;
 }
 
 // Round
-.round {
-  border-radius: 56px;
+@mixin round {
+  border-radius: 50%;
 }
-input.round {
-  border-radius: 24px;
+.round,
+%round {
+  @include round;
 }
 
 // WhiteSpace
+@mixin nowrap {
+  td {
+    white-space: nowrap;
+  }
+}
 .nowrap,
-.nowrap td {
-  white-space: nowrap;
+%nowrap {
+  @include nowrap;
 }
 
 // Forms
-.req {
+@mixin req {
   display: inline;
   color: transparent;
   &:after {
@@ -149,37 +260,47 @@ input.round {
     text-transform: none;
   }
 }
+.req,
+%req {
+  @include req;
+}
+
 
 // Close
-.close {
+
+.close,
+%close {
   @include close(#000);
   @include close-size(28px);
   &.inverted {
     color: #fff;
   }
-}
-.close.small {
-  @include close-size(20px);
-}
-.close.big {
-  @include close-size(36px);
+  &.small {
+    @include close-size(20px);
+  }
+  &.big {
+    @include close-size(36px);
+  }
 }
 
 
 // Fullwidth
-@media (min-width: $breakpoint-small) {
-
-  .fullwidth {
-  @include flex-item-auto;
+@mixin fullwidth {
+  @media (min-width: $breakpoint-small) {
+    @include flex-item-auto;
   }
-  .fullwidth ul {
+}
+
+
+.fullwidth,
+%fullwidth {
+  @include fullwidth;
+  ul {
     @include flex;
   }
-  .fullwidth li {
-
-  @include flex-item-auto;
+  li {
+    @include flex-item-auto;
     text-align: center;
-
     em,
     a {
       display: block;
@@ -189,29 +310,43 @@ input.round {
 
 
 // Width
-.width-100 {
+@mixin width-100 {
   width: 100%;
 }
-.width-50 {
+.width-100,
+%width-100 {
+  @include width-100;
+}
+
+@mixin width-50 {
   width: 50%;
 }
-@media (max-width: $breakpoint-small) {
-  .width-50 {
-    width: 100% !important;
+.width-50,
+%width-50 {
+  @include width-50;
+  @media (max-width: $breakpoint-small) {
+    .width-50 {
+      width: 100% !important;
+    }
   }
 }
 
+
 // Fixed
-.fixed {
+@mixin fixed {
   position: fixed;
   top: 0;
   left: 0;
   z-index: $z-over-content;
   width: 100%;
 }
+.fixed,
+%fixed {
+  @include fixed;
+}
 
 // NoScroll
-.no-scroll {
+@mixin no-sroll {
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -219,9 +354,13 @@ input.round {
   width: 100%;
   height: 100% !important;
 }
+.no-scroll,
+%no-scroll {
+  @include no-sroll;
+}
 
 // Overlay
-.overlay {
+@mixin overlay {
   position: fixed;
   z-index: $z-over-control;
   top: 0;
@@ -230,18 +369,26 @@ input.round {
   bottom: 0;
   background-color: $overlay-background-color;
 }
+.overlay,
+%overlay {
+  @include overlay;
+}
 
 // ScrollbarMeasure
-.scrollbar-measure {
+@mixin scrollbar-measure {
   position: absolute;
   top: -9999px;
   width: 50px;
   height: 50px;
   overflow: scroll;
 }
+.scrollbar-measure,
+%scrollbar-measure {
+  @include scrollbar-measure;
+}
 
 // IconSearch
-.search-icon {
+@mixin search-icon {
   font-family: Arial, Helvetica, sans-serif;
   display: inline-block;
   font-size: 18px;
@@ -252,9 +399,7 @@ input.round {
   position: relative;
   top: -1px;
   font-weight: bold;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
+  @include transform(rotate(-45deg));
   &:before {
   content: "\26B2";
   }
@@ -262,19 +407,19 @@ input.round {
   color: #fff;
   }
 }
-button {
-  & .search-icon {
+.search-icon,
+%search-icon {
+  @include search-icon;
+  button & {
     top: 0;
-  }
-}
-button:hover {
-  & .search-icon {
-  opacity: .6;
+    &:hover {
+      opacity: .6;
+    }
   }
 }
 
 // IconMenu
-.menu-icon {
+@mixin menu-icon {
   font-family: Arial, Helvetica, sans-serif;
   display: inline-block;
   font-size: 15px;
@@ -290,14 +435,17 @@ button:hover {
   color: #fff;
   }
 }
-button:hover {
-  & .menu-icon {
-  opacity: .6;
+.menu-icon,
+%menu-icon {
+  @include menu-icon;
+  button:hover & {
+    opacity: .6;
   }
 }
 
 // Caret
-.caret {
+.caret,
+%caret {
   position: relative;
   display: inline-block;
   height: 0;
@@ -338,7 +486,8 @@ button:hover {
 }
 
 // Offcanvas
-.offcanvas {
+.offcanvas,
+%offcanvas {
   background: #fff;
   position: fixed;
   padding: $base-line;
@@ -347,42 +496,56 @@ button:hover {
   left: 0;
   z-index: $z-over-page;
   overflow-y: scroll;
-}
-.offcanvas .close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-}
-.offcanvas-left {
-  border-right: 1px solid rgba(0, 0, 0, .1);
-}
-.offcanvas-right {
-  left: auto;
-  right: 0;
-  border-left: 1px solid rgba(0, 0, 0, .1);
-}
-.offcanvas-push-body {
-  position: relative;
+  .close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  &-left {
+    border-right: 1px solid rgba(0, 0, 0, .1);
+  }
+  &-right {
+    left: auto;
+    right: 0;
+    border-left: 1px solid rgba(0, 0, 0, .1);
+  }
+  &-push-body {
+    position: relative;
+  }
 }
 
 // Background colors
-.color-background--primary-light {background: $color-primary-light;}
-.color-background--primary {background: $color-primary;}
-.color-background--primary-dark {background: $color-primary-dark;}
-.color-background--secondary-red {background: $color-secondary-red;}
-.color-background--secondary-orange {background-color: $color-secondary-orange;}
-.color-background--secondary-yellow {background-color: $color-secondary-yellow;}
-.color-background--secondary-blue {background-color: $color-secondary-blue;}
-.color-background--secondary-blue-light {background-color: $color-secondary-bue-light;}
-.color-background--secondary-blue-dark {background-color: $color-secondary-blue-dark;}
-.color-background--secondary-green {background-color: $color-secondary-green;}
-.color-background--gray-lightest {background-color: $color-gray-lightest;}
-.color-background--gray-lighter {background-color: $color-gray-lighter;}
-.color-background--gray-light {background-color: $color-gray-light;}
-.color-background--gray {background-color: $color-gray;}
-.color-background--gray-dark {background-color: $color-gray-dark;}
-.color-background--gray-darker {background-color: $color-gray-darker;}
-.color-background--default {background-color: $color-default;}
-.color-background--success {background-color: $color-success;}
-.color-background--error {background-color: $color-error;}
-.color-background--warning {background-color: $color-warning;}
+@mixin background-color($name, $color) {
+  .color-background--#{$name} {
+    background-color: $color;
+  }
+}
+@each $name, $color in (primary-light, $color-primary-light),
+                       (primary,  $color-primary),
+                       (primary-dark, $color-primary-dark),
+                       (secondary-red, $color-secondary-red),
+                       (secondary-orange, $color-secondary-orange),
+                       (secondary-yellow, $color-secondary-yellow),
+                       (secondary-blue-light, $color-secondary-bue-light),
+                       (secondary-blue, $color-secondary-blue),
+                       (secondary-blue-dark, $color-secondary-blue-dark),
+                       (secondary-green, $color-secondary-green),
+                       (gray-lightest, $color-gray-lightest),
+                       (gray-lighter, $color-gray-lighter),
+                       (gray-light, $color-gray-light),
+                       ('gray', $color-gray),
+                       (gray-dark, $color-gray-dark),
+                       (gray-darker, $color-gray-darker),
+                       (default, $color-default),
+                       (success, $color-success),
+                       (error, $color-error),
+                       (warning, $color-warning) {
+  .color-background--#{$name},
+  %color-background--#{$name} {
+    background-color: $color;
+  }
+  .color-text--#{$name},
+  %color-text--#{$name} {
+    color: $color;
+  }
+}
