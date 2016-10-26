@@ -1,0 +1,58 @@
+extends ../../_base
+
+block head
+  - var root_path = '../../'
+  include ../../_head
+
+block content
+  - var root_path = '../../'
+  #header
+    #header-brand
+      a(href='http://cepave.com/') Cepave
+  #main
+    #hero
+      h1 Modals
+      p#hero-lead
+        |很多原因和目的我们会使用模態视窗。 OWL UI lite 設計和操作 Modal 视窗的方式非常簡單。我们只需要設置一個
+        code div
+        |來表示 Modal 口的內容
+      nav#hero-subnav
+        ul
+          li: a(href=root_path) Download
+          li: a(href=root_path+'/docs/') Documentation
+
+    .row
+      .col.col-3
+        nav.nav-contents
+          ul
+            li: a(href='index.html#h-base') Base
+      .col.col-9
+        #owl-ui-lite-component
+
+          // Base
+          h3#h-base.demo-head Base
+          p
+            div.overlay
+
+            #ui-modal.modal-box.show
+
+              .modal.col-6
+                span.close
+                .modal-header UI Modal
+                .modal-body
+                .modal-footer
+                  .float-right
+                    .button.outline.primary 取消
+                    .button.primary 送出
+          .window
+            .icons: span
+            .title modals--base.pug
+            pre.language-jade
+              code.
+
+
+  include ../../_footer
+
+block script
+  - var root_path = '../../'
+  include ../../_script
