@@ -67,9 +67,14 @@ gulp.task('prism:styles', function() {
 });
 gulp.task('vendor', ['prism:script', 'prism:styles']);
 
+gulp.task('coffee', function() {
+  gulp.src('./src/coffee/*.coffee')
+    .pipe($.coffee({bare: true}).on('error', $.util.log))
+    .pipe(gulp.dest('./dist/scripts/'));
+});
 
-gulp.task('js-watch', function(){
-  gulp.src('scripts/*.js', {cwd: dist})
+gulp.task('coffee-watch', function(){
+  gulp.src('./src/coffee/*.coffee', {cwd: dist})
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -80,7 +85,7 @@ gulp.task('watch', function () {
 gulp.task('serve', ['build', 'browser-sync'],function() {
   gulp.watch('sass/**/*.scss', {cwd: src}, ['styles', browserReload]);
   gulp.watch('pug/**/*.pug', {cwd: src}, ['views', browserReload]);
-  gulp.watch('scripts/*.js', {cwd: dist}, ['js-watch', browserReload]);
+  gulp.watch('coffee/*.coffee', {cwd: dist}, ['coffee-watch', browserReload]);
   gulp.watch('*.html', {cwd: dist}).on('change', browserReload);
   browserSync.create();
 });
@@ -103,6 +108,6 @@ gulp.task('css-min', function(){
     .pipe(gulp.dest('css', {cwd: dist}));
 });
 
-gulp.task('default', ['styles', 'views', 'js-watch', 'serve']);
+gulp.task('default', ['styles', 'views', 'coffee', 'serve']);
 
 gulp.task('build', ['image-min', 'js-min', 'css-min']);

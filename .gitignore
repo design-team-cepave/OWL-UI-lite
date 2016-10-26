@@ -50,3 +50,4 @@ app/dist/robots.txt
 ## Dev
 temp/
 screen.sketch
+/dist/scripts/main.js
