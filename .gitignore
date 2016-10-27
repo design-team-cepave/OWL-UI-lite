@@ -30,6 +30,7 @@ dist/css
 dist/**/*.html
 dist/assets/css
 dist/scripts/vendor
+dist/scripts/main.js
 
 
 ## Change path
@@ -50,4 +51,3 @@ app/dist/robots.txt
 ## Dev
 temp/
 screen.sketch
-/dist/scripts/main.js
