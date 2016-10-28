@@ -1,3 +1,12 @@
+###
+owl ui lite
+###
+# prototype
+# owlUiLite
+# Animation
+# Direct Load
+# modal
+
 do ->
 
   owluilite = (element, options) ->
