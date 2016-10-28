@@ -88,7 +88,86 @@ block content
                       .modal-body
                         | ...
                         a(href='#', data-action='modal-close') Close
-
+          // Settings
+          h3#h-settings.demo-head Settings
+          h5 target
+          ul
+            li
+              | Type:
+              var string
+            li
+              | Default:
+              var null
+          p 定義 modal view 內容
+          h5 header
+          ul
+            li
+              | Type:
+              var string
+            li
+              | Default:
+              var false
+          p
+            | 為 modal view 設置標題。預設是
+            var false
+          h5 width
+          ul
+            li
+              | Type:
+              var string
+            li
+              | Default:
+              var '600px'
+          h5 height
+          ul
+            li
+              | Type:
+              var string
+            li
+              | Default:
+              var false
+          h5 maxHeight
+          ul
+            li
+              | Type:
+              var string
+            li
+              | Default:
+              var false
+          p
+            | 設置
+            var maxHeight
+            | 定義 modal view 的最大高度。啟用的情況下，超出的內容會於 modal 中滾動，禁用視窗的 scrollbar
+          h5 position
+          ul
+            li
+              | Type:
+              var string
+            li
+              | Default:
+              var 'center'
+          p 決定 modal view 打開時的位置
+          h5 overlay
+          ul
+            li
+              | Type:
+              var boolean
+            li
+              | Default:
+              var true
+          p
+            | 當設置為
+            var false
+            | 時，modal 沒有疊加效果。預設情況下 modal 下具有一個半透明層覆蓋頁面。
+          h5 animation
+          ul
+            li
+              | Type:
+              var boolean
+            li
+              | Default:
+              var true
+          p 設置 modal 打開和關閉是否啟用動畫及方式
 
   include ../../_footer
 
