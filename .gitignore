@@ -30,7 +30,8 @@ dist/css
 dist/**/*.html
 dist/assets/css
 dist/scripts/vendor
-dist/scripts/main.js
+/dist/scripts/main.js
+
 
 
 ## Change path
