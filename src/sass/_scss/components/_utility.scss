@@ -452,20 +452,20 @@
   height: 0;
   vertical-align: middle;
   width: 0;
-  margin-left: 2px;
+  margin-left: $beta;
   &:before {
     content: '';
     position: absolute;
     top: -2px;
     left: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
+    border-left: $alpha solid transparent;
+    border-right: $alpha solid transparent;
   }
   &.down:before {
-    border-top: 4px solid #000;
+    border-top: $alpha solid #000;
   }
   &.up:before {
-    border-bottom: 4px solid #000;
+    border-bottom: $alpha solid #000;
   }
   &.down.inverted:before {
     border-top-color: #fff;
@@ -476,11 +476,11 @@
   .button:hover & {
     opacity: .6;
   }
-  .dropdown & {
+  &.down {
     margin-left: $beta;
     margin-right: $alpha;
   }
-  .up & {
+  &.up {
     margin-left: $beta;
     margin-right: $alpha;
   }

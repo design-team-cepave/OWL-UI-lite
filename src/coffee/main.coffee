@@ -325,6 +325,163 @@ do ->
   return
 ) jQuery
 
+do (owluilite) ->
+  owluilite.Dropdown = owlUiLite.plugin('dropdown',
+    opts:
+      target: null
+      height: false
+      width: false
+      animation:
+        open:
+          name: 'slideDown'
+          duration: 0.15
+          timing: 'linear'
+        close:
+          name: 'slideUp'
+          duration: 0.1
+          timing: 'linear'
+      callbacks: [
+        'open'
+        'opened'
+        'close'
+        'closed'
+      ]
+      caretUp: false
+    init: ->
+      owluilite.apply this, arguments
+      if @opts.target == null
+        return
+      @$target = $(@opts.target)
+      @$target.hide()
+      @$close = @$target.find('.close')
+      @$caret = @getCaret()
+      @buildCaretPosition()
+      @$element.on 'click.component.dropdown', $.proxy(@toggle, this)
+      return
+    buildMobileAnimation: ->
+      @opts.animationOpen = 'fadeIn'
+      @opts.animationClose = 'fadeOut'
+      return
+    getCaret: ->
+      @$element.find '.caret'
+    buildCaretPosition: ->
+      height = @$element.offset().top + @$element.innerHeight() + @$target.innerHeight()
+      if $(document).height() > height
+        return
+      @opts.caretUp = true
+      @$caret.addClass 'up'
+      return
+    toggleCaretOpen: ->
+      if @opts.caretUp
+        @$caret.removeClass('up').addClass 'down'
+      else
+        @$caret.removeClass('down').addClass 'up'
+      return
+    toggleCaretClose: ->
+      if @opts.caretUp
+        @$caret.removeClass('down').addClass 'up'
+      else
+        @$caret.removeClass('up').addClass 'down'
+      return
+    toggle: (e) ->
+      if @isClosed() then @open(e) else @close(e)
+    getPlacement: (height) ->
+      if $(document).height() < height then 'top' else 'bottom'
+    getOffset: (position) ->
+      if @isNavigationFixed() then @$element.position() else @$element.offset()
+    getPosition: ->
+      if @isNavigationFixed() then 'fixed' else 'absolute'
+    setPosition: ->
+      position = @getPosition()
+      coords = @getOffset(position)
+      height = @$target.innerHeight()
+      width = @$target.innerWidth()
+      placement = @getPlacement(coords.top + height + @$element.innerHeight())
+      leftFix = if $(window).width() < coords.left + width then width - @$element.innerWidth() else 0
+      top = undefined
+      left = coords.left - leftFix
+      if placement == 'bottom'
+        if @isClosed()
+          @$caret.removeClass('up').addClass 'down'
+        @opts.caretUp = false
+        top = coords.top + @$element.outerHeight() + 1
+      else
+        @opts.animation.open.name = 'show'
+        @opts.animation.close.name = 'hide'
+        if @isClosed()
+          @$caret.addClass('up').removeClass 'down'
+        @opts.caretUp = true
+        top = coords.top - height - 1
+      @$target.css
+        position: position
+        top: top + 'px'
+        left: left + 'px'
+      return
+    enableEvents: ->
+      # if @isDesktop()
+      @$target.on('mouseover.component.dropdown', $.proxy(@disableBodyScroll, this)).on 'mouseout.component.dropdown', $.proxy(@enableBodyScroll, this)
+      $(document).on 'scroll.component.dropdown', $.proxy(@setPosition, this)
+      $(window).on 'resize.component.dropdown', $.proxy(@setPosition, this)
+      $(document).on 'click.component.dropdown touchstart.component.dropdown', $.proxy(@close, this)
+      $(document).on 'keydown.component.dropdown', $.proxy(@handleKeyboard, this)
+      @$target.find('[data-action="dropdown-close"]').on 'click.component.dropdown', $.proxy(@close, this)
+      return
+    disableEvents: ->
+      @$target.off '.component.dropdown'
+      $(document).off '.component.dropdown'
+      $(window).off '.component.dropdown'
+      return
+    open: (e) ->
+      if e
+        e.preventDefault()
+      @callback 'open'
+      $('.dropdown').removeClass('open').hide()
+      if @opts.height
+        @$target.css 'min-height', @opts.height + 'px'
+      if @opts.width
+        @$target.width @opts.width
+      @setPosition()
+      @toggleCaretOpen()
+      @$target.animation @opts.animation.open, $.proxy(@opened, this)
+      return
+    opened: ->
+      @enableEvents()
+      @$target.addClass 'open'
+      @callback 'opened'
+      return
+    handleKeyboard: (e) ->
+      if e.which == 27 then @close(e) else true
+    shouldNotBeClosed: (el) ->
+      if $(el).attr('data-action') == 'dropdown-close' or el == @$close[0]
+        return false
+      else if $(el).closest('.dropdown').length == 0
+        return false
+      true
+    close: (e) ->
+      if @isClosed()
+        return
+      if e
+        if @shouldNotBeClosed(e.target)
+          return
+        e.preventDefault()
+      @enableBodyScroll()
+      @callback 'close'
+      @toggleCaretClose()
+      @$target.removeClass('open').animation @opts.animation.close, $.proxy(@closed, this)
+      return
+    closed: ->
+      @disableEvents()
+      @callback 'closed'
+      return
+    isOpened: ->
+      @$target.hasClass 'open'
+    isClosed: ->
+      !@$target.hasClass('open')
+    isNavigationFixed: ->
+      @$element.closest('.fixed').length != 0
+  )
+  return
+
 # Direct Load
 (($) ->
   $.modalcurrent = null

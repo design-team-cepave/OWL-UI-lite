@@ -6,6 +6,7 @@ block head
 
 block content
   - var root_path = '../../'
+
   #header
     #header-brand
       a(href='http://cepave.com/') Cepave
@@ -25,87 +26,113 @@ block content
           ul
             li: a(href='index.html#h-base') Base
             li: a(href='index.html#h-button') Button dropdown
-            li: a(href='index.html#h-navigation') Navigation
+            li: a(href='index.html#h-tab') Tab dropdown
 
       .col.col-9
         #owl-ui-lite-component
 
-          // base
-          h3#h-base.demo-head base
-          .row
-            .col-6
-              p
-                .dropdown
-                  | 下拉選單
-                  span.caret.down
-            .col-6
-              p
-                .dropdown
-                  span 下拉選單
-                  span.caret.up
-                  #dropdown1.dropdown.open
-                    ul
-                      li
-                        a(href='#') Item 1
-                      li
-                        a(href='#') Item 2
-                      li.active
-                        a(href='#') Item 3
-                      li
-                        a(href='#')
-                          span.label.primary Item 4
-                      li
-                        a(href='#')
-                          span.label.error Item 5
+          // Heyper Link Dropdown
+          h3.demo-head#h-base Hyperlink
+          p
+            a(href='#', data-component='dropdown', data-target='#dropdown1')
+              | 顯示下拉選單
+              span.caret.down
+          #dropdown1.dropdown
+            a.close.show-on-small(href='#')
+            ul
+              li
+                a(href='') Item 1
+              li
+                a(href='') Item 2
+              li.active
+                a(href='') Item 3
+              li
+                a(href='')
+                  span.label.primary Item 4
+              li
+                a(href='')
+                  span.label.error Item 5
           .window
             .icons: span
-            .title dropdown.pug
+            .title button--base.pug
             pre.language-jade
               code.
-                .dropdown
-                  span 下拉選單
+                // Toggle
+                a(href='#', data-component='dropdown', data-target='#dropdownID')
+                  | 顯示下拉選單
                   span.caret.down
-                  .dropdown.open
-                    ul
-                      li ...
-          // Button dropdown
-          h3#h-botton.demo-head Button Dropdown
-          .row
-            .col-6
-              p
-                button.button.outline.primary.dropdown
-                  | 下拉選單
+
+                // Dropdown
+                #dropdownID.dropdown
+                  a.close.show-on-small(href='')
+                  ul
+                    li
+                      a(href='') ...
+
+          // Button Dropdown
+          h3.demo-head#h-button Button Dropdown
+          p
+            button.button.primary.outline(data-component='dropdown', data-target='#dropdown2')
+              | 顯示下拉選單
+              span.caret.down
+          #dropdown2.dropdown
+            div(style='padding: 24px;')
+              p Lorem Ipsum，也称乱数假文或者哑元文本， 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
+              a(href='#', data-action='dropdown-close') 關閉
+          .window
+            .icons: span
+            .title button--base.pug
+            pre.language-jade
+              code.
+                // Toggle
+                button.button.outline(data-component='dropdown', data-target='#dropdownID')
+                  | 顯示下拉選單
                   span.caret.down
-            .col-6
-              p
-                button.button.outline.primary.dropdown(data-target='#dropdown2')
-                  | 下拉選單
-                  span.caret.up
-                  #dropdown2.dropdown.open
-                    div(style='padding: 24px;')
-                      p Lorem Ipsum，也称乱数假文或者哑元文本， 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
-                      a(href='index.html#', data-action='dropdown-close') 關閉
-          // Navigation
-          h3.demo-head#h-navigation Navigation Fixed
-          #navbar-demo.sticky
-            nav#navbar-main
-              ul
-                li
-                  a(href='index.html#') Item 1
-                li
-                  a(href='index.html#') Item 2
-                li
-                  a(href='index.html#') Item 3
-                li
-                  .dropdown(data-target='#dropdown-fixed')
-                    | 下拉選單
-                    span.caret.up
-                    #dropdown-fixed.dropdown.open
-                      ul
-                        li
-                          a(href='') Menu 1
-                        li
-                          a(href='') Menu 2
+
+                // Dropdown
+                #dropdownID.dropdown
+                  p ...
+                  a(href='#', data-action='dropdown-close') 關閉
+
+          // Tab Dropdown
+          h3.demo-head#h-tab Tab Dropdown
+          nav#tab-header.tabs.header
+            ul
+              li.active
+                a(href='index.html#tab1') HostGroup
+              li
+                a(href='index.html#tab2') Endpoint
+              li
+                a(href='', data-component='dropdown', data-target='#dropdown-tab')
+                  | 四大維度
+                  span.caret.down
+          #dropdown-tab.dropdown
+            ul
+              li
+                a(href='') ISP
+              li
+                a(href='') 平台
+              li
+                a(href='') 地理資訊
+              li
+                a(href='') 機房
+          .window
+            .icons: span
+            .title button--base.pug
+            pre.language-jade
+              code.
+                nav#tab.tabs.header
+                  ul
+                    li
+                      // Toggle
+                      a(href='', data-component='dropdown', data-target='#dropdownID')
+                        | 下拉選單
+                        span.caret.down
+                // Dropdown
+                #dropdownID.dropdown
+                  ul
+                    li
+                      a(href='') ...
 
   include ../../_footer
 
