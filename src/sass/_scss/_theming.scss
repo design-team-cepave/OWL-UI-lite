@@ -187,3 +187,13 @@ $overlay-color              : (top                                              
 $overlay-background-color   : rgba(map-get($overlay-color, top),1) 30%, rgba(map-get($overlay-color, bottom),1) 70%;
 
 
+// =============
+// Pagination
+// =============
+$pagination-border-radius: 0;
+$pagination-padding: $beta $delta;
+$pagination-hover-background: $color-primary-light;
+$pagination-color: $color-gray-darker;
+$pagination-hover-color: $color-gray-lightest;
+$pagination-border-color: $color-gray-lighter;
+
