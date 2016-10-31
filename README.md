@@ -45,17 +45,17 @@ Installation
 內容
 -------------------------
 
-* [Typography](http://design.cepave.com/owl-ui-lite/typography/index.html)
-* [Palettes](http://design.cepave.com/owl-ui-lite/palettes/index.html)
-* [Grid](http://design.cepave.com/owl-ui-lite/grid/index.html)
-* [Forms](http://design.cepave.com/owl-ui-lite/forms/index.html)
-* [Tables](http://design.cepave.com/owl-ui-lite/tables/index.html)
-* [Buttons](http://design.cepave.com/owl-ui-lite/buttons/index.html)
-* [Tabs](http://design.cepave.com/owl-ui-lite/tabs/index.html)
-* [Labels](http://design.cepave.com/owl-ui-lite/labels/index.html)
-* [Breadcrumbs](http://design.cepave.com/owl-ui-lite/breadcrumbs/index.html)
-* [Dropdowns](http://design.cepave.com/owl-ui-lite/dropdowns/index.html)
-* [Modals](http://design.cepave.com/owl-ui-lite/modals/index.html)
+* [Typography](http://design.cepave.com/owl-ui-lite/docs/typography/index.html)
+* [Palettes](http://design.cepave.com/owl-ui-lite/docs/palettes/index.html)
+* [Grid](http://design.cepave.com/owl-ui-lite/docs/grid/index.html)
+* [Forms](http://design.cepave.com/owl-ui-lite/docs/forms/index.html)
+* [Tables](http://design.cepave.com/owl-ui-lite/docs/tables/index.html)
+* [Buttons](http://design.cepave.com/owl-ui-lite/docs/buttons/index.html)
+* [Tabs](http://design.cepave.com/owl-ui-lite/docs/tabs/index.html)
+* [Labels](http://design.cepave.com/owl-ui-lite/docs/labels/index.html)
+* [Breadcrumbs](http://design.cepave.com/owl-ui-lite/docs/breadcrumbs/index.html)
+* [Dropdowns](http://design.cepave.com/owl-ui-lite/docs/dropdowns/index.html)
+* [Modals](http://design.cepave.com/owl-ui-lite/docs/modals/index.html)
 * [Mixins](#)
 
 
