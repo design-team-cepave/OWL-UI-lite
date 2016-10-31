@@ -27,16 +27,9 @@ bower_components
 
 ## Build
 dist/css
+dist/scripts
 dist/**/*.html
 dist/assets/css
-dist/scripts/vendor
-/dist/scripts/main.js
-
-
-
-## Change path
-app/dist/css
-app/dist/*.html
 
 ## Sublime editor
 *.sublime-project
@@ -45,10 +38,10 @@ app/dist/*.html
 .eslintrc
 
 ## Todo
-app/dist/humans.txt
-app/dist/robots.txt
-/.sass-cache
+dist/humans.txt
+dist/robots.txt
 
 ## Dev
-temp/
+.sass-cache
+temp
 screen.sketch
