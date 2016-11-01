@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/20/more</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Output-temp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="temp" transform="translate(-366.000000, -212.000000)" fill="#B8BDBF">
+            <path d="M376,219 C377.1,219 378,218.1 378,217 C378,215.9 377.1,215 376,215 C374.9,215 374,215.9 374,217 C374,218.1 374.9,219 376,219 L376,219 L376,219 Z M376,220 C374.9,220 374,220.9 374,222 C374,223.1 374.9,224 376,224 C377.1,224 378,223.1 378,222 C378,220.9 377.1,220 376,220 L376,220 L376,220 Z M376,225 C374.9,225 374,225.9 374,227 C374,228.1 374.9,229 376,229 C377.1,229 378,228.1 378,227 C378,225.9 377.1,225 376,225 L376,225 L376,225 Z" id="icon/more"></path>
+        </g>
+    </g>
+</svg>
