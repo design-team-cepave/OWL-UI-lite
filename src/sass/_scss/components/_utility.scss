@@ -27,9 +27,9 @@
 // Float
 @mixin float-right {
   float: right;
-  @media (max-width: $breakpoint-small) {
-    float: none;
-  }
+  // @media (max-width: $breakpoint-small) {
+  //   float: none;
+  // }
 }
 .float-right,
 %float-right {
@@ -38,16 +38,22 @@
 
 @mixin float-left {
   float: left;
-  @media (max-width: $breakpoint-small) {
-    float: none;
-  }
+  // @media (max-width: $breakpoint-small) {
+  //   float: none;
+  // }
 }
 .float-left,
 %float-left {
   @include float-left;
 }
 
-
+@mixin pull-right {
+  margin-left: auto;
+}
+.pull-right,
+%pull-right {
+  @include pull-right;
+}
 // Alignment
 @mixin text-right {
   text-align: right;

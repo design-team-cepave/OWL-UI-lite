@@ -9,15 +9,17 @@ block content
   #header
     #header-brand
       a(href='http://cepave.com/') Cepave
+    nav#nav
+      ul
+        li: a(href=root_path) Download
+        li: a(href=root_path+'docs/index.html') Documentation
+
   #main
-    #hero
-      h1 Forms
-      p#hero-lead
-        |OWL UI lite 完整定義所有表單元件，統一了主流瀏覽器的預設差異，可以利用他們來在網頁上完成所有與使用者的互動行為！
-      nav#hero-subnav
-        ul
-          li: a(href=root_path) Download
-          li: a(href=root_path+'docs/index.html') Documentation
+    .row.centered
+      #hero.col-10
+        h1 Forms
+        p#hero-lead
+          |OWL UI lite 完整定義所有表單元件，統一了主流瀏覽器的預設差異，可以利用他們來在網頁上完成所有與使用者的互動行為！
 
     .row
       .col.col-3

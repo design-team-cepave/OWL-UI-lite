@@ -9,17 +9,19 @@ block content
   #header
     #header-brand
       a(href='http://cepave.com/') Cepave
+    nav#nav
+      ul
+        li: a(href=root_path) Download
+        li: a(href=root_path+'docs/index.html') Documentation
+
   #main
-    #hero
-      h1 Modals
-      p#hero-lead
-        |很多原因和目的我们会使用模態视窗。 OWL UI lite 設計和操作 Modal 视窗的方式非常簡單。我们只需要設置一個
-        code div
-        |來表示 Modal 口的內容
-      nav#hero-subnav
-        ul
-          li: a(href=root_path) Download
-          li: a(href=root_path+'docs/index.html') Documentation
+    .row.centered
+      #hero.col-10
+        h1 Modals
+        p#hero-lead
+          |很多原因和目的我们会使用模態视窗。 OWL UI lite 設計和操作 Modal 视窗的方式非常簡單。我们只需要設置一個
+          code div
+          |來表示 Modal 口的內容
 
     .row
       .col.col-3

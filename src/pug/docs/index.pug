@@ -9,15 +9,17 @@ block content
   #header
     #header-brand
       a(href='http://cepave.com/') Cepave
+    nav#nav
+      ul
+        li: a(href=root_path) Download
+        li: a(href=root_path+'docs/index.html') Documentation
+
   #main
-    #hero
-      h1
-        span#owl-ui-lite-brand OWL UI lite
-      p professional designer and developer CSS framework
-      nav#hero-subnav
-        ul
-          li: a(href=root_path)  Download
-          li: span Documentation
+    .row.centered
+      #hero.col-10
+        h1
+          span#owl-ui-lite-brand OWL UI lite
+        p professional designer and developer CSS framework
 
     #owl-ui-lite-components
       .row.equal

@@ -9,15 +9,17 @@ block content
   #header
     #header-brand
       a(href='http://cepave.com/') Cepave
+    nav#nav
+      ul
+        li: a(href=root_path) Download
+        li: a(href=root_path+'docs/index.html') Documentation
+
   #main
-    #hero
-      h1 Labels
-      p#hero-lead
-        |OWL UI lite 的 Labels
-      nav#hero-subnav
-        ul
-          li: a(href=root_path) Download
-          li: a(href=root_path+'docs/index.html') Documentation
+    .row.centered
+      #hero.col-10
+        h1 Labels
+        p#hero-lead
+          |OWL UI lite 的 Labels
 
     .row
       .col.col-3

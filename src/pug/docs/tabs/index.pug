@@ -9,15 +9,17 @@ block content
   #header
     #header-brand
       a(href='http://cepave.com/') Cepave
+    nav#nav
+      ul
+        li: a(href=root_path) Download
+        li: a(href=root_path+'docs/index.html') Documentation
+
   #main
-    #hero
-      h1 Tabs
-      p#hero-lead
-        |OWL UI lite 的頁籤的目的在轉換頁面或切換內容。
-      nav#hero-subnav
-        ul
-          li: a(href=root_path) Download
-          li: a(href=root_path+'docs/index.html') Documentation
+    .row.centered
+      #hero.col-10
+        h1 Tabs
+        p#hero-lead
+          |OWL UI lite 的頁籤的目的在轉換頁面或切換內容。
 
     .row
       .col.col-3
