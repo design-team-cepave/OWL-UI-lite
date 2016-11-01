@@ -52,11 +52,12 @@ var vendor = {
   prism: {
     js    : '/prism/prism.js',
     jade  : '/prism/components/prism-jade.js',
+    scss  : '/prism/components/prism-scss.js',
     style : '/prism/themes/**/*',
   }
 };
 gulp.task('prism:script', function() {
-  return gulp.src([vendor.src + vendor.prism.js, vendor.src + vendor.prism.jade])
+  return gulp.src([vendor.src + vendor.prism.js, vendor.src + vendor.prism.jade, vendor.src + vendor.prism.scss])
   .pipe($.plumber())
   .pipe(gulp.dest('dist/scripts/vendor/prism'));
 });
