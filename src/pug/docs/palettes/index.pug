@@ -9,15 +9,17 @@ block content
   #header
     #header-brand
       a(href='http://cepave.com/') Cepave
+    nav#nav
+      ul
+        li: a(href=root_path) Download
+        li: a(href=root_path+'docs/index.html') Documentation
+
   #main
-    #hero
-      h1 Color palettes
-      p#hero-lead
-        |OWL UI lite 的色票庫，是用科學的數學方式求得，藉此得到色採搭配的最佳視覺平衡方案。
-      nav#hero-subnav
-        ul
-          li: a(href=root_path) Download
-          li: a(href=root_path+'docs/index.html') Documentation
+    .row.centered
+      #hero.col-10
+        h1 Color palettes
+        p#hero-lead
+          |OWL UI lite 的色票庫，是用科學的數學方式求得，藉此得到色採搭配的最佳視覺平衡方案。
 
     .row
       .col.col-3

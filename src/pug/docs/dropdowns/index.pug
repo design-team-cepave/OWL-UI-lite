@@ -6,19 +6,20 @@ block head
 
 block content
   - var root_path = '../../'
-
   #header
     #header-brand
       a(href='http://cepave.com/') Cepave
+    nav#nav
+      ul
+        li: a(href=root_path) Download
+        li: a(href=root_path+'docs/index.html') Documentation
+
   #main
-    #hero
-      h1 Dropdowns
-      p#hero-lead
-        |OWL UI lite 的下拉選單是直覺的內容收納。
-      nav#hero-subnav
-        ul
-          li: a(href=root_path) Download
-          li: a(href=root_path+'docs/index.html') Documentation
+    .row.centered
+      #hero.col-10
+        h1 Dropdowns
+        p#hero-lead
+          |OWL UI lite 的下拉選單是直覺的內容收納。
 
     .row
       .col.col-3

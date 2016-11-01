@@ -9,15 +9,16 @@ block content
   #header
     #header-brand
       a(href='http://cepave.com/') Cepave
+    nav#nav
+      ul
+        li: a(href=root_path) Download
+        li: a(href=root_path+'docs/index.html') Documentation
   #main
-    #hero
-      h1 Buttons
-      p#hero-lead
-        |OWL UI lite 的按鈕元件組合是針對簡約、即時、便捷而定制，並支援 pushed, pressed, clicked 等操作
-      nav#hero-subnav
-        ul
-          li: a(href=root_path) Download
-          li: a(href=root_path+'docs/index.html') Documentation
+    .row.centered
+      #hero.col-10
+        h1 Buttons
+        p#hero-lead
+          |OWL UI lite 的按鈕元件組合是針對簡約、即時、便捷而定制，並支援 pushed, pressed, clicked 等操作
 
     .row
       .col.col-3

@@ -2,6 +2,7 @@
 @import "_scss/variables";
 @import "_scss/theming";
 @import "_scss/mixins";
+@import "_scss/components/utility";
 // @import "_scss/animation";
 
 
@@ -92,36 +93,33 @@ body, h1, h2, h3, h4, h5, h6, .button {
   p {
     // font-size: 18px;
     // line-height: 28px;
-    max-width: 720px;
-    margin: auto;
-  }
-  &-subnav {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: center;
-    li {
-      margin: 0 12px;
-      font-size: 20px;
-      display: inline-block;
-      a, span {
-        display: inline-block;
-        padding: 4px 12px;
-      }
-      a {
-        color: $color-primary;
-        &:hover {
-          color: $color-primary-dark;
-          text-decoration: underline;
-        }
-      }
-      span {
-        color: rgba(0, 0, 0, 0.45);
-      }
-    }
+    // max-width: 720px;
+    // margin: auto;
   }
   figure {
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+}
+#nav {
+  @include pull-right;
+  li {
+    margin: 0 12px;
+    display: inline-block;
+    a, span {
+      display: inline-block;
+      padding: 4px 12px;
+    }
+    a {
+      color: $color-primary;
+      text-decoration: none;
+      &:hover {
+        color: $color-primary-dark;
+      }
+    }
+    span {
+      color: rgba(0, 0, 0, 0.45);
+    }
   }
 }
 #owl-ui-lite {

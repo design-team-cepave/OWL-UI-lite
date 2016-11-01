@@ -9,16 +9,17 @@ block content
   #header
     #header-brand
       a(href='http://cepave.com/') Cepave
-  #main
-    #hero
-      h1 Table
-      p#hero-lead
-        |OWL UI lite 已預先格式化，並額外提供完整的各種樣式選用。因此在許多不同的情境下，讓資料得以獲得最佳的呈現。
+    nav#nav
+      ul
+        li: a(href=root_path) Download
+        li: a(href=root_path+'docs/index.html') Documentation
 
-      nav#hero-subnav
-        ul
-          li: a(href=root_path) Download
-          li: a(href=root_path+'docs/index.html') Documentation
+  #main
+    .row.centered
+      #hero.col-10
+        h1 Table
+        p#hero-lead
+          |OWL UI lite 已預先格式化，並額外提供完整的各種樣式選用。因此在許多不同的情境下，讓資料得以獲得最佳的呈現。
 
     .row
       .col.col-3

@@ -9,17 +9,19 @@ block content
   #header
     #header-brand
       a(href='http://cepave.com/') Cepave
+    nav#nav
+      ul
+        li: a(href=root_path) Download
+        li: a(href=root_path+'docs/index.html') Documentation
+
   #main
-    #hero
-      h1 Pagination
-      p#hero-lead
-        | OWL UI lite 中的分頁器使用 list 結構
-        code ul li
-        |。提供使用者視覺提示：表達當前頁面是及頁面編號，以便於導航。
-      nav#hero-subnav
-        ul
-          li: a(href=root_path) Download
-          li: a(href=root_path+'docs/index.html') Documentation
+    .row.centered
+      #hero.col-10
+        h1 Pagination
+        p#hero-lead
+          | OWL UI lite 中的分頁器使用 list 結構
+          code ul li
+          |。提供使用者視覺提示：表達當前頁面是及頁面編號，以便於導航。
 
     .row
       .col.col-3

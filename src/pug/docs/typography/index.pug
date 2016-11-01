@@ -9,15 +9,17 @@ block content
   #header
     #header-brand
       a(href='http://cepave.com/') Cepave
+    nav#nav
+      ul
+        li: a(href=root_path) Download
+        li: a(href=root_path+'docs/index.html') Documentation
+
   #main
-    #hero
-      h1 Typography / 文字排版
-      p#hero-lead
-        |Typography 是網頁上的最重要的基礎之一。即使是輕微的缺陷，也足以摧毀美麗的頁面。OWL UI lite 提供完美的排版與理想的間距、字級大小和比例關係，無論搭配什麼風格、選擇任何字體都可以適配頁面。
-      nav#hero-subnav
-        ul
-          li: a(href=root_path) Download
-          li: a(href=root_path+'docs/index.html') Documentation
+    .row.centered
+      #hero.col-10
+        h1 Typography / 文字排版
+        p#hero-lead
+          |Typography 是網頁上的最重要的基礎之一。即使是輕微的缺陷，也足以摧毀美麗的頁面。OWL UI lite 提供完美的排版與理想的間距、字級大小和比例關係，無論搭配什麼風格、選擇任何字體都可以適配頁面。
 
     .row
       .col.col-3

@@ -62,7 +62,7 @@
 }
 
 .pull-right {
-  margin-left: auto;
+  @include pull-right;
 }
 
 .col-1 {  @include grid-column(1); }
