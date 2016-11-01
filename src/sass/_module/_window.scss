@@ -1,5 +1,5 @@
 .window {
-  $border-radius : $beta;
+  $border-radius : 4px;
   $black         : #222;
   $grey-dark     : $color-gray-dark;
   $grey-light    : $color-gray-lighter;
@@ -9,45 +9,47 @@
   $yellow        : #f4c025;
   $green         : #3ec930;
 
-  background: $grey-light;
+  // background: $grey-light;
   border-radius: $border-radius;
   @include flex;
   @include flex-flow(row wrap);
   position: relative;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   code, pre {
     color: $color-gray;
   }
-  .title {
-    flex: 1;
-    text-align: center;
-    padding: 0.35em 0.75em;
-  }
-  %icon {
-    display: inline-block;
-    float: left;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    margin-right: 0.5em;
-  }
-  .icons {
-    padding: 0.75em;
-    span {
-      @extend %icon;
-      background: $yellow;
-    }
-    &:before {
-      @extend %icon;
-      content: '';
-      background: $red;
-    }
-    &:after {
-      @extend %icon;
-      content: '';
-      background: $green;
-    }
-  }
+  // .title {
+  //   flex: 1;
+  //   text-align: center;
+  //   padding: 0.35em 0.75em;
+  //   margin-right: 72px;
+  // }
+  // %icon {
+  //   display: inline-block;
+  //   float: left;
+  //   width: .75em;
+  //   height: .75em;
+  //   border-radius: 50%;
+  //   margin-right: 0.5em;
+  // }
+  // .icons {
+  //   padding: 0.5em;
+  //   span {
+  //     @extend %icon;
+  //     background: $yellow;
+  //   }
+  //   &:before {
+  //     @extend %icon;
+  //     content: '';
+  //     background: $red;
+  //   }
+  //   &:after {
+  //     @extend %icon;
+  //     content: '';
+  //     background: $green;
+  //   }
+  // }
   pre {
     background: $color-gray-lightest;
     border-bottom-left-radius: $border-radius;
@@ -61,57 +63,27 @@
     code {
       font: bold #{1em}/#{1.5} 'Source Code Pro', monospace;
 
-      &:after {
-        animation: blink 0.75s infinite;
-        font: initial;
-        display: block;
-        opacity: 1;
-        content: '|';
-      }
+      // &:after {
+      //   animation: blink 0.75s infinite;
+      //   font: initial;
+      //   display: block;
+      //   opacity: 1;
+      //   content: '|';
+      // }
     }
   }
 
-  .token {
-    &.tag {
-      color: #A95861;
-    }
-    &.attr-name {
-      color: #D08770;
-    }
-    &.attr-value {
-      color: #A3BE8C;
-    }
-    &.plain-text {
-      color: $color-gray;
-    }
-    &.string {
-      color: #A3BE8C;
-    }
-    &.punctuation {
-      color: $grey-dark;
-    }
-    &.boolean,
-    &.number {
-      color: $purple;
-    }
-    &.keyword {
-      color: $blue
-    }
-    &.operator {
-      color: $red;
-    }
-  }
-  @keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+  // @keyframes blink {
+  //   0% {
+  //     opacity: 1;
+  //   }
+  //   50% {
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //   }
+  // }
   // @media(max-width: #{$width}) {
   //   pre {
   //     font-size: 10px;
@@ -122,3 +94,48 @@
   //   }
   // }
 }
+
+// .token {
+//   $grey-dark     : $color-gray-dark;
+//   $grey-light    : $color-gray-lighter;
+//   $blue          : #09a3d5;
+//   $purple        : #8130c9;
+//   $red           : #e4514f;
+//   $yellow        : #f4c025;
+//   $green         : #3ec930;
+//   &.tag,
+//   &.selector {
+//     color: #A95861;
+//   }
+//   &.attr-name {
+//     color: #D08770;
+//   }
+//   &.attr-value {
+//     color: #A3BE8C;
+//   }
+//   &.plain-text {
+//     color: $color-gray;
+//   }
+//   &.string {
+//     color: #A3BE8C;
+//   }
+//   &.punctuation {
+//     color: $grey-dark;
+//   }
+//   &.boolean,
+//   &.number {
+//     color: $purple;
+//   }
+//   &.keyword {
+//     color: $blue
+//   }
+//   &.operator {
+//     color: $red;
+//   }
+//   &.property,
+//   &.punctuation {
+//     .language-scss & {
+//       color: #fff;
+//     }
+//   }
+// }

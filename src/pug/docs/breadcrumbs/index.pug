@@ -45,8 +45,8 @@ block content
               li.active
                 em 當前頁面
           .window
-            .icons: span
-            .title breadcrumb--base.pug
+            //- .icons: span
+            //- .title breadcrumb--base.pug
             pre.language-jade
               code.
                 nav.breadcrumb
@@ -71,8 +71,8 @@ block content
               li.active
                 em 當前頁面
           .window
-            .icons: span
-            .title breadcrumb--centered.pug
+            //- .icons: span
+            //- .title breadcrumb--centered.pug
             pre.language-jade
               code.
                 nav.breadcrumb.centered
@@ -97,8 +97,8 @@ block content
               li.active
                 em 當前頁面
           .window
-            .icons: span
-            .title breadcrumb--right.pug
+            //- .icons: span
+            //- .title breadcrumb--right.pug
             pre.language-jade
               code.
                 nav.breadcrumb.right
@@ -123,15 +123,16 @@ block content
               li.active
                 em 當前頁面
           .window
-            .icons: span
-            .title breadcrumb--custom-separator.pug
-            pre.language-jade
+            //- .icons: span
+            //- .title breadcrumb--custom-separator.pug
+            pre.language-scss
               code.
                 // css
                 #breadcrumb-custom-separator li:after {
                   content: '>';
                 }
-
+            pre.language-jade
+              code.
                 // jade
                 nav#breadcrumb-custom-separator.breadcrumb
                   ul

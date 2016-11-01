@@ -86,15 +86,14 @@ body, h1, h2, h3, h4, h5, h6, .button {
   max-width: 1128px;
 }
 #hero {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 48px;
+  padding-bottom: 48px;
   text-align: center;
   p {
-    font-size: 18px;
-    line-height: 28px;
+    // font-size: 18px;
+    // line-height: 28px;
     max-width: 720px;
     margin: auto;
-    color: rgba(0, 0, 0, 0.5);
   }
   &-subnav {
     margin-top: 40px;
@@ -211,8 +210,8 @@ body, h1, h2, h3, h4, h5, h6, .button {
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 48px;
+  margin-bottom: 24px;
   color: $color-gray-darker;
   text-align: center;
 }
@@ -226,6 +225,9 @@ body, h1, h2, h3, h4, h5, h6, .button {
   padding: 24px 28px;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.07);
+  p {
+    font-size: 13px;
+  }
 }
 
 .palettes-item {
@@ -238,7 +240,7 @@ body, h1, h2, h3, h4, h5, h6, .button {
     background: #ecf6f8;
   }
   .row {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
   .item {
     background: #e1eef0;
