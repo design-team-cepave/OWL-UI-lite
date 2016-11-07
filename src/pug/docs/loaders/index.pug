@@ -1,0 +1,54 @@
+extends ../../_base
+
+block head
+  - var root_path = '../../'
+  include ../../_head
+
+block content
+  - var root_path = '../../'
+  #header
+    #header-brand
+      a(href='http://cepave.com/') Cepave
+    nav#nav
+      ul
+        li: a(href=root_path) Download
+        li: a(href=root_path+'docs/index.html') Documentation
+  #main
+    .row.centered
+      #hero.col-10
+        h1 Loader
+        //- p#hero-lead
+
+    .row
+      .col.col-3
+        nav.nav-contents
+          ul
+            li: a(href='index.html#h-border') border
+            li: a(href='index.html#h-bar') bar
+      .col.col-9
+        #owl-ui-lite-component
+
+          // Border
+          h3#h-border.demo-head Border
+          p.centered
+            .loader.border
+          .window
+            pre.language-jade
+              code.
+                div(class="oader border")
+
+          // Bar
+          h3#h-bar.demo-head Bar
+          p.centered
+            .loader.bar
+          .window
+            pre.language-jade
+              code.
+                div(class="loader bar")
+
+
+  include ../../_footer
+
+block script
+  - var root_path = '../../'
+  include ../../_script
