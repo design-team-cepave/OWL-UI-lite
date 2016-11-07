@@ -33,28 +33,36 @@ block content
       .col.col-9
         #owl-ui-lite-component
 
+          mixin palettes-list(color, value)
+            tr
+              td.col-2
+                div(class='palettes-item color-background--' + color)
+              td.col-10
+                .window
+                  pre.language-scss
+                    code.
+                      background-color: #{value}
+                .window
+                  pre.language-jade
+                    code.
+                      class='color-background--#{color}'
+            tr
+              td.col-2
+                div(class='color-text--' + color) #{value}
+              td.col-10
+                .window
+                  pre.language-scss
+                    code.
+                      color: #{value}
+                .window
+                  pre.language-jade
+                    code.
+                      class='color-text--#{color}'
+
           // Primary
           h3#h-primary.demo-head Primary
           p 主色
-          table
-            mixin palettes-list(color, value)
-              tr
-                td.col-1: div(class='palettes-item color-background--' + color)
-                td.col-5
-                  code.
-                    background-color: #{value}
-                  br
-                  code.
-                    class='color-background--#{color}'
-                td.col-1
-                  div(class='color-text--' + color) #{value}
-                td.col-5
-                  code.
-                    color: #{value}
-                  br
-                  code.
-                    class='color-text--#{color}'
-
+          table.palettles-color
             +palettes-list('primary-light', '$color-primary-Light')
             +palettes-list('primary', '$color-primary')
             +palettes-list('primary-dark', '$color-primary-Dark')
@@ -62,7 +70,7 @@ block content
           // Secondary
           h3#h-secondary.demo-head Secondary
           p 搭配色
-          table
+          table.palettles-color
             +palettes-list('secondary-red', '$color-secondary-red')
             +palettes-list('secondary-orange', '$color-secondary-orange')
             +palettes-list('secondary-yellow', '$color-secondary-yellow')
@@ -74,7 +82,7 @@ block content
           // Gray
           h3#h-gray.demo-head Gray
           p 灰階
-          table
+          table.palettles-color
             +palettes-list('gray-lightest', '$color-gray-lightest')
             +palettes-list('gray-lighter', '$color-gray-lighter')
             +palettes-list('gray-light', '$color-gray-light')
@@ -85,7 +93,7 @@ block content
           // State
           h3#h-state.demo-head State
           p 狀態
-          table
+          table.palettles-color
             +palettes-list('default', '$color-default')
             +palettes-list('success', '$color-success')
             +palettes-list('error', '$color-gray-error')
