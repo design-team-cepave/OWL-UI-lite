@@ -2,7 +2,7 @@
 @import "_scss/variables";
 @import "_scss/theming";
 @import "_scss/mixins";
-@import "_scss/components/utility";
+// @import "_scss/components/utility";
 // @import "_scss/animation";
 
 
@@ -102,7 +102,8 @@ body, h1, h2, h3, h4, h5, h6, .button {
   }
 }
 #nav {
-  @include pull-right;
+  // @include pull-right;
+  margin-left: auto;
   li {
     margin: 0 12px;
     display: inline-block;
@@ -390,4 +391,24 @@ body, h1, h2, h3, h4, h5, h6, .button {
 
 // Code block
 @import "_module/window";
+
+
+// .temp
+.palettles-color {
+  .window {
+    pre {
+      margin: 0;
+    }
+    margin: 0;
+    & + .window {
+      margin-top: 20px;
+    }
+  }
+  tr > td:first-child {
+    vertical-align: middle;
+    > div {
+      display: inline-block;
+    }
+  }
+}
 
