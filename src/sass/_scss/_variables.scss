@@ -172,3 +172,9 @@ $pagination-hover-background: #f4f4f4;
 $pagination-hover-color: rgba(0, 0, 0, .5);
 $pagination-color: #000;
 $pagination-border-color: rgba(0, 0, 0, .1);
+
+// Loader
+$loader-color-primary: $color-primary;
+$loader-color-secondary: lighten($color-primary, 20%);
+$loader-bar-width: 100px;
+$loader-bar-height: 10px;

@@ -521,6 +521,13 @@
   }
 }
 
+@mixin vertical-align-center {
+  .vertical-align: middle;
+}
+.vertical-align-cente,
+%vertical-align-cente {
+  @include vertical-align-center;
+}
 // Background colors
 @mixin background-color($name, $color) {
   .color-background--#{$name} {
