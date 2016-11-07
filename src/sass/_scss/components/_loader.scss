@@ -1,0 +1,51 @@
+.loader {
+  margin: 50px auto;
+  display: block;
+}
+
+.border {
+  width: 0;
+  height: 0;
+  border: 20px solid $loader-color-primary;
+  border-top-color: $loader-color-secondary;
+  box-shadow: 0 0 0 1px $loader-color-primary;
+  border-radius: 100%;
+  animation: borderloader infinite 0.8s linear;
+}
+
+@include keyframes(borderloader) {
+  0% {
+    border-color: $loader-color-primary;
+    border-top-color: $loader-color-secondary;
+  }
+  25% {
+    border-color: $loader-color-primary;
+    border-right-color: $loader-color-secondary;
+  }
+  50% {
+    border-color: $loader-color-primary;
+    border-bottom-color: $loader-color-secondary;
+  }
+  75% {
+    border-color: $loader-color-primary;
+    border-left-color: $loader-color-secondary;
+  }
+}
+
+
+.bar {
+  width: $loader-bar-width;
+  height: $loader-bar-height;
+  background: $loader-color-primary;
+  border-right: ($loader-bar-width - $loader-bar-height) solid $loader-color-secondary;
+  border-left: 0px solid $loader-color-secondary;
+  box-shadow: 0 0 0 1px $loader-color-primary;
+  @include animation (barloader infinite 1.5s linear);
+}
+
+@include keyframes(barloader) {
+  50% {
+    border-left: 90px solid $loader-color-primary;
+    border-right: 0px solid $loader-color-primary;
+  }
+}
