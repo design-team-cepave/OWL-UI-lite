@@ -1,0 +1,24 @@
+nav#nav
+  ul.horizontal
+    li: a(href=root_path) Download
+    li
+      a(href=root_path+'docs/index.html', data-component='dropdown', data-target='#docDropdown')
+        | Documentation
+        span.caret.down
+      #docDropdown.dropdown
+        a.close.show-on-small(href='#')
+        ul
+          li: a(href=root_path+'docs/index.html') Back Documentation
+          li: a(href=root_path+'docs/typography/index.html') Typography
+          li: a(href=root_path+'docs/palettes/index.html') Palettes
+          li: a(href=root_path+'docs/grid/index.html') Grid
+          li: a(href=root_path+'docs/tables/index.html') Tables
+          li: a(href=root_path+'docs/forms/index.html') Forms
+          li: a(href=root_path+'docs/buttons/index.html') Buttons
+          li: a(href=root_path+'docs/labels/index.html') Labels
+          li: a(href=root_path+'docs/tabs/index.html') Tabs
+          li: a(href=root_path+'docs/breadcrumbs/index.html') Breadcrumbs
+          li: a(href=root_path+'docs/pagination/index.html') Pagination
+          li: a(href=root_path+'docs/dropdowns/index.html') Dropdowns
+          li: a(href=root_path+'docs/modals/index.html') Modals
+          li: a(href=root_path+'docs/loaders/index.html') Loaders

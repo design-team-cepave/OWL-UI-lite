@@ -102,24 +102,25 @@ body, h1, h2, h3, h4, h5, h6, .button {
   }
 }
 #nav {
-  // @include pull-right;
   margin-left: auto;
-  li {
-    margin: 0 12px;
-    display: inline-block;
-    a, span {
+  > .horizontal {
+    > li {
+      margin: 0 12px;
       display: inline-block;
-      padding: 4px 12px;
-    }
-    a {
-      color: $color-primary;
-      text-decoration: none;
-      &:hover {
-        color: $color-primary-dark;
+      > a, > span {
+        display: inline-block;
+        padding: 4px 12px;
       }
-    }
-    span {
-      color: rgba(0, 0, 0, 0.45);
+      > a {
+        color: $color-primary;
+        text-decoration: none;
+        &:hover {
+          color: $color-primary-dark;
+        }
+      }
+      > span {
+        color: rgba(0, 0, 0, 0.45);
+      }
     }
   }
 }
