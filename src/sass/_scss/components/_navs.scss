@@ -36,18 +36,6 @@
   }
 }
 
-%nav-h {
-  @include nav-h;
-}
-
-.nav-g {
-  @extend %nav-h;
-}
-
-.navbar {
-  @extend %nav-h;
-}
-
 // Vertical
 @mixin nav-v {
   @extend %nav;
@@ -79,12 +67,35 @@
     }
   }
 }
+
+%nav-h {
+  @include nav-h;
+}
+
+.nav-g {
+  @extend %nav-h;
+}
+
+.navbar {
+  @extend %nav-h;
+}
+
+
 %nav-v {
   @include nav-v;
 }
 
 .nav {
   @extend %nav-v;
+  .navbar & {
+    ul li {
+      float: none;
+      a,
+      span {
+        padding: 8px 12px;
+      }
+    }
+  }
 }
 
 // Stacked
