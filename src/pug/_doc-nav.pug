@@ -1,11 +1,11 @@
-nav#nav
-  ul.horizontal
+nav#nav.navbar
+  ul
     li: a(href=root_path) Download
     li
       a(href=root_path+'docs/index.html', data-component='dropdown', data-target='#docDropdown')
         | Documentation
         span.caret.down
-      #docDropdown.dropdown
+      nav#docDropdown.dropdown.nav
         a.close.show-on-small(href='#')
         ul
           li: a(href=root_path+'docs/index.html') Back Documentation

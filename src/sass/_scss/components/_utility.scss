@@ -490,6 +490,9 @@
     margin-left: $beta;
     margin-right: $alpha;
   }
+  .navbar & {
+    display: inline-block;
+  }
 }
 
 // Offcanvas

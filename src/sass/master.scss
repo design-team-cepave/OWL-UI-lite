@@ -103,26 +103,26 @@ body, h1, h2, h3, h4, h5, h6, .button {
 }
 #nav {
   margin-left: auto;
-  > .horizontal {
-    > li {
-      margin: 0 12px;
+  margin-bottom: 0;
+  > li {
+    margin: 0 12px;
+    display: inline-block;
+    > a, > span {
       display: inline-block;
-      > a, > span {
-        display: inline-block;
-        padding: 4px 12px;
-      }
-      > a {
-        color: $color-primary;
-        text-decoration: none;
-        &:hover {
-          color: $color-primary-dark;
-        }
-      }
-      > span {
-        color: rgba(0, 0, 0, 0.45);
+      padding: 4px 12px;
+    }
+    > a {
+      color: $color-primary;
+      text-decoration: none;
+      &:hover {
+        color: $color-primary-dark;
       }
     }
+    > span {
+      color: rgba(0, 0, 0, 0.45);
+    }
   }
+
 }
 #owl-ui-lite {
   &-brand {
@@ -189,17 +189,21 @@ body, h1, h2, h3, h4, h5, h6, .button {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.nav-contents {
-  margin-top: 40px;
-  font-size: 16px;
-  li {
-    a {
-      color: $color-primary;
-      display: block;
-      padding: 12px 24px;
-      text-decoration: none;
-      &:hover {
-        @include left-line(4px, $color-primary)
+#sidebar {
+  &.nav {
+    margin-top: 40px;
+    font-size: 16px;
+    ul {
+      li {
+        a {
+          color: $color-primary;
+          display: block;
+          padding: 12px 24px;
+          text-decoration: none;
+          &:hover {
+            @include left-line(4px, $color-primary)
+          }
+        }
       }
     }
   }
