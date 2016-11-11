@@ -1,0 +1,332 @@
+extends ../../_base
+
+block head
+  - var root_path = '../../'
+  include ../../_head
+
+block content
+  - var root_path = '../../'
+  #header
+    #header-brand
+      a(href='http://cepave.com/') Cepave
+    include ../../_doc-nav
+  #main
+    .row.centered
+      #hero.col-10
+        h1 Navigations
+        p#hero-lead
+
+    .row
+      .col.col-3
+        nav.nav-contents
+          ul
+            li: a(href='index.html#h-navbar') Navbar
+            li: a(href='index.html#h-v-nav') Navbar fullwidth
+            li: a(href='index.html#h-v-nav') Left &amp; right navbars
+            li: a(href='index.html#h-v-nav') Vertical navigation
+            li: a(href='index.html#h-nested') Vertical navigation with nested items
+            li: a(href='index.html#h-stroke') Stroked
+            li: a(href='index.html#h-stacked') Stacked
+            li: a(href='index.html#h-state') Stats
+      .col.col-9
+        #owl-ui-lite-component
+
+          // Navbar
+          h3#h-v-nav.demo-head Navbar
+          p
+            nav.navbar
+              ul
+                li
+                  a(href='index.html#') Item 1
+                li.active
+                  a(href='index.html#') Item 2
+                li
+                  a(href='index.html#') Item 3
+                li
+                  a(href='index.html#') Item 4
+                li
+                  a(href='index.html#') Item 5
+          .window
+            pre.language-jade
+              code.
+                nav.navbar
+                  ul
+                    li
+                      a(href='index.html#') ...
+                      a(href='index.html#') ...
+          p
+            | 使用&nbsp;
+            code sapn
+            | &nbsp;作為
+            var active
+            | &nbsp;狀態:
+          .window
+            pre.language-jade
+              code.
+                nav.navbar
+                  ul
+                    li
+                      a(href='index.html#') ...
+                    li
+                      span.active ...
+
+          // Navbar fullwidth
+          h3#h-v-nav.demo-head Navbar fullwidth
+          p
+          p
+            nav.navbar.fullwidth
+              ul
+                li
+                  a(href='index.html#') Item 1
+                li.active
+                  a(href='index.html#') Item 2
+                li
+                  a(href='index.html#') Item 3
+                li
+                  a(href='index.html#') Item 4
+                li
+                  a(href='index.html#') Item 5
+          .window
+            pre.language-jade
+              code.
+                nav.navbar.fullwidth
+                  ul
+                    li
+                      a(href='index.html#') ...
+
+          // Left &amp; right navbars
+          h3#h-v-nav.demo-head Left &amp; right navbars
+          p
+            header.group
+              nav.navbar.float-left
+                ul
+                  li
+                    span Item 1
+                  li
+                    a(href='index.html#') Item 2
+                  li
+                    a(href='index.html#') Item 3
+              nav.navbar.float-right
+                ul
+                  li
+                    a(href='index.html#') Item 4
+                  li
+                    a(href='index.html#') Item 5
+          .window
+            pre.language-jade
+              code.
+                header.group
+                  nav.navbar.float-left
+                    ul
+                      li ...
+                  nav.navbar.float-right
+                    ul
+                      li ...
+          p
+            header.group
+              nav.navbar.float-left
+                ul
+                  li
+                    span Item 1
+                  li
+                    a(href='index.html#') Item 2
+                  li
+                    a(href='index.html#') Item 3
+                  li
+                    a(href='index.html#') Item 4
+                  li
+                    a(href='index.html#') Item 5
+              form.float-right(action='')
+                input.input-search(type='text' placeholder='Search')
+          .window
+            pre.language-jade
+              code.
+                header.group
+                  nav.navbar.navbar-left
+                    ul
+                      li ...
+                  form.right(action='')
+                    input.input-search(type='text' placeholder='Search')
+
+          // Vertical navigation
+          h3#h-v-nav.demo-head Vertical navigation
+          p
+          p
+            nav.nav
+              ul
+                li
+                  a(href='index.html#') Item 1
+                li
+                  span Item 2
+                li
+                  a(href='index.html#') Item 3
+                li
+                  a(href='index.html#') Item 4
+                li
+                  a(href='index.html#') Item 5
+          .window
+            pre.language-jade
+              code.
+                nav.nav
+                  ul
+                    li
+                      a(href='index.html#') ...
+                    li
+                      span ...
+
+          // Vertical navigation with nested items
+          h3#h-nested.demo-head Vertical navigation with nested items
+          p
+          p
+            nav.nav
+              ul
+                li
+                  a(href='index.html#') Item 1
+                li
+                  span Item 2
+                li
+                  a(href='index.html#') Item 3
+                  ul
+                    li
+                      a(href='index.html#') Item 3.1
+                    li
+                      span Item 3.2
+                    li
+                      a(href='index.html#') Item 3.3
+                      ul
+                        li
+                          a(href='index.html#') Item 3.3.1
+                        li
+                          span Item 3.3.2
+                        li
+                          a(href='index.html#') Item 3.3.3
+                        li
+                          a(href='index.html#') Item 3.3.4
+                        li
+                          a(href='index.html#') Item 3.3.5
+                    li
+                      a(href='index.html#') Item 3.4
+                    li
+                      a(href='index.html#') Item 3.5
+                li
+                  a(href='index.html#') Item 4
+                li
+                  a(href='index.html#') Item 5
+          .window
+            pre.language-jade
+              code.
+                nav(class="nav")
+                  ul
+                    li ...
+                    li
+                      | ...
+                      ul
+                        li ...
+
+          // Stroked
+          h3#h-stroked.demo-head Stroked
+          p
+          p
+            nav.nav.nav-stroked
+              ul
+                li
+                  a(href='index.html#') Item 1
+                li
+                  span Item 2
+                li
+                  a(href='index.html#') Item 3
+                li
+                  a(href='index.html#') Item 4
+                li
+                  a(href='index.html#') Item 5
+          .window
+            pre.language-jade
+              code.
+                nav.nav.nav-stroked
+                  ul
+                    li ...
+
+          // Stacked
+          h3#h-stroked.demo-head Stacked
+          p
+          p
+            nav.nav.nav-stacked
+              ul
+                li
+                  a(href='index.html#') Item 1
+                li
+                  span Item 2
+                li
+                  a(href='index.html#') Item 3
+                li
+                  a(href='index.html#') Item 4
+                li
+                  a(href='index.html#') Item 5
+          .window
+            pre.language-jade
+              code.
+                nav.nav.nav-stacked
+                  ul
+                    li ...
+
+          // Stats
+          h3#h-stats.demo-head Stats
+          p
+          p
+            nav.nav.nav-stats
+              ul
+                li
+                  a(href='index.html#') Item 1
+                  sup 1
+                li
+                  span Item 2
+                  sup 2
+                li
+                  a(href='index.html#') Item 3
+                  sup 3
+                li
+                  a(href='index.html#') Item 4
+                  sup 4
+                li
+                  a(href='index.html#') Item 5
+                  sup 5
+          .window
+            pre.language-jade
+              code.
+                nav.nav.nav-stats
+                  ul
+                    li
+                      a(href='index.html#') ...
+                      sup ...
+          p
+            nav.nav.nav-stats.nav-stacked
+              ul
+                li
+                  a(href='index.html#') Item 1
+                  sup 1
+                li
+                  span Item 2
+                  sup 2
+                li
+                  a(href='index.html#') Item 3
+                  sup 3
+                li
+                  a(href='index.html#') Item 4
+                  sup 4
+                li
+                  a(href='index.html#') Item 5
+                  sup 5
+          .window
+            pre.language-jade
+              code.
+                nav.nav.nav-stats.nav-stacked
+                  ul
+                    li
+                      a(href='index.html#') ...
+                      sup ...
+
+  include ../../_footer
+
+block script
+  - var root_path = '../../'
+  include ../../_script
