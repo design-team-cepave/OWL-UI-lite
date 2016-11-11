@@ -1,0 +1,189 @@
+// base nav
+@mixin nav {
+  margin-bottom: $base-line;
+  ul {
+    @include reset-list-style;
+    margin: 0;
+  }
+}
+%nav {
+  @include nav;
+}
+
+// Horizontal
+@mixin nav-h() {
+  @include nav;
+  @include pie-clearfix;
+  ul {
+    @include pie-clearfix;
+    li {
+      float: left;
+      margin-right: 1.5em;
+      a,
+      span {
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      span {
+        color: $color-gray-light;
+      }
+    }
+  }
+}
+
+%nav-h {
+  @include nav-h;
+}
+
+.nav-g {
+  @extend %nav-h;
+}
+
+.navbar {
+  @extend %nav-h;
+}
+
+// Vertical
+@mixin nav-v {
+  @extend %nav;
+  ul {
+    li {
+      ul {
+        margin-left: 2em;
+        li {
+          a,
+          span {
+            padding: $beta 0;
+          }
+        }
+      }
+      a,
+      span {
+        display: block;
+        padding: $beta 0;
+      }
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      span {
+        color: $color-gray-light;
+      }
+    }
+  }
+}
+%nav-v {
+  @include nav-v;
+}
+
+.nav {
+  @extend %nav-v;
+}
+
+// Stacked
+.nav-stacked {
+  ul {
+    border: 1px solid $color-gray-lighter;
+    li {
+      a,
+      span {
+        padding: $beta $gamma;
+      }
+      a:hover {
+        background-color: $color-gray-lightest;
+      }
+    }
+  }
+}
+
+/* Stats */
+.nav-stats {
+  li {
+    position: relative;
+    a,
+    span {
+      padding-right: 50px;
+    }
+  }
+  .label,
+  .label-badge {
+    position: absolute;
+    top: 50%;
+    margin-top: $beta * -1;
+    right: 0;
+  }
+  &.nav-stacked {
+    .label,
+    .label-badge {
+      right: $alpha;
+    }
+  }
+  &.label {
+    &.label-data {
+      @extend %mr-label;
+    }
+  }
+  sup {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  &.nav-stacked sup {
+    right: $beta;
+  }
+}
+%mr-label {
+  margin-top: $beta * -1;
+  right: $beta;
+}
+.nav-stacked {
+  .label-data {
+    @extend %mr-label;
+  }
+  @extend .nav-stroked;
+}
+
+@for $i from 1 through 6 {
+  .nav-v {
+    h#{$i} {
+      margin-top: 1.5em;
+      margin-bottom: $alpha;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.nav-stroked {
+  li + li {
+    border-top: 1px solid $color-gray-lighter;
+  }
+}
+
+.fullwidth {
+  ul {
+    width: 100%;
+  }
+  li {
+    float: none !important;
+    margin: 0;
+    display: table-cell;
+    width: 1%;
+    text-align: center;
+    a,
+    span {
+      display: block;
+    }
+  }
+}
+
+
