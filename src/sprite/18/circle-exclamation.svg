@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/18/circle-exclamation</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Output-temp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="temp" transform="translate(-504.000000, -94.000000)" fill="#B8BDBF">
+            <path d="M513,96 C509.136,96 506,99.136 506,103 C506,106.864 509.136,110 513,110 C516.864,110 520,106.864 520,103 C520,99.136 516.864,96 513,96 L513,96 Z M514,108 L512,108 L512,102 L514,102 L514,108 L514,108 Z M514,101 L512,101 L512,99 L514,99 L514,101 L514,101 Z" id="path" transform="translate(513.000000, 103.000000) scale(1, -1) translate(-513.000000, -103.000000) "></path>
+        </g>
+    </g>
+</svg>
