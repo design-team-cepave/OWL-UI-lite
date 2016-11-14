@@ -1,10 +1,9 @@
 var gulp          = require('gulp'),
     $             = require('gulp-load-plugins')(),
     browserSync   = require('browser-sync'),
-    svgSprite     = require('gulp-svg-sprite'),
-    argv          = require('yargs').argv,
+    argv          = require('yargs').argv;
     browserReload = browserSync.reload,
-    src           = './src',
+    src           = './src';
     dist          = './dist';
 
 gulp.task('browser-sync', function() {
@@ -17,51 +16,6 @@ gulp.task('browser-sync', function() {
   });
 });
 
-var basePaths = {
-  src: 'icon/',
-  dest: 'html/assets/',
-};
-var paths = {
-  images: {
-    src: basePaths.src + 'img/',
-    dest: basePaths.dest + 'img/'
-  },
-  sprite: {
-    src: basePaths.src + 'sprite/**/*',
-    svg: 'img/sprite.svg',
-    css: '../../' + basePaths.src + 'sass/src/_sprite.scss'
-  },
-  templates: {
-    src: basePaths.src + 'tpl/'
-  }
-};
-
-config = {
-  shape: {
-    dest: 'out/intermediate-svg'
-  },
-  mode: {
-    view: {
-      bust: false,
-      render: {
-    scss: true
-      }
-    },
-    symbol: true
-  },
-  selector: "icon-%f"
-};
-
-gulp.task('svg-sprite', function(){
-  gulp.src('sprite/**/*.svg', {cwd: 'src'})
-    .pipe(svgSprite(config))
-  .pipe(gulp.dest('out'));
-});
-gulp.task('sprites', function () {
-  return gulp.src('src/sprite/**/*.svg')
-    .pipe(svgSprite({mode: "symbols"}))
-    .pipe(gulp.dest("out"));
-});
 gulp.task('ui-styles', function(){
   gulp.src('sass/owl-ui-lite.scss', {cwd: src})
     .pipe($.plumber())
