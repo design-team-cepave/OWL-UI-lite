@@ -2,73 +2,12 @@
 
 $ieSprite: '.lt-ie9' !default;
 $sprite: map-get($icons, sprite) !default;
-// $baseFontSize: 14px !default;
+$baseFontSize: 14px !default;
 
 @import '../mixins/sprites';
 
-.icon {
-  &.icon-add {@include sprite(icon-add);}
-  &.icon-alarm {@include sprite(icon-alarm);}
-  &.icon-arrow-down {@include sprite(icon-arrow-down);}
-  &.icon-arrow-up {@include sprite(icon-arrow-up);}
-  &.icon-bell {@include sprite(icon-bell);}
-  &.icon-bin {@include sprite(icon-bin);}
-  &.icon-board {@include sprite(icon-board);}
-  &.icon-check {@include sprite(icon-check);}
-  &.icon-chevron-left {@include sprite(icon-chevron-left);}
-  &.icon-chevron-right {@include sprite(icon-chevron-right);}
-  &.icon-circle-add {@include sprite(icon-circle-add);}
-  &.icon-circle-and {@include sprite(icon-circle-and);}
-  &.icon-circle-error {@include sprite(icon-circle-error);}
-  &.icon-circle-exclamation {@include sprite(icon-circle-exclamation);}
-  &.icon-circle-info {@include sprite(icon-circle-info);}
-  &.icon-circle-minus {@include sprite(icon-circle-minus);}
-  &.icon-circle-open-new {@include sprite(icon-circle-open-new);}
-  &.icon-circle-phone {@include sprite(icon-circle-phone);}
-  &.icon-circle-prompt {@include sprite(icon-circle-prompt);}
-  &.icon-circle-restore {@include sprite(icon-circle-restore);}
-  &.icon-circle-success {@include sprite(icon-circle-success);}
-  &.icon-clipboard {@include sprite(icon-clipboard);}
-  &.icon-clone {@include sprite(icon-clone);}
-  &.icon-cpu {@include sprite(icon-cpu);}
-  &.icon-date {@include sprite(icon-date);}
-  &.icon-disable {@include sprite(icon-disable);}
-  &.icon-disk {@include sprite(icon-disk);}
-  &.icon-double-left {@include sprite(icon-double-left);}
-  &.icon-double-right {@include sprite(icon-double-right);}
-  &.icon-eye {@include sprite(icon-eye);}
-  &.icon-eye-off {@include sprite(icon-eye-off);}
-  &.icon-filter {@include sprite(icon-filter);}
-  &.icon-fn {@include sprite(icon-fn);}
-  &.icon-gear {@include sprite(icon-gear);}
-  &.icon-graph {@include sprite(icon-graph);}
-  &.icon-grid-1 {@include sprite(icon-grid-1);}
-  &.icon-grid-16 {@include sprite(icon-grid-16);}
-  &.icon-grid-4 {@include sprite(icon-grid-4);}
-  &.icon-grid-9 {@include sprite(icon-grid-9);}
-  &.icon-health {@include sprite(icon-health);}
-  &.icon-host {@include sprite(icon-host);}
-  &.icon-legend {@include sprite(icon-legend);}
-  &.icon-linechart {@include sprite(icon-linechart);}
-  &.icon-location {@include sprite(icon-location);}
-  &.icon-memory {@include sprite(icon-memory);}
-  &.icon-more {@include sprite(icon-more);}
-  &.icon-net {@include sprite(icon-net);}
-  &.icon-note {@include sprite(icon-note);}
-  &.icon-open-new {@include sprite(icon-open-new);}
-  &.icon-other {@include sprite(icon-other);}
-  &.icon-pen {@include sprite(icon-pen);}
-  &.icon-search {@include sprite(icon-search);}
-  &.icon-sort {@include sprite(icon-sort);}
-  &.icon-sunny {@include sprite(icon-sunny);}
-  &.icon-sync {@include sprite(icon-sync);}
-  &.icon-tick-circle {@include sprite(icon-tick-circle);}
-  &.icon-time {@include sprite(icon-time);}
-  &.icon-top10 {@include sprite(icon-top10);}
-  &.icon-triangle-down {@include sprite(icon-triangle-down);}
-  &.icon-triangle-up {@include sprite(icon-triangle-up);}
-  &.icon-user-group {@include sprite(icon-user-group);}
-  &.icon-x {@include sprite(icon-x);}
-  &.icon-zoom-in {@include sprite(icon-zoom-in);}
-  &.icon-zoom-out {@include sprite(icon-zoom-out);}
+@each $sprite-icon in icon-alarm, icon-arrow-down, icon-arrow-up, icon-bell, icon-bin, icon-board, icon-check, icon-chevron-left, icon-chevron-right, icon-circle-add, icon-circle-and, icon-circle-error, icon-circle-exclamation, icon-circle-info, icon-circle-minus, icon-circle-open-new, icon-circle-phone, icon-circle-prompt, icon-circle-restore, icon-circle-success, icon-clipboard, icon-clone, icon-cpu, icon-date, icon-disable, icon-disk, icon-double-left, icon-double-right, icon-eye, icon-eye-off, icon-filter, icon-fn, icon-gear, icon-graph, icon-grid-1, icon-grid-16, icon-grid-4, icon-grid-9, icon-health, icon-host, icon-legend, icon-linechart, icon-location, icon-memory, icon-more, icon-net, icon-note, icon-open-new, icon-other, icon-pen, icon-search, icon-sort, icon-sunny, icon-sync, icon-tick-circle, icon-time, icon-top10, icon-triangle-down, icon-triangle-up, icon-user-group, icon-x, icon-zoom-in, icon-zoom-out {
+  .icon {
+    &.#{$sprite-icon} {@include sprite($sprite-icon);}
+  }
 }
