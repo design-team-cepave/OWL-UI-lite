@@ -184,3 +184,350 @@
     top: $top;
   }
 }
+
+// center
+@mixin mid() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// vertical
+@mixin mid-v() {
+  display: flex;
+  align-items: center;
+}
+
+// horizontally
+@mixin mid-h() {
+  display: flex;
+  justify-content: center;
+}
+
+// size
+@mixin size($value) {
+  $width: nth($value, 1);
+  $height: $width;
+
+  @if length($value) > 1 {
+    $height: nth($value, 2);
+  }
+
+  @if is-size($height) {
+    height: $height;
+  } @else {
+    @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+  }
+
+  @if is-size($width) {
+    width: $width;
+  } @else {
+    @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+  }
+}
+
+// full width
+@mixin full-width {
+  width: 100%
+}
+
+@mixin full-height {
+  height: 100%
+}
+
+@mixin full-size {
+  @include full-width;
+  @include full-height;
+}
+
+
+// Layout
+
+@mixin group {
+  @include clearfix;
+}
+
+@mixin end {
+  margin-bottom: 0 !important;
+}
+
+@mixin centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+// Float
+@mixin float-right {
+  float: right;
+  // @media (max-width: $breakpoint-small) {
+  //   float: none;
+  // }
+}
+
+@mixin float-left {
+  float: left;
+  // @media (max-width: $breakpoint-small) {
+  //   float: none;
+  // }
+}
+
+@mixin pull-right {
+  margin-left: auto;
+}
+
+
+// Alignment
+@mixin text-right {
+  text-align: right;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+
+// Display
+@mixin hide {
+  display: none;
+}
+
+@mixin hide-on-small {
+  @media (max-width: $breakpoint-small) {
+    display: none !important;
+  }
+}
+
+@mixin show-on-small {
+  display: none !important;
+  @media (max-width: $breakpoint-small) {
+    display: block !important;
+  }
+}
+
+
+// Print
+@mixin hide-on-print {
+  @media print {
+    display: none !important;
+  }
+}
+
+@mixin show-on-print {
+  @media print {
+    display: block !important;
+  }
+}
+
+
+// Visibility
+@mixin invisible {
+  visibility: hidden;
+}
+
+@mixin visible {
+  visibility: visible
+}
+
+// TextColor
+@mixin muted {
+  color: rgba(0, 0, 0, .5) !important;
+  &:hover {
+    color: #000 !important;
+  }
+}
+
+@mixin soft-muted {
+  color: rgba(0, 0, 0, .7) !important;
+  &:hover {
+    color: #000 !important;
+  }
+}
+
+@mixin error {
+  color: $color-error;
+}
+
+@mixin success {
+  color: $color-success;
+}
+
+
+// TextStyle
+@mixin upper {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+@mixin normal {
+  font-weight: normal !important;
+}
+
+@mixin light {
+  font-weight: 300 !important;
+}
+
+@mixin italic {
+  font-style: italic !important;
+}
+
+@mixin bold {
+  font-weight: bold !important;
+}
+
+
+// Highlight
+@mixin highlight($color) {
+  background-color: $color;
+}
+
+
+// Round
+@mixin round {
+  border-radius: 50%;
+}
+
+// WhiteSpace
+@mixin nowrap {
+  td {
+    white-space: nowrap;
+  }
+}
+
+
+// Forms
+@mixin req {
+  display: inline;
+  color: transparent;
+  &:after {
+    content: '*';
+    font-size: 1.1em;
+    font-weight: bold;
+    color: $color-error;
+    text-transform: none;
+  }
+}
+
+
+// Fullwidth
+@mixin fullwidth {
+  @media (min-width: $breakpoint-small) {
+    @include flex-item-auto;
+  }
+}
+
+@mixin width-100 {
+  width: 100%;
+}
+
+@mixin width-50 {
+  width: 50%;
+}
+
+
+// Fixed
+@mixin fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-over-content;
+  width: 100%;
+}
+
+
+// NoScroll
+@mixin no-sroll {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+
+// Overlay
+@mixin overlay {
+  position: fixed;
+  z-index: $z-over-control;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: $overlay-background-opacity;
+  @include background-image(linear-gradient($overlay-background-color));
+}
+
+
+// ScrollbarMeasure
+@mixin scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+
+// IconSearch
+@mixin search-icon {
+  display: inline-block;
+  font-size: 18px;
+  width: 16px;
+  line-height: 1;
+  font-style: normal;
+  color: #000;
+  position: relative;
+  top: -1px;
+  font-weight: bold;
+  @include transform(rotate(-45deg));
+  &:before {
+    content: "\26B2";
+  }
+  &.inverted {
+    color: #fff;
+  }
+}
+
+// IconMenu
+@mixin menu-icon {
+  display: inline-block;
+  font-size: 15px;
+  width: 16px;
+  line-height: 1;
+  font-style: normal;
+  color: #000;
+  font-weight: normal;
+  &:before {
+    content: "\2630";
+  }
+  &.inverted {
+    color: #fff;
+  }
+}
+
+
+@mixin vertical-align-center {
+  .vertical-align: middle;
+}
+
+
+// Background colors
+@mixin background-color($name, $color) {
+  .color-background--#{$name} {
+    background-color: $color;
+  }
+}
+
+
+//
+.full-width {
+  @include full-width;
+}
+.full-height {
+  @include full-height
+}
+.full-size {
+  @extend .full-width;
+  @extend .full-height;
+}
