@@ -16,6 +16,7 @@ $color-primary            : #8962D9; //rgb(137, 98, 217)
 $color-primary-dark       : #6B5499; //rgb(107, 84, 153)
 
 // Secondary Color
+$color-secondary-color-turquoise : #50E3C2;
 $color-secondary-red       : #E6175C;
 $color-secondary-orange    : #F27F0C;
 $color-secondary-yellow    : #FFD919;
@@ -208,3 +209,14 @@ $pagination-border-color: $color-gray-lighter;
 $loader-color-primary: rgba($color-primary, 0.2);
 $loader-color-secondary: $color-primary-light;
 
+
+
+// =============
+// Template >
+// SiteSetting
+// =============
+$naviBar     : 56px;
+$navSetting  : 170px;
+$navigation  : $naviBar + $navSetting;
+$navigationZ : 222;
+$page        : 111;

@@ -1,0 +1,144 @@
+%fullSize {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  opacity: 1;
+  background: #e6ebf0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+%fullHeight {
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+}
+
+%siteTransition {
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+%naviTransition {
+  transition: margin-left 0.15s ease;
+}
+
+// layout-fixed' : app.layout-isfixed
+// layout-slide' : app.layout-isslide
+// layout-boxed' : app.layout-isboxed
+body, #main {}
+
+#app, ._app-container {
+  @extend %fullSize;
+  width: inherit;
+  min-width: 1140px - $naviBar;
+  @extend %siteTransition;
+
+  .layout-fixed & {
+    margin-left: $naviBar;
+    @extend %naviTransition;
+  }
+
+  .layout-slide & {
+    margin-left: $navigation;
+    @extend %naviTransition;
+  }
+
+  .layout-boxed & {
+    margin-left: 0;
+    @extend %naviTransition;
+  }
+
+  > ._navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: $navigationZ;
+
+    .layout-fixed & {
+      position: fixed;
+    }
+    .layout-slide & {
+      position: fixed;
+    }
+    .layout-boxed & {
+      display: none;
+    }
+
+    .-nav-bar {
+      position: relative;
+      height: 100%;
+      width: $naviBar;
+      z-index: 333;
+    }
+
+    ._nav-setting {
+      position: absolute;
+      width: $navSetting;
+      height: 100%;
+      left: ($navSetting - $naviBar) * -1;
+      bottom: 0;
+      z-index: 222;
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.15s ease;
+
+      .layout-slide & {
+        position: fixed;
+        transform: translate3d($navSetting, 0, 0);
+        transition: transform 0.15s ease;
+      }
+    }
+  }
+
+  > ._page {
+    height: 100%;
+    margin-left: 0;
+
+    @extend %naviTransition;
+  }
+
+  > #page {
+    height: 100%;
+    margin-left: 0;
+
+    @extend %naviTransition;
+  }
+}
+
+%_page-padding {
+  padding: 25px 35px;
+}
+
+#app {
+  @extend %_page-padding;
+}
+
+%wallDefaultHeight {
+  min-height: calc(100vh - 50px);
+}
+
+.wall {
+  padding: 25px 35px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  @include pie-clearfix;
+
+  .page-agenthealth & {
+    padding: 25px 50px;
+    @extend %wallDefaultHeight;
+  }
+
+  .page-graph & {
+    @extend %wallDefaultHeight;
+  }
+
+  .page- & {
+    @extend %wallDefaultHeight;
+  }
+}

@@ -1,0 +1,51 @@
+extends ../../_base
+
+block head
+  - var root_path = '../../'
+  include ../../_head
+
+block content
+  - var root_path = '../../'
+  #main.layout-fixed
+    #app.page-
+      ._navigation
+        .react-components.-nav-bar
+          ._navBox
+            ._nav-square: a._nav-square-a(href='') nav
+            ._nav-square: a._nav-square-a(href='') nav
+            ._nav-square: a._nav-square-a(href='') nav
+            ._nav-square: a._nav-square-a(href='') nav
+            ._nav-square: a._nav-square-a(href='') nav
+            ._nav-square: a._nav-square-a(href='') nav
+            ._nav-square: a._nav-square-a(href='') nav
+            //     <a href="/configure#search">
+            //     <div className="_nav-square -search">
+            //       <Icon className="fill-white" size={iconSize} link="search" />
+            //     </div>
+            //     </a>
+            //     <a href="/configure#add">
+            //     <div className="_nav-square -add">
+            //       <Icon className="fill-white" size={iconSize} link="add" />
+            //     </div>
+            //     </a>
+            //     <NavA route="/alarm" icon="alarm" onClick={collapseNavMenu} />
+            //     <NavA route="/graph" icon="linechart" onClick={collapseNavMenu} />
+            //     <NavA route="/apollo" icon="sunny" onClick={collapseNavMenu} />
+            //     <NavA route="/topsummary" icon="top10" onClick={collapseNavMenu} />
+            //     <NavA route="/agenthealth" icon="health" onClick={collapseNavMenu} />
+            //     <NavA route="/nqm" icon="location" onClick={collapseNavMenu} />
+            //     <div className="_nav-square -setting" onClick={handleSetClick} >
+            //       <Icon size={iconSize} link="settings" />
+            //     </div>
+            //   </div>
+            //   <button className="_nav-avatar" onClick={this.routeToProfile}>
+            //     <Icon size="30x30" link="brand-circle" />
+            //   </button>
+            // </div>
+            // <NavSetup />
+      #page
+
+
+block script
+  - var root_path = '../../'
+  include ../../_script
