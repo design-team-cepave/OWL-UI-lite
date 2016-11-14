@@ -1,71 +1,43 @@
 // Layout
-@mixin group {
-  @include clearfix;
-}
 .group,
 %group {
   @include group;
 }
 
-@mixin end {
-  margin-bottom: 0 !important;
-}
 .end,
 %end {
   @include end;
 }
 
-@mixin centered {
-  margin-left: auto;
-  margin-right: auto;
-}
 .centered,
 %centered {
   @include centered;
 }
 
+
 // Float
-@mixin float-right {
-  float: right;
-  // @media (max-width: $breakpoint-small) {
-  //   float: none;
-  // }
-}
 .float-right,
 %float-right {
   @include float-right;
 }
 
-@mixin float-left {
-  float: left;
-  // @media (max-width: $breakpoint-small) {
-  //   float: none;
-  // }
-}
 .float-left,
 %float-left {
   @include float-left;
 }
 
-@mixin pull-right {
-  margin-left: auto;
-}
 .pull-right,
 %pull-right {
   @include pull-right;
 }
+
+
 // Alignment
-@mixin text-right {
-  text-align: right;
-}
 .text-right,
 %text-right {
   @include text-right;
 }
 
-@mixin text-center {
-  text-align: center;
-}
 .text-center,
 %text-center,
 .text-centered,
@@ -74,52 +46,28 @@
 }
 
 
-
 // Display
-@mixin hide {
-  display: none;
-}
 .hide,
 %hide {
   @include hide;
 }
 
-@mixin hide-on-small {
-  @media (max-width: $breakpoint-small) {
-    display: none !important;
-  }
-}
 .hide-on-small,
 %hide-on-small {
   @include hide-on-small;
 }
 
-@mixin show-on-small {
-  display: none !important;
-  @media (max-width: $breakpoint-small) {
-    display: block !important;
-  }
-}
 .show-on-small,
 %show-on-small {
   @include show-on-small;
 }
 
 // Print
-@mixin hide-on-print {
-  @media print {
-    display: none !important;
-  }
-}
-@mixin show-on-print {
-  @media print {
-    display: block !important;
-  }
-}
 .hide-on-print,
 %hide-on-print {
   @include hide-on-print;
 }
+
 .show-on-print,
 %show-on-print {
   @include show-on-print;
@@ -127,17 +75,11 @@
 
 
 // Visibility
-@mixin invisible {
-  visibility: hidden;
-}
 .invisible,
 %invisible {
   @include invisible;
 }
 
-@mixin visible {
-  visibility: visible
-}
 .visible,
 %visible {
   @include visible;
@@ -145,23 +87,11 @@
 
 
 // TextColor
-@mixin muted {
-  color: rgba(0, 0, 0, .5) !important;
-  &:hover {
-    color: #000 !important;
-  }
-}
 .muted,
 %muted {
   @include muted;
 }
 
-@mixin soft-muted {
-  color: rgba(0, 0, 0, .7) !important;
-  &:hover {
-    color: #000 !important;
-  }
-}
 .soft-muted,
 %soft-muted {
   @include soft-muted;
@@ -183,89 +113,56 @@
   @include success;
 }
 
+
 // TextStyle
-@mixin upper {
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
 .upper,
 %upper {
   @include upper;
 }
 
-@mixin normal {
-  font-weight: normal !important;
-}
 .normal,
 %normal {
   @include normal;
 }
 
-@mixin light {
-  font-weight: 300 !important;
-}
 .light,
 %light {
   @include light;
 }
 
-@mixin italic {
-  font-style: italic !important;
-}
 .italic,
 %italic {
   @include italic;
 }
 
-@mixin bold {
-  font-weight: bold !important;
-}
 .bold,
 %bold {
   @include bold;
 }
 
+
 // Highlight
 .highlight,
 %highlight {
-  background-color: $background-color-highlight;
-}
-@mixin highlight {
-  @extend %highlight;
+  @include highlight($background-color-highlight);
 }
 
+
 // Round
-@mixin round {
-  border-radius: 50%;
-}
 .round,
 %round {
   @include round;
 }
 
+
 // WhiteSpace
-@mixin nowrap {
-  td {
-    white-space: nowrap;
-  }
-}
 .nowrap,
 %nowrap {
   @include nowrap;
 }
 
+
 // Forms
-@mixin req {
-  display: inline;
-  color: transparent;
-  &:after {
-    content: '*';
-    font-size: 1.1em;
-    font-weight: bold;
-    color: $color-error;
-    text-transform: none;
-  }
-}
 .req,
 %req {
   @include req;
@@ -273,7 +170,6 @@
 
 
 // Close
-
 .close,
 %close {
   @include close(#000);
@@ -291,13 +187,6 @@
 
 
 // Fullwidth
-@mixin fullwidth {
-  @media (min-width: $breakpoint-small) {
-    @include flex-item-auto;
-  }
-}
-
-
 .fullwidth,
 %fullwidth {
   @include fullwidth;
@@ -314,19 +203,11 @@
   }
 }
 
-
-// Width
-@mixin width-100 {
-  width: 100%;
-}
 .width-100,
 %width-100 {
   @include width-100;
 }
 
-@mixin width-50 {
-  width: 50%;
-}
 .width-50,
 %width-50 {
   @include width-50;
@@ -339,31 +220,18 @@
 
 
 // Fixed
-@mixin fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: $z-over-content;
-  width: 100%;
-}
 .fixed,
 %fixed {
   @include fixed;
 }
 
+
 // NoScroll
-@mixin no-sroll {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100% !important;
-}
 .no-scroll,
 %no-scroll {
   @include no-sroll;
 }
+
 
 // Overlay
 @mixin overlay {
@@ -381,39 +249,15 @@
   @include overlay;
 }
 
+
 // ScrollbarMeasure
-@mixin scrollbar-measure {
-  position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll;
-}
 .scrollbar-measure,
 %scrollbar-measure {
   @include scrollbar-measure;
 }
 
+
 // IconSearch
-@mixin search-icon {
-  font-family: Arial, Helvetica, sans-serif;
-  display: inline-block;
-  font-size: 18px;
-  width: 16px;
-  line-height: 1;
-  font-style: normal;
-  color: #000;
-  position: relative;
-  top: -1px;
-  font-weight: bold;
-  @include transform(rotate(-45deg));
-  &:before {
-  content: "\26B2";
-  }
-  &.inverted {
-  color: #fff;
-  }
-}
 .search-icon,
 %search-icon {
   @include search-icon;
@@ -426,22 +270,6 @@
 }
 
 // IconMenu
-@mixin menu-icon {
-  font-family: Arial, Helvetica, sans-serif;
-  display: inline-block;
-  font-size: 15px;
-  width: 16px;
-  line-height: 1;
-  font-style: normal;
-  color: #000;
-  font-weight: normal;
-  &:before {
-  content: "\2630";
-  }
-  &.inverted {
-  color: #fff;
-  }
-}
 .menu-icon,
 %menu-icon {
   @include menu-icon;
@@ -495,6 +323,7 @@
   }
 }
 
+
 // Offcanvas
 .offcanvas,
 %offcanvas {
@@ -524,19 +353,15 @@
   }
 }
 
-@mixin vertical-align-center {
-  .vertical-align: middle;
-}
+
+//
 .vertical-align-cente,
 %vertical-align-cente {
   @include vertical-align-center;
 }
+
+
 // Background colors
-@mixin background-color($name, $color) {
-  .color-background--#{$name} {
-    background-color: $color;
-  }
-}
 @each $name, $color in (primary-light, $color-primary-light),
                        (primary,  $color-primary),
                        (primary-dark, $color-primary-dark),
@@ -565,4 +390,16 @@
   %color-text--#{$name} {
     color: $color;
   }
+}
+
+//
+.full-width {
+  @include full-width;
+}
+.full-height {
+  @include full-height
+}
+.full-size {
+  @extend .full-width;
+  @extend .full-height;
 }
