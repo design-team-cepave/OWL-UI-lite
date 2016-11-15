@@ -1,0 +1,99 @@
+extends ../../_base
+
+block head
+  - var root_path = '../../'
+  include ../../_head
+
+block content
+  - var root_path = '../../'
+  #header
+    #header-brand
+      a(href='http://cepave.com/') Cepave
+    include ../../_doc-nav
+  #doc-main
+    .row.centered
+      #hero.col-10
+        h1 Icons
+        p#hero-lead
+
+    .row
+      .col.col-3
+        nan#sidebar.nav
+          ul
+            li: a(href='index.html#h-base') Base
+      .col.col-9
+        #owl-ui-lite-component
+          // Base
+          h3#h-base.demo-head Base
+          p#icon-sample
+            span.icon.icon-add
+            span.icon.icon-alarm
+            span.icon.icon-arrow-down
+            span.icon.icon-arrow-up
+            span.icon.icon-bell
+            span.icon.icon-bin
+            span.icon.icon-board
+            span.icon.icon-check
+            span.icon.icon-chevron-left
+            span.icon.icon-chevron-right
+            span.icon.icon-circle-add
+            span.icon.icon-circle-and
+            span.icon.icon-circle-error
+            span.icon.icon-circle-exclamation
+            span.icon.icon-circle-info
+            span.icon.icon-circle-minus
+            span.icon.icon-circle-open-new
+            span.icon.icon-circle-phone
+            span.icon.icon-circle-prompt
+            span.icon.icon-circle-restore
+            span.icon.icon-circle-success
+            span.icon.icon-clipboard
+            span.icon.icon-clone
+            span.icon.icon-cpu
+            span.icon.icon-date
+            span.icon.icon-disable
+            span.icon.icon-disk
+            span.icon.icon-double-left
+            span.icon.icon-double-right
+            span.icon.icon-eye
+            span.icon.icon-eye-off
+            span.icon.icon-filter
+            span.icon.icon-fn
+            span.icon.icon-gear
+            span.icon.icon-graph
+            span.icon.icon-grid-1
+            span.icon.icon-grid-16
+            span.icon.icon-grid-4
+            span.icon.icon-grid-9
+            span.icon.icon-health
+            span.icon.icon-host
+            span.icon.icon-legend
+            span.icon.icon-linechart
+            span.icon.icon-location
+            span.icon.icon-memory
+            span.icon.icon-more
+            span.icon.icon-net
+            span.icon.icon-note
+            span.icon.icon-open-new
+            span.icon.icon-other
+            span.icon.icon-pen
+            span.icon.icon-search
+            span.icon.icon-sort
+            span.icon.icon-sunny
+            span.icon.icon-sync
+            span.icon.icon-tick-circle
+            span.icon.icon-time
+            span.icon.icon-top10
+            span.icon.icon-triangle-down
+            span.icon.icon-triangle-up
+            span.icon.icon-user-group
+            span.icon.icon-x
+            span.icon.icon-zoom-in
+            span.icon.icon-zoom-out
+
+
+  include ../../_footer
+
+block script
+  - var root_path = '../../'
+  include ../../_script
