@@ -1,13 +1,27 @@
+%form-base,
+.form-base {
+  @include form-base;
+}
+%input-base,
+.input-base {
+  @include input-base;
+}
+%form-block-el,
+.form-block-el {
+  display: block;
+  width: 100%;
+  padding: $input-padding;
+  border-radius: $form-border-radius;
+  background: $input-background-color;
+  border: $input-border-size solid $input-border-color;
+}
+
+
 input,
 select,
 textarea,
 fieldset {
-  font-family: $font-family;
-  font-size: $ui-font-size-small;
-  color: inherit;
-  @include input-placeholder {
-    color: $input-place-hold-color;
-  }
+  @extend %form-base;
 }
 
 input[type="email"],
@@ -18,23 +32,12 @@ input[type="date"],
 input[type="tel"],
 input[type="url"],
 input[type="password"] {
-  height: $ui-height;
-  padding: $input-padding;
-  vertical-align: middle;
-  -webkit-appearance: none;
-  background: $input-background-color;
-  border: $input-border-size solid $input-border-color;
-  border-radius: $form-border-radius;
+  @extend %input-base;
 }
 
 select,
 textarea {
-  display: block;
-  width: 100%;
-  padding: $input-padding;
-  border-radius: $form-border-radius;
-  background: $input-background-color;
-  border: $input-border-size solid $input-border-color;
+  @extend %form-block-el;
 }
 
 select:not([multiple]) {
@@ -47,13 +50,15 @@ label {
   vertical-align: middle;
 }
 
-textarea:focus,
-select:focus,
-input:focus {
-  outline: none;
-  background: $input-focus-background-color;
-  border-color: $input-focus-border-color;
-  box-shadow: $input-focus-box-shadow;
+textarea,
+select,
+input {
+  &:focus {
+    outline: none;
+    background: $input-focus-background-color;
+    border-color: $input-focus-border-color;
+    box-shadow: $input-focus-box-shadow;
+  }
 }
 input {
   &[type="radio"],
@@ -65,17 +70,16 @@ input {
     }
   }
 }
-textarea:disabled,
-select:disabled,
-input:disabled,
-textarea.disabled,
-select.disabled,
-input.disabled {
+textarea,
+select,
+input {
+  &:disabled,
+  &.disabled {
   resize: none;
   opacity: $input-disabled-opacity;
   cursor: default;
   font-style: italic;
-  // color: $input-disabled-color;
+ }
 }
 
 // Fieldset

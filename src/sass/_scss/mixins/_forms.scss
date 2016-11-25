@@ -1,0 +1,25 @@
+@mixin form-base {
+  font-family: $font-family;
+  font-size: $ui-font-size-small;
+  color: inherit;
+  @include input-placeholder {
+    color: $input-place-hold-color;
+  }
+}
+@mixin input-base {
+  height: $ui-height;
+  padding: $input-padding;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background: $input-background-color;
+  border: $input-border-size solid $input-border-color;
+  border-radius: $form-border-radius;
+}
+@mixin form-block-el {
+  display: block;
+  width: 100%;
+  padding: $input-padding;
+  border-radius: $form-border-radius;
+  background: $input-background-color;
+  border: $input-border-size solid $input-border-color;
+}

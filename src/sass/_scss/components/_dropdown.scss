@@ -37,7 +37,7 @@
       background-color: $dropdowm-list-item-background;
       color: $dropdown-color;
       &:hover {
-        @include left-line(4px, $color-primary-light);
+        @include boder-thick(left, 4px, $color-primary-light);
       }
     }
     &:active,

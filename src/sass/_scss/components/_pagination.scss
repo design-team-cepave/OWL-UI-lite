@@ -1,40 +1,45 @@
 .pagination {
   margin: $base-line 0;
   font-size: $ui-font-size;
+  ol,
   ul {
     @include flex;
   }
 
   &.centered {
+    ol,
     ul {
       @include flex-center;
     }
   }
-
-  em,
-  a {
+  %pagination__item--block {
     display: inline-block;
     font-style: normal;
     padding: $pagination-padding;
-    line-height: 1;
     border-radius: $pagination-border-radius;
     white-space: nowrap;
     border: 1px solid transparent;
   }
+  %pagination__item--block-effect {
+    @include boder-thick(bottom, 2px, $color-primary);
+    cursor: text;
+  }
+  em {
+    @extend %pagination__item--block;
+  }
   a {
+    @extend %pagination__item--block;
     text-decoration: none;
     color: $pagination-color;
     &:hover {
       color: $pagination-hover-color;
-      background: $pagination-hover-background;
+      @extend %pagination__item--block-effect;
+      cursor: pointer;
     }
   }
-  em,
   li.active {
-    a {
-      color: $pagination-hover-color;
-      background: $pagination-hover-background;
-      cursor: text;
+    em {
+      @extend %pagination__item--block-effect;
     }
   }
   .upper {
@@ -80,6 +85,13 @@
       }
     }
   }
+}
+
+.input {
+  @include form-base;
+  @include input-base;
+  display: block;
+  height: auto;
 }
 
 // Responsive
