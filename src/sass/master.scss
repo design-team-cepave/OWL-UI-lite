@@ -201,7 +201,7 @@ body, h1, h2, h3, h4, h5, h6, .button {
           padding: 12px 24px;
           text-decoration: none;
           &:hover {
-            @include left-line(4px, $color-primary)
+            @include boder-thick(left, 4px, $color-primary);
           }
         }
       }
