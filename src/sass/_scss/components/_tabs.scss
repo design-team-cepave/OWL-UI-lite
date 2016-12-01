@@ -8,7 +8,7 @@
       cursor: default;
       background: none;
       color: $tab-text-color-active;
-      @include under-line($alpha, $color-primary);
+      @include boder-thick(bottom, $alpha, $color-primary-light);
     }
   }
   em,
@@ -24,7 +24,7 @@
     color: $tab-text-color;
     &:hover {
       @include transition;
-      @include under-line($alpha, $color-primary);
+      @include boder-thick(bottom, $alpha, $color-primary);
     }
   }
   &.header {
@@ -35,12 +35,12 @@
         position: relative;
         &:hover {
           @include transition;
-          @include under-line($alpha, $color-primary);
+          @include boder-thick(bottom, $alpha, $color-primary);
         }
       }
       &.active {
         a {
-          @include under-line($alpha, $color-primary);
+          @include boder-thick(bottom, $alpha, $color-primary);
         }
       }
     }

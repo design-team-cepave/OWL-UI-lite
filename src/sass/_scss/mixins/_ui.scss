@@ -1,27 +1,33 @@
-@mixin under-line($height, $color) {
+@mixin boder-thick($position, $size, $color) {
+  $default: 100%;
   position: relative;
   &:after {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left:0;
     content: '';
-    width: 100%;
-    height: $height;
-    background-color:  $color;
-  }
-}
-
-@mixin left-line($width, $color) {
-  position: relative;
-  &:after {
-    display: block;
     position: absolute;
-    bottom: 0;
-    left:0;
-    content: '';
-    width: $width;
-    height: 100%;
-    background-color:  $color;
+    background-color: $color;
+    @if $position == top {
+      top: 0;
+      left: 0;
+      width: $default;
+      height: $size;
+    }
+    @if $position == bottom {
+      bottom: 0;
+      left: 0;
+      width: $default;
+      height: $size;
+    }
+    @if $position == left {
+      left: 0;
+      top: 0;
+      width: $size;
+      height: $default;
+    }
+    @if $position == right {
+      right: 0;
+      top: 0;
+      width: $size;
+      height: $default;
+    }
   }
 }

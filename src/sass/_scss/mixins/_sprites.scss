@@ -15,10 +15,10 @@ $mq-base-font-size: 14px !default;
 /// @returns {Number}
 @function mq-px2em($px, $base-font-size: $mq-base-font-size) {
     @if unitless($px) {
-        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
-        @return mq-px2em($px + 0px); // That may fail.
+      @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+      @return mq-px2em($px + 0px); // That may fail.
     } @else if unit($px) == em {
-        @return $px;
+      @return $px;
     }
     @return ($px / $base-font-size) * 1em;
 }

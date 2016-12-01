@@ -38,7 +38,7 @@ block content
               li.prev
                 a(href='#') ←
               li
-                ul
+                ol
                   li.active
                     em 1
                   li
@@ -51,6 +51,54 @@ block content
                     a(href='#') 5
               li.next
                 a(href='#') →
+          nav.pagination
+            ul
+              li.prev
+                a(href='#') ←
+              li
+                ol
+                  li
+                    em ...
+                  li
+                    a(href='#') 2
+                  li
+                    a(href='#') 3
+                  li.active
+                    em 4
+                  li
+                    a(href='#') 5
+                  li
+                    a(href='#') 6
+                  li
+                    em ...
+              li.next
+                a(href='#') →
+          nav.pagination
+            ul
+              li.prev
+                a(href='#') ←
+              li
+                ol
+                  li
+                    a(href='#') 1
+                  li
+                    em ...
+                  li
+                    a(href='#') 3
+                  li
+                    a(href='#') 4
+                  li.active
+                    em 5
+                  li
+                    a(href='#') 6
+                  li
+                    a(href='#') 7
+                  li
+                    em ...
+                  li
+                    a(href='#') 99
+              li.next
+                a(href='#') →
           .window
             //- .icons: span
             //- .title pagination--base.pug
@@ -61,7 +109,7 @@ block content
                     li.prev
                       a(href="#") &larr;
                     li
-                      ul
+                      ol
                         li(class="active")
                           em 1
                         li
@@ -76,7 +124,7 @@ block content
               li.prev
                 a(href='#') ←
               li
-                ul
+                ol
                   li.active
                     em 1
                   li
@@ -99,7 +147,7 @@ block content
                     li.prev
                       a(href="#") &larr;
                     li
-                      ul
+                      ol
                         li(class="active")
                           em 1
                         li
@@ -168,6 +216,33 @@ block content
                       a(href='#') 上一頁
                     li.next
                       a(href='#') 下一頁
+
+
+          // Of Page
+          h3#h-base.demo-head Of page
+          nav.pagination
+            ul
+              li.prev
+                a(href='#') ←
+              li
+                ol
+                  li
+                    span.input 1 of 99
+              li.next
+                a(href='#') →
+          .window
+            pre.language-jade
+              code.
+                nav.pagination
+                  ul
+                    li.prev
+                      a(href="#") &larr;
+                    li
+                      ol
+                        li
+                          span.input 1 of ...
+                    li.next
+                      a(href="#"") &rarr;
 
   include ../../_footer
 
