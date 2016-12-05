@@ -2,98 +2,120 @@
 // Colors
 // =============
 
+// Color States
+$color-default : $ui-color-default;
+$color-primary : $ui-color-primary;
+$color-success : $ui-color-success;
+$color-error   : $ui-color-error;
+$color-warning : $ui-color-warning;
+
 // Color Pattles
-$color-gray-lightest: #F2F6F7; // rgb(242, 246, 247)
-$color-gray-lighter : #DFE4E6; // rgb(223, 228, 230)
-$color-gray-light   : #B8BDBF; // rgb(184, 189, 191)
-$color-gray         : #919799; // rgb(145, 151, 153)
-$color-gray-dark    : #6C7173; // rgb(108, 113, 115)
-$color-gray-darker  : #3B3F40; // rgb(59, 63, 64)
+$color-gray-lightest: $ui-color-gray-lightest;
+$color-gray-lighter : $ui-color-gray-lighter;
+$color-gray-light   : $ui-color-gray-light;
+$color-gray         : $ui-color-gray;
+$color-gray-dark    : $ui-color-gray-dark;
+$color-gray-darker  : $ui-color-gray-darker;
+$color-gray-darkest  : $ui-color-gray-darkest;
 
 // Primary Color
-$color-primary-light      : #CAB6F2; //rgb(202, 182, 242)
-$color-primary            : #8962D9; //rgb(137, 98, 217)
-$color-primary-dark       : #6B5499; //rgb(107, 84, 153)
+$color-primary-light      : $ui-color-primary-light;
+$color-primary            : $ui-color-primary;
+$color-primary-dark       : $ui-color-primary-dark;
 
 // Secondary Color
-$color-secondary-color-turquoise : #50E3C2;
-$color-secondary-red       : #E6175C;
-$color-secondary-orange    : #F27F0C;
-$color-secondary-yellow    : #FFD919;
-$color-secondary-blue      : hsl(210, 81.8, 46.8);
-$color-secondary-bue-light : hsl(210, 87.7, 59.4);
-$color-secondary-blue-dark : hsl(210, 90.5, 36.8);
-$color-secondary-green     : #B9E617;
+$color-secondary-turquoise : $ui-color-secondary-turquoise;
+$color-secondary-red       : $ui-color-secondary-red;
+$color-secondary-orange    : $ui-color-secondary-orange;
+$color-secondary-yellow    : $ui-color-secondary-yellow;
+$color-secondary-blue      : $ui-color-secondary-blue;
+$color-secondary-bue-light : $ui-color-secondary-bue-light;
+$color-secondary-blue-dark : $ui-color-secondary-blue-dark;
+$color-secondary-green     : $ui-color-secondary-green;
 
 // Color States
-$color-default : $color-gray-lighter;
-$color-success : $color-secondary-green;
-$color-error   : $color-secondary-red;
-$color-warning : $color-secondary-yellow;
+$color-default : $ui-color-default;
+$color-success : $ui-color-success;
+$color-error   : $ui-color-error;
+$color-warning : $ui-color-warning;
+
+// Color
+$text-color-body         : $ui-text-color-body;
+$text-color-heading      : $ui-text-color-heading;
+$text-color-samp         : $ui-text-color-samp;
+$text-color-input        : $ui-text-color-input;
+$text-link-color         : $ui-text-link-color;
+$text-link-hover-color   : $ui-text-link-hover-color;
+// $text-color-input-append : #555;
+
+
+// Kbd
+$kbd-border: 1px solid rgba($ui-color-gray-darker, .1);
+
 
 
 // =============
 // Font
 // =============
-$font-family           : 'Helvetica Neue', Helvetica, sans-serif !default;
-$font-family-heading   : $font-family;
-$font-family-monospace : Consolas, Monaco, 'Courier New', monospace !default;
-$font-size-regular     : 14px;
-$font-size-smaller     : $font-size-regular - 3px;
-$text-color-body       : $color-gray-dark;
-$text-color-heading    : $color-gray-darker;
-$link-color            : $color-primary;
-$link-hover-color      : $color-primary-dark;
+$font-family           : $ui-font-family;
+$font-family-heading   : $ui-font-family-heading;
+$font-family-monospace : $ui-font-family-monospace;
+$font-size-regular     : $ui-font-size-body;
+$font-size-small       : $ui-font-size-body;
+$text-color-body       : $text-color-body;
+$text-color-heading    : $text-color-heading;
+$text-color-samp       : $text-color-samp;
+$text-color-input      : $text-color-input;
+$text-link-color       : $text-link-color;
+$text-link-hover-color : $text-link-hover-color;
 
-// Text font size
-$font-size-regular    : 14px;
-
-$font-size-bigger     : $font-size-regular + 10px; //24
-$font-size-big        : $font-size-regular + 4px;  //18
-$font-size-small      : $font-size-regular - 1px;  //13
-$font-size-smaller    : $font-size-regular - 2px;  //12
-
-// UI font size
-$ui-font-size-bigger  : $font-size-bigger;  //24
-$ui-font-size-big     : $font-size-big;     //18
-$ui-font-size         : $font-size-regular; //14
-$ui-font-size-small   : $font-size-small;   //13
-$ui-font-size-smaller : $font-size-smaller; //12
-
-// Baseline
-$base-unit         : 4px;
-$base-line-bigger  : 32px;
-$base-line-big     : 24px;
-$base-line         : 18px;
-$base-line-small   : 16px;
-$base-line-smaller : 16px;
+// Text sizes
 
 // Headings
-$font-size-title : $kappa;
-$font-size-h1    : $font-size-regular * 2;
-$font-size-h2    : $font-size-regular * 1.5;
-$font-size-h3    : $font-size-regular + 2px;
-$font-size-h4    : $font-size-small;
-$font-size-h5    : 13px;
-$font-size-h6    : 12px;
+$font-size-h1     : $ui-font-size-mega;
+$font-size-h2     : $ui-font-size-jumbo;
+$font-size-h3     : $ui-font-size-display;
+$font-size-h4     : $ui-font-size-headline;
+$font-size-h5     : $ui-font-size-subheader;
+$font-size-h6     : $ui-font-size-title;
+
+// Contents
+$font-size-base   : $ui-font-size-body;
+$font-size-body   : $font-size-base;
+$font-size-cation : $ui-font-size-cation;
+$font-size-small  : $ui-font-size-small;
 
 // Lineheight
-$line-height-title : 64px;
-$line-height-h1    : 52px;
-$line-height-h2    : $base-line-bigger;
-$line-height-h3    : $base-line-big;
-$line-height-h4    : $base-line;
-$line-height-h5    : $base-line;
-$line-height-h6    : $base-line;
+$line-height-h1     : $ui-lineheight-mega;
+$line-height-h2     : $ui-lineheight-jumbo;
+$line-height-h3     : $ui-lineheight-display;
+$line-height-h4     : $ui-lineheight-headline;
+$line-height-h5     : $ui-lineheight-subheader;
+$line-height-h6     : $ui-lineheight-title;
+$line-height-body   : $ui-lineheight-body;
+$line-height-cation : $ui-lineheight-cation;
+$line-height-small  : $ui-lineheight-small;
+
+// Text and block Spaces
+$margin-bottom-heading   : rem(12);
+$margin-bottom-paragraph : rem(16);
+
+
+
+// =============
+// Typography
+// =============
+
 
 
 // =============
 // Buttons
 // =============
 $button-border-radius : 0;
-$button-padding       : $beta $zeta;
+$button-padding       : em(8px);
 $ui-height            : 34px;
 $ui-line-height       : 18px;
+
 
 
 // =============
@@ -108,6 +130,7 @@ $label-padding       : $alpha $beta;
 $badge-padding       : $alpha $beta;
 
 
+
 // =============
 // Tables
 // =============
@@ -116,14 +139,15 @@ $table-striped-background-color : $color-gray-lightest;
 $table-hover-background-color   : rgba($color-secondary-blue, .1);
 
 
+
 // =============
 // Forms
 // =============
 $form-element-text-color       : $color-gray-dark;
-$label-color                   : $form-element-text-color;
-$form-label-font-size          : $ui-font-size-small;
-$input-place-hold-color        : $color-gray-light;
+$form-label-font-size          : $font-size-base;
 $form-border-radius            : 0;
+$label-color                   : $form-element-text-color;
+$input-place-hold-color        : $color-gray-light;
 $input-focus-border-color      : $color-primary;
 $input-focus-box-shadow        : 0 0 0 2px rgba($color-primary, .3), 0 1px 2px rgba($color-gray-darker, .1) inset;
 $input-sucess-box-shadow       : 0 0 0 2px rgba($color-success, .3), 0 1px 2px rgba($color-gray-darker, .1) inset;
@@ -134,8 +158,9 @@ $input-border-color            : $color-gray-light;
 $input-background-color        : white;
 $input-focus-background-color  : white;
 $input-append-background-color : $color-gray-lighter ;
-$input-padding                 : 8px 10px;
-$input-padding-big             : 16px 10px;
+$input-padding                 : $ui-padding-small;
+$input-padding-big             : $ui-padding-small $ui-padding-medium;
+
 
 
 // =============
@@ -146,6 +171,7 @@ $tab-text-color-active       : $color-gray-darker;
 $tab-header-font-size        : 20px;
 $tab-header-text-line-height : 26px;
 $tab-header-padding          : $gamma $iota $delta;
+
 
 
 // =============
@@ -161,11 +187,12 @@ $breadcrumb-item-text-color       : $color-gray-dark;
 $breadcrumb-separator             : '/';
 
 
+
 // =============
 // Dropdowns
 // =============
 $dropdown-color                       : $color-gray-dark;
-$dropdown-font-size                   : $ui-font-size-small;
+$dropdown-font-size                   : $font-size-body;
 $dropdown-z-index                     : $z-over-content;
 $dropdowm-border                      : 1px solid $color-gray-light;
 $dropdowm-list-item-separator         : none;
@@ -174,11 +201,12 @@ $dropdowm-list-item-background        : white;
 $dropdowm-list-item-background-active : $color-primary-light;
 
 
+
 // =============
 // Modals
 // =============
 $modal-border               : 1px solid $color-gray-lighter;
-$modal-header-font-size     : $ui-font-size-big;
+$modal-header-font-size     : $line-height-h5;
 $modal-header-padding       : $theta;
 $modal-body-padding         : $theta;
 $modal-border-radius        : 0;
@@ -189,6 +217,7 @@ $modal-close                : 20px;
 $overlay-background-opacity : 0.9;
 $overlay-color              : (top                                                                                   : #462882, bottom : #080938);
 $overlay-background-color   : rgba(map-get($overlay-color, top),1) 30%, rgba(map-get($overlay-color, bottom),1) 70%;
+
 
 
 // =============
@@ -221,3 +250,97 @@ $navSetting  : 170px;
 $navigation  : $naviBar + $navSetting;
 $navigationZ : 222;
 $page        : 111;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Background
+$background-color-body      : $ui-background-color-body;
+$background-color-pre       : $ui-background-color-pre;
+$background-color-mark      : $ui-background-color-mark;
+$background-color-code      : $ui-background-color-code;
+$background-color-samp      : $ui-background-color-samp;
+$background-color-highlight : $ui-background-color-highlight;
+
+
+// Table
+$table-striped-background-color : #f4f4f4;
+$table-border                   : 1px solid #eee;
+
+// Label
+$label-font-size   : $font-size-base;
+$label-color       : #111;
+$label-font-weight : normal;
+
+// Input
+$input-disabled-opacity        : 0.75;
+$input-disabled-color          : rgba(0, 0, 0, .5);
+$input-border-size             : 1px;
+$input-border-color            : #dfdfdf;
+$input-focus-border-color      : #bbb;
+$input-background-color        : #fff;
+$input-focus-background-color  : #fff;
+$input-append-background-color : #eee;
+$input-padding                 : 8px;
+$input-padding-big             : 8px 12px;
+
+// Fieldset
+$fieldset-border-color: rgba(0, 0, 0, .1);
+$fieldset-border-size: 1px;
+
+// Button
+$button-background-color    : #eee;
+$button-font-weight         : normal;
+$button-outline-font-weight : normal;
+$button-outline-border-size : 1px;
+$button-padding-small       : 0 20px;
+$button-padding             : 0 28px;
+$button-padding-big         : 0 48px;
+
+// Height
+$ui-height-small      : 32px;
+$ui-line-height-small : 32px;
+$ui-height            : 40px;
+$ui-line-height       : 38px;
+$ui-height-big        : 48px;
+$ui-line-height-big   : 46px;
+
+// Overlay
+$overlay-background-opacity : 0.9;
+// $overlay-background-color   : linear-gradient(-1deg, rgba(7,9,56,0.90) 15%, rgba(69,40,130,0.90) 100%);
+
+// Modals
+$modal-border            : none;
+$modal-header-font-size  : $ui-font-size-title;
+$modal-header-padding    : 24px 32px;
+$modal-body-padding      : 36px 56px;
+// $modal-footer-padding    : 0;
+$modal-footer-background : #fff;
+$modal-border-radius     : 8px;
+$modal-border-radius-top : 4px;
+$modal-close : 36px;
+
+// Pagination
+$pagination-border-radius: $line-height-body;
+$pagination-padding: 8px 16px;
+$pagination-hover-background: #f4f4f4;
+$pagination-hover-color: rgba(0, 0, 0, .5);
+$pagination-color: #000;
+$pagination-border-color: rgba(0, 0, 0, .1);
+
+// Loader
+$loader-color-primary: $color-primary;
+$loader-color-secondary: lighten($color-primary, 20%);
+$loader-bar-width: 100px;
+$loader-bar-height: 10px;

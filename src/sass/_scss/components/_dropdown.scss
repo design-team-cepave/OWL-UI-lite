@@ -5,7 +5,7 @@
   z-index: $dropdown-z-index;
   top: 100%;
   left: 0;
-  width: 180px;
+  width: rem(180px);
   color: $dropdown-color;
   background: $dropdowm-list-item-background;
   border-radius: 0;
@@ -16,7 +16,7 @@
   font-size: $dropdown-font-size;
   border: $dropdowm-border;
   .close {
-    margin: 20px auto;
+    margin: rem(20px) auto;
   }
 
   &.open {
@@ -99,4 +99,3 @@
 //     }
 //   }
 // }
-

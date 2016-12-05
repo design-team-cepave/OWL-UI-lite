@@ -16,7 +16,6 @@
   border: $input-border-size solid $input-border-color;
 }
 
-
 input,
 select,
 textarea,
@@ -85,7 +84,7 @@ input {
 // Fieldset
 fieldset {
   padding: $iota $zeta $zeta;
-  margin-bottom: $base-line;
+  margin-bottom: $line-height-body * 1em;
   border: $fieldset-border-size solid $fieldset-border-color;
   border-radius: $form-border-radius;
 }
@@ -94,19 +93,17 @@ legend {
   font-size: $ui-font-size-small;
   text-transform: uppercase;
   padding: 0 1em;
-  margin-left: -1em;
-  top: 2px;
+  margin-left: -1rem;
+  top: rem(2px);
   position: relative;
   line-height: 0;
 }
 
 // Collection
 .form {
-
   margin-bottom: 0;
-
   .form-item {
-    margin-bottom: $base-line;
+    margin-bottom: 1rem;
   }
 
   input[type="email"],
@@ -130,7 +127,6 @@ legend {
   }
 
   label {
-    font-size: $form-label-font-size;
     color: $label-color;
     font-weight: $label-font-weight;
     display: block;
@@ -147,7 +143,7 @@ legend {
     font-weight: normal;
     cursor: pointer;
     color: inherit;
-    font-size: $ui-font-size-small;
+    // font-size: $ui-font-size-small;
   }
 
   .checkboxes label {
@@ -175,7 +171,7 @@ legend {
   div.success {
     text-transform: none;
     font-weight: normal;
-    font-size: 11px;
+    @include text-small;
   }
 
   span.error,
@@ -202,34 +198,32 @@ legend {
   }
 }
 
-// Sizes
-input.big,
-select.big {
-  font-size: $ui-font-size-big;
-  height: $ui-height-big;
-}
-input.big {
-  padding: $input-padding-big;
-}
-select.big {
-  padding: 6px 10px;
-}
+// // Sizes
+// input.big,
+// select.big {
+//   font-size: $ui-font-size-title;
+//   height: $ui-height-big;
+// }
+// input.big {
+//   padding: $input-padding-big;
+// }
+// select.big {
+//   padding: 6px 10px;
+// }
 
 // Descriptions
 .desc {
   text-transform: none;
   margin-top: 4px;
   color: rgba($color-gray-darker, .5);
-  font-size: 12px;
-  line-height: $base-line-small;
   font-weight: normal;
+  @extend .cation;
 }
 ul.desc {
   margin-bottom: 8px;
 }
 span.desc {
   margin-left: 4px;
-  line-height: $base-line-small;
 }
 
 // States
@@ -272,18 +266,17 @@ select {
   }
 
   .button,
-  span {
+  span,
+  .append {
     @include flex-item-shrink;
   }
 
-  span {
+  span, .append {
     font-weight: normal;
     background-color: $input-append-background-color;
-    padding: 0 12px;
-    color: $text-color-input-append;
-    font-size: $font-size-smaller;
-    line-height: $ui-height;
+    @include text-body;
     white-space: nowrap;
+    padding: rem(8px);
   }
 
   .button {
@@ -300,7 +293,7 @@ select {
     select {
 
       // disable autozoom
-      font-size: 16px;
+      // font-size: 16px;
 
       &.width-50 { width: 100%; }
     }
