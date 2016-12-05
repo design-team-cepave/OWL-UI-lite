@@ -1,24 +1,99 @@
-// Unit
-$alpha   : 4px;
-$beta    : 8px;
-$gamma   : 12px;
-$delta   : 16px;
-$epsilon : 20px;
-$zeta    : 24px;
-$eta     : 28px;
-$theta   : 32px;
-$iota    : 36px;
-$kappa   : 40px;
+// =============
+// 1.Colors
+// 2.Text
+// =============
 
+
+
+// =============
+// Colors
+// =============
+
+// Color Pattles
+$ui-color-gray-lightest : #F5F7FA; // rgb(245, 247, 250)
+$ui-color-gray-lighter  : #DFE4ED; // rgb(223, 228, 237)
+$ui-color-gray-light    : #BFC7D9; // rgb(191, 199, 217)
+$ui-color-gray          : #939FB8; // rgb(145, 159, 184)
+$ui-color-gray-dark     : #6C7891; // rgb(108, 120, 145)
+$ui-color-gray-darker   : #3B465C; // rgb(59, 79, 92)
+$ui-color-gray-darkest  : #1A2233; // rgb(26, 34, 51)
+
+// Primary Color
+$ui-color-primary-light      : #CAB6F2; //rgb(202, 182, 242)
+$ui-color-primary            : #8962D9; //rgb(137, 98, 217)
+$ui-color-primary-dark       : #6B5499; //rgb(107, 84, 153)
+
+// Secondary Color
+$ui-color-secondary-blue      : hsl(210, 81.8, 46.8);
+$ui-color-secondary-turquoise : #50E3C2;
+$ui-color-secondary-green     : #6FBA57;
+$ui-color-secondary-yellow    : #FFD919;
+$ui-color-secondary-orange    : #F27F0C;
+$ui-color-secondary-red       : #E6175C;
+$ui-color-secondary-bue-light : hsl(210, 87.7, 59.4);
+$ui-color-secondary-blue-dark : hsl(210, 90.5, 36.8);
+
+// Color States
+$ui-color-default : $ui-color-gray-lighter;
+$ui-color-success : $ui-color-secondary-green;
+$ui-color-error   : $ui-color-secondary-red;
+$ui-color-warning : $ui-color-secondary-yellow;
+
+// Color Text
+$ui-text-color-body         : $ui-color-gray-darker;
+$ui-text-color-heading      : $ui-color-gray-darker;
+$ui-text-color-samp         : $ui-color-gray-lightest;
+$ui-text-color-input        : $ui-color-gray-darker;
+// $ui-text-color-input-append : $ui-color-gray-darker;
+$ui-text-link-color       : $ui-color-primary;
+$ui-text-link-hover-color : darken($ui-color-primary, 10%);
+
+// Background
+$ui-background-color-body      : $ui-color-gray-lightest;
+$ui-background-color-pre       : $ui-color-gray-lightest;
+$ui-background-color-mark      : $ui-color-warning;
+$ui-background-color-code      : $ui-color-default;
+$ui-background-color-samp      : lighten($ui-color-primary, 7%);
+$ui-background-color-highlight : rgba($ui-color-primary, .075);
+
+
+
+// =============
+// Unit
+// =============
+
+$base-unit : 4px;
+$alpha     : 4px;
+$beta      : 8px;
+$gamma     : 12px;
+$delta     : 16px;
+$epsilon   : 20px;
+$zeta      : 24px;
+$eta       : 28px;
+$theta     : 32px;
+$iota      : 36px;
+$kappa     : 40px;
+
+$ui-padding-xsmall : $base-unit;
+$ui-padding-small  : $base-unit*2;
+$ui-padding-medium : $base-unit*3;
+$ui-padding-large  : $base-unit*4;
+$ui-padding-xlarge : $base-unit*5;
+
+$ui-radius-default: 0;
+$ui-radius-xsmall : $base-unit;
+$ui-radius-small  : $base-unit*2;
+$ui-radius-medium : $base-unit*3;
+$ui-radius-large  : $base-unit*4;
+$ui-radius-xlarge : $base-unit*5;
+
+// =============
 // Breakpoints
+// =============
 $breakpoint-small  : 768px;
 $breakpoint-medium : 1024px;
 $breakpoint-large  : 1200px;
 
-// FontFamily
-$font-family           : 'Helvetica Neue', Helvetica, sans-serif;
-$font-family-heading   : $font-family;
-$font-family-monospace : Consolas, Monaco, "Courier New", monospace;
 
 // Grid
 $grid-columns        : 12;
@@ -34,147 +109,82 @@ $z-over-page    : 300;
 $z-over-screen  : 400;
 $z-over-all     : 500;
 
-// Text font size
-$font-size-regular : 16px;
 
-$font-size-bigger  : $font-size-regular + 4px; //20
-$font-size-big     : $font-size-regular + 2px; //18
-$font-size-small   : $font-size-regular - 2px; //14
-$font-size-smaller : $font-size-regular - 3px; //13
 
-// UI font size
-$ui-font-size-bigger  : $font-size-bigger;  //20
-$ui-font-size-big     : $font-size-big;     //18
-$ui-font-size         : $font-size-small;   //14
-$ui-font-size-small   : $font-size-smaller; //13
-$ui-font-size-smaller : 12px;
 
-// Headings
-$font-size-title : $kappa;
-$font-size-h1    : $font-size-regular * 2;
-$font-size-h2    : $font-size-regular * 1.5;
-$font-size-h3    : $font-size-regular + 2px;
-$font-size-h4    : $font-size-small;
-$font-size-h5    : 13px;
-$font-size-h6    : 12px;
 
-// Baseline
-$base-unit         : 4px;
-$base-line-bigger  : 32px;
-$base-line-big     : 24px;
-$base-line         : 18px;
-$base-line-small   : 16px;
-$base-line-smaller : 16px;
+// =============
+// Font
+// =============
 
-// Lineheight
-$line-height-title : 64px;
-$line-height-h1    : 52px;
-$line-height-h2    : $base-line-bigger;
-$line-height-h3    : $base-line-big;
-$line-height-h4    : $base-line;
-$line-height-h5    : $base-line;
-$line-height-h6    : $base-line;
+// FontFamily
+$ui-font-family           : 'Helvetica Neue', Helvetica, sans-serif;
+$ui-font-family-heading   : $ui-font-family;
+$ui-font-family-monospace : Consolas, Monaco, "Courier New", monospace;
 
-// Spaces
-$margin-bottom-heading   : 12px;
-$margin-bottom-paragraph : 16px;
+// FontSize
+$browser-context        : 16px;
+$font-size-regular      : 14px;
+$ui-font-size-body      : rem(14); // 14
+$ui-font-size-mega      : rem(72); // 72
+$ui-font-size-jumbo     : rem(48); // 48
+$ui-font-size-display   : rem(36); // 36
+$ui-font-size-headline  : rem(26); // 24
+$ui-font-size-subheader : rem(20); // 20
+$ui-font-size-title     : rem(16); // 16
+$ui-font-size-cation    : rem(12); // 12
+$ui-font-size-small     : rem(10); // 10
 
-// Color
-$text-color-body         : #333;
-$text-color-heading      : #000;
-$text-color-samp         : #fff;
-$text-color-input        : #333;
-$text-color-input-append : #555;
+// LineHeight
+$ui-lineheight-mega      : 1.333;
+$ui-lineheight-jumbo     : 1.333;
+$ui-lineheight-display   : 1.5;
+$ui-lineheight-headline  : 1.5;
+$ui-lineheight-subheader : 1.6;
+$ui-lineheight-title     : 1.5;
+$ui-lineheight-body      : 1.4285714;
+$ui-lineheight-cation    : 1.5;
+$ui-lineheight-small     : 1.6;
 
-// Color States
-$color-default : #f4f4f4;
-$color-primary : #3c74d9;
-$color-success : #60ae4d;
-$color-error   : #f34248;
-$color-warning : #fed443;
 
-// Links
-$link-color       : darken($color-primary, 10%);
-$link-hover-color : $color-error;
 
-// Background
-$background-color-body      : #fff;
-$background-color-pre       : #f8f8f8;
-$background-color-mark      : $color-warning;
-$background-color-code      : $color-default;
-$background-color-samp      : lighten($color-primary, 7%);
-$background-color-highlight : rgba($color-primary, .075);
+// =============
+// Typography
+// =============
 
-// Kbd
-$kbd-border: 1px solid rgba(0, 0, 0, .1);
+// Preformatted
+$ui-pre-block-padding: em($ui-padding-xlarge);
+$ui-pre-block-radius: $ui-radius-default;
+$ui-code-block-padding: $ui-padding-xsmall $ui-padding-small;
+$ui-list-margin-left: 1.5;
 
-// Table
-$table-striped-background-color : #f4f4f4;
-$table-border                   : 1px solid #eee;
 
-// Label
-$label-font-size   : $ui-font-size;
-$label-color       : #111;
-$label-font-weight : normal;
 
-// Input
-$input-disabled-opacity        : 0.75;
-$input-disabled-color          : rgba(0, 0, 0, .5);
-$input-border-size             : 1px;
-$input-border-color            : #dfdfdf;
-$input-focus-border-color      : #bbb;
-$input-background-color        : #fff;
-$input-focus-background-color  : #fff;
-$input-append-background-color : #eee;
-$input-padding                 : 8px 10px;
-$input-padding-big             : 16px 10px;
 
-// Fieldset
-$fieldset-border-color: rgba(0, 0, 0, .1);
-$fieldset-border-size: 1px;
+// =============
+// Buttons
+// =============
+$ui-button-padding-small-h  : 2 * $base-unit;
+$ui-button-padding-small-v  : 3 * $base-unit;
+$ui-button-padding-medium-h : $ui-button-padding-small-h;
+$ui-button-padding-medium-v : 4 * $base-unit;
+$ui-button-padding-large-h  : $ui-button-padding-small-h;
+$ui-button-padding-large-v  : 5 * $base-unit;
 
-// Button
-$button-background-color    : #eee;
-$button-font-weight         : normal;
-$button-outline-font-weight : normal;
-$button-outline-border-size : 1px;
-$button-padding-small       : 0 20px;
-$button-padding             : 0 28px;
-$button-padding-big         : 0 48px;
+$ui-button-padding-small-h  : rem($ui-button-padding-small-h );
+$ui-button-padding-small-v  : rem($ui-button-padding-small-v);
+$ui-button-padding-medium-h : rem($ui-button-padding-small-v);
+$ui-button-padding-medium-v : rem($ui-button-padding-medium-v);
+$ui-button-padding-large-h  : rem($ui-button-padding-large-h);
+$ui-button-padding-large-v  : rem($ui-button-padding-large-v);
 
-// Height
-$ui-height-small      : 32px;
-$ui-line-height-small : 32px;
-$ui-height            : 40px;
-$ui-line-height       : 38px;
-$ui-height-big        : 48px;
-$ui-line-height-big   : 46px;
 
-// Overlay
-$overlay-background-opacity : 0.9;
-$overlay-background-color   : linear-gradient(-1deg, rgba(7,9,56,0.90) 15%, rgba(69,40,130,0.90) 100%);
-
-// Modals
-$modal-border            : none;
-$modal-header-font-size  : $ui-font-size-big;
-$modal-header-padding    : 24px 32px;
-$modal-body-padding      : 36px 56px;
-$modal-footer-padding    : 0;
-$modal-footer-background : #fff;
-$modal-border-radius     : 8px;
-$modal-border-radius-top : 4px;
-$modal-close : 36px;
-
+// =============
 // Pagination
-$pagination-border-radius: $base-line;
+// =============
+$pagination-border-radius: 0;
 $pagination-padding: 8px 16px;
 $pagination-hover-background: #f4f4f4;
 $pagination-hover-color: rgba(0, 0, 0, .5);
 $pagination-color: #000;
 $pagination-border-color: rgba(0, 0, 0, .1);
-
-// Loader
-$loader-color-primary: $color-primary;
-$loader-color-secondary: lighten($color-primary, 20%);
-$loader-bar-width: 100px;
-$loader-bar-height: 10px;

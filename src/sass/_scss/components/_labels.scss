@@ -51,7 +51,7 @@
 // Badge
 .badge {
   padding: $badge-padding;
-  border-radius: $base-line;
+  border-radius: $line-height-body;
 }
 
 // Tags
@@ -60,7 +60,6 @@
     padding: 0;
     background: none;
     font-weight: bold;
-    letter-spacing: .02em;
 
     .primary {
       &, a {
@@ -100,15 +99,15 @@
 
 .label {
   h1 & {
-    top: -4px;
+    top: rem(-4px);
   }
   h2 & {
-    top: -2px;
+    top: rem(-2px);
   }
   h5 & {
-    top: -2px;
+    top: rem(-2px);
   }
   h6 & {
-    top: -3px;
+    top: rem(-3px);
   }
 }

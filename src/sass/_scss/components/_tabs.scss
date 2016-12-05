@@ -1,6 +1,5 @@
 .tabs {
-  font-size: $ui-font-size;
-  line-height: $base-line;
+  @include text-body;
   li {
     em,
     &.active a {

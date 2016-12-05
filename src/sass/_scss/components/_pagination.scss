@@ -1,6 +1,7 @@
 .pagination {
-  margin: $base-line 0;
-  font-size: $ui-font-size;
+  margin: $line-height-body 0;
+  // font-size: $ui-font-size;
+  @include text-body;
   ol,
   ul {
     @include flex;

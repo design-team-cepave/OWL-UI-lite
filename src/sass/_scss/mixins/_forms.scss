@@ -1,13 +1,13 @@
 @mixin form-base {
   font-family: $font-family;
-  font-size: $ui-font-size-small;
+  font-size: $ui-font-size-body;
+  line-height: $ui-lineheight-body;
   color: inherit;
   @include input-placeholder {
     color: $input-place-hold-color;
   }
 }
 @mixin input-base {
-  height: $ui-height;
   padding: $input-padding;
   vertical-align: middle;
   -webkit-appearance: none;

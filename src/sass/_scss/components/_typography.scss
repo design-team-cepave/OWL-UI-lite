@@ -1,64 +1,76 @@
 body {
   font-family: $font-family;
-  line-height: $base-line;
   font-size: $font-size-regular;
   color: $text-color-body;
   background-color: $background-color-body;
 }
 
-
 // Links
 a {
-  color: $link-color;
+  color: $text-link-color;
+  &:hover {
+    color: $text-link-hover-color;
+  }
 }
-a:hover {
-  color: $link-hover-color;
-}
-
 
 // Headings
-h1.title, h1, h2, h3, h4, h5, h6 {
+%heading {
   font-family: $font-family-heading;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   color: $text-color-heading;
   margin-bottom: $margin-bottom-heading;
 }
-h1.title {
-  font-size: $font-size-title;
-  line-height: $line-height-title;
-}
+
 h1,
-.h1 {
-  font-size: $font-size-h1;
-  line-height: $line-height-h1;
+.h1,
+.text-mega {
+  @include text-mega;
+  @extend %heading;
 }
 h2,
-.h2 {
-  font-size: $font-size-h2;
-  line-height: $line-height-h2;
+.h2,
+.text-jumbo {
+  @include text-jumbo;
+  @extend %heading;
 }
 h3,
-.h3 {
-  font-size: $font-size-h3;
-  line-height: $line-height-h3;
+.h3,
+.text-display {
+  @include text-display;
+  @extend %heading;
 }
 h4,
-.h4 {
-  font-size: $font-size-h4;
-  line-height: $line-height-h4;
+.h4,
+.text-headline {
+  @include text-headline;
+  @extend %heading;
 }
 h5,
-.h5 {
-  font-size: $font-size-h5;
-  line-height: $line-height-h5;
+.h5,
+.subheder {
+  @include text-subheder;
+  @extend %heading;
 }
 h6,
-.h6 {
-  font-size: $font-size-h6;
-  line-height: $line-height-h6;
+.h6,
+.title {
+  @include text-title;
+  @extend %heading;
   text-transform: uppercase;
   letter-spacing: .08em;
+}
+// Subheadings
+.subheading {
+  // margin-top: -($margin-bottom-heading - $base-unit);
+  // margin-bottom: ($base-unit*2);
+  font-weight: 300;
+}
+.cation {
+  @include text-cation;
+}
+.small {
+  @include text-small;
 }
 p,
 ul,
@@ -79,37 +91,38 @@ figure {
   }
 }
 
-// Subheadings
-.subheading {
-  margin-top: -($margin-bottom-heading - $base-unit);
-  margin-bottom: ($base-unit*2);
-  font-weight: 300;
-}
 
 
 // Lists
-ul, ol,
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-  margin: 0 0 0 $base-line;
-}
-ol ol li {
-  list-style-type: lower-alpha;
-}
-ol ol ol li {
-  list-style-type: lower-roman;
-}
-nav ul, nav ol {
+ul, ol {
   margin: 0;
-  list-style: none;
+  margin-left: $ui-list-margin-left*1em;
+  & {
+    ol, ul {
+      margin: 0;
+      margin-left: $ui-list-margin-left*1em;
+    }
+  }
+}
+ol ol {
+  li {
+    list-style-type: lower-alpha;
+  }
+  ol li {
+    list-style-type: lower-roman;
+  }
+}
+nav {
+  ul, ol {
+    margin: 0;
+    list-style: none;
+  }
 }
 dl dt {
   font-weight: 700;
 }
 dd {
-  margin-left: $base-line;
+  margin-left: $line-height-body;
 }
 
 // Block
@@ -121,7 +134,7 @@ hr {
   margin-top: -1px;
 }
 blockquote {
-  padding-left: $base-line;
+  padding-left: $line-height-body;
   border-left: 2px solid rgba(0, 0, 0, .125);
   font-style: italic;
   color: rgba(0, 0, 0, .65);
@@ -130,22 +143,22 @@ blockquote {
 // Preformatted
 pre, code, samp, var, kbd {
   font-family: $font-family-monospace;
-  font-size: $font-size-small;
+  font-size: $font-size-cation;
 }
 pre {
   color: rgba(0, 0, 0, .85);
   background: $background-color-pre;
-  padding: 20px;
-  border-radius: 4px;
-  line-height: $base-line-small;
+  padding: $ui-pre-block-padding;
+  border-radius: $ui-pre-block-radius;
+  line-height: $line-height-cation;
   overflow: none;
   white-space: pre-wrap;
 }
 
 // Inline
 .small, time, cite, small, figcaption {
-  font-size: $font-size-smaller;
-  line-height: $base-line-smaller;
+  font-size: $font-size-small;
+  line-height: $line-height-small;
 }
 cite {
   color: rgba(0, 0, 0, .5);
@@ -164,7 +177,7 @@ abbr[title], dfn[title] {
   cursor: help;
 }
 mark, code, samp, kbd {
-  padding: 4px 8px 2px 8px;
+  padding: $ui-code-block-padding;
   display: inline-block;
   line-height: 1;
   border-radius: $base-unit;
@@ -175,7 +188,7 @@ pre code {
   white-space: pre;
   padding: 0;
   background: none;
-  line-height: $base-line;
+  line-height: $line-height-body;
 }
 mark {
   background-color: $background-color-mark;
