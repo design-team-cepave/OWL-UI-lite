@@ -18,6 +18,7 @@
   margin-bottom: 20px;
   code, pre {
     color: $color-gray;
+    // @include lighten($purple, 40%);
   }
   // .title {
   //   flex: 1;
@@ -52,8 +53,9 @@
   // }
   pre {
     background: $color-gray-lightest;
-    border-bottom-left-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
+    background: desaturate(lighten($purple, 50%), 20%);
+    // border-bottom-left-radius: $border-radius;
+    // border-bottom-right-radius: $border-radius;
     color: #fff;
     overflow: visible;
     padding: $delta $epsilon;
