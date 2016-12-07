@@ -1,36 +1,36 @@
-@mixin text-mega {
+@mixin typo-mega {
   font-size: $font-size-h1;
   line-height: $line-height-h1;
 }
-@mixin text-jumbo {
+@mixin typo-jumbo {
   font-size: $font-size-h2;
   line-height: $line-height-h2;
 }
-@mixin text-display {
+@mixin typo-display {
   font-size: $font-size-h3;
   line-height: $line-height-h3;
 }
-@mixin text-headline {
+@mixin typo-headline {
   font-size: $font-size-h4;
   line-height: $line-height-h4;
 }
-@mixin text-subheder {
+@mixin typo-subheder {
   font-size: $font-size-h5;
   line-height: $line-height-h5;
 }
-@mixin text-title {
+@mixin typo-title {
   font-size: $font-size-h6;
   line-height: $line-height-h6;
 }
-@mixin text-body {
+@mixin typo-body {
   font-size: $font-size-body;
   line-height: $line-height-body;
 }
-@mixin text-cation {
+@mixin typo-cation {
   font-size: $font-size-cation;
   line-height: $line-height-cation;
 }
-@mixin text-small {
+@mixin typo-small {
   font-size: $font-size-small;
   line-height: $line-height-small;
 }

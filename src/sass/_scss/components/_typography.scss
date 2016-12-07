@@ -1,6 +1,7 @@
 body {
   font-family: $font-family;
   font-size: $font-size-regular;
+  line-height: $line-height-body;
   color: $text-color-body;
   background-color: $background-color-body;
 }
@@ -24,53 +25,52 @@ a {
 
 h1,
 .h1,
-.text-mega {
-  @include text-mega;
+.typo-mega {
+  @include typo-mega;
   @extend %heading;
 }
 h2,
 .h2,
-.text-jumbo {
-  @include text-jumbo;
+.typo-jumbo {
+  @include typo-jumbo;
   @extend %heading;
 }
 h3,
 .h3,
-.text-display {
-  @include text-display;
+.typo-display {
+  @include typo-display;
   @extend %heading;
 }
 h4,
 .h4,
-.text-headline {
-  @include text-headline;
+.typo-headline {
+  @include typo-headline;
   @extend %heading;
 }
 h5,
 .h5,
-.subheder {
-  @include text-subheder;
+.typo-subheder {
+  @include typo-subheder;
   @extend %heading;
 }
 h6,
 .h6,
-.title {
-  @include text-title;
+.typo-title {
+  @include typo-title;
   @extend %heading;
   text-transform: uppercase;
   letter-spacing: .08em;
 }
-// Subheadings
+.typo-cation {
+  @include typo-cation;
+}
+.typo-small {
+  @include typo-small;
+}
 .subheading {
   // margin-top: -($margin-bottom-heading - $base-unit);
   // margin-bottom: ($base-unit*2);
   font-weight: 300;
-}
-.cation {
-  @include text-cation;
-}
-.small {
-  @include text-small;
 }
 p,
 ul,
@@ -90,8 +90,6 @@ figure {
     margin-top: $base-unit * 8;
   }
 }
-
-
 
 // Lists
 ul, ol {

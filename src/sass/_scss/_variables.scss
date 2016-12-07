@@ -95,21 +95,26 @@ $breakpoint-medium : 1024px;
 $breakpoint-large  : 1200px;
 
 
+
+// =============
 // Grid
+// =============
 $grid-columns        : 12;
 $grid-width          : 1128; // pixels
 $grid-gutter         : 15px;
 $grid-gutter-integer : ($grid-gutter / ($grid-gutter * 0 + 1));
 $grid-gap            : ($grid-gutter-integer / ($grid-width / 100)) * 1%;
 
+
+
+// =============
 // Z Indexes
+// =============
 $z-over-content : 100;
 $z-over-control : 200;
 $z-over-page    : 300;
 $z-over-screen  : 400;
 $z-over-all     : 500;
-
-
 
 
 
@@ -179,11 +184,12 @@ $ui-button-padding-large-h  : rem($ui-button-padding-large-h);
 $ui-button-padding-large-v  : rem($ui-button-padding-large-v);
 
 
+
 // =============
 // Pagination
 // =============
 $pagination-border-radius: 0;
-$pagination-padding: 8px 16px;
+$pagination-padding: em(8px) em(16px);
 $pagination-hover-background: #f4f4f4;
 $pagination-hover-color: rgba(0, 0, 0, .5);
 $pagination-color: #000;

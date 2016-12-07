@@ -6,7 +6,7 @@
 }
 .breadcrumb {
   margin-bottom: $line-height-body * 1rem;
-  @include text-body;
+  @include typo-body;
   ul {
     @include flex;
     @include flex-middle;
