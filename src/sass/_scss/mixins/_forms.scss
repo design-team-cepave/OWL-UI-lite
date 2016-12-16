@@ -1,3 +1,12 @@
+@mixin input-placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+@mixin reset-list-style {
+  list-style: none;
+}
 @mixin form-base {
   font-family: $font-family;
   font-size: $ui-font-size-body;

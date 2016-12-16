@@ -39,8 +39,8 @@
 }
 .col {
 
-  @include flex-grow(1);
-  @include flex-basis(0);
+  flex-grow: 1;
+  flex-basis: 0;
 
   max-width: 100%;
   padding-left: $grid-gap;
