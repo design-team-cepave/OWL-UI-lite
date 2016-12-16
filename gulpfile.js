@@ -1,9 +1,14 @@
 var gulp          = require('gulp'),
     $             = require('gulp-load-plugins')(),
     browserSync   = require('browser-sync'),
-    argv          = require('yargs').argv;
+    argv          = require('yargs').argv,
+    postcss       = require('gulp-postcss'),
+    autoprefixer  = require('autoprefixer'),
+    cssnano       = require('cssnano'),
+    cssnext       = require('cssnext'),
+    precss        = require('precss'),
     browserReload = browserSync.reload,
-    src           = './src';
+    src           = './src',
     dist          = './dist';
 
 gulp.task('browser-sync', function() {
@@ -17,22 +22,30 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('ui-styles', function(){
+  var processors = [
+    autoprefixer
+  ];
   gulp.src('sass/owl-ui-lite.scss', {cwd: src})
     .pipe($.plumber())
     .pipe($.compass({
       sass: 'src/sass',
       css: 'dist/css'
     }))
+    .pipe(postcss(processors))
     .pipe(gulp.dest('css', {cwd: dist}))
 });
 
 gulp.task('doc-styles', function(){
+  var processors = [
+    autoprefixer
+  ];
   gulp.src('sass/master.scss', {cwd: src})
     .pipe($.plumber())
     .pipe($.compass({
       sass: 'src/sass',
       css: 'dist/assets/css'
     }))
+    .pipe(postcss(processors))
     .pipe(gulp.dest('css', {cwd: 'dist/assets'}))
 });
 
@@ -117,4 +130,4 @@ gulp.task('css-min', function(){
 
 gulp.task('default', ['styles', 'views', 'coffee', 'serve']);
 
-gulp.task('build', ['image-min', 'css-min']);
+gulp.task('build', ['image-min']);

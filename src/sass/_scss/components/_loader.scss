@@ -13,7 +13,7 @@
   animation: borderloader infinite 0.8s linear;
 }
 
-@include keyframes(borderloader) {
+@keyframes borderloader {
   0% {
     border-color: $loader-color-primary;
     border-top-color: $loader-color-secondary;
@@ -43,7 +43,7 @@
   @include animation (barloader infinite 1.5s linear);
 }
 
-@include keyframes(barloader) {
+@keyframes keyframes barloader {
   50% {
     border-left: 90px solid $loader-color-primary;
     border-right: 0px solid $loader-color-primary;

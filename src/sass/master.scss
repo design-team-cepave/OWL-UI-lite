@@ -1,4 +1,4 @@
-@import "compass";
+// @import "compass";
 @import "_scss/functions";
 @import "_scss/variables";
 @import "_scss/theming";
@@ -51,8 +51,8 @@ body, h1, h2, h3, h4, h5, h6, .button {
 }
 
 #header {
-  @include display-flex;
-  @include align-items(center);
+  display: flex;
+  align-items: center;
   background: white;
   padding: 20px 32px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -64,7 +64,7 @@ body, h1, h2, h3, h4, h5, h6, .button {
     left: 0;
     width: 100%;
     height: 2px;
-    @include background-image(linear-gradient(to right, #FFDA00, #FF4E39, #FF2E9C, #FF44FF, #00BFFF, #00EDFF, #FF74FF));
+    background-image: linear-gradient(to right, #FFDA00, #FF4E39, #FF2E9C, #FF44FF, #00BFFF, #00EDFF, #FF74FF);
   }
   &-brand {
     width: 25%;
@@ -193,7 +193,7 @@ body, h1, h2, h3, h4, h5, h6, .button {
 
 }
 #footer {
-  @include display-flex;
+  display: flex;
   border-top: 1px solid #eee;
   padding: 0 32px;
   padding-top: 24px;

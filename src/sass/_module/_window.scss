@@ -11,8 +11,8 @@
 
   // background: $grey-light;
   border-radius: $border-radius;
-  @include flex;
-  @include flex-flow(row wrap);
+  display: flex;
+  flex-flow: row wrap;
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;

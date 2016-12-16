@@ -242,7 +242,7 @@
   right: 0;
   bottom: 0;
   opacity: $overlay-background-opacity;
-  @include background-image(linear-gradient($overlay-background-color));
+  background-image: linear-gradient($overlay-background-color);
 }
 .overlay,
 %overlay {
