@@ -131,12 +131,12 @@ $ui-font-family-monospace : Consolas, Monaco, "Courier New", monospace;
 $browser-context        : 16px;
 $font-size-regular      : 14px;
 $ui-font-size-body      : rem(14); // 14
-$ui-font-size-mega      : rem(72); // 72
-$ui-font-size-jumbo     : rem(48); // 48
-$ui-font-size-display   : rem(36); // 36
-$ui-font-size-headline  : rem(26); // 24
-$ui-font-size-subheader : rem(20); // 20
-$ui-font-size-title     : rem(16); // 16
+$ui-font-size-mega      : rem(72); // 72 //h1
+$ui-font-size-jumbo     : rem(48); // 48 //h2
+$ui-font-size-display   : rem(36); // 36 //h3
+$ui-font-size-headline  : rem(24); // 24 //h4
+$ui-font-size-subheader : rem(20); // 20 //h5
+$ui-font-size-title     : rem(16); // 16 //h6
 $ui-font-size-cation    : rem(12); // 12
 $ui-font-size-small     : rem(10); // 10
 
