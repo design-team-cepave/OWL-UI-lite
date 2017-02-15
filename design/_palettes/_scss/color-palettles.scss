@@ -1,0 +1,67 @@
+/**
+ * OWL Portal Color Palettes
+ * ============================================================================
+ */
+$palettes: (
+  purple: (
+    base  : #836CC2,
+    light : #7F67C2,
+    dark  : #6958A2
+  ),
+  blue: (
+    base  : #25A6F7,
+    light : #5BBCF9,
+    dark  : #1D87CE
+  ),
+  turqoise: (
+    base  : #3DE0C5,
+    light : #65F7DF,
+    dark  : #35C4AC
+  ),
+  green: (
+    base  : #6FBA57,
+    light : #9CD689,
+    dark  : #599748
+  ),
+  yellow: (
+    base  : #F6D846,
+    light : #F8E174,
+    dark  : #C5B03A
+  ),
+  orange: (
+    base  : #F8A509,
+    light : #F9BB46,
+    dark  : #C78607
+  ),
+  red: (
+    base  : #E35141,
+    light : #EA7C70,
+    dark  : #B64236
+  ),
+  pink: (
+    base  : #E56AA6,
+    light : #EB8FBC,
+    dark  : #B8568A
+  ),
+  grey: (
+    lightest : #F5F7FA,
+    lighter  : #DFE4ED,
+    light    : #BFC7D9,
+    base     : #939FB8,
+    dark     : #6C7891,
+    darker   : #3B465C,
+    darkest  : #1A2233
+  )
+);
+
+@function palette($palette, $tone: 'base') {
+  @return map-get(map-get($palettes, $palette), $tone);
+}
+
+// how use this
+
+// element {
+//   color: palette(purple);
+//   color: palette(purple, light);
+//   color: palette(purple, dark);
+// }
