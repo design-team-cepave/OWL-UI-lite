@@ -7,6 +7,7 @@ var gulp          = require('gulp'),
     cssnano       = require('cssnano'),
     cssnext       = require('cssnext'),
     precss        = require('precss'),
+    sourcemaps    = require('gulp-sourcemaps'),
     browserReload = browserSync.reload,
     src           = './src',
     dist          = './dist';
@@ -27,11 +28,13 @@ gulp.task('ui-styles', function(){
   ];
   gulp.src('sass/owl-ui-lite.scss', {cwd: src})
     .pipe($.plumber())
+    .pipe(sourcemaps.init())
     .pipe($.compass({
       sass: 'src/sass',
       css: 'dist/css'
     }))
     .pipe(postcss(processors))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css', {cwd: dist}))
 });
 
@@ -41,11 +44,13 @@ gulp.task('doc-styles', function(){
   ];
   gulp.src('sass/master.scss', {cwd: src})
     .pipe($.plumber())
+    .pipe(sourcemaps.init())
     .pipe($.compass({
       sass: 'src/sass',
       css: 'dist/assets/css'
     }))
     .pipe(postcss(processors))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css', {cwd: 'dist/assets'}))
 });
 
