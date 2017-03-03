@@ -61,7 +61,7 @@ $font-family           : $ui-font-family;
 $font-family-heading   : $ui-font-family-heading;
 $font-family-monospace : $ui-font-family-monospace;
 $font-size-regular     : $ui-font-size-body;
-$font-size-small       : $ui-font-size-body;
+// $font-size-small       : $ui-font-size-body;
 $text-color-body       : $text-color-body;
 $text-color-heading    : $text-color-heading;
 $text-color-samp       : $text-color-samp;
@@ -111,7 +111,7 @@ $margin-bottom-paragraph : rem(16);
 // =============
 // Buttons
 // =============
-$button-border-radius : 0;
+$button-border-radius : 4px;
 $button-padding       : em(8px);
 $ui-height            : 34px;
 $ui-line-height       : 18px;
@@ -302,10 +302,10 @@ $fieldset-border-color: rgba(0, 0, 0, .1);
 $fieldset-border-size: 1px;
 
 // Button
-$button-background-color    : #eee;
+$button-background-color    : $ui-color-gray-white;
 $button-font-weight         : normal;
 $button-outline-font-weight : normal;
-$button-outline-border-size : 1px;
+$button-outline-border-size : $ui-button-border-width-default;
 $button-padding-small       : 0 20px;
 $button-padding             : 0 28px;
 $button-padding-big         : 0 48px;

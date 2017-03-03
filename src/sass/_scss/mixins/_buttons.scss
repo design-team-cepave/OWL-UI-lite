@@ -6,7 +6,6 @@
 
   &:focus,
   &:hover {
-    color: rgba($text-color, .6);
     &:disabled,
     &.disabled {
       color: $text-color;
@@ -14,8 +13,6 @@
     }
   }
   &.outline:hover {
-    color: rgba($back-color,.6);
-    border-color: rgba($back-color,.4);
   }
   &.outline,
   &.outline:disabled:hover,
@@ -35,7 +32,15 @@
 
 @mixin button-outline($text-color, $back-color) {
 
-  color: $back-color;
+  color: $text-color;
+  border-width: 1px;
+  border-style: solid;
   border-color: $back-color;
   background-color: transparent;
+}
+
+@mixin button-reset {
+  color: inherit;
+  background-color: inherit;
+  border: inherit;
 }

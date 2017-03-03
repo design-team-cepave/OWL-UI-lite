@@ -17,6 +17,8 @@ $ui-color-gray          : #939FB8; // rgb(145, 159, 184)
 $ui-color-gray-dark     : #6C7891; // rgb(108, 120, 145)
 $ui-color-gray-darker   : #3B465C; // rgb(59, 79, 92)
 $ui-color-gray-darkest  : #1A2233; // rgb(26, 34, 51)
+$ui-color-gray-white    : white;
+$ui-color-gray-black    : black;
 
 // Primary Color
 $ui-color-primary-light      : #C2AAF2; //rgb(202, 182, 242)
@@ -172,7 +174,6 @@ $ui-list-margin-left: 1.5;
 
 
 
-
 // =============
 // Buttons
 // =============
@@ -189,6 +190,8 @@ $ui-button-padding-medium-h : rem($ui-button-padding-small-v);
 $ui-button-padding-medium-v : rem($ui-button-padding-medium-v);
 $ui-button-padding-large-h  : rem($ui-button-padding-large-h);
 $ui-button-padding-large-v  : rem($ui-button-padding-large-v);
+
+$ui-button-border-width-default: 1px;
 
 
 
