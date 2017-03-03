@@ -34,6 +34,14 @@ button:hover,
     box-shadow: none;
   }
 }
+input[type='submit'] {
+  &.button {
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
 
 // Outline
 .button.outline {

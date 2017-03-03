@@ -255,7 +255,12 @@ select {
     }
   }
 }
-
+input[type='submit'] {
+  &:focus {
+    border-color: transparent;
+    box-shadow: none;
+  }
+}
 // Append Prepend
 .controls {
   @include flex;
