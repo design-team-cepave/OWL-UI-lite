@@ -10,7 +10,7 @@
 // =============
 
 // Color Pattles
-$ui-color-gray-lightest : #F5F7FA; // rgb(245, 247, 250)
+$ui-color-gray-lightest : #F2F4F7;
 $ui-color-gray-lighter  : #DFE4ED; // rgb(223, 228, 237)
 $ui-color-gray-light    : #BFC7D9; // rgb(191, 199, 217)
 $ui-color-gray          : #939FB8; // rgb(145, 159, 184)
@@ -19,19 +19,26 @@ $ui-color-gray-darker   : #3B465C; // rgb(59, 79, 92)
 $ui-color-gray-darkest  : #1A2233; // rgb(26, 34, 51)
 
 // Primary Color
-$ui-color-primary-light      : #CAB6F2; //rgb(202, 182, 242)
-$ui-color-primary            : #8962D9; //rgb(137, 98, 217)
-$ui-color-primary-dark       : #6B5499; //rgb(107, 84, 153)
+$ui-color-primary-light      : #C2AAF2; //rgb(202, 182, 242)
+$ui-color-primary            : #8E73DA;
+$ui-color-primary-dark       : #6B49AA;
 
 // Secondary Color
-$ui-color-secondary-blue      : hsl(210, 81.8, 46.8);
-$ui-color-secondary-turquoise : #50E3C2;
-$ui-color-secondary-green     : #6FBA57;
-$ui-color-secondary-yellow    : #FFD919;
-$ui-color-secondary-orange    : #F27F0C;
-$ui-color-secondary-red       : #E6175C;
-$ui-color-secondary-bue-light : hsl(210, 87.7, 59.4);
-$ui-color-secondary-blue-dark : hsl(210, 90.5, 36.8);
+$ui-color-secondary-blue         : #1F9BF7;
+$ui-color-secondary-turquoise    : #3DE0C5;
+$ui-color-secondary-green        : #13CE66;
+$ui-color-secondary-yellow       : #F7BA2A;
+$ui-color-secondary-orange       : #F87B09;
+$ui-color-secondary-red          : #FE4949;
+$ui-color-secondary-pink         : #E56AA6;
+$ui-color-secondary-bue-light    : #58B7FF;
+$ui-color-secondary-blue-dark    : #1D8CE0;
+$ui-color-secondary-green-light  : #58ED9B;
+$ui-color-secondary-green-dark   : #10AD57;
+$ui-color-secondary-yellow-light : #FFD063;
+$ui-color-secondary-yellow-dark  : #E3AB29;
+$ui-color-secondary-red-light    : #FF8686;
+$ui-color-secondary-red-dark     : #E04141;
 
 // Color States
 $ui-color-default : $ui-color-gray-lighter;
