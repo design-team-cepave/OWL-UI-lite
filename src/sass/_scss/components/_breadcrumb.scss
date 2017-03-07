@@ -5,8 +5,8 @@
   white-space: nowrap;
 }
 .breadcrumb {
-  margin-bottom: $line-height-body * 1rem;
-  @include typo-body;
+  margin-bottom: $ui-line-height-md * 1rem;
+  @include typo-md;
   ul {
     @include flex;
     @include flex-middle;

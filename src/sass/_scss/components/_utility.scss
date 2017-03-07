@@ -46,7 +46,7 @@
 }
 
 
-// Display
+// display
 .hide,
 %hide {
   @include hide;
@@ -329,7 +329,7 @@
 %offcanvas {
   background: #fff;
   position: fixed;
-  padding: $line-height-body;
+  padding: $ui-line-height-md;
   height: 100%;
   top: 0;
   left: 0;

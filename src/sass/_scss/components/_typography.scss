@@ -1,7 +1,7 @@
 body {
   font-family: $font-family;
   font-size: $font-size-regular;
-  line-height: $line-height-body;
+  line-height: $ui-line-height-md;
   color: $text-color-body;
   background-color: $background-color-body;
 }
@@ -43,29 +43,32 @@ h3,
 }
 h4,
 .h4,
-.typo-headline {
-  @include typo-headline;
+.typo-xxl {
+  @include typo-xxl;
   @extend %heading;
 }
 h5,
 .h5,
-.typo-subheder {
-  @include typo-subheder;
+.typo-xl {
+  @include typo-xl;
   @extend %heading;
 }
 h6,
 .h6,
-.typo-title {
-  @include typo-title;
+.typo-lg {
+  @include typo-lg;
   @extend %heading;
   text-transform: uppercase;
   letter-spacing: .08em;
 }
-.typo-cation {
-  @include typo-cation;
+.typo-md {
+  @include typo-md;
 }
-.typo-small {
-  @include typo-small;
+.typo-sm {
+  @include typo-sm;
+}
+.typo-xs {
+  @include typo-xs;
 }
 .subheading {
   // margin-top: -($margin-bottom-heading - $base-unit);
@@ -120,7 +123,7 @@ dl dt {
   font-weight: 700;
 }
 dd {
-  margin-left: $line-height-body;
+  margin-left: $ui-line-height-md;
 }
 
 // Block
@@ -132,7 +135,7 @@ hr {
   margin-top: -1px;
 }
 blockquote {
-  padding-left: $line-height-body;
+  padding-left: $ui-line-height-md;
   border-left: 2px solid rgba(0, 0, 0, .125);
   font-style: italic;
   color: rgba(0, 0, 0, .65);
@@ -141,22 +144,22 @@ blockquote {
 // Preformatted
 pre, code, samp, var, kbd {
   font-family: $font-family-monospace;
-  font-size: $font-size-cation;
+  font-size: $ui-font-size-sm;
 }
 pre {
   color: rgba(0, 0, 0, .85);
   background: $background-color-pre;
   padding: $ui-pre-block-padding;
   border-radius: $ui-pre-block-radius;
-  line-height: $line-height-cation;
+  line-height: $ui-line-height-sm;
   overflow: none;
   white-space: pre-wrap;
 }
 
 // Inline
 .small, time, cite, small, figcaption {
-  font-size: $font-size-small;
-  line-height: $line-height-small;
+  font-size: $ui-font-size-xs;
+  line-height: $ui-line-height-xs;
 }
 cite {
   color: rgba(0, 0, 0, .5);
@@ -186,7 +189,7 @@ pre code {
   white-space: pre;
   padding: 0;
   background: none;
-  line-height: $line-height-body;
+  line-height: $ui-line-height-md;
 }
 mark {
   background-color: $background-color-mark;

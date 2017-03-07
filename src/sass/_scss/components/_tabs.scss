@@ -1,5 +1,5 @@
 .tabs {
-  @include typo-body;
+  @include typo-md;
   li {
     em,
     &.active a {

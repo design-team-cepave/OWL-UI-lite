@@ -1,7 +1,7 @@
 .pagination {
-  margin: $line-height-body 0;
+  margin: $ui-line-height-md 0;
   // font-size: $ui-font-size;
-  @include typo-body;
+  @include typo-md;
   ol,
   ul {
     @include flex;

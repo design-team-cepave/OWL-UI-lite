@@ -48,7 +48,6 @@ $text-link-color         : $ui-text-link-color;
 $text-link-hover-color   : $ui-text-link-hover-color;
 // $text-color-input-append : #555;
 
-
 // Kbd
 $kbd-border: 1px solid rgba($ui-color-gray-darker, .1);
 
@@ -61,40 +60,35 @@ $font-family           : $ui-font-family;
 $font-family-heading   : $ui-font-family-heading;
 $font-family-monospace : $ui-font-family-monospace;
 $font-size-regular     : $ui-font-size-body;
-// $font-size-small       : $ui-font-size-body;
-$text-color-body       : $text-color-body;
-$text-color-heading    : $text-color-heading;
-$text-color-samp       : $text-color-samp;
-$text-color-input      : $text-color-input;
-$text-link-color       : $text-link-color;
-$text-link-hover-color : $text-link-hover-color;
 
 // Text sizes
 
 // Headings
-$font-size-h1     : $ui-font-size-mega;
-$font-size-h2     : $ui-font-size-jumbo;
-$font-size-h3     : $ui-font-size-display;
-$font-size-h4     : $ui-font-size-headline;
-$font-size-h5     : $ui-font-size-subheader;
-$font-size-h6     : $ui-font-size-title;
+$font-size-h1  : $ui-font-size-mega;
+$font-size-h2  : $ui-font-size-jumbo;
+$font-size-h3  : $ui-font-size-display;
+$font-size-h4  : $ui-font-size-xxl;
+$font-size-h5  : $ui-font-size-xl;
+$font-size-h6  : $ui-font-size-lg;
+$font-size-xxl : $ui-font-size-xxl;
+$font-size-xl  : $ui-font-size-xl;
+$font-size-lg  : $ui-font-size-lg;
 
 // Contents
-$font-size-base   : $ui-font-size-body;
-$font-size-body   : $font-size-base;
-$font-size-cation : $ui-font-size-cation;
-$font-size-small  : $ui-font-size-small;
+$ui-font-size-md   : $ui-font-size-md;
+$ui-font-size-sm   : $ui-font-size-sm;
+$ui-font-size-xs   : $ui-font-size-xs;
 
 // Lineheight
-$line-height-h1     : $ui-lineheight-mega;
-$line-height-h2     : $ui-lineheight-jumbo;
-$line-height-h3     : $ui-lineheight-display;
-$line-height-h4     : $ui-lineheight-headline;
-$line-height-h5     : $ui-lineheight-subheader;
-$line-height-h6     : $ui-lineheight-title;
-$line-height-body   : $ui-lineheight-body;
-$line-height-cation : $ui-lineheight-cation;
-$line-height-small  : $ui-lineheight-small;
+$ui-line-height-h1  : $ui-line-height-mega;
+$ui-line-height-h2  : $ui-line-height-jumbo;
+$ui-line-height-h3  : $ui-line-height-display;
+$ui-line-height-xxl : $ui-line-height-xxl;
+$ui-line-height-xl  : $ui-line-height-xl;
+$ui-line-height-lg  : $ui-line-height-lg;
+$ui-line-height-md  : $ui-line-height-md;
+$ui-line-height-sm  : $ui-line-height-sm;
+$ui-line-height-xs  : $ui-line-height-xs;
 
 // Text and block Spaces
 $margin-bottom-heading   : rem(12);
@@ -122,12 +116,12 @@ $ui-line-height       : 18px;
 // Labels & Badge
 // =============
 // Label
-$label-font-size   : $font-size-base;
+$label-font-size   : $ui-font-size-md;
 $label-color       : #111;
 $label-font-weight : normal;
 
-$label-font-size     : $font-size-cation;
-$label-line-height   : $line-height-cation;
+$label-font-size     : $ui-font-size-sm;
+$label-line-height   : $ui-line-height-sm;
 $label-text-color    : $color-gray-darker;
 $label-border-border : 1px solid transparent;
 $label-border-radius : 2px;
@@ -149,7 +143,7 @@ $table-hover-background-color   : rgba($color-secondary-blue, .1);
 // Forms
 // =============
 $form-element-text-color       : $color-gray-dark;
-$form-label-font-size          : $font-size-base;
+$form-label-font-size          : $ui-font-size-md;
 $form-border-radius            : 0;
 $label-color                   : $form-element-text-color;
 $input-place-hold-color        : $color-gray-light;
@@ -197,7 +191,7 @@ $breadcrumb-separator             : '/';
 // Dropdowns
 // =============
 $dropdown-color                       : $color-gray-dark;
-$dropdown-font-size                   : $font-size-body;
+$dropdown-font-size                   : $ui-font-size-md;
 $dropdown-z-index                     : $z-over-content;
 $dropdowm-border                      : 1px solid $color-gray-light;
 $dropdowm-list-item-separator         : none;
@@ -211,7 +205,7 @@ $dropdowm-list-item-background-active : $color-primary-light;
 // Modals
 // =============
 $modal-border               : 1px solid $color-gray-lighter;
-$modal-header-font-size     : $line-height-h5;
+$modal-header-font-size     : $ui-line-height-xl;
 $modal-header-padding       : $theta;
 $modal-body-padding         : $theta;
 $modal-border-radius        : 0;
@@ -255,18 +249,6 @@ $navSetting  : 170px;
 $navigation  : $naviBar + $navSetting;
 $navigationZ : 222;
 $page        : 111;
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -324,7 +306,7 @@ $overlay-background-opacity : 0.9;
 
 // Modals
 $modal-border            : none;
-$modal-header-font-size  : $ui-font-size-title;
+$modal-header-font-size  : $ui-font-size-md;
 $modal-header-padding    : 24px 32px;
 $modal-body-padding      : 36px 56px;
 // $modal-footer-padding    : 0;
@@ -334,7 +316,7 @@ $modal-border-radius-top : 4px;
 $modal-close : 36px;
 
 // Pagination
-$pagination-border-radius: $line-height-body;
+$pagination-border-radius: $ui-line-height-md;
 $pagination-padding: 8px 16px;
 $pagination-hover-background: #f4f4f4;
 $pagination-hover-color: rgba(0, 0, 0, .5);

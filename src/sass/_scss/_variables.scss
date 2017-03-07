@@ -137,28 +137,29 @@ $ui-font-family-heading   : $ui-font-family;
 $ui-font-family-monospace : Consolas, Monaco, "Courier New", monospace;
 
 // FontSize
-$browser-context        : 16px;
-$font-size-regular      : 14px;
-$ui-font-size-body      : rem(14); // 14
-$ui-font-size-mega      : rem(72); // 72 //h1
-$ui-font-size-jumbo     : rem(48); // 48 //h2
-$ui-font-size-display   : rem(36); // 36 //h3
-$ui-font-size-headline  : rem(24); // 24 //h4
-$ui-font-size-subheader : rem(20); // 20 //h5
-$ui-font-size-title     : rem(16); // 16 //h6
-$ui-font-size-cation    : rem(12); // 12
-$ui-font-size-small     : rem(10); // 10
+$browser-context      : 16px;
+$font-size-regular    : 14px;
+$ui-font-size-body    : rem(14);
+$ui-font-size-mega    : rem(32);
+$ui-font-size-jumbo   : rem(28);
+$ui-font-size-display : rem(24);
+$ui-font-size-xxl     : rem(20);
+$ui-font-size-xl      : rem(18);
+$ui-font-size-lg      : rem(16);
+$ui-font-size-md      : rem(14);
+$ui-font-size-sm      : rem(13);
+$ui-font-size-xs      : rem(12);
 
 // LineHeight
-$ui-lineheight-mega      : 1.333;
-$ui-lineheight-jumbo     : 1.333;
-$ui-lineheight-display   : 1.5;
-$ui-lineheight-headline  : 1.5;
-$ui-lineheight-subheader : 1.6;
-$ui-lineheight-title     : 1.5;
-$ui-lineheight-body      : 1.4285714;
-$ui-lineheight-cation    : 1.5;
-$ui-lineheight-small     : 1.6;
+$ui-line-height-mega    : 1.333;
+$ui-line-height-jumbo   : 1.333;
+$ui-line-height-display : 1.5;
+$ui-line-height-xxl     : 1.5;
+$ui-line-height-xl      : 1.6;
+$ui-line-height-lg      : 1.5;
+$ui-line-height-md      : 1.4285714;
+$ui-line-height-sm      : 1.5;
+$ui-line-height-xs      : 1.6;
 
 
 

@@ -84,13 +84,13 @@ input {
 // Fieldset
 fieldset {
   padding: $iota $zeta $zeta;
-  margin-bottom: $line-height-body * 1em;
+  margin-bottom: $ui-line-height-md * 1em;
   border: $fieldset-border-size solid $fieldset-border-color;
   border-radius: $form-border-radius;
 }
 legend {
   font-weight: bold;
-  font-size: $ui-font-size-small;
+  font-size: $ui-font-size-xs;
   text-transform: uppercase;
   padding: 0 1em;
   margin-left: -1rem;
@@ -143,7 +143,7 @@ legend {
     font-weight: normal;
     cursor: pointer;
     color: inherit;
-    // font-size: $ui-font-size-small;
+    // font-size: $ui-font-size-xs;
   }
 
   .checkboxes label {
@@ -171,7 +171,7 @@ legend {
   div.success {
     text-transform: none;
     font-weight: normal;
-    @include typo-small;
+    @include typo-xs;
   }
 
   span.error,
@@ -201,7 +201,7 @@ legend {
 // // Sizes
 // input.big,
 // select.big {
-//   font-size: $ui-font-size-title;
+//   font-size: $ui-font-size-md;
 //   height: $ui-height-big;
 // }
 // input.big {
@@ -217,7 +217,7 @@ legend {
   margin-top: 4px;
   color: rgba($color-gray-darker, .5);
   font-weight: normal;
-  @extend .typo-cation;
+  @extend .typo-sm;
 }
 ul.desc {
   margin-bottom: 8px;
@@ -278,7 +278,7 @@ input[type='submit'] {
   span, .append {
     font-weight: normal;
     background-color: $input-append-background-color;
-    @include typo-body;
+    @include typo-md;
     white-space: nowrap;
     padding: rem(8px);
   }

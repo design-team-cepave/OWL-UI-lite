@@ -1,6 +1,6 @@
 // base nav
 @mixin nav {
-  margin-bottom: $line-height-body;
+  margin-bottom: $ui-line-height-md;
   ul {
     @include reset-list-style;
     margin: 0;
