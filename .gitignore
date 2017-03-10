@@ -26,10 +26,7 @@ bower_components
 *~
 
 ## Build
-dist/css
-dist/scripts
-dist/**/*.html
-dist/assets/css
+dist
 
 ## Sublime editor
 *.sublime-project

@@ -23,6 +23,40 @@ gulp.task('browser-sync', function() {
   });
 });
 
+
+config = {
+  // scss: {
+  //   all: src + "/scss/**/*.scss",
+  //   src: src + "/scss/*.scss",
+  //   dist: dist + "/css",
+  //   settings: {}
+  // },
+  // images: {
+  //   src: src + "/img/**/*",
+  //   dist: dist + "/img"
+  // },
+  // js: {
+  //   src: src + "/js/**/*",
+  //   dist: dist + "/js"
+  // },
+  clean:{
+    src: dist
+  }
+}
+
+gulp.task("clean", function(){
+  return gulp.src(config.clean.src)
+  .pipe(clean());
+})
+
+gulp.task('images', function() {
+  return gulp.src('img/**/*', {cwd: src})
+    .pipe($.imagemin({
+      progressive: true
+    }))
+    .pipe(gulp.dest('dist/assets/img'))
+})
+
 gulp.task('ui-styles', function(){
   var processors = [
     autoprefixer
@@ -104,16 +138,10 @@ gulp.task('coffee', function() {
 // });
 
 gulp.task('watch', function () {
-  gulp.watch('sass/main.scss', {cwd: src}, ['styles', browserReload]);
-  gulp.watch('coffee/main.js', {cwd: src}, ['coffee', browserReload]);
-});
-
-gulp.task('serve', ['build', 'browser-sync'],function() {
+  gulp.watch('src/img/**/*',['images', browserReload]);
   gulp.watch('sass/**/*.scss', {cwd: src}, ['styles', browserReload]);
   gulp.watch('pug/**/*.pug', {cwd: src}, ['views', browserReload]);
   gulp.watch('coffee/**/*.coffee', {cwd: src}, ['coffee', browserReload]);
-  gulp.watch('*.html', {cwd: dist}).on('change', browserReload);
-  browserSync.create();
 });
 
 gulp.task('image-min', function(){
@@ -134,6 +162,15 @@ gulp.task('css-min', function(){
     .pipe(gulp.dest('css', {cwd: dist}));
 });
 
-gulp.task('default', ['styles', 'views', 'coffee', 'serve']);
+gulp.task('build', ['clean', 'vendor', 'images', 'styles', 'views', 'image-min', 'css-min']);
 
-gulp.task('build', ['image-min', 'css-min']);
+gulp.task('serve', ['browser-sync'],function() {
+  gulp.watch('src/img/**/*',['images', browserReload]);
+  gulp.watch('sass/**/*.scss', {cwd: src}, ['styles', browserReload]);
+  gulp.watch('pug/**/*.pug', {cwd: src}, ['views', browserReload]);
+  gulp.watch('coffee/**/*.coffee', {cwd: src}, ['coffee', browserReload]);
+  gulp.watch('*.html', {cwd: dist}).on('change', browserReload);
+  browserSync.create();
+});
+
+gulp.task('default', ['serve']);
