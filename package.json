@@ -15,6 +15,7 @@
     "browser-sync": "~2.12.8",
     "cssnext": "^1.8.4",
     "gulp": "~3.9.0",
+    "gulp-clean": "^0.3.2",
     "gulp-coffee": "github:contra/gulp-coffee",
     "gulp-compass": "^2.1.0",
     "gulp-cssnano": "~2.1.2",
