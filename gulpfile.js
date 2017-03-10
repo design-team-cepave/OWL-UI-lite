@@ -2,6 +2,7 @@ var gulp          = require('gulp'),
     $             = require('gulp-load-plugins')(),
     browserSync   = require('browser-sync'),
     argv          = require('yargs').argv,
+    clean         = require('gulp-clean'),
     postcss       = require('gulp-postcss'),
     autoprefixer  = require('autoprefixer'),
     cssnano       = require('cssnano'),
@@ -130,4 +131,4 @@ gulp.task('css-min', function(){
 
 gulp.task('default', ['styles', 'views', 'coffee', 'serve']);
 
-gulp.task('build', ['image-min']);
+gulp.task('build', ['image-min', 'css-min']);
