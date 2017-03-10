@@ -135,4 +135,4 @@ gulp.task('css-min', function(){
 
 gulp.task('default', ['styles', 'views', 'coffee', 'serve']);
 
-gulp.task('build', ['image-min']);
+gulp.task('build', ['image-min', 'css-min']);
