@@ -137,11 +137,12 @@ gulp.task('coffee', function() {
 //     .pipe(browserSync.reload({stream: true}));
 // });
 
-gulp.task('watch', function () {
+gulp.task('watch', ['images', 'styles', 'views'], function () {
   gulp.watch('src/img/**/*',['images', browserReload]);
   gulp.watch('sass/**/*.scss', {cwd: src}, ['styles', browserReload]);
   gulp.watch('pug/**/*.pug', {cwd: src}, ['views', browserReload]);
   gulp.watch('coffee/**/*.coffee', {cwd: src}, ['coffee', browserReload]);
+  gulp.watch('*.html', {cwd: dist}).on('change', browserReload);
 });
 
 gulp.task('image-min', function(){
@@ -164,12 +165,7 @@ gulp.task('css-min', function(){
 
 gulp.task('build', ['clean', 'vendor', 'images', 'styles', 'views', 'image-min', 'css-min']);
 
-gulp.task('serve', ['browser-sync'],function() {
-  gulp.watch('src/img/**/*',['images', browserReload]);
-  gulp.watch('sass/**/*.scss', {cwd: src}, ['styles', browserReload]);
-  gulp.watch('pug/**/*.pug', {cwd: src}, ['views', browserReload]);
-  gulp.watch('coffee/**/*.coffee', {cwd: src}, ['coffee', browserReload]);
-  gulp.watch('*.html', {cwd: dist}).on('change', browserReload);
+gulp.task('serve', ['watch', 'browser-sync'],function() {
   browserSync.create();
 });
 
