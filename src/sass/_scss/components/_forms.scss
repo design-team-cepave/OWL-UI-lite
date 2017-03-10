@@ -41,7 +41,7 @@ textarea {
 
 select:not([multiple]) {
   cursor: pointer;
-  height: $ui-height;
+  height: $height;
   vertical-align: middle;
 }
 
@@ -84,13 +84,13 @@ input {
 // Fieldset
 fieldset {
   padding: $iota $zeta $zeta;
-  margin-bottom: $ui-line-height-md * 1em;
+  margin-bottom: $line-height-md * 1em;
   border: $fieldset-border-size solid $fieldset-border-color;
   border-radius: $form-border-radius;
 }
 legend {
   font-weight: bold;
-  font-size: $ui-font-size-xs;
+  font-size: $font-size-xs;
   text-transform: uppercase;
   padding: 0 1em;
   margin-left: -1rem;
@@ -143,7 +143,7 @@ legend {
     font-weight: normal;
     cursor: pointer;
     color: inherit;
-    // font-size: $ui-font-size-xs;
+    // font-size: $font-size-xs;
   }
 
   .checkboxes label {
@@ -201,8 +201,8 @@ legend {
 // // Sizes
 // input.big,
 // select.big {
-//   font-size: $ui-font-size-md;
-//   height: $ui-height-big;
+//   font-size: $font-size-md;
+//   height: $height-big;
 // }
 // input.big {
 //   padding: $input-padding-big;

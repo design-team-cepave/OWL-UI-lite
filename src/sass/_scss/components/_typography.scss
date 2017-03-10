@@ -1,7 +1,7 @@
 body {
   font-family: $font-family;
   font-size: $font-size-regular;
-  line-height: $ui-line-height-md;
+  line-height: $line-height-md;
   color: $text-color-body;
   background-color: $background-color-body;
 }
@@ -97,11 +97,11 @@ figure {
 // Lists
 ul, ol {
   margin: 0;
-  margin-left: $ui-list-margin-left*1em;
+  margin-left: $list-margin-left*1em;
   & {
     ol, ul {
       margin: 0;
-      margin-left: $ui-list-margin-left*1em;
+      margin-left: $list-margin-left*1em;
     }
   }
 }
@@ -123,7 +123,7 @@ dl dt {
   font-weight: 700;
 }
 dd {
-  margin-left: $ui-line-height-md;
+  margin-left: $line-height-md;
 }
 
 // Block
@@ -135,7 +135,7 @@ hr {
   margin-top: -1px;
 }
 blockquote {
-  padding-left: $ui-line-height-md;
+  padding-left: $line-height-md;
   border-left: 2px solid rgba(0, 0, 0, .125);
   font-style: italic;
   color: rgba(0, 0, 0, .65);
@@ -144,22 +144,22 @@ blockquote {
 // Preformatted
 pre, code, samp, var, kbd {
   font-family: $font-family-monospace;
-  font-size: $ui-font-size-sm;
+  font-size: $font-size-sm;
 }
 pre {
   color: rgba(0, 0, 0, .85);
   background: $background-color-pre;
-  padding: $ui-pre-block-padding;
-  border-radius: $ui-pre-block-radius;
-  line-height: $ui-line-height-sm;
+  padding: $pre-block-padding;
+  border-radius: $pre-block-radius;
+  line-height: $line-height-sm;
   overflow: none;
   white-space: pre-wrap;
 }
 
 // Inline
 .small, time, cite, small, figcaption {
-  font-size: $ui-font-size-xs;
-  line-height: $ui-line-height-xs;
+  font-size: $font-size-xs;
+  line-height: $line-height-xs;
 }
 cite {
   color: rgba(0, 0, 0, .5);
@@ -178,7 +178,7 @@ abbr[title], dfn[title] {
   cursor: help;
 }
 mark, code, samp, kbd {
-  padding: $ui-code-block-padding;
+  padding: $code-block-padding;
   display: inline-block;
   line-height: 1;
   border-radius: $base-unit;
@@ -189,7 +189,7 @@ pre code {
   white-space: pre;
   padding: 0;
   background: none;
-  line-height: $ui-line-height-md;
+  line-height: $line-height-md;
 }
 mark {
   background-color: $background-color-mark;

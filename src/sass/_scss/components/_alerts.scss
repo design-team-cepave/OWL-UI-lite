@@ -3,14 +3,14 @@
   padding: 15px 24px;
   padding-right: 40px;
   line-height: 20px;
-  font-size: $ui-font-size;
+  font-size: $font-size;
   color: #000;
   background: $color-default;
   border: 1px solid darken($color-default, 10);
   display: block;
   font-weight: normal;
   border-radius: 4px;
-  margin-bottom: $ui-line-height-md;
+  margin-bottom: $line-height-md;
   a {
     color: #000;
     font-weight: bold;

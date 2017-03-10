@@ -7,7 +7,7 @@
   right: 16px;
   width: 320px;
   line-height: 20px;
-  font-size: $ui-font-size;
+  font-size: $font-size;
   padding: 16px 20px;
   color: rgba(0, 0, 0, .9);
   background: $color-default;
@@ -48,7 +48,7 @@
 .message .buttons a {
   display: inline-block;
   text-transform: uppercase;
-  font-size: $ui-font-size-xs;
+  font-size: $font-size-xs;
   margin-right: 8px;
 }
 .message.line .buttons {

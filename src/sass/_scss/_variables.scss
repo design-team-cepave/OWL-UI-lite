@@ -10,60 +10,60 @@
 // =============
 
 // Color Pattles
-$ui-color-gray-lightest : #F2F4F7;
-$ui-color-gray-lighter  : #DFE4ED; // rgb(223, 228, 237)
-$ui-color-gray-light    : #BFC7D9; // rgb(191, 199, 217)
-$ui-color-gray          : #939FB8; // rgb(145, 159, 184)
-$ui-color-gray-dark     : #6C7891; // rgb(108, 120, 145)
-$ui-color-gray-darker   : #3B465C; // rgb(59, 79, 92)
-$ui-color-gray-darkest  : #1A2233; // rgb(26, 34, 51)
-$ui-color-gray-white    : white;
-$ui-color-gray-black    : black;
+$color-gray-lightest : #F2F4F7;
+$color-gray-lighter  : #DFE4ED; // rgb(223, 228, 237)
+$color-gray-light    : #BFC7D9; // rgb(191, 199, 217)
+$color-gray          : #939FB8; // rgb(145, 159, 184)
+$color-gray-dark     : #6C7891; // rgb(108, 120, 145)
+$color-gray-darker   : #3B465C; // rgb(59, 79, 92)
+$color-gray-darkest  : #1A2233; // rgb(26, 34, 51)
+$color-gray-white    : white;
+$color-gray-black    : black;
 
 // Primary Color
-$ui-color-primary-light      : #C2AAF2; //rgb(202, 182, 242)
-$ui-color-primary            : #8E73DA;
-$ui-color-primary-dark       : #6B49AA;
+$color-primary-light      : #C2AAF2; //rgb(202, 182, 242)
+$color-primary            : #8E73DA;
+$color-primary-dark       : #6B49AA;
 
 // Secondary Color
-$ui-color-secondary-blue         : #1F9BF7;
-$ui-color-secondary-turquoise    : #3DE0C5;
-$ui-color-secondary-green        : #13CE66;
-$ui-color-secondary-yellow       : #F7BA2A;
-$ui-color-secondary-orange       : #F87B09;
-$ui-color-secondary-red          : #FE4949;
-$ui-color-secondary-pink         : #E56AA6;
-$ui-color-secondary-bue-light    : #58B7FF;
-$ui-color-secondary-blue-dark    : #1D8CE0;
-$ui-color-secondary-green-light  : #58ED9B;
-$ui-color-secondary-green-dark   : #10AD57;
-$ui-color-secondary-yellow-light : #FFD063;
-$ui-color-secondary-yellow-dark  : #E3AB29;
-$ui-color-secondary-red-light    : #FF8686;
-$ui-color-secondary-red-dark     : #E04141;
+$color-secondary-blue         : #1F9BF7;
+$color-secondary-turquoise    : #3DE0C5;
+$color-secondary-green        : #13CE66;
+$color-secondary-yellow       : #F7BA2A;
+$color-secondary-orange       : #F87B09;
+$color-secondary-red          : #FE4949;
+$color-secondary-pink         : #E56AA6;
+$color-secondary-bue-light    : #58B7FF;
+$color-secondary-blue-dark    : #1D8CE0;
+$color-secondary-green-light  : #58ED9B;
+$color-secondary-green-dark   : #10AD57;
+$color-secondary-yellow-light : #FFD063;
+$color-secondary-yellow-dark  : #E3AB29;
+$color-secondary-red-light    : #FF8686;
+$color-secondary-red-dark     : #E04141;
 
 // Color States
-$ui-color-default : $ui-color-gray-lighter;
-$ui-color-success : $ui-color-secondary-green;
-$ui-color-error   : $ui-color-secondary-red;
-$ui-color-warning : $ui-color-secondary-yellow;
+$color-default : $color-gray-lighter;
+$color-success : $color-secondary-green;
+$color-error   : $color-secondary-red;
+$color-warning : $color-secondary-yellow;
 
 // Color Text
-$ui-text-color-body         : $ui-color-gray-darker;
-$ui-text-color-heading      : $ui-color-gray-darker;
-$ui-text-color-samp         : $ui-color-gray-lightest;
-$ui-text-color-input        : $ui-color-gray-darker;
-// $ui-text-color-input-append : $ui-color-gray-darker;
-$ui-text-link-color       : $ui-color-primary;
-$ui-text-link-hover-color : darken($ui-color-primary, 10%);
+$text-color-body         : $color-gray-darker;
+$text-color-heading      : $color-gray-darker;
+$text-color-samp         : $color-gray-lightest;
+$text-color-input        : $color-gray-darker;
+// $text-color-input-append : $color-gray-darker;
+$text-link-color       : $color-primary;
+$text-link-hover-color : darken($color-primary, 10%);
 
 // Background
-$ui-background-color-body      : $ui-color-gray-lightest;
-$ui-background-color-pre       : $ui-color-gray-lightest;
-$ui-background-color-mark      : $ui-color-warning;
-$ui-background-color-code      : $ui-color-default;
-$ui-background-color-samp      : lighten($ui-color-primary, 7%);
-$ui-background-color-highlight : rgba($ui-color-primary, .075);
+$background-color-body      : $color-gray-lightest;
+$background-color-pre       : $color-gray-lightest;
+$background-color-mark      : $color-warning;
+$background-color-code      : $color-default;
+$background-color-samp      : lighten($color-primary, 7%);
+$background-color-highlight : rgba($color-primary, .075);
 
 
 
@@ -83,18 +83,18 @@ $theta     : 32px;
 $iota      : 36px;
 $kappa     : 40px;
 
-$ui-padding-xsmall : $base-unit;
-$ui-padding-small  : $base-unit*2;
-$ui-padding-medium : $base-unit*3;
-$ui-padding-large  : $base-unit*4;
-$ui-padding-xlarge : $base-unit*5;
+$padding-xsmall : $base-unit;
+$padding-small  : $base-unit*2;
+$padding-medium : $base-unit*3;
+$padding-large  : $base-unit*4;
+$padding-xlarge : $base-unit*5;
 
-$ui-radius-default: 0;
-$ui-radius-xsmall : $base-unit;
-$ui-radius-small  : $base-unit*2;
-$ui-radius-medium : $base-unit*3;
-$ui-radius-large  : $base-unit*4;
-$ui-radius-xlarge : $base-unit*5;
+$radius-default: 0;
+$radius-xsmall : $base-unit;
+$radius-small  : $base-unit*2;
+$radius-medium : $base-unit*3;
+$radius-large  : $base-unit*4;
+$radius-xlarge : $base-unit*5;
 
 // =============
 // Breakpoints
@@ -132,34 +132,34 @@ $z-over-all     : 500;
 // =============
 
 // FontFamily
-$ui-font-family           : 'Helvetica Neue', Helvetica, sans-serif;
-$ui-font-family-heading   : $ui-font-family;
-$ui-font-family-monospace : Consolas, Monaco, "Courier New", monospace;
+$font-family           : 'Helvetica Neue', Helvetica, sans-serif;
+$font-family-heading   : $font-family;
+$font-family-monospace : Consolas, Monaco, "Courier New", monospace;
 
 // FontSize
 $browser-context      : 16px;
 $font-size-regular    : 14px;
-$ui-font-size-body    : rem(14);
-$ui-font-size-mega    : rem(32);
-$ui-font-size-jumbo   : rem(28);
-$ui-font-size-display : rem(24);
-$ui-font-size-xxl     : rem(20);
-$ui-font-size-xl      : rem(18);
-$ui-font-size-lg      : rem(16);
-$ui-font-size-md      : rem(14);
-$ui-font-size-sm      : rem(13);
-$ui-font-size-xs      : rem(12);
+$font-size-body    : rem(14);
+$font-size-mega    : rem(32);
+$font-size-jumbo   : rem(28);
+$font-size-display : rem(24);
+$font-size-xxl     : rem(20);
+$font-size-xl      : rem(18);
+$font-size-lg      : rem(16);
+$font-size-md      : rem(14);
+$font-size-sm      : rem(13);
+$font-size-xs      : rem(12);
 
 // LineHeight
-$ui-line-height-mega    : 1.333;
-$ui-line-height-jumbo   : 1.333;
-$ui-line-height-display : 1.5;
-$ui-line-height-xxl     : 1.5;
-$ui-line-height-xl      : 1.6;
-$ui-line-height-lg      : 1.5;
-$ui-line-height-md      : 1.4285714;
-$ui-line-height-sm      : 1.5;
-$ui-line-height-xs      : 1.6;
+$line-height-mega    : 1.333;
+$line-height-jumbo   : 1.333;
+$line-height-display : 1.5;
+$line-height-xxl     : 1.5;
+$line-height-xl      : 1.6;
+$line-height-lg      : 1.5;
+$line-height-md      : 1.4285714;
+$line-height-sm      : 1.5;
+$line-height-xs      : 1.6;
 
 
 
@@ -168,31 +168,31 @@ $ui-line-height-xs      : 1.6;
 // =============
 
 // Preformatted
-$ui-pre-block-padding: em($ui-padding-xlarge);
-$ui-pre-block-radius: $ui-radius-default;
-$ui-code-block-padding: $ui-padding-xsmall $ui-padding-small;
-$ui-list-margin-left: 1.5;
+$pre-block-padding: em($padding-xlarge);
+$pre-block-radius: $radius-default;
+$code-block-padding: $padding-xsmall $padding-small;
+$list-margin-left: 1.5;
 
 
 
 // =============
 // Buttons
 // =============
-$ui-button-padding-small-h  : 2 * $base-unit;
-$ui-button-padding-small-v  : 3 * $base-unit;
-$ui-button-padding-medium-h : $ui-button-padding-small-h;
-$ui-button-padding-medium-v : 4 * $base-unit;
-$ui-button-padding-large-h  : $ui-button-padding-small-h;
-$ui-button-padding-large-v  : 5 * $base-unit;
+$button-padding-small-h  : 2 * $base-unit;
+$button-padding-small-v  : 3 * $base-unit;
+$button-padding-medium-h : $button-padding-small-h;
+$button-padding-medium-v : 4 * $base-unit;
+$button-padding-large-h  : $button-padding-small-h;
+$button-padding-large-v  : 5 * $base-unit;
 
-$ui-button-padding-small-h  : rem($ui-button-padding-small-h );
-$ui-button-padding-small-v  : rem($ui-button-padding-small-v);
-$ui-button-padding-medium-h : rem($ui-button-padding-small-v);
-$ui-button-padding-medium-v : rem($ui-button-padding-medium-v);
-$ui-button-padding-large-h  : rem($ui-button-padding-large-h);
-$ui-button-padding-large-v  : rem($ui-button-padding-large-v);
+$button-padding-small-h  : rem($button-padding-small-h );
+$button-padding-small-v  : rem($button-padding-small-v);
+$button-padding-medium-h : rem($button-padding-small-v);
+$button-padding-medium-v : rem($button-padding-medium-v);
+$button-padding-large-h  : rem($button-padding-large-h);
+$button-padding-large-v  : rem($button-padding-large-v);
 
-$ui-button-border-width-default: 1px;
+$button-border-width-default: 1px;
 
 
 

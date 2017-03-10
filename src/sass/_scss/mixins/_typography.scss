@@ -1,36 +1,36 @@
 @mixin typo-mega {
-  font-size: $ui-font-size-mega;
-  line-height: $ui-line-height-mega;
+  font-size: $font-size-mega;
+  line-height: $line-height-mega;
 }
 @mixin typo-jumbo {
-  font-size: $ui-font-size-jumbo;
-  line-height: $ui-line-height-jumbo;
+  font-size: $font-size-jumbo;
+  line-height: $line-height-jumbo;
 }
 @mixin typo-display {
-  font-size: $ui-font-size-display;
-  line-height: $ui-line-height-display;
+  font-size: $font-size-display;
+  line-height: $line-height-display;
 }
 @mixin typo-xxl {
-  font-size: $ui-font-size-xxl;
-  line-height: $ui-line-height-xxl;
+  font-size: $font-size-xxl;
+  line-height: $line-height-xxl;
 }
 @mixin typo-xl {
-  font-size: $ui-font-size-xl;
-  line-height: $ui-line-height-xl;
+  font-size: $font-size-xl;
+  line-height: $line-height-xl;
 }
 @mixin typo-lg {
-  font-size: $ui-font-size-lg;
-  line-height: $ui-line-height-lg;
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
 }
 @mixin typo-md {
-  font-size: $ui-font-size-md;
-  line-height: $ui-line-height-md;
+  font-size: $font-size-md;
+  line-height: $line-height-md;
 }
 @mixin typo-sm {
-  font-size: $ui-font-size-sm;
-  line-height: $ui-line-height-sm;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
 }
 @mixin typo-xs {
-  font-size: $ui-font-size-xs;
-  line-height: $ui-line-height-xs;
+  font-size: $font-size-xs;
+  line-height: $line-height-xs;
 }

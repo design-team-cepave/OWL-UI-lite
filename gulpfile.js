@@ -23,7 +23,6 @@ gulp.task('browser-sync', function() {
   });
 });
 
-
 config = {
   all: '**/*',
   images: {
@@ -124,6 +123,7 @@ var vendor = {
     scriptdist : dist + 'scripts/vendor/prism/'
   }
 };
+
 gulp.task('prism:script', function() {
   return gulp.src([
     vendor.src + vendor.prism.js,

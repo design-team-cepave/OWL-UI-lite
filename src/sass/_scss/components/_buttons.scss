@@ -1,6 +1,6 @@
 // Default
-$button-text-color-default: $ui-color-gray-darker;
-$button-border-color-default: $ui-color-gray-light;
+$button-text-color-default: $color-gray-darker;
+$button-border-color-default: $color-gray-light;
 
 button,
 .button {
@@ -16,13 +16,13 @@ button,
   vertical-align: middle;
   -webkit-appearance: none;
   @include button-outline($button-text-color-default, $button-border-color-default);
-  background-color: $ui-color-gray-white;
+  background-color: $color-gray-white;
   border-radius: $button-border-radius;
 }
 button:hover,
 .button:hover {
-  @include button-outline($ui-color-primary, $ui-color-primary);
-  background-color: $ui-color-gray-white;
+  @include button-outline($color-primary, $color-primary);
+  background-color: $color-gray-white;
   outline: none;
   text-decoration: none;
 }
@@ -63,27 +63,27 @@ input[type='submit'] {
 
 // Sizes
 // .button.small {
-//   font-size: $ui-font-size-xs;
-//   line-height: $ui-line-height-small;
-//   height: $ui-height-small;
+//   font-size: $font-size-xs;
+//   line-height: $line-height-small;
+//   height: $height-small;
 //   padding: $button-padding-small;
 //   &.upper {
-//     font-size: $ui-font-size-xs - 2px;
+//     font-size: $font-size-xs - 2px;
 //   }
 // }
 // .button.big {
-//   font-size: $ui-font-size-md;
-//   line-height: $ui-line-height-big;
-//   height: $ui-height-big;
+//   font-size: $font-size-md;
+//   line-height: $line-height-big;
+//   height: $height-big;
 //   padding: $button-padding-big;
 //   &.upper {
-//     font-size: $ui-font-size-md - 5px;
+//     font-size: $font-size-md - 5px;
 //   }
 // }
 
 // Upper
 .button.upper {
-  // font-size: $ui-font-size - 3px;
+  // font-size: $font-size - 3px;
 }
 
 // Primary
@@ -118,7 +118,7 @@ input[type='submit'] {
 }
 // Inverted
 .button.inverted {
-  @include button($ui-color-gray-darkest, $ui-color-gray-lightest);
+  @include button($color-gray-darkest, $color-gray-lightest);
 }
 
 // Grouped

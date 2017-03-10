@@ -9,8 +9,8 @@
 }
 @mixin form-base {
   font-family: $font-family;
-  font-size: $ui-font-size-body;
-  line-height: $ui-font-size-md;
+  font-size: $font-size-body;
+  line-height: $font-size-md;
   color: inherit;
   @include input-placeholder {
     color: $input-place-hold-color;
