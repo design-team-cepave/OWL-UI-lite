@@ -16,7 +16,7 @@ button,
   vertical-align: middle;
   -webkit-appearance: none;
   @include button-outline($button-text-color-default, $button-border-color-default);
-  background-color: $color-gray-white;
+  // background-color: $color-gray-white;
   border-radius: $button-border-radius;
 }
 button:hover,

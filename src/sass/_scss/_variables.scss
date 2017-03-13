@@ -214,35 +214,37 @@ $kbd-border: 1px solid rgba($color-gray-darker, .1);
 // =============
 // Buttons
 // =============
-$button-background-color     : $color-gray-white;
-$button-border-radius        : 4px;
-$button-border-width-default : 1px;
-$button-font-weight          : normal;
-$button-outline-border-size  : $button-border-width-default;
-$button-outline-font-weight  : normal;
-$button-padding              : 0 28px;
-// $button-padding              : em(8px);
-$button-padding-big          : 0 48px;
-$button-padding-sm        : 0 20px;
-$button-padding-sm-h      : 2 * $base-unit;
-$button-padding-sm-h      : rem($button-padding-sm-h );
-$button-padding-sm-v      : 3 * $base-unit;
-$button-padding-sm-v      : rem($button-padding-sm-v);
-$button-padding-md-h     : $button-padding-sm-h;
-$button-padding-md-h     : rem($button-padding-sm-v);
-$button-padding-md-v     : 4 * $base-unit;
-$button-padding-md-v     : rem($button-padding-md-v);
-$button-padding-lg-h      : $button-padding-sm-h;
-$button-padding-lg-h      : rem($button-padding-lg-h);
-$button-padding-lg-v      : 5 * $base-unit;
-$button-padding-lg-v      : rem($button-padding-lg-v);
-$height                      : 40px;
-$height-big                  : 48px;
-$height-sm                : 32px;
-$line-height                 : 38px;
-$line-height-big             : 46px;
-$line-height-sm           : 32px;
-
+$button-font-weight              : normal;
+$button-background-color         : transparent;
+$button-border-radius            : 4px;
+$button-border-width-default     : 1px;
+$button-border-style             : solid;
+$button-padding                  : 0 28px;
+// $button-padding               : em(8px);
+$button-padding-big              : 0 48px;
+$button-padding-sm               : 0 20px;
+$button-padding-sm-h             : 2 * $base-unit;
+$button-padding-sm-h             : rem($button-padding-sm-h );
+$button-padding-sm-v             : 3 * $base-unit;
+$button-padding-sm-v             : rem($button-padding-sm-v);
+$button-padding-md-h             : $button-padding-sm-h;
+$button-padding-md-h             : rem($button-padding-sm-v);
+$button-padding-md-v             : 4 * $base-unit;
+$button-padding-md-v             : rem($button-padding-md-v);
+$button-padding-lg-h             : $button-padding-sm-h;
+$button-padding-lg-h             : rem($button-padding-lg-h);
+$button-padding-lg-v             : 5 * $base-unit;
+$button-padding-lg-v             : rem($button-padding-lg-v);
+$height                          : 40px;
+$height-big                      : 48px;
+$height-sm                       : 32px;
+$line-height                     : 38px;
+$line-height-big                 : 46px;
+$line-height-sm                  : 32px;
+$button-outline-border-size      : $button-border-width-default;
+$button-outline-font-weight      : normal;
+// outline
+$button-outline-background-color : transparent;
 
 
 // =============

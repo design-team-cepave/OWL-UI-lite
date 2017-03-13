@@ -12,14 +12,13 @@
       background: $back-color;
     }
   }
-  &.outline:hover {
-  }
-  &.outline,
-  &.outline:disabled:hover,
-  &.outline.disabled:hover {
-    color: $text-color;
-    border-color: $text-color;
-    background: none;
+  &.outline {
+    &:disabled:hover,
+    &.disabled:hover {
+      color: $text-color;
+      border-color: $text-color;
+      background: none;
+    }
   }
 }
 
@@ -33,13 +32,14 @@
 @mixin button-outline($text-color, $back-color) {
 
   color: $text-color;
-  border-width: 1px;
-  border-style: solid;
+  background-color: $button-background-color;
+  border-width: $button-border-width-default;
+  border-style: $button-border-style;
   border-color: $back-color;
-  background-color: transparent;
 }
 
 @mixin button-reset {
+
   color: inherit;
   background-color: inherit;
   border: inherit;
