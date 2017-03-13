@@ -36,7 +36,7 @@
     width: 100%;
   }
 
-  @media (max-width: $breakpoint-small) {
+  @media (max-width: $breakpoint-sm) {
     @include column-count(1)
   }
 }

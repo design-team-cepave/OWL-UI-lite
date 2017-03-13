@@ -252,14 +252,14 @@
 // Float
 @mixin float-right {
   float: right;
-  // @media (max-width: $breakpoint-small) {
+  // @media (max-width: $breakpoint-sm) {
   //   float: none;
   // }
 }
 
 @mixin float-left {
   float: left;
-  // @media (max-width: $breakpoint-small) {
+  // @media (max-width: $breakpoint-sm) {
   //   float: none;
   // }
 }
@@ -284,15 +284,15 @@
   display: none;
 }
 
-@mixin hide-on-small {
-  @media (max-width: $breakpoint-small) {
+@mixin hide-on-sm {
+  @media (max-width: $breakpoint-sm) {
     display: none !important;
   }
 }
 
-@mixin show-on-small {
+@mixin show-on-sm {
   display: none !important;
-  @media (max-width: $breakpoint-small) {
+  @media (max-width: $breakpoint-sm) {
     display: block !important;
   }
 }
@@ -403,7 +403,7 @@
 
 // Fullwidth
 @mixin fullwidth {
-  @media (min-width: $breakpoint-small) {
+  @media (min-width: $breakpoint-sm) {
     @include flex-item-auto;
   }
 }

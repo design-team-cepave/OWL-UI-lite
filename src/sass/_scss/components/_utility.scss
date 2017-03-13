@@ -52,14 +52,14 @@
   @include hide;
 }
 
-.hide-on-small,
-%hide-on-small {
-  @include hide-on-small;
+.hide-on-sm,
+%hide-on-sm {
+  @include hide-on-sm;
 }
 
-.show-on-small,
-%show-on-small {
-  @include show-on-small;
+.show-on-sm,
+%show-on-sm {
+  @include show-on-sm;
 }
 
 // Print
@@ -177,7 +177,7 @@
   &.inverted {
     color: #fff;
   }
-  &.small {
+  &.sm {
     @include close-size(20px);
   }
   &.big {
@@ -211,7 +211,7 @@
 .width-50,
 %width-50 {
   @include width-50;
-  @media (max-width: $breakpoint-small) {
+  @media (max-width: $breakpoint-sm) {
     .width-50 {
       width: 100% !important;
     }

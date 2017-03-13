@@ -157,7 +157,7 @@ pre {
 }
 
 // Inline
-.small, time, cite, small, figcaption {
+.sm, time, cite, sm, figcaption {
   font-size: $font-size-xs;
   line-height: $line-height-xs;
 }
@@ -213,7 +213,7 @@ kbd {
 }
 sub,
 sup {
-  font-size: x-small;
+  font-size: x-sm;
   line-height: 0;
   margin-left: $base-unit;
   position: relative;

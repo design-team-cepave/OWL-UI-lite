@@ -52,11 +52,11 @@
     order: 1;
   }
 }
-@media (max-width: $breakpoint-small) {
-  .col.first-on-small {
+@media (max-width: $breakpoint-sm) {
+  .col.first-on-sm {
     order: -1;
   }
-  .col.last-on-small {
+  .col.last-on-sm {
     order: 1;
   }
 }
@@ -100,7 +100,7 @@
   @include flex-grow(1);
   width: 100%;
 }
-@media (max-width: $breakpoint-small) {
+@media (max-width: $breakpoint-sm) {
   .row-layout {
     display: block;
   }
@@ -118,7 +118,7 @@
 }
 
 // Responsive
-@media (max-width: $breakpoint-small) {
+@media (max-width: $breakpoint-sm) {
 
   .row {
     margin-left: 0;

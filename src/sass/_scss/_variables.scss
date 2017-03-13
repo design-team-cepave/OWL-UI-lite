@@ -67,13 +67,13 @@ $color-error   : $color-secondary-red;
 $color-warning : $color-secondary-yellow;
 
 // Color Text
-$text-color-body         : $color-gray-darker;
-$text-color-heading      : $color-gray-darker;
-$text-color-samp         : $color-gray-lightest;
-$text-color-input        : $color-gray-darker;
+$text-color-body            : $color-gray-darker;
+$text-color-heading         : $color-gray-darker;
+$text-color-samp            : $color-gray-lightest;
+$text-color-input           : $color-gray-darker;
 // $text-color-input-append : $color-gray-darker;
-$text-link-color       : $color-primary;
-$text-link-hover-color : darken($color-primary, 10%);
+$text-link-color            : $color-primary;
+$text-link-hover-color      : darken($color-primary, 10%);
 
 // Background
 $background-color-body      : $color-gray-lightest;
@@ -101,25 +101,25 @@ $theta     : 32px;
 $iota      : 36px;
 $kappa     : 40px;
 
-$padding-xsmall : $base-unit;
-$padding-small  : $base-unit*2;
-$padding-medium : $base-unit*3;
-$padding-large  : $base-unit*4;
-$padding-xlarge : $base-unit*5;
+$padding-xs     : $base-unit;
+$padding-sm     : $base-unit*2;
+$padding-md     : $base-unit*3;
+$padding-lg     : $base-unit*4;
+$padding-xl     : $base-unit*5;
 
-$radius-default: 0;
-$radius-xsmall : $base-unit;
-$radius-small  : $base-unit*2;
-$radius-medium : $base-unit*3;
-$radius-large  : $base-unit*4;
-$radius-xlarge : $base-unit*5;
+$radius-default : 0;
+$radius-xs      : $base-unit;
+$radius-sm      : $base-unit*2;
+$radius-md      : $base-unit*3;
+$radius-lg      : $base-unit*4;
+$radius-xl      : $base-unit*5;
 
 // =============
 // Breakpoints
 // =============
-$breakpoint-small  : 768px;
-$breakpoint-medium : 1024px;
-$breakpoint-large  : 1200px;
+$breakpoint-sm  : 768px;
+$breakpoint-md : 1024px;
+$breakpoint-lg  : 1200px;
 
 
 
@@ -155,8 +155,8 @@ $font-family-heading   : $font-family;
 $font-family-monospace : Consolas, Monaco, "Courier New", monospace;
 
 // FontSize
-$browser-context      : 16px;
-$font-size-regular    : 14px;
+$browser-context   : 16px;
+$font-size-regular : 14px;
 $font-size-body    : rem(14);
 $font-size-mega    : rem(32);
 $font-size-jumbo   : rem(28);
@@ -178,9 +178,9 @@ $line-height-lg      : 1.5;
 $line-height-md      : 1.4285714;
 $line-height-sm      : 1.5;
 $line-height-xs      : 1.6;
-$line-height-h1  : $line-height-mega;
-$line-height-h2  : $line-height-jumbo;
-$line-height-h3  : $line-height-display;
+$line-height-h1      : $line-height-mega;
+$line-height-h2      : $line-height-jumbo;
+$line-height-h3      : $line-height-display;
 
 // Headings
 $font-size-h1  : $font-size-mega;
@@ -201,10 +201,10 @@ $margin-bottom-paragraph : rem(16);
 // =============
 
 // Preformatted
-$pre-block-padding: em($padding-xlarge);
-$pre-block-radius: $radius-default;
-$code-block-padding: $padding-xsmall $padding-small;
-$list-margin-left: 1.5;
+$pre-block-padding  : em($padding-xl);
+$pre-block-radius   : $radius-default;
+$code-block-padding : $padding-xs $padding-sm;
+$list-margin-left   : 1.5;
 
 // Kbd
 $kbd-border: 1px solid rgba($color-gray-darker, .1);
@@ -223,25 +223,25 @@ $button-outline-font-weight  : normal;
 $button-padding              : 0 28px;
 // $button-padding              : em(8px);
 $button-padding-big          : 0 48px;
-$button-padding-small        : 0 20px;
-$button-padding-small-h      : 2 * $base-unit;
-$button-padding-small-h      : rem($button-padding-small-h );
-$button-padding-small-v      : 3 * $base-unit;
-$button-padding-small-v      : rem($button-padding-small-v);
-$button-padding-medium-h     : $button-padding-small-h;
-$button-padding-medium-h     : rem($button-padding-small-v);
-$button-padding-medium-v     : 4 * $base-unit;
-$button-padding-medium-v     : rem($button-padding-medium-v);
-$button-padding-large-h      : $button-padding-small-h;
-$button-padding-large-h      : rem($button-padding-large-h);
-$button-padding-large-v      : 5 * $base-unit;
-$button-padding-large-v      : rem($button-padding-large-v);
+$button-padding-sm        : 0 20px;
+$button-padding-sm-h      : 2 * $base-unit;
+$button-padding-sm-h      : rem($button-padding-sm-h );
+$button-padding-sm-v      : 3 * $base-unit;
+$button-padding-sm-v      : rem($button-padding-sm-v);
+$button-padding-md-h     : $button-padding-sm-h;
+$button-padding-md-h     : rem($button-padding-sm-v);
+$button-padding-md-v     : 4 * $base-unit;
+$button-padding-md-v     : rem($button-padding-md-v);
+$button-padding-lg-h      : $button-padding-sm-h;
+$button-padding-lg-h      : rem($button-padding-lg-h);
+$button-padding-lg-v      : 5 * $base-unit;
+$button-padding-lg-v      : rem($button-padding-lg-v);
 $height                      : 40px;
 $height-big                  : 48px;
-$height-small                : 32px;
+$height-sm                : 32px;
 $line-height                 : 38px;
 $line-height-big             : 46px;
-$line-height-small           : 32px;
+$line-height-sm           : 32px;
 
 
 
@@ -304,8 +304,8 @@ $input-error-box-shadow        : 0 0 0 2px rgba($color-error, .3), 0 1px 2px rgb
 $input-focus-background-color  : white;
 $input-focus-border-color      : $color-primary;
 $input-focus-box-shadow        : 0 0 0 2px rgba($color-primary, .3), 0 1px 2px rgba($color-gray-darker, .1) inset;
-$input-padding                 : $padding-small;
-$input-padding-big             : $padding-small $padding-medium;
+$input-padding                 : $padding-sm;
+$input-padding-big             : $padding-sm $padding-md;
 $input-place-hold-color        : $color-gray-light;
 $input-sucess-box-shadow       : 0 0 0 2px rgba($color-success, .3), 0 1px 2px rgba($color-gray-darker, .1) inset;
 $label-color                   : $form-element-text-color;

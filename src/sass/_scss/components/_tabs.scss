@@ -46,7 +46,7 @@
   }
 }
 
-@media (min-width: $breakpoint-small) {
+@media (min-width: $breakpoint-sm) {
 
   .tabs ul {
     @include flex;
