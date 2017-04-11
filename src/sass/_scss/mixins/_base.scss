@@ -510,16 +510,3 @@
     background-color: $color;
   }
 }
-
-
-//
-.full-width {
-  @include full-width;
-}
-.full-height {
-  @include full-height
-}
-.full-size {
-  @extend .full-width;
-  @extend .full-height;
-}
