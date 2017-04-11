@@ -3,18 +3,6 @@
 
 professional designers and developers CSS framework
 
-Requirements
--------------------------
-compass ruby gem
-
-``
-$ gem update --system
-$ gem install compass
-``
-
-請參照[用戶指南](http://compass-style.org/install/)
-
-
 Installation
 -------------------------
 **Step 1: Download**
