@@ -17,92 +17,93 @@ block content
         h3 Color palettes
         p#hero-lead
           |OWL UI lite 的色票庫，是用科學的數學方式求得，藉此得到色採搭配的最佳視覺平衡方案。
-    #doc-main__content.row
-      .col.col-3.nav-wrapper
-        nan#sidebar.nav
-          ul
-            li: a(href='index.html#h-primary') Primary
-            li: a(href='index.html#h-secondary') Secondary
-            li: a(href='index.html#h-gray') Gray
-            li: a(href='index.html#h-state') State
+    #doc-main__content
+      .row.splice
+        .col.col-3.nav-wrapper
+          nan#sidebar.nav
+            ul
+              li: a(href='index.html#h-primary') Primary
+              li: a(href='index.html#h-secondary') Secondary
+              li: a(href='index.html#h-gray') Gray
+              li: a(href='index.html#h-state') State
 
-      .col.col-9
-        #owl-ui-lite-component
+        .col.col-9
+          #owl-ui-lite-component
 
-          mixin palettes-list(color, value)
-            tr
-              td.col-2
-                div(class='palettes-item color-background--' + color)
-              td.col-10
-                .window
-                  pre.language-scss
-                    code.
-                      background-color: #{value}
-                .window
-                  pre.language-jade
-                    code.
-                      class='color-background--#{color}'
-            tr
-              td.col-2
-                div(class='color-text--' + color) #{value}
-              td.col-10
-                .window
-                  pre.language-scss
-                    code.
-                      color: #{value}
-                .window
-                  pre.language-jade
-                    code.
-                      class='color-text--#{color}'
+            mixin palettes-list(color, value)
+              tr
+                td.col-2
+                  div(class='palettes-item color-background--' + color)
+                td.col-10
+                  .window
+                    pre.language-scss
+                      code.
+                        background-color: #{value}
+                  .window
+                    pre.language-jade
+                      code.
+                        class='color-background--#{color}'
+              tr
+                td.col-2
+                  div(class='color-text--' + color) #{value}
+                td.col-10
+                  .window
+                    pre.language-scss
+                      code.
+                        color: #{value}
+                  .window
+                    pre.language-jade
+                      code.
+                        class='color-text--#{color}'
 
-          // Primary
-          h3#h-primary.demo-head Primary
-          p 主色
-          table.palettles-color
-            +palettes-list('primary-light', '$color-primary-Light')
-            +palettes-list('primary', '$color-primary')
-            +palettes-list('primary-dark', '$color-primary-Dark')
+            // Primary
+            h3#h-primary.demo-head Primary
+            p 主色
+            table.palettles-color
+              +palettes-list('primary-light', '$color-primary-Light')
+              +palettes-list('primary', '$color-primary')
+              +palettes-list('primary-dark', '$color-primary-Dark')
 
-          // Secondary
-          h3#h-secondary.demo-head Secondary
-          p 搭配色
-          table.palettles-color
-            +palettes-list('secondary-red-light', '$color-secondary-red-light')
-            +palettes-list('secondary-red', '$color-secondary-red')
-            +palettes-list('secondary-red-dark', '$color-secondary-red-dark')
-            +palettes-list('secondary-orange', '$color-secondary-orange')
-            +palettes-list('secondary-yellow-light', '$color-secondary-yellow-light')
-            +palettes-list('secondary-yellow', '$color-secondary-yellow')
-            +palettes-list('secondary-yellow-dark', '$color-secondary-yellow-dark')
-            +palettes-list('secondary-blue-light', '$color-secondary-blue-light')
-            +palettes-list('secondary-blue', '$color-secondary-blue')
-            +palettes-list('secondary-blue-dark', '$color-secondary-blue-dark')
-            +palettes-list('secondary-green-light', '$color-secondary-green-light')
-            +palettes-list('secondary-green', '$color-secondary-green')
-            +palettes-list('secondary-green-dark', '$color-secondary-green-dark')
-            +palettes-list('secondary-pink', '$color-secondary-pink')
-            +palettes-list('secondary-turquoise', '$color-secondary-turquoise')
+            // Secondary
+            h3#h-secondary.demo-head Secondary
+            p 搭配色
+            table.palettles-color
+              +palettes-list('secondary-red-light', '$color-secondary-red-light')
+              +palettes-list('secondary-red', '$color-secondary-red')
+              +palettes-list('secondary-red-dark', '$color-secondary-red-dark')
+              +palettes-list('secondary-orange', '$color-secondary-orange')
+              +palettes-list('secondary-yellow-light', '$color-secondary-yellow-light')
+              +palettes-list('secondary-yellow', '$color-secondary-yellow')
+              +palettes-list('secondary-yellow-dark', '$color-secondary-yellow-dark')
+              +palettes-list('secondary-blue-light', '$color-secondary-blue-light')
+              +palettes-list('secondary-blue', '$color-secondary-blue')
+              +palettes-list('secondary-blue-dark', '$color-secondary-blue-dark')
+              +palettes-list('secondary-green-light', '$color-secondary-green-light')
+              +palettes-list('secondary-green', '$color-secondary-green')
+              +palettes-list('secondary-green-dark', '$color-secondary-green-dark')
+              +palettes-list('secondary-pink', '$color-secondary-pink')
+              +palettes-list('secondary-turquoise', '$color-secondary-turquoise')
 
-          // Gray
-          h3#h-gray.demo-head Gray
-          p 灰階
-          table.palettles-color
-            +palettes-list('gray-lightest', '$color-gray-lightest')
-            +palettes-list('gray-lighter', '$color-gray-lighter')
-            +palettes-list('gray-light', '$color-gray-light')
-            +palettes-list('gray', '$color-gray')
-            +palettes-list('gray-dark', '$color-gray-dark')
-            +palettes-list('gray-darker', '$color-gray-darker')
-            +palettes-list('gray-darkest', '$color-gray-darkest')
+            // Gray
+            h3#h-gray.demo-head Gray
+            p 灰階
+            table.palettles-color
+              +palettes-list('gray-lightest', '$color-gray-lightest')
+              +palettes-list('gray-lighter', '$color-gray-lighter')
+              +palettes-list('gray-light', '$color-gray-light')
+              +palettes-list('gray', '$color-gray')
+              +palettes-list('gray-dark', '$color-gray-dark')
+              +palettes-list('gray-darker', '$color-gray-darker')
+              +palettes-list('gray-darkest', '$color-gray-darkest')
 
-          // State
-          h3#h-state.demo-head State
-          p 狀態
-          table.palettles-color
-            +palettes-list('default', '$color-default')
-            +palettes-list('success', '$color-success')
-            +palettes-list('error', '$color-gray-error')
-            +palettes-list('warning', '$color-warning')
+            // State
+            h3#h-state.demo-head State
+            p 狀態
+            table.palettles-color
+              +palettes-list('default', '$color-default')
+              +palettes-list('success', '$color-success')
+              +palettes-list('error', '$color-gray-error')
+              +palettes-list('warning', '$color-warning')
 
   include ../../_footer
 

@@ -16,288 +16,289 @@ block content
       #hero.col-10
         h3 Typography / 文字排版
         p#hero-lead 文字排版是網頁上的最重要的基礎。所有元素的尺寸皆源自於文字尺寸的計算，因此即使是輕微的缺陷，也足以摧毀美麗的頁面。因此 OWL UI lite 提供完美的排版與理想的間距、字級大小和比例關係，尤其用於中文排版上，無論搭配什麼風格、字體都可以適配頁面，得到優良的呈現。
-    #doc-main__content.row
-      .col.col-3.nav-wrapper
-        nan#sidebar.nav
-          ul
-            li: a(href='index.html#h-headings') Headings
-            li: a(href='index.html#h-subheadings') Subheadings
-            li: a(href='index.html#h-paragraph') Paragraph
-            li: a(href='index.html#h-inline') Inline Elements
-            li: a(href='index.html#h-lists') Lists
-      .col.col-9
-        #owl-ui-lite-component
+    #doc-main__content
+      .row.splice
+        .col.col-3.nav-wrapper
+          nan#sidebar.nav
+            ul
+              li: a(href='index.html#h-headings') Headings
+              li: a(href='index.html#h-subheadings') Subheadings
+              li: a(href='index.html#h-paragraph') Paragraph
+              li: a(href='index.html#h-inline') Inline Elements
+              li: a(href='index.html#h-lists') Lists
+        .col.col-9
+          #owl-ui-lite-component
 
-          // Headings
-          h3#h-headings.demo-head Headings
-          p 為有效簡化字級尺寸，與適配 html 元素標籤，OWL UI lite 僅定義了9個級別的文字尺寸其中標題字佔6級，但這是為了支援非中文語系的彈性，如果您在中文排版的介面中，OWL UI lite 建議挑選三個等級使用即可。單純使用字體粗細技巧，3個等級的字體尺寸，即可營造6個階層的等級關係，如加上色彩早已足以應付。）
+            // Headings
+            h3#h-headings.demo-head Headings
+            p 為有效簡化字級尺寸，與適配 html 元素標籤，OWL UI lite 僅定義了9個級別的文字尺寸其中標題字佔6級，但這是為了支援非中文語系的彈性，如果您在中文排版的介面中，OWL UI lite 建議挑選三個等級使用即可。單純使用字體粗細技巧，3個等級的字體尺寸，即可營造6個階層的等級關係，如加上色彩早已足以應付。）
 
-          .example
-            h1
-              | h1, mega Bold/72px
+            .example
+              h1
+                | h1, mega Bold/72px
+                code &lt;h1&gt;
+                var .typo-mega
+              h2
+                | h2, jumbo Bold/48px
+                code &lt;h2&gt;
+                var .typo-jumbo
+              h3
+                | h3, display Bold/36px
+                code &lt;h3&gt;
+                var .typo-display
+              h4
+                | 我是 大標題 加粗 24px
+                code &lt;h4&gt;
+                var .typo-xxl
+              h5
+                | 我是 次標題 加粗 20px
+                code &lt;h5&gt;
+                var .typo-xl
+              h6
+                | 我是 小標題 加粗 16px
+                code &lt;h6&gt;
+                var .typo-lg
+            br
+            p
+              | OWL UI lite 已對標頭（Heading）樣式重置，可單獨透過&nbsp;
               code &lt;h1&gt;
-              var .typo-mega
-            h2
-              | h2, jumbo Bold/48px
-              code &lt;h2&gt;
-              var .typo-jumbo
-            h3
-              | h3, display Bold/36px
-              code &lt;h3&gt;
-              var .typo-display
-            h4
-              | 我是 大標題 加粗 24px
-              code &lt;h4&gt;
-              var .typo-xxl
-            h5
-              | 我是 次標題 加粗 20px
-              code &lt;h5&gt;
-              var .typo-xl
-            h6
-              | 我是 小標題 加粗 16px
+              |&nbsp;-&nbsp;
               code &lt;h6&gt;
+              |&nbsp;等標籤(tag)進行定義。&nbsp;
+              code &lt;h1&gt;
+              |&nbsp;定義最大的標題。&lt;h6&gt; 定義最小的標題。
+            p
+              | 亦可使用&nbsp;
+              var .h1
+              | -
+              var .h6
+              | 樣式名(class name)來定義標題。
+            p
+              | 推薦使用採用設計語言定義的樣式風格定義，
+              var .typo-mega
+              | 、
+              var .typo-jumbo
+              | 、
+              var .typo-display
+              | 、
+              var .typo-xxl
+              | 、
+              var .typo-xl
+              | 、
               var .typo-lg
-          br
-          p
-            | OWL UI lite 已對標頭（Heading）樣式重置，可單獨透過&nbsp;
-            code &lt;h1&gt;
-            |&nbsp;-&nbsp;
-            code &lt;h6&gt;
-            |&nbsp;等標籤(tag)進行定義。&nbsp;
-            code &lt;h1&gt;
-            |&nbsp;定義最大的標題。&lt;h6&gt; 定義最小的標題。
-          p
-            | 亦可使用&nbsp;
-            var .h1
-            | -
-            var .h6
-            | 樣式名(class name)來定義標題。
-          p
-            | 推薦使用採用設計語言定義的樣式風格定義，
-            var .typo-mega
-            | 、
-            var .typo-jumbo
-            | 、
-            var .typo-display
-            | 、
-            var .typo-xxl
-            | 、
-            var .typo-xl
-            | 、
-            var .typo-lg
-            | 、
-            var .typo-md
-            | 、
-            var .typo-sm
-            | 、
-            var .typo-xs
-            | 。
+              | 、
+              var .typo-md
+              | 、
+              var .typo-sm
+              | 、
+              var .typo-xs
+              | 。
 
-          // Subheadings
-          h3#h-subheadings.demo-head Subheading / 子標題
-          p
-            |副標題正是為了讓標題得到良好的呈現。
-          p
-            |要使用副標題，需添加&nbsp;
-            code .subheading
-            |&nbsp;樣式到一個 heading tag
-            code &lt;h1&gt;
-            |&nbsp;-&nbsp;
-            code &lt;h6&gt;
-            |. 下面的範例中, 這個&nbsp;
-            code &lt;h3&gt;
-            |&nbsp;最好搭配像&nbsp;
-            code .muted
-            |&nbsp;的樣式名，讓文字顏色跟字體更細或淡，以降低文字級標籤的使用。
-          .example
-            h3 Lorem Ipsum，也称乱数假文或者哑元文本
-            h3.subheading.muted Lorem ipsum 我们为何用它？
-            p Lorem Ipsum，也称乱数假文或者哑元文本， 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
-          .window
-            //- .icons: span
-            //- .title subheading.pug
-            pre.language-jade
-              code.
-                h3 ...
-                h3(class="subheading muted") ...
-
-          // Paragraph
-          h3#h-paragraph.demo-head Paragraph / 文字段落標籤
-          p
-            |除了特殊規範外, 所有的段落文字使用&nbsp;
-            code 14px
-            |&nbsp;字體級&nbsp;與
-            code 21px
-            |&nbsp;行高
-          .example
+            // Subheadings
+            h3#h-subheadings.demo-head Subheading / 子標題
             p
-              |Lorem ipsum
-              code dolor
-              |sit amet,&nbsp;
-              a(href='') 它起源于哪里？
-              |&nbsp;恰恰与流行观念相反，Lorem Ipsum并不是简简单单的随机文本。它追溯于一篇公元前45年的经典拉丁著作，从而使它有着两千多年的岁数。弗吉尼亚州Hampden-Sydney大学拉丁系教授Richard McClintock曾在Lorem Ipsum段落中注意到一个涵义十分隐晦的拉丁词语，“consectetur”，通过这个单词详细查阅跟其有关的经典文学著作原文，McClintock教授发掘了这个不容置疑的出处。Lorem Ipsum始于西塞罗(Cicero)在公元前45年作的“de Finibus Bonorum et Malorum”（善恶之尽）里1.10.32 和1.10.33章节。这本书是一本关于道德理论的论述，曾在文艺复兴时期非常流行。Lorem Ipsum的第一行”Lorem ipsum dolor sit amet..”节选于1.10.32章节。
+              |副標題正是為了讓標題得到良好的呈現。
             p
-              | Lorem ipsum dolor sit amet,&nbsp;
-              var 恰恰与流行观念相反，
-              |&nbsp;Lorem Ipsum并不是简简单单的随机文本。它追溯于一篇公元前45年的经典拉丁著作，从而使它有着两千多年的岁数。弗吉尼亚州Hampden-Sydney大学拉丁系教授Richard McClintock曾在Lorem Ipsum段落中注意到一个涵义十分隐晦的拉丁词语，“consectetur”，通过这个单词详细查阅跟其有关的经典文学著作原文，McClintock教授发掘了这个不容置疑的出处。Lorem Ipsum始于西塞罗(Cicero)在公元前45年作的“de Finibus Bonorum et Malorum”（善恶之尽）里1.10.32 和1.10.33章节。这本书是一本关于道德理论的论述，曾在文艺复兴时期非常流行。Lorem Ipsum的第一行”Lorem ipsum dolor sit amet..”节选于1.10.32章节。
-          .window
-            //- .icons: span
-            //- .title p.pug
-            pre.language-jade
-              code.
-                p ...
+              |要使用副標題，需添加&nbsp;
+              code .subheading
+              |&nbsp;樣式到一個 heading tag
+              code &lt;h1&gt;
+              |&nbsp;-&nbsp;
+              code &lt;h6&gt;
+              |. 下面的範例中, 這個&nbsp;
+              code &lt;h3&gt;
+              |&nbsp;最好搭配像&nbsp;
+              code .muted
+              |&nbsp;的樣式名，讓文字顏色跟字體更細或淡，以降低文字級標籤的使用。
+            .example
+              h3 Lorem Ipsum，也称乱数假文或者哑元文本
+              h3.subheading.muted Lorem ipsum 我们为何用它？
+              p Lorem Ipsum，也称乱数假文或者哑元文本， 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
+            .window
+              //- .icons: span
+              //- .title subheading.pug
+              pre.language-jade
+                code.
+                  h3 ...
+                  h3(class="subheading muted") ...
 
-          // Inline Elements
-          h3#h-inline.demo-head Inline Elements / 行內元素
-          p OWL UI lite 特別收入許多常用'行內'格式化元素。他們都有自己的語義，自己的風格。畢竟語義化是我們追求的精神與原則之一。
-          table.table-bordered
-            tr
-              td.nowrap
-                abbr(title='Cascading Style Sheets') abbr / 縮寫
-                | -
-                code &lt;attr&gt;
-              td.nowrap
-                cite Cite / 引用
-                | -
-                code &lt;city&gt;
-            tr
-              td.nowrap
-                code Code tag / 程式碼
-                | -
-                code &lt;code&gt;
-              td.nowrap
-                samp Sample / 樣本
-                | -
-                code &lt;samp&gt;
-            tr
-              td.nowrap
-                var Variable / 變數
-                | -
-                code &lt;var&gt;
-              td.nowrap
-                mark Mark / 記號
-                | -
-                code &lt;mark&gt;
-            tr
-              td.nowrap
-                kbd kbd / 鍵盤文字
-                | -
-                code &lt;kbd&gt;
-              td.nowrap
-                del Deleted / 刪除
-                | -
-                code &lt;del&gt;
-            tr
-              td.nowrap
-                i Italic / 斜體
-                | -
-                code &lt;i&gt;
-              td.nowrap
-                em Emphasis / 強調
-                | -
-                code &lt;em&gt;
-            tr
-              td.nowrap
-                strong Highlighted / 更強的強調
-                | -
-                code &lt;strong&gt;
-              td.nowrap
-                b Bold / 粗體
-                | -
-                code &lt;b&gt;
-            tr
-              td.nowrap
-                | Base
-                sup superscript / 上標
-                | -
-                code &lt;sup&gt;
-              td.nowrap
-                | Base
-                sub subscriptt / 下標
-                | -
-                code &lt;sub&gt;
-            tr
-              td.nowrap
-                small Small / 小號字體
-                | -
-                code &lt;small&gt;
-              td.nowrap
-                ins Inserted / 下畫線
-                | -
-                code &lt;ins&gt;
+            // Paragraph
+            h3#h-paragraph.demo-head Paragraph / 文字段落標籤
+            p
+              |除了特殊規範外, 所有的段落文字使用&nbsp;
+              code 14px
+              |&nbsp;字體級&nbsp;與
+              code 21px
+              |&nbsp;行高
+            .example
+              p
+                |Lorem ipsum
+                code dolor
+                |sit amet,&nbsp;
+                a(href='') 它起源于哪里？
+                |&nbsp;恰恰与流行观念相反，Lorem Ipsum并不是简简单单的随机文本。它追溯于一篇公元前45年的经典拉丁著作，从而使它有着两千多年的岁数。弗吉尼亚州Hampden-Sydney大学拉丁系教授Richard McClintock曾在Lorem Ipsum段落中注意到一个涵义十分隐晦的拉丁词语，“consectetur”，通过这个单词详细查阅跟其有关的经典文学著作原文，McClintock教授发掘了这个不容置疑的出处。Lorem Ipsum始于西塞罗(Cicero)在公元前45年作的“de Finibus Bonorum et Malorum”（善恶之尽）里1.10.32 和1.10.33章节。这本书是一本关于道德理论的论述，曾在文艺复兴时期非常流行。Lorem Ipsum的第一行”Lorem ipsum dolor sit amet..”节选于1.10.32章节。
+              p
+                | Lorem ipsum dolor sit amet,&nbsp;
+                var 恰恰与流行观念相反，
+                |&nbsp;Lorem Ipsum并不是简简单单的随机文本。它追溯于一篇公元前45年的经典拉丁著作，从而使它有着两千多年的岁数。弗吉尼亚州Hampden-Sydney大学拉丁系教授Richard McClintock曾在Lorem Ipsum段落中注意到一个涵义十分隐晦的拉丁词语，“consectetur”，通过这个单词详细查阅跟其有关的经典文学著作原文，McClintock教授发掘了这个不容置疑的出处。Lorem Ipsum始于西塞罗(Cicero)在公元前45年作的“de Finibus Bonorum et Malorum”（善恶之尽）里1.10.32 和1.10.33章节。这本书是一本关于道德理论的论述，曾在文艺复兴时期非常流行。Lorem Ipsum的第一行”Lorem ipsum dolor sit amet..”节选于1.10.32章节。
+            .window
+              //- .icons: span
+              //- .title p.pug
+              pre.language-jade
+                code.
+                  p ...
 
-          // Lists
-          h3#h-lists.demo-head Lists
-          p
-            |我們為列表提供許多的層級，雖然很可能永遠都用不到，但 OWL UI lite 仍然保留了這個彈性。
-            |無論項目或計數清單至少可支援至三個級別。
-          .row
-            .col.col-6
-              ul
-                li list item 1
-                li
-                  | list item 2
-                  ul
-                    li list item 2.1
-                    li
-                      | list item 2.2
-                      ul
-                        li list item 2.2.1
-                        li list item 2.2.2
-                    li list item 2.3
-                    li list item 2.4
-                li list item 3
-                li list item 4
+            // Inline Elements
+            h3#h-inline.demo-head Inline Elements / 行內元素
+            p OWL UI lite 特別收入許多常用'行內'格式化元素。他們都有自己的語義，自己的風格。畢竟語義化是我們追求的精神與原則之一。
+            table.table-bordered
+              tr
+                td.nowrap
+                  abbr(title='Cascading Style Sheets') abbr / 縮寫
+                  | -
+                  code &lt;attr&gt;
+                td.nowrap
+                  cite Cite / 引用
+                  | -
+                  code &lt;city&gt;
+              tr
+                td.nowrap
+                  code Code tag / 程式碼
+                  | -
+                  code &lt;code&gt;
+                td.nowrap
+                  samp Sample / 樣本
+                  | -
+                  code &lt;samp&gt;
+              tr
+                td.nowrap
+                  var Variable / 變數
+                  | -
+                  code &lt;var&gt;
+                td.nowrap
+                  mark Mark / 記號
+                  | -
+                  code &lt;mark&gt;
+              tr
+                td.nowrap
+                  kbd kbd / 鍵盤文字
+                  | -
+                  code &lt;kbd&gt;
+                td.nowrap
+                  del Deleted / 刪除
+                  | -
+                  code &lt;del&gt;
+              tr
+                td.nowrap
+                  i Italic / 斜體
+                  | -
+                  code &lt;i&gt;
+                td.nowrap
+                  em Emphasis / 強調
+                  | -
+                  code &lt;em&gt;
+              tr
+                td.nowrap
+                  strong Highlighted / 更強的強調
+                  | -
+                  code &lt;strong&gt;
+                td.nowrap
+                  b Bold / 粗體
+                  | -
+                  code &lt;b&gt;
+              tr
+                td.nowrap
+                  | Base
+                  sup superscript / 上標
+                  | -
+                  code &lt;sup&gt;
+                td.nowrap
+                  | Base
+                  sub subscriptt / 下標
+                  | -
+                  code &lt;sub&gt;
+              tr
+                td.nowrap
+                  small Small / 小號字體
+                  | -
+                  code &lt;small&gt;
+                td.nowrap
+                  ins Inserted / 下畫線
+                  | -
+                  code &lt;ins&gt;
 
-              .window
-                //- .icons: span
-                //- .title ul li.pug
-                pre.language-jade
-                  code.
+            // Lists
+            h3#h-lists.demo-head Lists
+            p
+              |我們為列表提供許多的層級，雖然很可能永遠都用不到，但 OWL UI lite 仍然保留了這個彈性。
+              |無論項目或計數清單至少可支援至三個級別。
+            .row
+              .col.col-6
+                ul
+                  li list item 1
+                  li
+                    | list item 2
                     ul
-                      li ...
-            .col.col-6
-              ol
-                li list item 1
-                li
-                  | list item 2
-                  ol
-                    li list item 2.1
-                    li
-                      | list item 2.2
-                      ol
-                        li list item 2.2.1
-                        li list item 2.2.2
-                    li list item 2.3
-                    li list item 2.4
-                li list item 3
-                li list item 4
+                      li list item 2.1
+                      li
+                        | list item 2.2
+                        ul
+                          li list item 2.2.1
+                          li list item 2.2.2
+                      li list item 2.3
+                      li list item 2.4
+                  li list item 3
+                  li list item 4
 
-              .window
-                //- .icons: span
-                //- .title ol li.pug
-                pre.language-jade
-                  code.
+                .window
+                  //- .icons: span
+                  //- .title ul li.pug
+                  pre.language-jade
+                    code.
+                      ul
+                        li ...
+              .col.col-6
+                ol
+                  li list item 1
+                  li
+                    | list item 2
                     ol
-                      li ...
+                      li list item 2.1
+                      li
+                        | list item 2.2
+                        ol
+                          li list item 2.2.1
+                          li list item 2.2.2
+                      li list item 2.3
+                      li list item 2.4
+                  li list item 3
+                  li list item 4
 
-          h3.demo-head Definition List
-          p 有時候，我們可能需要一個自定義列表。千萬千萬不要忘記使用自定義列表，因為我們愛語義的東西，也務必遵守。自定義列表不僅僅是一列項目，而是項目及其註釋的組合
-          dl
-            dt Term 1
-            dd Description 1
-            dt Term 2
-            dd Description 2
-            dt Term 3
-            dd Description 3
-          .window
-            //- .icons: span
-            //- .title dl dt dd.pug
-            pre.language-jade
-              code.
-                dl
-                  dt Term
-                  dd Description
+                .window
+                  //- .icons: span
+                  //- .title ol li.pug
+                  pre.language-jade
+                    code.
+                      ol
+                        li ...
+
+            h3.demo-head Definition List
+            p 有時候，我們可能需要一個自定義列表。千萬千萬不要忘記使用自定義列表，因為我們愛語義的東西，也務必遵守。自定義列表不僅僅是一列項目，而是項目及其註釋的組合
+            dl
+              dt Term 1
+              dd Description 1
+              dt Term 2
+              dd Description 2
+              dt Term 3
+              dd Description 3
+            .window
+              //- .icons: span
+              //- .title dl dt dd.pug
+              pre.language-jade
+                code.
+                  dl
+                    dt Term
+                    dd Description
 
   include ../../_footer
 

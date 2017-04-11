@@ -17,117 +17,118 @@ block content
         h3 Breadcrumbs
         p#hero-lead
           |OWL UI lite 的麵包屑利用分隔符作為預設的展現方式。這種分隔方式可以輕易透過一行 CSS 來改變，非常靈活。
-    #doc-main__content.row
-      .col.col-3.nav-wrapper
-        nan#sidebar.nav
-          ul
-            li: a(href='index.html#h-base') Base
-            li: a(href='index.html#h-centered') Centered
-            li: a(href='index.html#h-right') Right
-            li: a(href='index.html#h-separator') Custom Separator
-      .col.col-9
-        #owl-ui-lite-component
-
-          // Base
-          h3#h-base.demo-head Base
-          nav.breadcrumb
+    #doc-main__content
+      .row.splice
+        .col.col-3.nav-wrapper
+          nan#sidebar.nav
             ul
-              li
-                a(href='index.html#') 首頁
-              li
-                a(href='index.html#') 頁面 1
-              li
-                a(href='index.html#') 頁面 2
-              li
-                a(href='index.html#') 頁面 3
-              li.active
-                em 當前頁面
-          .window
-            pre.language-jade
-              code.
-                nav.breadcrumb
-                  ul
-                    li
-                      a(href='#') ...
-                    li.active
-                      em ...
+              li: a(href='index.html#h-base') Base
+              li: a(href='index.html#h-centered') Centered
+              li: a(href='index.html#h-right') Right
+              li: a(href='index.html#h-separator') Custom Separator
+        .col.col-9
+          #owl-ui-lite-component
 
-          // Centered
-          h3#h-centered.demo-head Centered
-          nav.breadcrumb.centered
-            ul
-              li
-                a(href='index.html#') 首頁
-              li
-                a(href='index.html#') 頁面 1
-              li
-                a(href='index.html#') 頁面 2
-              li
-                a(href='index.html#') 頁面 3
-              li.active
-                em 當前頁面
-          .window
-            pre.language-jade
-              code.
-                nav.breadcrumb.centered
-                  ul
-                    li
-                      a(href='#') ...
-                    li.active
-                      em ...
+            // Base
+            h3#h-base.demo-head Base
+            nav.breadcrumb
+              ul
+                li
+                  a(href='index.html#') 首頁
+                li
+                  a(href='index.html#') 頁面 1
+                li
+                  a(href='index.html#') 頁面 2
+                li
+                  a(href='index.html#') 頁面 3
+                li.active
+                  em 當前頁面
+            .window
+              pre.language-jade
+                code.
+                  nav.breadcrumb
+                    ul
+                      li
+                        a(href='#') ...
+                      li.active
+                        em ...
 
-          // Right
-          h3#h-right.demo-head Right
-          nav.breadcrumb.right
-            ul
-              li
-                a(href='index.html#') 首頁
-              li
-                a(href='index.html#') 頁面 1
-              li
-                a(href='index.html#') 頁面 2
-              li
-                a(href='index.html#') 頁面 3
-              li.active
-                em 當前頁面
-          .window
-            pre.language-jade
-              code.
-                nav.breadcrumb.right
-                  ul
-                    li
-                      a(href='#') ...
-                    li.active
-                      em ...
+            // Centered
+            h3#h-centered.demo-head Centered
+            nav.breadcrumb.centered
+              ul
+                li
+                  a(href='index.html#') 首頁
+                li
+                  a(href='index.html#') 頁面 1
+                li
+                  a(href='index.html#') 頁面 2
+                li
+                  a(href='index.html#') 頁面 3
+                li.active
+                  em 當前頁面
+            .window
+              pre.language-jade
+                code.
+                  nav.breadcrumb.centered
+                    ul
+                      li
+                        a(href='#') ...
+                      li.active
+                        em ...
 
-          // Custom Separator
-          h3#h-separator.demo-head Custom Separator
-          nav#breadcrumb-custom-separator.breadcrumb
-            ul
-              li
-                a(href='index.html#') 首頁
-              li
-                a(href='index.html#') 頁面 1
-              li
-                a(href='index.html#') 頁面 2
-              li
-                a(href='index.html#') 頁面 3
-              li.active
-                em 當前頁面
-          .window
-            pre.language-scss
-              code.
-                // css
-                #breadcrumb-custom-separator li:after {
-                  content: '>';
-                }
-            pre.language-jade
-              code.
-                // jade
-                nav#breadcrumb-custom-separator.breadcrumb
-                  ul
-                    li: a href="#" ...
-                    li.active: a href="#" ...
+            // Right
+            h3#h-right.demo-head Right
+            nav.breadcrumb.right
+              ul
+                li
+                  a(href='index.html#') 首頁
+                li
+                  a(href='index.html#') 頁面 1
+                li
+                  a(href='index.html#') 頁面 2
+                li
+                  a(href='index.html#') 頁面 3
+                li.active
+                  em 當前頁面
+            .window
+              pre.language-jade
+                code.
+                  nav.breadcrumb.right
+                    ul
+                      li
+                        a(href='#') ...
+                      li.active
+                        em ...
+
+            // Custom Separator
+            h3#h-separator.demo-head Custom Separator
+            nav#breadcrumb-custom-separator.breadcrumb
+              ul
+                li
+                  a(href='index.html#') 首頁
+                li
+                  a(href='index.html#') 頁面 1
+                li
+                  a(href='index.html#') 頁面 2
+                li
+                  a(href='index.html#') 頁面 3
+                li.active
+                  em 當前頁面
+            .window
+              pre.language-scss
+                code.
+                  // css
+                  #breadcrumb-custom-separator li:after {
+                    content: '>';
+                  }
+              pre.language-jade
+                code.
+                  // jade
+                  nav#breadcrumb-custom-separator.breadcrumb
+                    ul
+                      li: a href="#" ...
+                      li.active: a href="#" ...
 
 
   include ../../_footer

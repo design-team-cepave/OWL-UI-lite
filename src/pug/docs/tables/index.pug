@@ -17,34 +17,149 @@ block content
         h3 Table
         p#hero-lead
           |OWL UI lite 已預先格式化，並額外提供完整的各種樣式選用。因此在許多不同的情境下，讓資料得以獲得最佳的呈現。
-    #doc-main__content.row
-      .col.col-3.nav-wrapper
-        nan#sidebar.nav
-          ul
-            li: a(href='index.html#h-base') Base
-            li: a(href='index.html#h-width') Width
-            li: a(href='index.html#h-bordered') Bordered
-            li: a(href='index.html#h-striped') Striped
-            li: a(href='index.html#h-flat') Flat
+    #doc-main__content
+      .row.splice
+        .col.col-3.nav-wrapper
+          nan#sidebar.nav
+            ul
+              li: a(href='index.html#h-base') Base
+              li: a(href='index.html#h-width') Width
+              li: a(href='index.html#h-bordered') Bordered
+              li: a(href='index.html#h-striped') Striped
+              li: a(href='index.html#h-flat') Flat
 
-      .col.col-9
-        #owl-ui-lite-component
+        .col.col-9
+          #owl-ui-lite-component
 
-          // Base
-          h3#h-primary.demo-head Base
-          p
-            |這是基礎表格。預設情況下，它只有水平邊線。可以使用
-            code td
-            |帶
-            code colspan="2"
-            |。加入兩個單元格，可以將列跨越兩個欄。
-          p
-            table
+            // Base
+            h3#h-primary.demo-head Base
+            p
+              |這是基礎表格。預設情況下，它只有水平邊線。可以使用
+              code td
+              |帶
+              code colspan="2"
+              |。加入兩個單元格，可以將列跨越兩個欄。
+            p
+              table
+                thead
+                  tr
+                    th First Name
+                    th Last Name
+                    th Phone
+                tbody
+                  tr
+                    td JJ 1
+                    td Hung
+                    td 45
+                  tr
+                    td JJ 2
+                    td Hung
+                    td 44
+                tfoot
+                  tr
+                    td(colspan='2') Total points
+                    td 99
+            .window
+              //- .icons: span
+              //- .title table--base.pug
+              pre.language-jade
+                code.
+                  table
+                    thead
+                      tr
+                        th First Name
+                        th Last Name
+                        th Points
+                    tbody
+                      tr
+                        td JJ 1
+                        td Hung
+                        td 45
+                      tr
+                        td JJ 2
+                        td Hung
+                        td 44
+                    tfoot
+                      tr
+                        td(colspan='2') Total points
+                        td 99
+
+            // Width
+            h3#h-width.demo-head Width
+            p
+              |設置列的寬度非常簡單，只需使用 OWL UI lite 的 Grid 參數！例如：下面表格的兩列，兩列等於
+              code col-6
+              |。
+            p
+              table
+                thead
+                  tr
+                    td.col-6 Head 1
+                    td.col-6 Head 2
+                tbody
+                  tr
+                    td Col 1
+                    td Col 2
+            .window
+              //- .icons: span
+              //- .title table--Width.pug
+              pre.language-jade
+                code.
+                  table
+                    thead
+                      tr
+                        td(class="col-6") Head 1
+                        td(class="col-6") Head 2
+                    tbody
+                      tr
+                        td Col 1
+                        td Col 2
+            p 這裡的3列表格例子中，第一個是另外兩個的兩倍寬。這樣的效果都是用 Grid system 製作而成。
+            p
+              table
+                thead
+                  tr
+                    th.col-6 Head 1
+                    th.col-3 Head 2
+                    th.col-3 Head 3
+                  tbody
+                    tr
+                      td Col 1
+                      td Col 2
+                      td Col 3
+            .window
+              //- .icons: span
+              //- .title table--Width.pug
+              pre.language-jade
+                code.
+                  table
+                    thead
+                      tr
+                        th(class="col-6") Head 1
+                        th(class="col-3") Head 2
+                        th(class="col-3") Head 3
+                      tbody
+                        tr
+                          td Col 1
+                          td Col 2
+                          td Col 3
+
+            // Bordered
+            h3#h-bordered.demo-head Bordered
+            p
+              | 這個表格的樣式是一個經典，與符合多數人認知的外觀樣式。只需添加&nbsp;
+              code class
+              | &nbsp;
+              var bordered
+              | 到&nbsp;
+              code table
+              | &nbsp;。
+            table.bordered
               thead
                 tr
                   th First Name
                   th Last Name
-                  th Phone
+                  th Points
               tbody
                 tr
                   td JJ 1
@@ -58,245 +173,131 @@ block content
                 tr
                   td(colspan='2') Total points
                   td 99
-          .window
-            //- .icons: span
-            //- .title table--base.pug
-            pre.language-jade
-              code.
-                table
-                  thead
-                    tr
-                      th First Name
-                      th Last Name
-                      th Points
-                  tbody
-                    tr
-                      td JJ 1
-                      td Hung
-                      td 45
-                    tr
-                      td JJ 2
-                      td Hung
-                      td 44
-                  tfoot
-                    tr
-                      td(colspan='2') Total points
-                      td 99
-
-          // Width
-          h3#h-width.demo-head Width
-          p
-            |設置列的寬度非常簡單，只需使用 OWL UI lite 的 Grid 參數！例如：下面表格的兩列，兩列等於
-            code col-6
-            |。
-          p
-            table
-              thead
-                tr
-                  td.col-6 Head 1
-                  td.col-6 Head 2
-              tbody
-                tr
-                  td Col 1
-                  td Col 2
-          .window
-            //- .icons: span
-            //- .title table--Width.pug
-            pre.language-jade
-              code.
-                table
-                  thead
-                    tr
-                      td(class="col-6") Head 1
-                      td(class="col-6") Head 2
-                  tbody
-                    tr
-                      td Col 1
-                      td Col 2
-          p 這裡的3列表格例子中，第一個是另外兩個的兩倍寬。這樣的效果都是用 Grid system 製作而成。
-          p
-            table
-              thead
-                tr
-                  th.col-6 Head 1
-                  th.col-3 Head 2
-                  th.col-3 Head 3
-                tbody
-                  tr
-                    td Col 1
-                    td Col 2
-                    td Col 3
-          .window
-            //- .icons: span
-            //- .title table--Width.pug
-            pre.language-jade
-              code.
-                table
-                  thead
-                    tr
-                      th(class="col-6") Head 1
-                      th(class="col-3") Head 2
-                      th(class="col-3") Head 3
+            .window
+              //- .icons: span
+              //- .title table--bordered.pug
+              pre.language-jade
+                code.
+                  table(class="bordered")
+                    thead
+                      tr
+                        th First Name
+                        th Last Name
+                        th Points
                     tbody
                       tr
-                        td Col 1
-                        td Col 2
-                        td Col 3
+                        td JJ 1
+                        td Hung
+                        td 45
+                      tr
+                        td JJ 2
+                        td Hung
+                        td 44
+                    tfoot
+                      tr
+                        td(colspan='2') Total points
+                        td 99
 
-          // Bordered
-          h3#h-bordered.demo-head Bordered
-          p
-            | 這個表格的樣式是一個經典，與符合多數人認知的外觀樣式。只需添加&nbsp;
-            code class
-            | &nbsp;
-            var bordered
-            | 到&nbsp;
-            code table
-            | &nbsp;。
-          table.bordered
-            thead
-              tr
-                th First Name
-                th Last Name
-                th Points
-            tbody
-              tr
-                td JJ 1
-                td Hung
-                td 45
-              tr
-                td JJ 2
-                td Hung
-                td 44
-            tfoot
-              tr
-                td(colspan='2') Total points
-                td 99
-          .window
-            //- .icons: span
-            //- .title table--bordered.pug
-            pre.language-jade
-              code.
-                table(class="bordered")
-                  thead
-                    tr
-                      th First Name
-                      th Last Name
-                      th Points
-                  tbody
-                    tr
-                      td JJ 1
-                      td Hung
-                      td 45
-                    tr
-                      td JJ 2
-                      td Hung
-                      td 44
-                  tfoot
-                    tr
-                      td(colspan='2') Total points
-                      td 99
-
-          // Stripped
-          h3#h-striped.demo-head Striped
-          p
-            | Striped 表格帶有條紋，用以區分單雙欄，增進閱讀的使用性。只需要添加
-            code class
-            | &nbsp;
-            var striped
-            | 到&nbsp;
-            code table
-            | &nbsp;。
-          table.striped
-            thead
-              tr
-                th First Name
-                th Last Name
-                th Points
-            tbody
-              tr
-                td JJ 1
-                td Hung
-                td 45
-              tr
-                td JJ 2
-                td Hung
-                td 44
-            tfoot
-              tr
-                td(colspan='2') Total points
-                td 99
-          .window
-            //- .icons: span
-            //- .title table--striped.pug
-            pre.language-jade
-              code.
-                table(class="striped")
-                  thead
-                    tr
-                      th First Name
-                      th Last Name
-                      th Points
-                  tbody
-                    tr
-                      td JJ 1
-                      td Hung
-                      td 45
-                    tr
-                      td JJ 2
-                      td Hung
-                      td 44
-                  tfoot
-                    tr
-                      td(colspan='2') Total points
-                      td 99
-          // Flat
-          h3#h-flat.demo-head Flat
-          p
-            | 如果希望有一個最基本最基本的表格樣式。那就是......打平它吧。
-          table.flat
-            thead
-              tr
-                th First Name
-                th Last Name
-                th Points
-            tbody
-              tr
-                td JJ 1
-                td Hung
-                td 45
-              tr
-                td JJ 2
-                td Hung
-                td 44
-            tfoot
-              tr
-                td(colspan='2') Total points
-                td 99
-          .window
-            //- .icons: span
-            //- .title table--flat.pug
-            pre.language-jade
-              code.
-                table(class="flat")
-                  thead
-                    tr
-                      th First Name
-                      th Last Name
-                      th Points
-                  tbody
-                    tr
-                      td JJ 1
-                      td Hung
-                      td 45
-                    tr
-                      td JJ 2
-                      td Hung
-                      td 44
-                  tfoot
-                    tr
-                      td(colspan='2') Total points
-                      td 99
+            // Stripped
+            h3#h-striped.demo-head Striped
+            p
+              | Striped 表格帶有條紋，用以區分單雙欄，增進閱讀的使用性。只需要添加
+              code class
+              | &nbsp;
+              var striped
+              | 到&nbsp;
+              code table
+              | &nbsp;。
+            table.striped
+              thead
+                tr
+                  th First Name
+                  th Last Name
+                  th Points
+              tbody
+                tr
+                  td JJ 1
+                  td Hung
+                  td 45
+                tr
+                  td JJ 2
+                  td Hung
+                  td 44
+              tfoot
+                tr
+                  td(colspan='2') Total points
+                  td 99
+            .window
+              //- .icons: span
+              //- .title table--striped.pug
+              pre.language-jade
+                code.
+                  table(class="striped")
+                    thead
+                      tr
+                        th First Name
+                        th Last Name
+                        th Points
+                    tbody
+                      tr
+                        td JJ 1
+                        td Hung
+                        td 45
+                      tr
+                        td JJ 2
+                        td Hung
+                        td 44
+                    tfoot
+                      tr
+                        td(colspan='2') Total points
+                        td 99
+            // Flat
+            h3#h-flat.demo-head Flat
+            p
+              | 如果希望有一個最基本最基本的表格樣式。那就是......打平它吧。
+            table.flat
+              thead
+                tr
+                  th First Name
+                  th Last Name
+                  th Points
+              tbody
+                tr
+                  td JJ 1
+                  td Hung
+                  td 45
+                tr
+                  td JJ 2
+                  td Hung
+                  td 44
+              tfoot
+                tr
+                  td(colspan='2') Total points
+                  td 99
+            .window
+              //- .icons: span
+              //- .title table--flat.pug
+              pre.language-jade
+                code.
+                  table(class="flat")
+                    thead
+                      tr
+                        th First Name
+                        th Last Name
+                        th Points
+                    tbody
+                      tr
+                        td JJ 1
+                        td Hung
+                        td 45
+                      tr
+                        td JJ 2
+                        td Hung
+                        td 44
+                    tfoot
+                      tr
+                        td(colspan='2') Total points
+                        td 99
 
   include ../../_footer
 

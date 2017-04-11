@@ -20,229 +20,230 @@ block content
           code ul li
           |。提供使用者視覺提示：表達當前頁面是及頁面編號，以便於導航。
 
-    #doc-main__content.row
-      .col.col-3.nav-wrapper
-        nan#sidebar.nav
-          ul
-            li: a(href='index.html#h-base') Base
-            li: a(href='index.html#h-centered') Centered
-            li: a(href='index.html#h-wide') Wide
-            li: a(href='index.html#h-pager') Pager
-      .col.col-9
-        #owl-ui-lite-component
+    #doc-main__content
+      .row.splice
+        .col.col-3.nav-wrapper
+          nan#sidebar.nav
+            ul
+              li: a(href='index.html#h-base') Base
+              li: a(href='index.html#h-centered') Centered
+              li: a(href='index.html#h-wide') Wide
+              li: a(href='index.html#h-pager') Pager
+        .col.col-9
+          #owl-ui-lite-component
 
-          // Base
-          h3#h-base.demo-head Base
-          nav.pagination
-            ul
-              li.prev
-                a(href='#') ←
-              li
-                ol
-                  li.active
-                    em 1
-                  li
-                    a(href='#') 2
-                  li
-                    a(href='#') 3
-                  li
-                    a(href='#') 4
-                  li
-                    a(href='#') 5
-              li.next
-                a(href='#') →
-          nav.pagination
-            ul
-              li.prev
-                a(href='#') ←
-              li
-                ol
-                  li
-                    em ...
-                  li
-                    a(href='#') 2
-                  li
-                    a(href='#') 3
-                  li.active
-                    em 4
-                  li
-                    a(href='#') 5
-                  li
-                    a(href='#') 6
-                  li
-                    em ...
-              li.next
-                a(href='#') →
-          nav.pagination
-            ul
-              li.prev
-                a(href='#') ←
-              li
-                ol
-                  li
-                    a(href='#') 1
-                  li
-                    em ...
-                  li
-                    a(href='#') 3
-                  li
-                    a(href='#') 4
-                  li.active
-                    em 5
-                  li
-                    a(href='#') 6
-                  li
-                    a(href='#') 7
-                  li
-                    em ...
-                  li
-                    a(href='#') 99
-              li.next
-                a(href='#') →
-          .window
-            //- .icons: span
-            //- .title pagination--base.pug
-            pre.language-jade
-              code.
-                nav.pagination
-                  ul
-                    li.prev
-                      a(href="#") &larr;
+            // Base
+            h3#h-base.demo-head Base
+            nav.pagination
+              ul
+                li.prev
+                  a(href='#') ←
+                li
+                  ol
+                    li.active
+                      em 1
                     li
-                      ol
-                        li(class="active")
-                          em 1
-                        li
-                          a(href="#") ...
-                    li.next
-                      a(href="#"") &rarr;
-
-          // Centered
-          h3#h-centered.demo-head Centered
-          nav.pagination.centered
-            ul
-              li.prev
-                a(href='#') ←
-              li
-                ol
-                  li.active
-                    em 1
-                  li
-                    a(href='#') 2
-                  li
-                    a(href='#') 3
-                  li
-                    a(href='#') 4
-                  li
-                    a(href='#') 5
-              li.next
-                a(href='#') →
-          .window
-            //- .icons: span
-            //- .title pagination--centered.pug
-            pre.language-jade
-              code.
-                nav.pagination.centered
-                  ul
-                    li.prev
-                      a(href="#") &larr;
+                      a(href='#') 2
                     li
-                      ol
-                        li(class="active")
-                          em 1
-                        li
-                          a(href="#") ...
-                    li.next
-                      a(href="#"") &rarr;
-
-          // Wide
-          h3#h-wide.demo-head Wide
-          nav.pagination.centered.upper
-            ul
-              li.prev
-                a(href='#') < 上一頁
-              li.width-100
-                //- ul
-                //-   li.bold
-                //-     a(href='#') 回目錄
-              li.next
-                a(href='#') 下一頁 >
-          .window
-            //- .icons: span
-            //- .title pagination--wide.pug
-            pre.language-jade
-              code.
-                nav.pagination.centered.upper
-                  ul
-                    li.prev
-                      a(href="#") &lt; 上一頁
-                    li.width-100
-                    li.next
-                      a(href="#"") 下一頁 &gt;
-
-          // Pager
-          h3#h-pager.demo-head Pager
-          nav.pagination.pager
-            ul
-              li.prev
-                a(href='#') 上一頁
-              li.next
-                a(href='#') 下一頁
-          .window
-            //- .icons: span
-            //- .title pagination--pager.pug
-            pre.language-jade
-              code.
-                nav.pagination.pager
-                  ul
-                    li.prev
-                      a(href='#') 上一頁
-                    li.next
-                      a(href='#') 下一頁
-          nav.pagination.pager.centered
-            ul
-              li.prev
-                a(href='#') 上一頁
-              li.next
-                a(href='#') 下一頁
-          .window
-            //- .icons: span
-            //- .title pagination--pager-centered.pug
-            pre.language-jade
-              code.
-                nav.pagination.pager.centered
-                  ul
-                    li.prev
-                      a(href='#') 上一頁
-                    li.next
-                      a(href='#') 下一頁
-
-
-          // Of Page
-          h3#h-base.demo-head Of page
-          nav.pagination
-            ul
-              li.prev
-                a(href='#') ←
-              li
-                ol
-                  li
-                    span.input 1 of 99
-              li.next
-                a(href='#') →
-          .window
-            pre.language-jade
-              code.
-                nav.pagination
-                  ul
-                    li.prev
-                      a(href="#") &larr;
+                      a(href='#') 3
                     li
-                      ol
-                        li
-                          span.input 1 of ...
-                    li.next
-                      a(href="#"") &rarr;
+                      a(href='#') 4
+                    li
+                      a(href='#') 5
+                li.next
+                  a(href='#') →
+            nav.pagination
+              ul
+                li.prev
+                  a(href='#') ←
+                li
+                  ol
+                    li
+                      em ...
+                    li
+                      a(href='#') 2
+                    li
+                      a(href='#') 3
+                    li.active
+                      em 4
+                    li
+                      a(href='#') 5
+                    li
+                      a(href='#') 6
+                    li
+                      em ...
+                li.next
+                  a(href='#') →
+            nav.pagination
+              ul
+                li.prev
+                  a(href='#') ←
+                li
+                  ol
+                    li
+                      a(href='#') 1
+                    li
+                      em ...
+                    li
+                      a(href='#') 3
+                    li
+                      a(href='#') 4
+                    li.active
+                      em 5
+                    li
+                      a(href='#') 6
+                    li
+                      a(href='#') 7
+                    li
+                      em ...
+                    li
+                      a(href='#') 99
+                li.next
+                  a(href='#') →
+            .window
+              //- .icons: span
+              //- .title pagination--base.pug
+              pre.language-jade
+                code.
+                  nav.pagination
+                    ul
+                      li.prev
+                        a(href="#") &larr;
+                      li
+                        ol
+                          li(class="active")
+                            em 1
+                          li
+                            a(href="#") ...
+                      li.next
+                        a(href="#"") &rarr;
+
+            // Centered
+            h3#h-centered.demo-head Centered
+            nav.pagination.centered
+              ul
+                li.prev
+                  a(href='#') ←
+                li
+                  ol
+                    li.active
+                      em 1
+                    li
+                      a(href='#') 2
+                    li
+                      a(href='#') 3
+                    li
+                      a(href='#') 4
+                    li
+                      a(href='#') 5
+                li.next
+                  a(href='#') →
+            .window
+              //- .icons: span
+              //- .title pagination--centered.pug
+              pre.language-jade
+                code.
+                  nav.pagination.centered
+                    ul
+                      li.prev
+                        a(href="#") &larr;
+                      li
+                        ol
+                          li(class="active")
+                            em 1
+                          li
+                            a(href="#") ...
+                      li.next
+                        a(href="#"") &rarr;
+
+            // Wide
+            h3#h-wide.demo-head Wide
+            nav.pagination.centered.upper
+              ul
+                li.prev
+                  a(href='#') < 上一頁
+                li.width-100
+                  //- ul
+                  //-   li.bold
+                  //-     a(href='#') 回目錄
+                li.next
+                  a(href='#') 下一頁 >
+            .window
+              //- .icons: span
+              //- .title pagination--wide.pug
+              pre.language-jade
+                code.
+                  nav.pagination.centered.upper
+                    ul
+                      li.prev
+                        a(href="#") &lt; 上一頁
+                      li.width-100
+                      li.next
+                        a(href="#"") 下一頁 &gt;
+
+            // Pager
+            h3#h-pager.demo-head Pager
+            nav.pagination.pager
+              ul
+                li.prev
+                  a(href='#') 上一頁
+                li.next
+                  a(href='#') 下一頁
+            .window
+              //- .icons: span
+              //- .title pagination--pager.pug
+              pre.language-jade
+                code.
+                  nav.pagination.pager
+                    ul
+                      li.prev
+                        a(href='#') 上一頁
+                      li.next
+                        a(href='#') 下一頁
+            nav.pagination.pager.centered
+              ul
+                li.prev
+                  a(href='#') 上一頁
+                li.next
+                  a(href='#') 下一頁
+            .window
+              //- .icons: span
+              //- .title pagination--pager-centered.pug
+              pre.language-jade
+                code.
+                  nav.pagination.pager.centered
+                    ul
+                      li.prev
+                        a(href='#') 上一頁
+                      li.next
+                        a(href='#') 下一頁
+
+
+            // Of Page
+            h3#h-base.demo-head Of page
+            nav.pagination
+              ul
+                li.prev
+                  a(href='#') ←
+                li
+                  ol
+                    li
+                      span.input 1 of 99
+                li.next
+                  a(href='#') →
+            .window
+              pre.language-jade
+                code.
+                  nav.pagination
+                    ul
+                      li.prev
+                        a(href="#") &larr;
+                      li
+                        ol
+                          li
+                            span.input 1 of ...
+                      li.next
+                        a(href="#"") &rarr;
 
   include ../../_footer
 

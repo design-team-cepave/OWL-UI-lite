@@ -16,32 +16,33 @@ block content
         h3 Loader
         //- p#hero-lead
 
-    #doc-main__content.row
-      .col.col-3.nav-wrapper
-        nan#sidebar.nav
-          ul
-            li: a(href='index.html#h-border') border
-            li: a(href='index.html#h-bar') bar
-      .col.col-9
-        #owl-ui-lite-component
+    #doc-main__content
+      .row.splice
+        .col.col-3.nav-wrapper
+          nan#sidebar.nav
+            ul
+              li: a(href='index.html#h-border') border
+              li: a(href='index.html#h-bar') bar
+        .col.col-9
+          #owl-ui-lite-component
 
-          // Border
-          h3#h-border.demo-head Border
-          p.centered
-            .loader.border
-          .window
-            pre.language-jade
-              code.
-                div(class="oader border")
+            // Border
+            h3#h-border.demo-head Border
+            p.centered
+              .loader.border
+            .window
+              pre.language-jade
+                code.
+                  div(class="oader border")
 
-          // Bar
-          h3#h-bar.demo-head Bar
-          p.centered
-            .loader.bar
-          .window
-            pre.language-jade
-              code.
-                div(class="loader bar")
+            // Bar
+            h3#h-bar.demo-head Bar
+            p.centered
+              .loader.bar
+            .window
+              pre.language-jade
+                code.
+                  div(class="loader bar")
 
 
   include ../../_footer
