@@ -1,5 +1,5 @@
 {
-  "name": "OWL-UI-lite",
+  "name": "owl-ui-lite",
   "version": "2.0.0",
   "description": "professional design and developer CSS-framework",
   "keywords": [
@@ -10,7 +10,7 @@
   ],
   "author": "JJ",
   "license": "MIT",
-  "homepage": "design.cepave.com/owl-ui-lite",
+  "homepage": "http://design.cepave.com/owl-ui-lite",
   "devDependencies": {
     "browser-sync": "~2.12.8",
     "cssnext": "^1.8.4",
