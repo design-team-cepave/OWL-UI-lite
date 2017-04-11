@@ -71,8 +71,8 @@ h6,
   @include typo-xs;
 }
 .subheading {
-  // margin-top: -($margin-bottom-heading - $base-unit);
-  // margin-bottom: ($base-unit*2);
+  margin-top: ($margin-bottom-heading) / 2 * -1;
+  margin-bottom: ($base-unit*2);
   font-weight: 300;
 }
 p,
