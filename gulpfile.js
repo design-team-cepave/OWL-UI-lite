@@ -146,7 +146,7 @@ gulp.task('coffee', function() {
     .pipe(gulp.dest(config.js.dist));
 });
 
-gulp.task('watch', ['images', 'styles', 'views'], function () {
+gulp.task('watch', ['vendor', 'images', 'styles', 'views', 'coffee'], function () {
   gulp.watch('img/' + config.all ,{cwd: src}, ['images', browserReload]);
   gulp.watch('sass/' + config.all + '.scss', {cwd: src}, ['styles', browserReload]);
   gulp.watch('pug/' + config.all + '.pug', {cwd: src}, ['views', browserReload]);
