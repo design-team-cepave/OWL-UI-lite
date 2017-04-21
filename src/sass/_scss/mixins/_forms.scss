@@ -12,6 +12,7 @@
   font-size: $ui-font-size-body;
   line-height: $ui-lineheight-body;
   color: inherit;
+  @include border-box;
   @include input-placeholder {
     color: $input-place-hold-color;
   }
