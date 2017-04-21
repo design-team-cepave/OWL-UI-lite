@@ -39,6 +39,8 @@
 }
 .col {
 
+  @include border-box;
+
   flex-grow: 1;
   flex-basis: 0;
 
@@ -92,11 +94,13 @@
 
 // Fixed Width
 .row-layout {
+  @include border-box;
   @include flex;
   @include flex-nowrap;
   @include flex-center;
 }
 .col-fluid {
+  @include border-box;
   @include flex-grow(1);
   width: 100%;
 }
