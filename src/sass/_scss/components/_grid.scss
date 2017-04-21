@@ -28,11 +28,11 @@
 
     }
   }
-  &.splice > {
+  &.splice {
 
     margin-left: 0;
 
-    .col {
+    & > .col {
       padding-left: 0;
     }
   }
