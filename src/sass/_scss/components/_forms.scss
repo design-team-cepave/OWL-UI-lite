@@ -16,87 +16,106 @@
   border: $input-border-size solid $input-border-color;
 }
 
-input,
-select,
-textarea,
-fieldset {
-  @extend %form-base;
-}
-
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="date"],
-input[type="tel"],
-input[type="url"],
-input[type="password"] {
-  @extend %input-base;
-}
-
-select,
-textarea {
-  @extend %form-block-el;
-}
-
-select:not([multiple]) {
-  cursor: pointer;
-  height: $height;
-  vertical-align: middle;
-}
-
-label {
-  vertical-align: middle;
-}
-
-textarea,
-select,
-input {
-  &:focus {
-    outline: none;
-    background: $input-focus-background-color;
-    border-color: $input-focus-border-color;
-    box-shadow: $input-focus-box-shadow;
+.form-item {
+  input[type="radio"],
+  input[type="checkbox"] {
+    cursor: pointer;
+    font-size: 110%;
+    position: relative;
+    margin-right: 3px;
+    padding: 0;
   }
-}
-input {
-  &[type="radio"],
-  &[type="checkbox"] {
-    margin-right: $beta;
-    top: -1px;
+  input[type="search"] {
+    -webkit-appearance: textfield;
+  }
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+
+  input,
+  select,
+  textarea,
+  fieldset {
+    @extend %form-base;
+  }
+
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="text"],
+  input[type="date"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="password"] {
+    @extend %input-base;
+  }
+
+  select,
+  textarea {
+    @extend %form-block-el;
+  }
+
+  select:not([multiple]) {
+    cursor: pointer;
+    height: $height;
+    vertical-align: middle;
+  }
+
+  label {
+    vertical-align: middle;
+  }
+
+  textarea,
+  select,
+  input {
     &:focus {
-      box-shadow: none;
+      outline: none;
+      background: $input-focus-background-color;
+      border-color: $input-focus-border-color;
+      box-shadow: $input-focus-box-shadow;
     }
   }
-}
-textarea,
-select,
-input {
-  &:disabled,
-  &.disabled {
-  resize: none;
-  opacity: $input-disabled-opacity;
-  cursor: default;
-  font-style: italic;
- }
-}
+  input {
+    &[type="radio"],
+    &[type="checkbox"] {
+      margin-right: $beta;
+      top: -1px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  textarea,
+  select,
+  input {
+    &:disabled,
+    &.disabled {
+    resize: none;
+    opacity: $input-disabled-opacity;
+    cursor: default;
+    font-style: italic;
+   }
+  }
 
-// Fieldset
-fieldset {
-  padding: $iota $zeta $zeta;
-  margin-bottom: $line-height-md * 1em;
-  border: $fieldset-border-size solid $fieldset-border-color;
-  border-radius: $form-border-radius;
-}
-legend {
-  font-weight: bold;
-  font-size: $font-size-xs;
-  text-transform: uppercase;
-  padding: 0 1em;
-  margin-left: -1rem;
-  top: rem(2px);
-  position: relative;
-  line-height: 0;
+  // Fieldset
+  fieldset {
+    padding: $iota $zeta $zeta;
+    margin-bottom: $line-height-md * 1em;
+    border: $fieldset-border-size solid $fieldset-border-color;
+    border-radius: $form-border-radius;
+  }
+  legend {
+    font-weight: bold;
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+    padding: 0 1em;
+    margin-left: -1rem;
+    top: rem(2px);
+    position: relative;
+    line-height: 0;
+  }
+
 }
 
 // Collection
