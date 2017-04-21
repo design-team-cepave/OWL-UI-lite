@@ -1,0 +1,43 @@
+@mixin reset-box-model {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@mixin reset-font {
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+@mixin reset-focus {
+  outline: 0;
+}
+
+@mixin reset-body {
+  line-height: 1;
+}
+
+// Reset the list style of an element.
+@mixin reset-list-style {
+  list-style: none;
+}
+
+@mixin reset-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@mixin reset-table-cell {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+@mixin reset-quotation {
+  quotes: none;
+  &:before, &:after {
+    content: "";
+    content: none;
+  }
+}
