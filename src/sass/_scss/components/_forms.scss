@@ -58,7 +58,7 @@
 
   select:not([multiple]) {
     cursor: pointer;
-    height: $height;
+    // height: $height;
     vertical-align: middle;
   }
 
@@ -280,33 +280,57 @@ input[type='submit'] {
   }
 }
 // Append Prepend
+$input-z-index: 2;
+%appendprend-button {
+  font-weight: normal;
+  white-space: nowrap;
+  @include typo-md;
+  padding: rem(8px);
+  background-color: $input-append-background-color;
+  @include flex-item-shrink;
+  z-index: $input-z-index - 1;
+}
+%appendprend-input {
+  z-index: $input-z-index;
+}
 .controls {
   @include flex;
-
+  .input,
   input {
     @include flex-item-one;
     margin-bottom: 0 !important;
   }
-
   .button,
-  span,
-  .append {
-    @include flex-item-shrink;
-  }
-
-  span, .append {
-    font-weight: normal;
-    background-color: $input-append-background-color;
-    @include typo-md;
-    white-space: nowrap;
-    padding: rem(8px);
-  }
-
-  .button {
+  button
+  span {
     border-radius: $form-border-radius;
   }
 }
-
+.append {
+  .input,
+  input {
+    @extend %appendprend-input;
+    @include border-left-radius($form-border-radius);
+  }
+  .button,
+  span {
+    @extend %appendprend-button;
+    @include border-right-radius($form-border-radius);
+  }
+}
+.prepend {
+  .input,
+  input {
+    @extend %appendprend-input;
+    @include border-right-radius($form-border-radius);
+  }
+  .button,
+  button,
+  span {
+    @extend %appendprend-button;
+    @include border-left-radius($form-border-radius);
+  }
+}
 // Responsive
 @media (max-width: $breakpoint-sm) {
 

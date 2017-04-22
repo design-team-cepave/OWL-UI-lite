@@ -512,7 +512,7 @@ block content
             form.form(method='post', action='')
               .form-item
                 label 輸入檢索字串
-                .controls.width-50
+                .controls.width-50(class='prepend')
                   span 不可輸入!@#$%^&*()
                   input(type='text')
             .window
@@ -523,15 +523,16 @@ block content
                   form.form(method='post', action='')
                     .form-item
                       label 輸入檢索字串
-                      .controls.width-50
+                      .controls.width-50(class='prepend')
                         span= '不可輸入!@#$%^&'
+                        input(type='text')
 
             form.form(method='post', action='')
               .form-item
                 label 流出安全上限
-                .controls.width-50
+                .controls.width-50(class='append')
                   input(type='text')
-                  span.append kb
+                  span kb
             .window
               //- .icons: span
               //- .title form--width.pug
@@ -539,9 +540,9 @@ block content
                 code.
                   .form-item
                     label 流出安全上限
-                    .controls.width-50
+                    .controls.width-50(class='append')
                       input(type='text')
-                      span.append kb
+                      span kb
 
             // Button Append
             h4#h-button-append.demo-head Button Append
@@ -549,7 +550,7 @@ block content
             form.form(method='post', action='')
               .form-item
                 label 標籤
-                .controls.width-50
+                .controls.width-50(class='append')
                   input(type='text', name='search', placeholder='搜尋...')
                   button.button.primary 搜尋
             .window
